@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>初步认识 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/11.f32d6aa6.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable open"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" aria-current="page" class="active sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable"><span>教程:professional-solidity</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>初步认识</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">初步认识</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>T8840</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/2/15</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><p><a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=1" target="_blank" rel="noopener noreferrer">B站视频教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://github.com/anbang/professional-solidity/blob/v0.0.1/docs/source/01.hello.md" target="_blank" rel="noopener noreferrer">Github<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="solidity初识"><a href="#solidity初识" class="header-anchor">#</a> Solidity初识</h2> <p>本节最有价值部分&quot;WETH DEMO&quot;;</p> <h3 id="区块链基础"><a href="#区块链基础" class="header-anchor">#</a> 区块链基础</h3> <ul><li>事务</li> <li>Gas</li> <li>交易
+<ul><li>From - To 消息(二进制数据/以太币)</li></ul></li> <li>地址
+<ul><li>外部地址：助记词/keystore...</li> <li>合约地址：solidity代码</li> <li>对应EVM是一样的
+<ul><li>key：value</li></ul></li></ul></li> <li>区块
+<ul><li>区块可能会被回滚，交易可能被作废</li></ul></li> <li>存储/内存/栈
+<ul><li>存储：256位： uint256/int256/bytes32</li> <li>内存：函数执行时候出现，完毕之后被销毁</li> <li>栈：1024个元素，每个元素256bit.</li></ul></li></ul> <h3 id="hello-world"><a href="#hello-world" class="header-anchor">#</a> Hello World</h3> <ul><li>demo代码</li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">&gt;=</span><span class="token version number">0.8.2</span> <span class="token operator">&lt;</span><span class="token version number">0.9.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Hello</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 3445 - gas</span>
+    <span class="token builtin">string</span> <span class="token keyword">public</span> message <span class="token operator">=</span> <span class="token string">&quot;hello world&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 状态变量</span>
+
+    <span class="token comment">// 3409</span>
+    <span class="token keyword">function</span> <span class="token function">fn1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 737</span>
+    <span class="token keyword">function</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;hello world&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 816</span>
+    <span class="token keyword">function</span> <span class="token function">fn3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">fn2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>remix IDE
+<ul><li>编译</li> <li>部署</li> <li>运行</li></ul></li></ul> <h3 id="注释"><a href="#注释" class="header-anchor">#</a> 注释</h3> <ul><li>单行 //</li> <li>块 /<em>...</em>/</li> <li>描述注释
+<ul><li>演示</li> <li>文档</li> <li>继承说明
+<ul><li>重载</li></ul></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">/// @title 合约标题</span>
+<span class="token comment">/// @author Neal</span>
+<span class="token comment">/// @notice </span>
+<span class="token comment">/// @dev  功能</span>
+<span class="token comment">/// @custom  XXX</span>
+</code></pre></div></li></ul> <h3 id="合约结构介绍"><a href="#合约结构介绍" class="header-anchor">#</a> 合约结构介绍</h3> <ol><li><p>SPDX版权声明</p> <ul><li>https://spdx.org/licenses</li></ul></li> <li><p>版本规则</p> <ul><li>pragma solidity &gt;=0.8.2 &lt;0.9.0; 等价于'^0.8.17'</li></ul></li> <li><p>contract关键字</p> <ul><li>变量</li> <li>函数</li> <li>this关键字</li> <li>合约地址/合约创建者地址/合约调用者地址</li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code>
+<span class="token comment">// this 本身代表当前的合约</span>
+<span class="token keyword">function</span> <span class="token function">fn4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 当前合约地址 0xf8e81D47203A594245E36C48e151709F0C19fBe8</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">fn5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 当前的合约地址</span>
+<span class="token punctuation">}</span>
+
+ <span class="token keyword">function</span> <span class="token function">fn6</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">fn5</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// external方法的调用</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 合约地址//合约调用者地址/合约创建者地址</span>
+<span class="token builtin">address</span> <span class="token keyword">public</span> owner1<span class="token punctuation">;</span>
+<span class="token builtin">address</span> <span class="token keyword">public</span> owner2<span class="token punctuation">;</span>
+<span class="token builtin">address</span> <span class="token keyword">public</span> owner3<span class="token punctuation">;</span>
+
+<span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    owner1 <span class="token operator">=</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//合约地址</span>
+    owner2 <span class="token operator">=</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+<span class="token comment">// 谁调用, msg.sender就是谁</span>
+<span class="token keyword">function</span> <span class="token function">fn7</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>合约属性：type关键字
+<ul><li>用于调用另一个合约<div class="language-solidity extra-class"><pre class="language-solidity"><code>
+
+<span class="token keyword">contract</span> <span class="token class-name">Demo</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">type</span><span class="token punctuation">(</span>Hello<span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">creationCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">type</span><span class="token punctuation">(</span>Hello<span class="token punctuation">)</span><span class="token punctuation">.</span>creationCode<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">runtimeCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">type</span><span class="token punctuation">(</span>Hello<span class="token punctuation">)</span><span class="token punctuation">.</span>runtimeCode<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li></ul></li> <li><p>import 导入声明</p></li></ol> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">import</span> <span class="token string">&quot;./hello.sol&quot;</span>  <span class="token keyword">as</span> Test<span class="token punctuation">;</span><span class="token comment">// 本地导入</span>
+<span class="token comment">// 遇到冲突的时候按需导入；</span>
+<span class="token keyword">import</span> xx <span class="token keyword">as</span> x <span class="token keyword">from</span> <span class="token string">&quot;./hello.sol&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">&quot;https://github.com/xxx&quot;</span> <span class="token comment">// 导入网络文件</span>
+<span class="token comment">// 安装导入</span>
+<span class="token comment">// npm install @xxx</span>
+<span class="token comment">// import &quot;@xxx&quot;</span>
+</code></pre></div><ol start="5"><li>interface：接口</li></ol> <div class="language-solidity extra-class"><pre class="language-solidity"><code>
+<span class="token keyword">contract</span> <span class="token class-name">Cat</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        age<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;cat eat fish&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">sleep1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;sleep1&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> age<span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        age <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;dog miss you&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">sleep2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;sleep2&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">AnimalEat</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token builtin">address</span> _addr<span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        AnimalEat general <span class="token operator">=</span> <span class="token function">AnimalEat</span><span class="token punctuation">(</span>_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> general<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 返回接口I 的 bytes4 类型的接口 ID</span>
+    <span class="token keyword">function</span> <span class="token function">interfaceId</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bytes4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">type</span><span class="token punctuation">(</span>AnimalEat<span class="token punctuation">)</span><span class="token punctuation">.</span>interfaceId<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ol start="6"><li>library：库合约</li></ol> <ul><li>库与合约类似，但它的目的是在一个指定的地址，且仅部署一次，然后通过 EVM 的特性来复用代码。</li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">library</span> <span class="token class-name">Set</span><span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Data</span> <span class="token punctuation">{</span> <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">uint</span> <span class="token operator">=&gt;</span> <span class="token builtin">bool</span><span class="token punctuation">)</span> flags <span class="token punctuation">;</span><span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">111</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">UseSet</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> Set<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="全局的以太币单位"><a href="#全局的以太币单位" class="header-anchor">#</a> 全局的以太币单位</h3> <ol><li><code>wei</code> <code>gwei</code> <code>ether</code> <ul><li>最小单位 wei</li> <li>1 ETH =10 <strong>9 gwei = 10</strong>18 wei</li></ul></li></ol> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">DanWei</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 返回true</span>
+    <span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span> a<span class="token punctuation">,</span> <span class="token builtin">bool</span> b<span class="token punctuation">,</span> <span class="token builtin">bool</span> c<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> <span class="token number">1</span> wei <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        b <span class="token operator">=</span> <span class="token number">1</span> gwei <span class="token operator">==</span> <span class="token number">1e9</span><span class="token punctuation">;</span>
+        c <span class="token operator">=</span> <span class="token number">1</span> ether <span class="token operator">==</span> <span class="token number">1e18</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>变量使用以太币单位</li></ol> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">DanWei2</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> amount<span class="token punctuation">;</span>
+
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        amount <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">fnEth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> amount <span class="token operator">+</span> <span class="token number">1</span> ether<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+     <span class="token keyword">function</span> <span class="token function">fnGwei</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> amount <span class="token operator">+</span> <span class="token number">1</span> gwei<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+     <span class="token keyword">function</span> <span class="token function">fnVar</span><span class="token punctuation">(</span><span class="token builtin">uint256</span> amountEth<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> amount <span class="token operator">+</span> amountEth <span class="token operator">*</span><span class="token number">1</span> ether<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="接收以太币"><a href="#接收以太币" class="header-anchor">#</a> 接收以太币</h3> <p>三个接收ETH相关的关键字： payable fallback(*需要花时间理解)  receive</p> <ul><li>payable
+<ul><li>function</li> <li>address</li></ul></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">&gt;=</span><span class="token version number">0.8.2</span> <span class="token operator">&lt;</span><span class="token version number">0.9.0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Payable</span> <span class="token punctuation">{</span>
+    <span class="token comment">// payable标记函数</span>
+    <span class="token keyword">function</span> <span class="token function">deposit1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">deposit2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment">// payable标记地址</span>
+    <span class="token keyword">function</span> <span class="token function">withdraw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span>
+        <span class="token keyword">payable</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">transfer</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 通过balance属性来查看余额</span>
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li><p>fallback</p> <ul><li>语法：
+<ul><li><code>fallback() external [payable]</code></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">Payable2</span> <span class="token punctuation">{</span>
+    <span class="token keyword">event</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token builtin">string</span> funName<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">from</span><span class="token punctuation">,</span> <span class="token builtin">uint256</span> value<span class="token punctuation">,</span> <span class="token builtin">bytes</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">deposit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment">// 通过balance属性来查看余额</span>
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;fallback&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span>msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li><code>fallback(bytes calldata input) external [payable] returns (bytes memory output)</code></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">Payable3</span> <span class="token punctuation">{</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">public</span> inputData1<span class="token punctuation">;</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">public</span> inputData2<span class="token punctuation">;</span>
+
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">calldata</span> input <span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span> output<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        inputData1 <span class="token operator">=</span> input<span class="token punctuation">;</span>
+        inputData2 <span class="token operator">=</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">;</span> <span class="token comment">// input 等于msg.data</span>
+        <span class="token keyword">return</span> input<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>msg.data可以通过abi.decode解码</li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">StoneCat</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> age <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">public</span> inputData1<span class="token punctuation">;</span>
+    <span class="token builtin">bytes</span> <span class="token keyword">public</span> inputData2<span class="token punctuation">;</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> c<span class="token punctuation">;</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> d<span class="token punctuation">;</span>
+
+    <span class="token keyword">event</span> <span class="token function">eventFallback</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    fallback <span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">calldata</span> input<span class="token punctuation">)</span> <span class="token keyword">external</span>  <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bytes</span> <span class="token keyword">memory</span> output<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        age<span class="token operator">++</span><span class="token punctuation">;</span>
+        inputData1 <span class="token operator">=</span> input<span class="token punctuation">;</span>
+        inputData2 <span class="token operator">=</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+        <span class="token punctuation">(</span>c<span class="token punctuation">,</span> d<span class="token punctuation">)</span> <span class="token operator">=</span> abi<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">,</span> <span class="token builtin">uint256</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">eventFallback</span><span class="token punctuation">(</span><span class="token string">&quot;fallbak&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> input<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">AnimalEat</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">memory</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token builtin">address</span> _addr<span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span> success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        AnimalEat general <span class="token operator">=</span> <span class="token function">AnimalEat</span><span class="token punctuation">(</span>_addr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">(</span>success<span class="token punctuation">,</span> <span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token builtin">address</span><span class="token punctuation">(</span>general<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>abi<span class="token punctuation">.</span><span class="token function">encodeWithSignature</span><span class="token punctuation">(</span><span class="token string">&quot;eat()&quot;</span><span class="token punctuation">,</span><span class="token number">123</span><span class="token punctuation">,</span><span class="token number">456</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>success<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>回调函数在两种情况下被调用
+<ul><li>向合约转账</li> <li>执行合约不存在的方法</li></ul></li> <li>带参数的fallback</li></ul></li> <li><p>receive</p> <ul><li>语法：<code>receive() external payable {}</code></li> <li>payable是必须的</li> <li>没有function关键字<div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">Payable4</span> <span class="token punctuation">{</span>
+    <span class="token keyword">event</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token builtin">string</span> funName<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">from</span><span class="token punctuation">,</span> <span class="token builtin">uint256</span> value<span class="token punctuation">,</span> <span class="token builtin">bytes</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 通过balance属性来查看余额</span>
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;receive&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span>msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div></li></ul></li> <li><p>receive和fallback共存的调用关系
+/**</p> <p>调用时发送了ETH
+|
+判断 msg.data 是否为空
+/     <br>
+是       否
+是否存在 receive   fallbak()
+/   <br>
+存在   不存在
+/        <br>
+receive()   fallbak()</p></li></ul> <p>*/</p> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// 这个合约会保留所有发送给它的以太币，没有办法返还。</span>
+<span class="token keyword">contract</span> <span class="token class-name">Payable5</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> x<span class="token punctuation">;</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> y<span class="token punctuation">;</span>
+
+    <span class="token keyword">event</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token builtin">string</span> funName<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">from</span><span class="token punctuation">,</span> <span class="token builtin">uint256</span> value<span class="token punctuation">,</span> <span class="token builtin">bytes</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 纯转账调用这个函数，例如对每个空empty calldata的调用</span>
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        y <span class="token operator">=</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;receive&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 除了纯转账外，所有的调用都会调用这个函数．</span>
+    <span class="token comment">// (因为除了 receive 函数外，没有其他的函数).</span>
+    <span class="token comment">// 任何对合约非空calldata 调用会执行回退函数(即使是调用函数附加以太).</span>
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        y <span class="token operator">=</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;fallback&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="selfdestruct-合约自毁"><a href="#selfdestruct-合约自毁" class="header-anchor">#</a> selfdestruct:合约自毁</h3> <ul><li>功能
+<ul><li><ol><li>销毁合约</li></ol></li> <li><ol start="2"><li>把合约的所有资金强制发送到目标地址</li></ol></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token keyword">contract</span> <span class="token class-name">Kill</span> <span class="token punctuation">{</span>
+    <span class="token builtin">uint256</span> <span class="token keyword">public</span> aaa <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span>
+        <span class="token keyword">selfdestruct</span><span class="token punctuation">(</span><span class="token keyword">payable</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">bbb</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">pure</span> <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Helper</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 没有`fallback`和`receive`,正常没办法接收ETH主币</span>
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// kill后，此时Helper余额就会强制接收到ETH主币</span>
+    <span class="token keyword">function</span> <span class="token function">kill</span><span class="token punctuation">(</span>Kill _kill<span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span>
+        _kill<span class="token punctuation">.</span><span class="token function">kill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+</code></pre></div></li> <li>除非必要，不建议销毁合约</li> <li>使用selfdestruct与从硬盘上删除数据是不同的</li> <li>即便一个合约的代码中没有显式地调用selfdestruct,它仍然有可能通过delegatecall或callcode执行自毁操作。</li></ul> <h2 id="demo1-同志们好"><a href="#demo1-同志们好" class="header-anchor">#</a> Demo1：同志们好</h2> <ul><li><p>需求
+同志们好的场景：
+领导说“同志们好”，回复“领导好”
+领导说“同志们辛苦了”，回复“为人民服务”</p></li> <li><p>代码</p></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">&gt;=</span><span class="token version number">0.8.2</span> <span class="token operator">&lt;</span><span class="token version number">0.9.0</span><span class="token punctuation">;</span>
+
+<span class="token comment">/// @title 一个模拟同志们好的简单演示</span>
+<span class="token comment">/// @author Anbang</span>
+<span class="token comment">/// @notice 您只能将此合约用于最基本的模拟演示</span>
+<span class="token comment">/// @dev 本章主要内容的实战练习</span>
+<span class="token comment">/// @custom:experimental 这是实验的合约。</span>
+<span class="token keyword">contract</span> <span class="token class-name">HelloComrades</span> <span class="token punctuation">{</span>
+    <span class="token comment">/*
+     * ========================================
+     * State Variables
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 用于标记当前进度</span>
+    <span class="token comment">/// @dev 0:等待领导说&quot;同志们好&quot;，</span>
+    <span class="token comment">/// @dev 1:等待同志们说&quot;领导好&quot;，</span>
+    <span class="token comment">/// @dev 2:等待领导说&quot;同志们辛苦了&quot;</span>
+    <span class="token comment">/// @dev 3:等待同志们说&quot;为人民服务&quot;</span>
+    <span class="token comment">/// @dev 4:等待销毁。</span>
+    <span class="token comment">/// @return 当前进度</span>
+    <span class="token builtin">uint8</span> <span class="token keyword">public</span> step <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/// @notice 用于标记领导地址</span>
+    <span class="token comment">/// @dev 不可变量，需要在构造函数内指定，以后就不能修改了</span>
+    <span class="token comment">/// @return 当前领导的地址</span>
+    <span class="token builtin">address</span> <span class="token keyword">public</span> immutable leader<span class="token punctuation">;</span>
+
+    <span class="token comment">/// @notice 用于遇到错误时的无脑复读机式回复</span>
+    <span class="token builtin">string</span> <span class="token keyword">internal</span> <span class="token keyword">constant</span> UNKNOWN <span class="token operator">=</span>
+        unicode<span class="token string">&quot;我不知道如何处理它,你找相关部门吧!&quot;</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Events
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 用于对当前 step 被修改时的信息通知</span>
+    <span class="token comment">/// @dev 只要发生 step 修改，都需要抛出此事件</span>
+    <span class="token comment">/// @param 当前修改的最新 step</span>
+    <span class="token keyword">event</span> <span class="token function">Step</span><span class="token punctuation">(</span><span class="token builtin">uint8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/// @notice 用于对当前合约的金额变动通知</span>
+    <span class="token comment">/// @dev 只要发生金额修改，都需要抛出此事件</span>
+    <span class="token comment">/// @param tag: 标记内容</span>
+    <span class="token comment">/// @param from: 当前地址</span>
+    <span class="token comment">/// @param value: 当前发送金额</span>
+    <span class="token comment">/// @param data: 当前调用的data内容</span>
+    <span class="token keyword">event</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token builtin">string</span> tag<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">from</span><span class="token punctuation">,</span> <span class="token builtin">uint256</span> value<span class="token punctuation">,</span> <span class="token builtin">bytes</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Modifier
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 检查只能领导调用</span>
+    <span class="token comment">/// @dev 用于领导专用函数</span>
+    <span class="token keyword">modifier</span> <span class="token function">onlyLeader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender <span class="token operator">==</span> leader<span class="token punctuation">,</span> unicode<span class="token string">&quot;必须领导才能说&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">_</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 检查只能非领导调用</span>
+    <span class="token comment">/// @dev 用于非领导地址检测</span>
+    <span class="token keyword">modifier</span> <span class="token function">notLeader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>
+            msg<span class="token punctuation">.</span>sender <span class="token operator">!=</span> leader<span class="token punctuation">,</span>
+            unicode<span class="token string">&quot;不需要领导回答，需要同志们来回答&quot;</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">_</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Errors
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 自定义的错误，这种注释内容会在错误时显示出来</span>
+    <span class="token comment">/// @dev 用于所有未知错误</span>
+    <span class="token comment">/// This is a message des info.需要上方空一行，才可以显示出来</span>
+    error <span class="token function">MyError</span><span class="token punctuation">(</span><span class="token builtin">string</span> msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Constructor
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @dev 用于领导地址的指定，后续不可修改</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token builtin">address</span> _leader<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>_leader <span class="token operator">!=</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;invalid address&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        leader <span class="token operator">=</span> _leader<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Functions
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 用于领导说&quot;同志们好&quot;</span>
+    <span class="token comment">/// @dev 只能在 step 为 0 时调用，只能领导调用，并且只能说&quot;同志们好&quot;</span>
+    <span class="token comment">/// @param content: 当前领导说的内容</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表成功</span>
+    <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">calldata</span> content<span class="token punctuation">)</span> <span class="token keyword">external</span> onlyLeader <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span><span class="token punctuation">(</span>UNKNOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">review</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> unicode<span class="token string">&quot;同志们好&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span> <span class="token function">MyError</span><span class="token punctuation">(</span>unicode<span class="token string">&quot;必须说:同志们好&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        step <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Step</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 用于同志们说&quot;领导好&quot;</span>
+    <span class="token comment">/// @dev 只能在 step 为 1 时调用，只能非领导调用，并且只能说&quot;领导好&quot;</span>
+    <span class="token comment">/// @param content: 当前同志们说的内容</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表成功</span>
+    <span class="token keyword">function</span> <span class="token function">helloRes</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">calldata</span> content<span class="token punctuation">)</span>
+        <span class="token keyword">external</span>
+        notLeader
+        <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">!=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span><span class="token punctuation">(</span>UNKNOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">review</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> unicode<span class="token string">&quot;领导好&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span> <span class="token function">MyError</span><span class="token punctuation">(</span>unicode<span class="token string">&quot;必须说:领导好&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        step <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Step</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 用于领导说&quot;同志们辛苦了&quot;</span>
+    <span class="token comment">/// @dev 只能在 step 为 2 时调用，只能领导调用，并且只能说&quot;同志们辛苦了&quot;,还需给钱</span>
+    <span class="token comment">/// @param content: 当前领导说的内容</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表成功</span>
+    <span class="token keyword">function</span> <span class="token function">comfort</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">calldata</span> content<span class="token punctuation">)</span>
+        <span class="token keyword">external</span>
+        <span class="token keyword">payable</span>
+        onlyLeader
+        <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">!=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span><span class="token punctuation">(</span>UNKNOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">review</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> unicode<span class="token string">&quot;同志们辛苦了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span> <span class="token function">MyError</span><span class="token punctuation">(</span>unicode<span class="token string">&quot;必须说:同志们辛苦了&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>msg<span class="token punctuation">.</span>value <span class="token operator">&lt;</span> <span class="token number">2</span> ether<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span> <span class="token function">MyError</span><span class="token punctuation">(</span>unicode<span class="token string">&quot;给钱！！！最少2个以太币&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        step <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Step</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;comfort&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 用于同志们说&quot;为人民服务&quot;</span>
+    <span class="token comment">/// @dev 只能在 step 为 3 时调用，只能非领导调用，并且只能说&quot;为人民服务&quot;</span>
+    <span class="token comment">/// @param content: 当前同志们说的内容</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表成功</span>
+    <span class="token keyword">function</span> <span class="token function">comfortRes</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">calldata</span> content<span class="token punctuation">)</span>
+        <span class="token keyword">external</span>
+        notLeader
+        <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">!=</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span><span class="token punctuation">(</span>UNKNOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">review</span><span class="token punctuation">(</span>content<span class="token punctuation">,</span> unicode<span class="token string">&quot;为人民服务&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span> <span class="token function">MyError</span><span class="token punctuation">(</span>unicode<span class="token string">&quot;必须说:为人民服务&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        step <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Step</span><span class="token punctuation">(</span>step<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 用于领导对</span>
+    <span class="token comment">/// @dev 只能在 step 为 4 时调用，只能领导调用</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表成功</span>
+    <span class="token keyword">function</span> <span class="token function">destruct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> onlyLeader <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>step <span class="token operator">!=</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">revert</span><span class="token punctuation">(</span>UNKNOWN<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;selfdestruct&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">selfdestruct</span><span class="token punctuation">(</span><span class="token keyword">payable</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/*
+     * ========================================
+     * Helper
+     * ========================================
+     */</span>
+
+    <span class="token comment">/// @notice 用于检查调用者说的话</span>
+    <span class="token comment">/// @dev 重复检测内容的代码抽出</span>
+    <span class="token comment">/// @param content: 当前内容</span>
+    <span class="token comment">/// @param correctContent: 正确内容</span>
+    <span class="token comment">/// @return 当前调用的状态，true 代表内容相同，通过检测</span>
+     <span class="token keyword">function</span> <span class="token function">review</span><span class="token punctuation">(</span><span class="token builtin">string</span> <span class="token keyword">calldata</span> content<span class="token punctuation">,</span> <span class="token builtin">string</span> <span class="token keyword">memory</span> correctContent<span class="token punctuation">)</span>
+     <span class="token keyword">private</span>
+     <span class="token keyword">pure</span>
+     <span class="token keyword">returns</span><span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+         <span class="token keyword">return</span> <span class="token function">keccak256</span><span class="token punctuation">(</span>abi<span class="token punctuation">.</span><span class="token function">encodePacked</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token function">keccak256</span><span class="token punctuation">(</span>abi<span class="token punctuation">.</span><span class="token function">encodePacked</span><span class="token punctuation">(</span>correctContent<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;receive&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token keyword">emit</span> <span class="token function">Log</span><span class="token punctuation">(</span><span class="token string">&quot;fallback&quot;</span><span class="token punctuation">,</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/// @notice 用于获取当前合约内的余额</span>
+    <span class="token comment">/// @dev 一个获取当前合约金额的辅助函数</span>
+    <span class="token comment">/// @return 当前合约的余额</span>
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><ul><li>使用指导</li></ul> <div class="language-sh extra-class"><pre class="language-sh"><code>部署合约
+需要输入 Leader 地址【选择一个测试钱包地址】作为参数
+点击 【leader】 查看信息
+点击 【destruct】 进行销毁
+此时报错，因为步骤不对
+【hello】
+输入错的内容
+输入同志们好
+查看 step 值
+【helloRes】
+输入错的内容，此时提示，账号不对。
+切换账号后输入错的内容，提示必须说:领导好
+输入领导好
+查看 step 值
+【comfort】
+输入错的内容，此时提示账号权限不对
+切换账号后，输入错的内容，提示必须说:同志们辛苦了
+点击【hello】，此时说提示我不知道如何处理它,你找相关部门吧<span class="token operator">!</span>，因为 step 不对。
+输入同志们辛苦了，此时提示必须给钱；（只有给了 <span class="token number">2</span> 个以上的以太币，才能说同志们辛苦了。）
+我们给 <span class="token number">2</span> 个 wei，假装是 <span class="token number">2</span> 个 ETH，看能否通过。（结果还是不能通过）
+给 <span class="token number">2</span> 个以太，并输入同志们辛苦了。此时可以通过了
+点击【getBalance】查看合约的余额
+查看 step 值
+【comfortRes】
+点击【helloRes】，此时说提示我不知道如何处理它,你找相关部门吧<span class="token operator">!</span>，因为 step 不对。
+切换账号后，输入错的内容，提示必须说:为人民服务
+输入为人民服务
+【calldata】调用
+输入 1wei ，无参数直接调用；查看交易详情内的 logs，此时是 receive，余额变化多 1wei
+输入 2wei，参数使用0x00调用，查看交易详情内的 logs，此时是 fallback，余额变化多 2wei
+【destruct】调用，注意查看余额变化。
+注意查看当前 leader 地址的余额
+先使用非 leader 地址触发【destruct】，提示错误
+然后是 leader 地址触发。查看交易详情种的 logs
+查看 leader 地址/ balance/step，都已经是默认值
+触发所有函数，此时函数都可以使用，但是都是默认值。
+</code></pre></div><h2 id="demo2-存钱罐合约"><a href="#demo2-存钱罐合约" class="header-anchor">#</a> Demo2: 存钱罐合约</h2> <ul><li><p>需求
+零存整取：<br>
+所有人都可以存钱（ETH）
+只有合约 owner 才可以取钱
+只要取钱，合约就销毁掉 selfdestruct</p></li> <li><p>需求扩展：支持主币以外的资产</p> <ul><li>ERC20</li> <li>ERC721</li></ul></li> <li><p>代码
+下面是只适合一个人的存钱罐</p></li></ul> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// SPDX-License-Identifier: MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.17</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">Bank</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 状态变量</span>
+    <span class="token builtin">address</span> <span class="token keyword">public</span> immutable owner<span class="token punctuation">;</span>
+
+    <span class="token comment">// 事件</span>
+    <span class="token keyword">event</span> <span class="token function">Deposit</span><span class="token punctuation">(</span><span class="token builtin">address</span> _ads<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">event</span> <span class="token function">Withdraw</span><span class="token punctuation">(</span><span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// receive</span>
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token keyword">emit</span> <span class="token function">Deposit</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 构造函数</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        owner <span class="token operator">=</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 方法</span>
+    <span class="token keyword">function</span> <span class="token function">withdraw</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender <span class="token operator">==</span> owner<span class="token punctuation">,</span> <span class="token string">&quot;Not Owner&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Withdraw</span><span class="token punctuation">(</span><span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">selfdestruct</span><span class="token punctuation">(</span><span class="token keyword">payable</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">getBalance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="demo3-weth合约"><a href="#demo3-weth合约" class="header-anchor">#</a> Demo3: WETH合约</h2> <p>WETH 是包装 ETH 主币，作为 ERC20 的合约。
+标准的 ERC20 合约包括如下几个：</p> <ol><li>3 个查询</li></ol> <ul><li>balanceOf: 查询指定地址的 Token 数量</li> <li>allowance: 查询指定地址对另外一个地址的剩余授权额度</li> <li>totalSupply: 查询当前合约的 Token 总量</li></ul> <ol start="2"><li>2 个交易</li></ol> <ul><li>transfer: 从当前调用者地址发送指定数量的 Token 到指定地址。
+<ul><li>这是一个写入方法，所以还会抛出一个 Transfer 事件。</li></ul></li> <li>transferFrom: 当向另外一个合约地址存款时，对方合约必须调用 transferFrom 才可以把 Token 拿到它自己的合约中。</li></ul> <ol start="3"><li>2 个事件</li></ol> <ul><li>Transfer</li> <li>Approval</li></ul> <ol start="4"><li>1 个授权
+approve: 授权指定地址可以操作调用者的最大 Token 数量。</li></ol> <div class="language-solidity extra-class"><pre class="language-solidity"><code><span class="token comment">// SPDX-License-Identifier: MIT</span>
+<span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">^</span><span class="token version number">0.8.17</span><span class="token punctuation">;</span>
+
+<span class="token keyword">contract</span> <span class="token class-name">WETH</span> <span class="token punctuation">{</span>
+    <span class="token builtin">string</span> <span class="token keyword">public</span> name <span class="token operator">=</span> <span class="token string">&quot;Wrapped Ether&quot;</span><span class="token punctuation">;</span>
+    <span class="token builtin">string</span> <span class="token keyword">public</span> symbol <span class="token operator">=</span> <span class="token string">&quot;WETH&quot;</span><span class="token punctuation">;</span>
+    <span class="token builtin">uint8</span> <span class="token keyword">public</span> decimals <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">event</span> <span class="token function">Approval</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token keyword">indexed</span> src<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">indexed</span> delegateAds<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">event</span> <span class="token function">Transfer</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token keyword">indexed</span> src<span class="token punctuation">,</span> <span class="token builtin">address</span> <span class="token keyword">indexed</span> toAds<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">event</span> <span class="token function">Deposit</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token keyword">indexed</span> toAds<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">event</span> <span class="token function">Withdraw</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token keyword">indexed</span> src<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token keyword">public</span> balanceOf<span class="token punctuation">;</span>
+    <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token keyword">mapping</span><span class="token punctuation">(</span><span class="token builtin">address</span> <span class="token operator">=&gt;</span> <span class="token builtin">uint256</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">public</span> allowance<span class="token punctuation">;</span>
+
+
+    <span class="token keyword">function</span> <span class="token function">deposit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        balanceOf<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">+=</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Deposit</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">withdraw</span><span class="token punctuation">(</span><span class="token builtin">uint256</span> amount<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>balanceOf<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        balanceOf<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+        <span class="token keyword">payable</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">transfer</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Withdraw</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">totalSupply</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">view</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint256</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token builtin">address</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">approve</span><span class="token punctuation">(</span><span class="token builtin">address</span> delegateAds<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        allowance<span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span><span class="token punctuation">[</span>delegateAds<span class="token punctuation">]</span> <span class="token operator">=</span> amount<span class="token punctuation">;</span>
+        <span class="token keyword">emit</span> <span class="token function">Approval</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> delegateAds<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">transfer</span><span class="token punctuation">(</span><span class="token builtin">address</span> toAds<span class="token punctuation">,</span> <span class="token builtin">uint256</span> amount<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">transferFrom</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">,</span> toAds<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">function</span> <span class="token function">transferFrom</span><span class="token punctuation">(</span>
+        <span class="token builtin">address</span> src<span class="token punctuation">,</span>
+        <span class="token builtin">address</span> toAds<span class="token punctuation">,</span>
+        <span class="token builtin">uint256</span> amount
+    <span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">bool</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">require</span><span class="token punctuation">(</span>balanceOf<span class="token punctuation">[</span>src<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>src <span class="token operator">!=</span> msg<span class="token punctuation">.</span>sender<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">require</span><span class="token punctuation">(</span>allowance<span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">&gt;=</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            allowance<span class="token punctuation">[</span>src<span class="token punctuation">]</span><span class="token punctuation">[</span>msg<span class="token punctuation">.</span>sender<span class="token punctuation">]</span> <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        balanceOf<span class="token punctuation">[</span>src<span class="token punctuation">]</span> <span class="token operator">-=</span> amount<span class="token punctuation">;</span>
+        balanceOf<span class="token punctuation">[</span>toAds<span class="token punctuation">]</span> <span class="token operator">+=</span> amount<span class="token punctuation">;</span>
+
+        <span class="token keyword">emit</span> <span class="token function">Transfer</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> toAds<span class="token punctuation">,</span> amount<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">fallback</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token function">deposit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">receive</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">external</span> <span class="token keyword">payable</span> <span class="token punctuation">{</span>
+        <span class="token function">deposit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="问答题"><a href="#问答题" class="header-anchor">#</a> 问答题</h2> <ol><li>因为区块可以被撤回，编码时候有些需要注意的？<br>
+会出现你发起的交易被回滚甚至从区块链中抹除掉的可能。区块链不能保证当前的交易一定包含在下一个区块中。如果你开发的合约有顺序关系，要注意这个特性。合约内的逻辑，不能将某一个块作为依赖。</li> <li>聊一聊存储，内存，栈的内容</li></ol> <ul><li>存储：每一个地址都有一个持久化的内存，存储是将 256 位字映射到 256 位字的键值存储区。所以数据类型的最大值是 uint256/int256/bytes32，合约只能读写存储区内属于自己的部分。</li> <li>内存：合约会试图为每一次消息调用获取一块被重新擦拭干净的内存实例。所以储存在内存中的数据，在函数执行完以后就会被销毁。内存是线性的，可按字节级寻址，但读的长度被限制为 256 位，而写的长度可以是 8 位或 256 位。</li> <li>栈：合约的所有计算都在一个被称为栈（stack）的区域执行，栈最大有 1024 个元素，每一个元素长度是 256 bit；所以调用深度被限制为 1024 ，对复杂的操作，推荐使用循环而不是递归。</li></ul> <ol start="3"><li>interface 如何使用</li> <li>string message = &quot;Hello World!&quot;; 这种没有明确标注可视范围的情况下，message 的可视范围是什么? 是 internal 还是 private?<br>
+答：private</li> <li>变量如何使用以太币单位？<br>
+如果想用以太币单位来计算输入参数，你可以使用乘法来转换: amountEth * 1 ether</li> <li>receive 和 fallback 共存的调用？<br>
+只有 msg.data 为空，并且存在 receive 的时候，才会运行 receive。</li> <li>receive 和 fallback 区别？<br>
+receive 只负责接收主币
+调用没有的方法时候执行,因为可以设置 payable，可以接收网络主币。尽管 fallback 可以是 payable 的，但并不建议这么做，声明为 payable 之后，其所消耗的 gas 最大量就会被限定在 2300。</li> <li>合约没有 receive 和 fallback 可以接受以太币么？<br>
+可以接受，可以方法标记 payable 进行转账</li> <li>聊一聊合约自毁 selfdestruct。<br>
+合约代码从区块链上移除的唯一方式是合约在合约地址上的执行自毁操作selfdestruct 。selfdestruct 作用是 销毁合约，并把余额发送到指定地址类型Address。
+销毁合约:它使合约变为无效，删除该地址地字节码。
+它把合约的所有资金强制发送到目标地址。
+如果接受的地址是合约，即使里面没有 fallback 和 receive 也会发送过去
+除非必要，不建议销毁合约。
+如果有人发送以太币到移除的合约，这些以太币可能将永远丢失。
+如果要禁用合约，可以通过修改某个内部状态让所有函数无法执行，这样也可以达到目的。
+即便一个合约的代码中没有显式地调用 selfdestruct，它仍然有可能通过 delegatecall 或 callcode 执行自毁操作。
+即使一个合约被 selfdestruct 删除，它仍然是区块链历史的一部分，区块链的链条中不可能无缘无故消失一个块，这样他们就没办法做校验了。 因此，使用 selfdestruct 与从硬盘上删除数据是不同的。</li> <li>合约进行selfdestruct后，还可以调用状态变量和函数么？<br>
+可以调用，但是返回默认值。如果想调用，也可以在存档节点里指定未删除的高度进行调用。</li></ol></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/basic/Introduce.html" class="prev">
+          介绍
+        </a></span> <span class="next"><a href="/solidity/basic/SoliditybyExample.html">
+          SoliditybyExample
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#solidity初识" class="sidebar-link reco-side-solidity初识" data-v-b57cc07c>Solidity初识</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#区块链基础" class="sidebar-link reco-side-区块链基础" data-v-b57cc07c>区块链基础</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#hello-world" class="sidebar-link reco-side-hello-world" data-v-b57cc07c>Hello World</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#注释" class="sidebar-link reco-side-注释" data-v-b57cc07c>注释</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#合约结构介绍" class="sidebar-link reco-side-合约结构介绍" data-v-b57cc07c>合约结构介绍</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#全局的以太币单位" class="sidebar-link reco-side-全局的以太币单位" data-v-b57cc07c>全局的以太币单位</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#接收以太币" class="sidebar-link reco-side-接收以太币" data-v-b57cc07c>接收以太币</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#selfdestruct-合约自毁" class="sidebar-link reco-side-selfdestruct-合约自毁" data-v-b57cc07c>selfdestruct:合约自毁</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#demo1-同志们好" class="sidebar-link reco-side-demo1-同志们好" data-v-b57cc07c>Demo1：同志们好</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#demo2-存钱罐合约" class="sidebar-link reco-side-demo2-存钱罐合约" data-v-b57cc07c>Demo2: 存钱罐合约</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#demo3-weth合约" class="sidebar-link reco-side-demo3-weth合约" data-v-b57cc07c>Demo3: WETH合约</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/basic/FirstMetSolidity.html#问答题" class="sidebar-link reco-side-问答题" data-v-b57cc07c>问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/11.f32d6aa6.js" defer></script>
+  </body>
+</html>

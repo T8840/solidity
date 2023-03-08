@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>16.Assembly:内联汇编 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/42.00e1217a.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" aria-current="page" class="active sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">16.Assembly:内联汇编</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_16-assembly-内联汇编"><a href="#_16-assembly-内联汇编" class="header-anchor">#</a> 16.Assembly:内联汇编</h1> <p>使用内联汇编，可以在 Solidity 源程序中嵌入汇编代码，对 EVM 有更细粒度的控制。内联汇编主要用在编写库函数时很有用，一般用于写工具函数，比如椭圆签名解析等。在项目中用汇编编主要是 opensea 的 <a href="https://github.com/ProjectOpenSea/seaport" target="_blank" rel="noopener noreferrer">seaport<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 合约.</p> <p>在合约的内部使用汇编，是在合约内部包含 <code>assembly</code> 关键字进行编写的，在 Solidity <code>inline assembly</code>(内联汇编) 中的语言被称为 Yul。<a href="https://docs.soliditylang.org/zh/latest/yul.html" target="_blank" rel="noopener noreferrer">Yul<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 除了在 Solidity 之中作为 inline assembly 的一部分，也能当作独立的直译语言能够被编译成 bytecode 给不同的后端。</p> <p>注意：内联汇编是一种在底层访问以太坊虚拟机的语言，由于编译器无法对汇编语句进行检查，所以 Solidity 提供的很多重要安全特性都没办法作用于汇编。写汇编代码相对比较困难，很多时候只有在处理一些相对复杂的问题时才需要使用它，并且开发者需要明确知道自己要做什么。</p> <h2 id="_1️⃣-基本格式"><a href="#_1️⃣-基本格式" class="header-anchor">#</a> 1️⃣ 基本格式</h2> <p>通过 <code>assembly {}</code> 包裹代码。并且内部每一行语句不需要使用<code>;</code>显示的标注结束。Assembly 也支持注释，可以使用 <code>//</code> 和 <code>/* */</code> 来进行注释。</p> <p>⚠️ 注意： Inline Assembly 中，代码块之间是不能彼此沟通的，里面声明的变量都是本地变量。</p> <h3 id="例子-不同代码块无法互相访问"><a href="#例子-不同代码块无法互相访问" class="header-anchor">#</a> 例子: 不同代码块无法互相访问</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public view returns (uint256) {
+        assembly {
+            let x := 2
+        }
+        assembly {
+            let y := x // DeclarationError: Identifier &quot;x&quot; not found.
+        }
+    }
+}
+</code></pre></div><p>let 指令执行如下任务：</p> <ul><li>创建一个新的堆栈槽位</li> <li>为变量保留该槽位</li> <li>当到达代码块结束时自动销毁该槽位</li></ul> <p>因此，使用 let 指令在汇编代码块中定义的变量，在代码块外部是无法访问的。但是内部代码块可以访问外部代码块的内容。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure {
+        assembly {
+            let x := 3
+
+            {
+                let y := x // success
+            } // 到此处会销毁y
+        }
+    }
+}
+</code></pre></div><h3 id="例子-简单的加法"><a href="#例子-简单的加法" class="header-anchor">#</a> 例子: 简单的加法</h3> <p>下面是一个计算 <code>_x + _y</code> 的两种写法对比，汇编的语法节省了 <code>1.76%</code> 的 gas。 assembly 核心是更细粒度的控制，省 gas 只是它的外在表现。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    // 输入 1,2 ; 输出 22307 gas
+    function addSolidity(uint256 _x, uint256 _y) public pure returns (uint256) {
+        return (_x + _y);
+    }
+
+    // 输入 1,2 ; 输出 21915 gas
+    function addAssembly(uint256 _x, uint256 _y) public pure returns (uint256) {
+        assembly {
+            // let result 是声明一个变量 result
+            // add(_x, _y) 是计算 x + y 的结果
+            // := 是将 x + y 的结果赋值给变量 result
+            let result := add(_x, _y)
+
+            // mstore(0x0, result) 在内存 `0x0` 的位置储存 `result`
+            mstore(0x0, result)
+
+            // 从内存索引 0x0 位置返回32字节
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><h2 id="_2️⃣-语言基础"><a href="#_2️⃣-语言基础" class="header-anchor">#</a> 2️⃣ 语言基础</h2> <p>Yul 提供了高级结构，如 <code>for</code> 循环、<code>if</code> 语句 <code>switch</code> 和函数调用等等，下面按照分类进行介绍。</p> <p>在 Inline Assembly 中，以下几个点很重要：</p> <ul><li>赋值: 使用的是<code>:=</code>，而不是<code>=</code>。</li> <li>声明变量: 使用 <code>let</code> 声明；（不是正常带有指定类型的强类型方式）</li></ul> <h3 id="声明与赋值"><a href="#声明与赋值" class="header-anchor">#</a> 声明与赋值</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256, uint256) {
+        assembly {
+            let x := 2  // 声明 x，赋值为2
+            let y       // 声明 y，初始化为 0
+            y := 5      // 赋值 y 为5
+
+            mstore(0x0, x) // 内存中储存 x
+            mstore(add(0x0, 32), y) // 内存中移动32位，再储存y
+
+            // 返回内存中 0 - 64 的数据
+            return(0x0, 64)
+        }
+    }
+}
+</code></pre></div><p>结果就是 <code>2,5</code>；</p> <p>在 Solidity 汇编中字面量的写法与 Solidity 一致。但是 字符串字面量 最多可以包含 32 个字符。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure {
+        assembly {
+            let a := 0x123 // 16进制
+            let b := 42 // 10进制
+            let c := &quot;hello world&quot; // 字符串
+            let d := &quot;very long string more than 32 bytes&quot; // 长度 35 的 字符串，错误！
+        }
+    }
+}
+</code></pre></div><h3 id="汇编只能读取局部变量"><a href="#汇编只能读取局部变量" class="header-anchor">#</a> 汇编只能读取局部变量</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    uint256 a = 2;
+    function demoAssembly() public pure {
+        uint256 b = 5;
+        assembly {
+            // 可以读取 x 和 y
+            let x := add(2, 3)
+            let y := 10
+            let z := add(x, y)
+        }
+        assembly {
+            // 可以读取 x 和 b
+            let x := add(2, 3)
+            let y := mul(x, b)
+        }
+        assembly {
+            let x := add(2, 3)
+
+            // ❌ TypeError: Only local variables are supported.
+            // To access storage variables, use the &quot;.slot&quot; and &quot;.offset&quot; suffixes.
+            let y := mul(x, a)
+        }
+    }
+}
+</code></pre></div><h2 id="_3️⃣-条件判断"><a href="#_3️⃣-条件判断" class="header-anchor">#</a> 3️⃣ 条件判断</h2> <ul><li>if</li> <li>switch</li></ul> <h3 id="if"><a href="#if" class="header-anchor">#</a> if</h3> <p>特点如下</p> <ul><li>只有 if ，没有 else</li> <li>if 语句强制要求代码块使用大括号，<code>{}</code>不允许省略</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure {
+        uint256 x;
+        assembly {
+            // success
+            if iszero(x) {
+                x := sub(1, x)
+            }
+
+            // fail: 没有使用 {} 包裹代码
+            // if iszero(x) revert(0, 0)
+        }
+    }
+}
+</code></pre></div><p>如果需要在 Solidity 内联汇编中检查多种条件，可以考虑使用 switch 语句。</p> <h3 id="switch"><a href="#switch" class="header-anchor">#</a> switch</h3> <p>switch 语句支持 一个默认分支 default，当表达式的值不匹配任何其他分支条件时，将 执行默认分支的代码。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 x) public pure returns (uint256 result) {
+        assembly {
+            switch x
+            case 0 {
+                result := 0
+            }
+            case 1 {
+                result := 1
+            }
+            default {
+                result := mul(x, x)
+            }
+        }
+    }
+}
+</code></pre></div><h2 id="_4️⃣-for-循环"><a href="#_4️⃣-for-循环" class="header-anchor">#</a> 4️⃣ for 循环</h2> <p>for 循环也包含 3 个元素</p> <ul><li>初始化：比如<code>let i := 0</code></li> <li>执行条件：比如<code>lt(i, n)</code> ，必须是函数风格表达式</li> <li>迭代后续步骤：比如<code>add(i, 1)</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 result) {
+        uint256 leng = 10;
+
+        assembly {
+            for
+            { let i := 0 }
+            lt(i, leng)
+            { i := add(i, 1) }
+            {
+                result := add(result, i)
+            }
+
+            // 下面可以省略
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><p>for 循环的<strong>初始化部分</strong>和<strong>迭代后续步骤</strong>可以留空 , 改写为下面的格式</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 result) {
+        uint256 leng = 10;
+        assembly {
+            let i := 0 // 初始条件写在这
+            for {} lt(i, leng) {} {
+                // 核心部分
+                result := add(result, i)
+
+                // 迭代后续步骤写在这
+                i := add(i, 1)
+            }
+
+            // 可以省略
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><p>备注: <code>continue</code> or <code>break</code> 语句只能在 <code>for</code> 循环体内使用</p> <h2 id="_5️⃣-函数的定义和使用"><a href="#_5️⃣-函数的定义和使用" class="header-anchor">#</a> 5️⃣ 函数的定义和使用</h2> <p>函数的运行机制如下：</p> <ul><li>从堆栈提取参数</li> <li>将结果压入堆栈</li> <li>和 Solidity 函数不同，不需要指定汇编函数的可见性
+<ul><li>例如 public 或 private， 因为汇编函数仅在定义所在的汇编代码块内有效。</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 free_memory_pointer) {
+        assembly {
+            // 函数定义
+            function allocate(length) -&gt; pos {
+                pos := mload(0x40)
+                mstore(0x40, add(pos, length))
+            }
+
+            // 函数使用
+            free_memory_pointer := allocate(64)
+        }
+    }
+}
+</code></pre></div><h2 id="_6️⃣-evm-内置函数-内置操作码"><a href="#_6️⃣-evm-内置函数-内置操作码" class="header-anchor">#</a> 6️⃣ EVM 内置函数/内置操作码</h2> <ul><li>算数操作
+<ul><li><code>add</code>: 加法</li> <li><code>mul</code>:</li></ul></li> <li>比较操作
+<ul><li><code>lt</code></li> <li><code>gt</code></li></ul></li> <li>位操作
+<ul><li><code>not</code>:</li> <li><code>and</code>:</li></ul></li> <li>密码学操作，目前仅包含 keccak256</li> <li>环境操作，主要指与区块链相关的全局信息，例如 blockhash 或 coinbase 收款账号</li> <li>存储、内存和栈操作</li> <li>交易与合约调用操作</li> <li>停机操作</li> <li>日志操作</li></ul> <p>下面是详细的列表说明，标记为<code>-</code>的操作不返回结果，其他所有操作码只返回一个值。</p> <p>标有 F、H、B、C 、I 和 L 分别自出现的时间，对应的如下</p> <ul><li><code>F</code>: Frontier</li> <li><code>H</code>: Homestead</li> <li><code>B</code>: Byzantium</li> <li><code>C</code>: Constantinople</li> <li><code>I</code>: Istanbul</li> <li><code>L</code>: London</li></ul> <p>常见的常量值是 <code>0x20</code> / <code>0x40</code> , 代表十进制的 32 和 64。</p> <h3 id="数学计算"><a href="#数学计算" class="header-anchor">#</a> 数学计算</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>add(x, y)</td> <td></td> <td>F</td> <td><code>x + y</code></td></tr> <tr><td>sub(x, y)</td> <td></td> <td>F</td> <td><code>x - y</code></td></tr> <tr><td>mul(x, y)</td> <td></td> <td>F</td> <td><code>x * y</code></td></tr> <tr><td>div(x, y)</td> <td></td> <td>F</td> <td><code>x / y</code> (如果 y 为 0，则结果为 0)</td></tr> <tr><td>mod(x, y)</td> <td></td> <td>F</td> <td><code>x % y</code> (如果 y 为 0，则结果为 0)</td></tr> <tr><td>exp(x, y)</td> <td></td> <td>F</td> <td><code>x</code> 的 <code>y</code> 次方</td></tr> <tr><td>addmod(x, y, m)</td> <td></td> <td>F</td> <td><code>(x + y) % m</code> 任意精度算术，如果 m == 0 则为 0</td></tr> <tr><td>mulmod(x, y, m)</td> <td></td> <td>F</td> <td><code>(x * y) % m</code> 任意精度算术，如果 m == 0 则为 0</td></tr> <tr><td>sdiv(x, y)</td> <td></td> <td>F</td> <td><code>x / y</code>, 以二进制补码作为符号 (如果 y 为 0，则结果为 0)</td></tr> <tr><td>smod(x, y)</td> <td></td> <td>F</td> <td><code>x % y</code>, 以二进制补码作为符号 (如果 y 为 0，则结果为 0)</td></tr></tbody></table> <h4 id="add-加法"><a href="#add-加法" class="header-anchor">#</a> add: 加法</h4> <div class="language- extra-class"><pre class="language-text"><code>function demoAssembly(uint256 _x, uint256 _y)
+    public
+    pure
+    returns (uint256)
+{
+    assembly {
+        let result := add(_x, _y)
+        mstore(0x0, result)
+        return(0x0, 32)
+    }
+}
+</code></pre></div><p>上面合约函数，传入参数:<code>1,2</code>，返回<code>3</code>。</p> <p>这里需要返回<code>uint256</code>类型，assembly 内部返回是，从什么位置开发，返回多少个数据。需要返回两个数据。比如我把 uint256 改为 uint8，代码如下</p> <div class="language- extra-class"><pre class="language-text"><code>function demoAssembly(uint8 _x, uint8 _y)
+    public
+    pure
+    returns (uint8)
+{
+    assembly {
+        let result := add(_x, _y)
+        mstore(0x0, result)
+        return(0x0, 2)
+    }
+}
+</code></pre></div><p>相同的参数会报错: <code>error:Failed to decode output: Error: data out-of-bounds (length=2, offset=32, code=BUFFER_OVERRUN, version=abi/5.5.0)</code></p> <h4 id="sub-减法"><a href="#sub-减法" class="header-anchor">#</a> sub: 减法</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (uint256)
+    {
+        assembly {
+            let result := sub(_x, _y)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><p>传入参数:<code>2,1</code>，返回<code>1</code>。</p> <p>注意：这时候如果传参 <code>1,2</code>，会溢出返回，得到的结果不会报错，反而是:<code>115792089237316195423570985008687907853269984665640564039457584007913129639935</code>，因为 assembly 绕过了 solidity 的安全检查。当我们使用 assembly 编码时候，安全问题需要自己控制，不要错误的认为 solidity 的默认机制会保护代码。</p> <h4 id="mul-乘法"><a href="#mul-乘法" class="header-anchor">#</a> mul: 乘法</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (uint256)
+    {
+        assembly {
+            let result := mul(_x, _y)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><p>传入参数:<code>2,3</code>，返回<code>6</code>。</p> <h4 id="div-除法"><a href="#div-除法" class="header-anchor">#</a> div: 除法</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (uint256)
+    {
+        assembly {
+            let result := div(_x, _y)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>3,2</code>，返回<code>1</code>。</li> <li>传入参数:<code>3,1</code>，返回<code>3</code>。</li> <li>传入参数:<code>3,0</code>，返回<code>0</code>。</li></ul> <h4 id="mod-求模"><a href="#mod-求模" class="header-anchor">#</a> mod: 求模</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (uint256)
+    {
+        assembly {
+            let result := mod(_x, _y)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>3,2</code>，返回<code>1</code></li> <li>传入参数:<code>3,1</code>，返回<code>0</code></li> <li>传入参数:<code>3,0</code>,返回<code>0</code></li> <li>传入参数:<code>3,30</code>,返回<code>3</code></li></ul> <h4 id="exp-次方"><a href="#exp-次方" class="header-anchor">#</a> exp: 次方</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (uint256)
+    {
+        assembly {
+            let result := exp(_x, _y)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>10,2</code>，返回<code>100</code>。</li> <li>传入参数:<code>10,3</code>，返回<code>1000</code>。</li></ul> <h4 id="addmod-先求和再求模"><a href="#addmod-先求和再求模" class="header-anchor">#</a> addmod: 先求和再求模</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(
+        uint256 _x,
+        uint256 _y,
+        uint256 _m
+    ) public pure returns (uint256) {
+        assembly {
+            let result := addmod(_x, _y, _m)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>2,3,3</code>，返回<code>2</code>。</li></ul> <h4 id="mulmod-先相乘再求模"><a href="#mulmod-先相乘再求模" class="header-anchor">#</a> mulmod: 先相乘再求模</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(
+        uint256 _x,
+        uint256 _y,
+        uint256 _m
+    ) public pure returns (uint256) {
+        assembly {
+            let result := mulmod(_x, _y, _m)
+            mstore(0x0, result)
+            return(0x0, 32)
+        }
+    }
+}
+
+</code></pre></div><ul><li>传入参数:<code>2,3,3</code>，返回<code>0</code>。</li></ul> <h4 id="二进制补码"><a href="#二进制补码" class="header-anchor">#</a> 二进制补码</h4> <p>下面两个方法，用法基本和 div / mod 差不多</p> <div class="language- extra-class"><pre class="language-text"><code>let result := sdiv(_x, _y)
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>let result := smod(_x, _y)
+</code></pre></div><h3 id="比较关系"><a href="#比较关系" class="header-anchor">#</a> 比较关系</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>gt(x, y)</td> <td></td> <td>F</td> <td>如果 <code>x &gt; y</code> 等于 1, 否则 0</td></tr> <tr><td>lt(x, y)</td> <td></td> <td>F</td> <td>如果 <code>x &lt; y</code> 等于 1, 否则 0</td></tr> <tr><td>eq(x, y)</td> <td></td> <td>F</td> <td>如果 <code>x == y</code> 等于 1, 否则 0</td></tr> <tr><td>iszero(x)</td> <td></td> <td>F</td> <td>如果 <code>x == 0</code> 等于 1, 否则 0</td></tr> <tr><td>slt(x, y)</td> <td></td> <td>F</td> <td>如果 <code>x &lt; y</code> 等于 1, 否则 0, 以二进制补码作为符号</td></tr> <tr><td>sgt(x, y)</td> <td></td> <td>F</td> <td>如果 <code>x &gt; y</code> 等于 1, 否则 0, 以二进制补码作为符号</td></tr></tbody></table> <h4 id="gt-大于"><a href="#gt-大于" class="header-anchor">#</a> gt: 大于</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (bool result)
+    {
+        assembly {
+            result := gt(_x, _y)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>1,2</code>，返回 <code>false</code></li> <li>传入参数:<code>10,3</code>，返回 <code>true</code></li></ul> <h4 id="lt-小于"><a href="#lt-小于" class="header-anchor">#</a> lt: 小于</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (bool result)
+    {
+        assembly {
+            result := lt(_x, _y)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>1,2</code>，返回 <code>true</code></li> <li>传入参数:<code>10,3</code>，返回 <code>false</code></li></ul> <h4 id="eq-等于"><a href="#eq-等于" class="header-anchor">#</a> eq: 等于</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x, uint256 _y)
+        public
+        pure
+        returns (bool result)
+    {
+        assembly {
+            result := eq(_x, _y)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>1,2</code>，返回 <code>false</code></li> <li>传入参数:<code>2,2</code>，返回 <code>true</code></li></ul> <h4 id="iszero-等于零"><a href="#iszero-等于零" class="header-anchor">#</a> iszero: 等于零</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(uint256 _x)
+        public
+        pure
+        returns (bool result)
+    {
+        assembly {
+            result := iszero(_x)
+        }
+    }
+}
+</code></pre></div><p>注意该参数只接收一个参数</p> <ul><li>传入参数:<code>1</code>，返回 <code>false</code></li> <li>传入参数:<code>0</code>，返回 <code>true</code></li></ul> <h3 id="按位-移位"><a href="#按位-移位" class="header-anchor">#</a> 按位 &amp; 移位</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>not(x)</td> <td></td> <td>F</td> <td>对 x 按位取反,类似<code>~x</code>;<code>x</code> 的按位非</td></tr> <tr><td>and(x, y)</td> <td></td> <td>F</td> <td>x 和 y 的按位与</td></tr> <tr><td>or(x, y)</td> <td></td> <td>F</td> <td>x 和 y 的按位或</td></tr> <tr><td>xor(x, y)</td> <td></td> <td>F</td> <td>x 和 y 的按位异或</td></tr> <tr><td>shl(x, y)</td> <td></td> <td>C</td> <td>y 逻辑左移 x 位</td></tr> <tr><td>shr(x, y)</td> <td></td> <td>C</td> <td>y 逻辑右移 x 位</td></tr> <tr><td>sar(x, y)</td> <td></td> <td>C</td> <td>将 y 算术右移 x 位</td></tr></tbody></table> <h4 id="not-按位非"><a href="#not-按位非" class="header-anchor">#</a> not: 按位非</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly(int256 _x) public pure returns (int256 result) {
+        assembly {
+            result := not(_x)
+        }
+    }
+}
+</code></pre></div><ul><li>传入参数:<code>0</code>，返回 <code>-1</code></li> <li>传入参数:<code>1</code>，返回 <code>-2</code></li> <li>传入参数:<code>-1</code>，返回 <code>0</code></li> <li>传入参数:<code>-11</code>，返回 <code>10</code></li></ul> <h4 id="and-按位与"><a href="#and-按位与" class="header-anchor">#</a> and: 按位与</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (int256 result) {
+        int256 _x = 2;
+        int256 _y = 3;
+        assembly {
+            result := and(_x, _y)
+        }
+    }
+}
+</code></pre></div><p>结果是 2</p> <h4 id="or-按位或"><a href="#or-按位或" class="header-anchor">#</a> or: 按位或</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (int256 result) {
+        int256 _x = 2;
+        int256 _y = 3;
+        assembly {
+            result := or(_x, _y)
+        }
+    }
+}
+</code></pre></div><p>结果是 3</p> <h4 id="xor-按位异或"><a href="#xor-按位异或" class="header-anchor">#</a> xor: 按位异或</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (int256 result) {
+        int256 _x = 2;
+        int256 _y = 3;
+        assembly {
+            result := xor(_x, _y)
+        }
+    }
+}
+</code></pre></div><p>结果 1</p> <h4 id="shl-逻辑左移"><a href="#shl-逻辑左移" class="header-anchor">#</a> shl: 逻辑左移</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 result) {
+        uint256 A = 2;
+        assembly {
+            result := shl(A, 1) // 4
+        }
+    }
+}
+</code></pre></div><h4 id="shr-逻辑右移"><a href="#shr-逻辑右移" class="header-anchor">#</a> shr: 逻辑右移</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 result) {
+        uint256 A = 2;
+        assembly {
+            result := shr(A, 1) // 0
+        }
+    }
+}
+</code></pre></div><h4 id="sar-算术右移"><a href="#sar-算术右移" class="header-anchor">#</a> sar: 算术右移</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public pure returns (uint256 result) {
+        uint256 A = 2;
+        assembly {
+            result := sar(A, 1) // 0
+        }
+    }
+}
+</code></pre></div><h3 id="evm-区块交易相关"><a href="#evm-区块交易相关" class="header-anchor">#</a> EVM 区块交易相关</h3> <table border="1" class="docutils"><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>address()</td> <td></td> <td>F</td> <td>当前合约地址 / execution context</td></tr> <tr><td>balance(a)</td> <td></td> <td>F</td> <td>地址 a 的 wei 余额</td></tr> <tr><td>selfbalance()</td> <td></td> <td>I</td> <td>相当于 <code>balance(address())</code>，但更便宜</td></tr> <tr><td>extcodehash(a)</td> <td></td> <td>C</td> <td>地址 a 的代码哈希</td></tr> <tr><td colspan="4"><center><strong>msg 相关</strong></center></td></tr> <tr><td>caller()</td> <td></td> <td>F</td> <td>call sender ( 类似<code>msg.sender</code>？) (excluding <code>delegatecall</code>)</td></tr> <tr><td>callvalue()</td> <td></td> <td>F</td> <td>wei sent together with the current call（类似<code>msg.value</code>？）</td></tr> <tr><td colspan="4"><center><strong>block 相关</strong></center></td></tr> <tr><td>chainid()</td> <td></td> <td>I</td> <td>当前网络的链 ID (EIP-1344)</td></tr> <tr><td>basefee()</td> <td></td> <td>L</td> <td>当前区块的基本费用 (EIP-3198 and EIP-1559)</td></tr> <tr><td>timestamp()</td> <td></td> <td>F</td> <td>当前块的时间戳，自纪元以来的秒数</td></tr> <tr><td>coinbase()</td> <td></td> <td>F</td> <td>当前采矿受益人</td></tr> <tr><td>number()</td> <td></td> <td>F</td> <td>当前区块号</td></tr> <tr><td>difficulty()</td> <td></td> <td>F</td> <td>当前区块的难度</td></tr> <tr><td>gaslimit()</td> <td></td> <td>F</td> <td>当前区块的区块 gas limit</td></tr> <tr><td colspan="4"><center><strong>tx 相关</strong></center></td></tr> <tr><td>origin()</td> <td></td> <td>F</td> <td>交易发送方</td></tr> <tr><td>gasprice()</td> <td></td> <td>F</td> <td>交易的 gas 价格</td></tr> <tr><td colspan="4"><center><strong>其它</strong></center></td></tr> <tr><td>gas()</td> <td></td> <td>F</td> <td>剩余 gas</td></tr> <tr><td>blockhash(b)</td> <td></td> <td>F</td> <td>指定 block 的 hash - 仅适用于最后 256 个块，不包括当前块</td></tr></tbody></table> <h4 id="address"><a href="#address" class="header-anchor">#</a> address()</h4> <p>相当于 <code>address(this)</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public view returns (address ads1, address ads2) {
+        assembly {
+            ads1 := address()
+        }
+
+        ads2 = address(this);
+    }
+}
+</code></pre></div><p>返回</p> <ul><li><code>0:address: ads1 0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288</code></li> <li><code>1:address: ads2 0x3c725134d74D5c45B4E4ABd2e5e2a109b5541288</code></li></ul> <h4 id="balance-a"><a href="#balance-a" class="header-anchor">#</a> balance(a)</h4> <p>相当于 <code>address.balance</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        address sender = msg.sender;
+        assembly {
+            result1 := balance(sender)
+        }
+
+        result2 = address(sender).balance;
+    }
+}
+</code></pre></div><p>返回</p> <ul><li><code>0:uint256: result1 99999999999992173039</code></li> <li><code>1:uint256: result2 99999999999992173039</code></li></ul> <h4 id="selfbalance"><a href="#selfbalance" class="header-anchor">#</a> selfbalance()</h4> <p>相当于 <code>balance(address())</code>，但更便宜</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    constructor() payable {}
+
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := balance(address())
+        }
+
+        result2 = address(this).balance;
+    }
+}
+</code></pre></div><h4 id="extcodehash-a"><a href="#extcodehash-a" class="header-anchor">#</a> extcodehash(a)</h4> <p>相当于 <code>address.codehash</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (bytes32 result1, bytes32 result2)
+    {
+        address sender = msg.sender;
+        assembly {
+            result1 := extcodehash(address())
+        }
+        result2 = address(this).codehash;
+    }
+}
+</code></pre></div><ul><li><code>0:bytes32: result1 0xcbefd958c5e7814e7e635b599c5859eb893c410292a7f9f82088c3e84ee3c0e9</code></li> <li><code>1:bytes32: result2 0xcbefd958c5e7814e7e635b599c5859eb893c410292a7f9f82088c3e84ee3c0e9</code></li></ul> <h4 id="caller"><a href="#caller" class="header-anchor">#</a> caller()</h4> <p>相当于 <code>msg.sender</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly() public view returns (address ads1, address ads2) {
+        assembly {
+            ads1 := caller()
+        }
+
+        ads2 = msg.sender;
+    }
+}
+</code></pre></div><h4 id="callvalue"><a href="#callvalue" class="header-anchor">#</a> callvalue()</h4> <p>相当于 <code>msg.value</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        payable
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := callvalue()
+        }
+        result2 = msg.value;
+    }
+}
+</code></pre></div><h4 id="chainid"><a href="#chainid" class="header-anchor">#</a> chainid()</h4> <p>相当于 <code>block.chainid</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := chainid() // 1
+        }
+        result2 = block.chainid; // 1
+    }
+}
+</code></pre></div><h4 id="basefee"><a href="#basefee" class="header-anchor">#</a> basefee()</h4> <p>相当于 <code>block.basefee</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := basefee()
+        }
+        result2 = block.basefee;
+    }
+}
+</code></pre></div><h4 id="timestamp"><a href="#timestamp" class="header-anchor">#</a> timestamp()</h4> <p>相当于 <code>block.timestamp</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := timestamp()
+        }
+        result2 = block.timestamp;
+    }
+}
+</code></pre></div><h4 id="coinbase"><a href="#coinbase" class="header-anchor">#</a> coinbase()</h4> <p>相当于 <code>block.coinbase</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (address result1, address result2)
+    {
+        assembly {
+            result1 := coinbase()
+        }
+        result2 = block.coinbase;
+    }
+}
+</code></pre></div><h4 id="number"><a href="#number" class="header-anchor">#</a> number()</h4> <p>相当于 <code>block.number</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := number()
+        }
+        result2 = block.number;
+    }
+}
+</code></pre></div><h4 id="difficulty"><a href="#difficulty" class="header-anchor">#</a> difficulty()</h4> <p>相当于 <code>block.difficulty</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := difficulty()
+        }
+        result2 = block.difficulty;
+    }
+}
+</code></pre></div><h4 id="gaslimit"><a href="#gaslimit" class="header-anchor">#</a> gaslimit()</h4> <p>相当于 <code>block.gaslimit</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := gaslimit()
+        }
+        result2 = block.gaslimit;
+    }
+}
+</code></pre></div><h4 id="origin"><a href="#origin" class="header-anchor">#</a> origin()</h4> <p>相当于 <code>tx.origin</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (address result1, address result2)
+    {
+        assembly {
+            result1 := origin()
+        }
+        result2 = tx.origin;
+    }
+}
+</code></pre></div><h4 id="gasprice"><a href="#gasprice" class="header-anchor">#</a> gasprice()</h4> <p>相当于 <code>tx.gasprice</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := gasprice()
+        }
+        result2 = tx.gasprice;
+    }
+}
+</code></pre></div><h4 id="gas"><a href="#gas" class="header-anchor">#</a> gas()</h4> <p>相当于 <code>gasleft()</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (uint256 result1, uint256 result2)
+    {
+        assembly {
+            result1 := gas() // 2978815
+        }
+
+        // 与 assembly 之间的顺序不改变最后的值
+        // 所以 assembly 优先执行？
+        result2 = gasleft(); // 2978808
+    }
+}
+</code></pre></div><h4 id="blockhash-b"><a href="#blockhash-b" class="header-anchor">#</a> blockhash(b)</h4> <p>相当于 <code>blockhash(number)</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function demoAssembly()
+        public
+        view
+        returns (bytes32 result1, bytes32 result2)
+    {
+        assembly {
+            result1 := blockhash(1)
+        }
+        result2 = blockhash(1);
+    }
+}
+</code></pre></div><h3 id="常见方法"><a href="#常见方法" class="header-anchor">#</a> 常见方法</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>sload(p)</td> <td></td> <td>F</td> <td><code>storage[p]</code></td></tr> <tr><td>mload(p)</td> <td></td> <td>F</td> <td><code>mem[p…(p+32))</code></td></tr> <tr><td>sstore(p, v)</td> <td>-</td> <td>F</td> <td><code>storage[p] := v</code></td></tr> <tr><td>mstore(p, v)</td> <td>-</td> <td>F</td> <td><code>mem[p…(p+32)) := v</code></td></tr> <tr><td>mstore8(p, v)</td> <td>-</td> <td>F</td> <td><code>mem[p] := v</code> &amp; 0xff (只修改单个字节)</td></tr> <tr><td>keccak256(p, n)</td> <td></td> <td>F</td> <td><code>keccak(mem[p…(p+n)))</code></td></tr> <tr><td>create(v, p, n)</td> <td></td> <td>F</td> <td>create 创建合约</td></tr> <tr><td>create2(v, p, n, s)</td> <td></td> <td>C</td> <td>create2 创建合约</td></tr></tbody></table> <p>小例子:</p> <ul><li><code>mload(p)</code>: 分配数据</li> <li><code>mstore(offset, value)</code>: 在 <code>offset</code> 的位置储存 <code>value</code></li></ul> <h4 id="sload-p"><a href="#sload-p" class="header-anchor">#</a> sload(p)</h4> <p>sload 是 storage load，<code>sload(key)</code> 是从 storage 的哪个 slot 来 load，详细原理可以在后面介绍的 <strong>状态变量在存储中的布局</strong> 了解更多。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    uint256 public a = 123;
+    uint256 public b = 456;
+
+    function demoAssembly() public view returns (uint256) {
+        assembly {
+            // v 是长度是 32 bytes
+            // 从 slot #0 读数据 =&gt; 读到的是 123
+            // 从 slot #1 读数据 =&gt; 读到的是 456
+            let v := sload(0)
+
+            // 在内存位置 0x80 处储存变量 v 后面的数据
+            mstore(0x80, v)
+
+            // 返回值:从 0x80 位置，返回 32个字节
+            return(0x80, 32)
+        }
+    }
+}
+</code></pre></div><p>上面例子中，<code>slot #0</code> 是 123，<code>slot #1</code> 是 456。</p> <p>注意: <code>slot #0</code> 可能是多个状态变量公用的。比如把状态变量改为如下类型,读 <code>slot #0</code> ，该位置储存了<code>a+b</code>;</p> <div class="language- extra-class"><pre class="language-text"><code>uint128 public a = 1;
+uint128 public b = 2;
+uint256 public c = 456;
+</code></pre></div><h4 id="mload-p"><a href="#mload-p" class="header-anchor">#</a> mload(p)</h4> <p>mload 是 memory load，<code>mload(key)</code> 是从 memory 的哪个 slot 来 load，类似 <code>sload</code>。</p> <ul><li>问题：内存数据 mload 时为什么从第 32 位开始?
+<ul><li>答案：前 32 个字节存储的是数据的长度;</li> <li>参考: https://www.cnblogs.com/wanghui-garcia/p/9592807.html</li></ul></li></ul> <h4 id="sstore-p-v"><a href="#sstore-p-v" class="header-anchor">#</a> sstore(p, v)</h4> <h4 id="mstore-p-v"><a href="#mstore-p-v" class="header-anchor">#</a> mstore(p, v)</h4> <p>下面 name1 和 name2 都返回 &quot;Anbang&quot; 的字符串</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    // gas 23471
+    bytes6 public name1 = &quot;Anbang&quot;; // 0x416e62616e67
+
+    // gas 21229
+    function name2() public pure returns (string memory) {
+        assembly {
+            // 在 0x20 处 储存值 0x20
+            mstore(0x20, 0x20)
+
+            // name1 length = 0x06
+            // 参数1: 0x40 + length = 0x40 + 0x06 =&gt; 0x46
+            // 参数2: length + name1  = 0x46 + 0x416e62616e67 =&gt; 0x06416e62616e67
+            mstore(0x46, 0x06416e62616e67)
+
+            // 返回 memory 从 0x20处之后的 0x60 长度的数据
+            return(0x20, 0x60)
+        }
+    }
+}
+</code></pre></div><p>上面是从<code>0x20</code>处开始写数据，这个位置不是强制的，使用<code>0x00</code>也可以的。</p> <h4 id="mstore8-p-v"><a href="#mstore8-p-v" class="header-anchor">#</a> mstore8(p, v)</h4> <h4 id="keccak256-p-n"><a href="#keccak256-p-n" class="header-anchor">#</a> keccak256(p, n)</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    // 0x01
+    function solidityKeccak(bytes memory _input) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked(_input));
+    }
+
+    // 0x01
+    function assemblyKeccak(bytes memory _input)
+        public
+        pure
+        returns (bytes32 x)
+    {
+        assembly {
+            x := keccak256(add(_input, 0x20), mload(_input))
+        }
+    }
+}
+</code></pre></div><h4 id="create-v-p-n"><a href="#create-v-p-n" class="header-anchor">#</a> create(v, p, n)</h4> <div class="language- extra-class"><pre class="language-text"><code> assembly {
+    // create(v,p,n);
+    // v 是 发送的ETH值
+    // p 是 内存中机器码开始的位置
+    // n 是 内存中机器码的大小
+    // msg.value 不能使用，需要用 callvalue()
+    adds := create(callvalue(), add(_code, 0x20), mload(_code))
+}
+</code></pre></div><h4 id="create2-v-p-n-s"><a href="#create2-v-p-n-s" class="header-anchor">#</a> create2(v, p, n, s)</h4> <p>下面是 <a href="https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol" target="_blank" rel="noopener noreferrer">UniswapV2Factory<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中创建 pair 核心逻辑</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Z {
+    bytes6 public name1 = &quot;Anbang&quot;;
+}
+
+contract Demo {
+    function addr() public returns (address pair) {
+        bytes memory bytecode = type(Z).creationCode;
+        // bytes32 salt = keccak256(abi.encodePacked(address(0), address(1)));
+        uint256 salt = block.number;
+        assembly {
+            pair := create2(0, add(bytecode, 32), mload(bytecode), salt)
+        }
+    }
+}
+</code></pre></div><h3 id="操作数据-大小"><a href="#操作数据-大小" class="header-anchor">#</a> 操作数据/大小</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>msize()</td> <td></td> <td>F</td> <td>内存大小，即最大访问内存索引</td></tr> <tr><td>pc()</td> <td></td> <td>F</td> <td>当前在代码中的位置</td></tr> <tr><td>codesize()</td> <td></td> <td>F</td> <td>当前合约的代码大小 / execution context</td></tr> <tr><td>codecopy(t, f, s)</td> <td>-</td> <td>F</td> <td>从位置 f 的代码复制 s 个字节到位置 t 的内存</td></tr> <tr><td>extcodesize(a)</td> <td></td> <td>F</td> <td>获取地址 a 的代码大小</td></tr> <tr><td>extcodecopy(a, t, f, s)</td> <td>-</td> <td>F</td> <td>像 codecopy(t, f, s) 但在地址 a 处获取代码</td></tr> <tr><td>signextend(i, x)</td> <td></td> <td>F</td> <td>sign extend from <code>(i*8+7)</code>th bit counting from least significant</td></tr> <tr><td>byte(n, x)</td> <td></td> <td>F</td> <td>x 的第 n 个字节，这个索引是从 0 开始的</td></tr> <tr><td>pop(x)</td> <td>-</td> <td>F</td> <td>丢弃值 x</td></tr></tbody></table> <h4 id="msize"><a href="#msize" class="header-anchor">#</a> msize()</h4> <p>内存大小，即最大访问内存索引</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    function test() public pure returns (int256) {
+        int8 v0 = 1;
+        assembly {
+            v0 := msize()
+        }
+        return int256(v0);
+    }
+}
+</code></pre></div><h4 id="pc"><a href="#pc" class="header-anchor">#</a> pc()</h4> <h4 id="codesize"><a href="#codesize" class="header-anchor">#</a> codesize()</h4> <h4 id="codecopy-t-f-s"><a href="#codecopy-t-f-s" class="header-anchor">#</a> codecopy(t, f, s)</h4> <h4 id="extcodesize-a"><a href="#extcodesize-a" class="header-anchor">#</a> extcodesize(a)</h4> <h4 id="extcodecopy-a-t-f-s"><a href="#extcodecopy-a-t-f-s" class="header-anchor">#</a> extcodecopy(a, t, f, s)</h4> <h4 id="signextend-i-x"><a href="#signextend-i-x" class="header-anchor">#</a> signextend(i, x)</h4> <h4 id="byte-n-x"><a href="#byte-n-x" class="header-anchor">#</a> byte(n, x)</h4> <h4 id="pop-x"><a href="#pop-x" class="header-anchor">#</a> pop(x)</h4> <h3 id="call-相关"><a href="#call-相关" class="header-anchor">#</a> call 相关</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>calldataload(p)</td> <td></td> <td>F</td> <td>从位置 p 开始调用数据 (32 bytes)</td></tr> <tr><td>calldatasize()</td> <td></td> <td>F</td> <td>调用数据的大小（以字节为单位）</td></tr> <tr><td>calldatacopy(t, f, s)</td> <td>-</td> <td>F</td> <td>从位置 f 的 calldata 复制 s 个字节到位置 t 的内存</td></tr> <tr><td>call(g, a, v, in, insize, out, outsize)</td> <td></td> <td>F</td> <td>在地址 a 调用合约 <a href="#yul-call-return-area">See more</a></td></tr> <tr><td>callcode(g, a, v, in, insize, out, outsize)</td> <td></td> <td>F</td> <td>与 <code>call</code> 相同，但仅使用 a 中的代码，否则留在当前合约的上下文中 <a href="#yul-call-return-area">See more</a></td></tr> <tr><td>delegatecall(g, a, in, insize, out, outsize)</td> <td></td> <td>H</td> <td>与 <code>callcode</code> 相同，但也保留 <code>caller</code> 和 <code>callvalue</code> <a href="#yul-call-return-area">See more</a></td></tr> <tr><td>staticcall(g, a, in, insize, out, outsize)</td> <td></td> <td>B</td> <td>与 <code>call(g, a, 0, in, insize, out, outsize)</code> 相同，但不允许状态修改 ons <a href="#yul-call-return-area">See more</a></td></tr></tbody></table> <h3 id="结束执行"><a href="#结束执行" class="header-anchor">#</a> 结束执行</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>return(p, s)</td> <td>-</td> <td>F</td> <td>结束执行, return data mem[p…(p+s))</td></tr> <tr><td>stop()</td> <td>-</td> <td>F</td> <td>结束执行, 类似 <code>return(0, 0)</code></td></tr> <tr><td>revert(p, s)</td> <td>-</td> <td>B</td> <td>结束执行, revert state changes, return data mem[p…(p+s))</td></tr> <tr><td>selfdestruct(a)</td> <td>-</td> <td>F</td> <td>结束执行, destroy current contract and send funds to a</td></tr> <tr><td>invalid()</td> <td>-</td> <td>F</td> <td>结束执行 with invalid instruction</td></tr> <tr><td>returndatasize()</td> <td></td> <td>B</td> <td>最后返回数据的大小</td></tr> <tr><td>returndatacopy(t, f, s)</td> <td>-</td> <td>B</td> <td>将 s 个字节从位置 f 的 returndata 复制到位置 t 的 mem</td></tr></tbody></table> <h3 id="log-信息"><a href="#log-信息" class="header-anchor">#</a> log 信息</h3> <table><thead><tr><th>操作符号</th> <th>返回值</th> <th>版本</th> <th>解释说明</th></tr></thead> <tbody><tr><td>log0(p, s)</td> <td>-</td> <td>F</td> <td>log without topics and data mem[p…(p+s))</td></tr> <tr><td>log1(p, s, t1)</td> <td>-</td> <td>F</td> <td>log with topic t1 and data mem[p…(p+s))</td></tr> <tr><td>log2(p, s, t1, t2)</td> <td>-</td> <td>F</td> <td>log with topics t1, t2 and data mem[p…(p+s))</td></tr> <tr><td>log3(p, s, t1, t2, t3)</td> <td>-</td> <td>F</td> <td>log with topics t1, t2, t3 and data mem[p…(p+s))</td></tr> <tr><td>log4(p, s, t1, t2, t3, t4)</td> <td>-</td> <td>F</td> <td>log with topics t1, t2, t3, t4 and data mem[p…(p+s))</td></tr></tbody></table> <h2 id="🆗-实战应用"><a href="#🆗-实战应用" class="header-anchor">#</a> 🆗 实战应用</h2> <h3 id="例子-1-一个演示"><a href="#例子-1-一个演示" class="header-anchor">#</a> 例子 1:一个演示</h3> <div class="language- extra-class"><pre class="language-text"><code>library VectorSum {
+    // 此函数效率较低，因为优化器当前无法删除数组访问中的边界检查。
+    function sumSolidity(uint256[] memory data)
+        public
+        pure
+        returns (uint256 sum)
+    {
+        for (uint256 i = 0; i &lt; data.length; ++i) sum += data[i];
+    }
+
+    // We know that we only access the array in bounds, so we can avoid the check.
+    // 0x20 needs to be added to an array because the first slot contains the
+    // array length.
+    // 我们知道我们只在边界内访问数组，
+    // 所以我们可以避免检查。0x20 需要添加到数组，因为第一个槽包含数组长度。
+    function sumAsm(uint256[] memory data) public pure returns (uint256 sum) {
+        for (uint256 i = 0; i &lt; data.length; ++i) {
+            assembly {
+                sum := add(sum, mload(add(add(data, 0x20), mul(i, 0x20))))
+            }
+        }
+    }
+
+    // Same as above, but accomplish the entire code within inline assembly.
+    function sumPureAsm(uint256[] memory data)
+        public
+        pure
+        returns (uint256 sum)
+    {
+        assembly {
+            // Load the length (first 32 bytes)
+            let len := mload(data)
+
+            // Skip over the length field.
+            //
+            // Keep temporary variable so it can be incremented in place.
+            //
+            // NOTE: incrementing data would result in an unusable
+            //       data variable after this assembly block
+            let dataElementLocation := add(data, 0x20)
+
+            // Iterate until the bound is not met.
+            for {
+                let end := add(dataElementLocation, mul(len, 0x20))
+            } lt(dataElementLocation, end) {
+                dataElementLocation := add(dataElementLocation, 0x20)
+            } {
+                sum := add(sum, mload(dataElementLocation))
+            }
+        }
+    }
+}
+
+</code></pre></div><h3 id="例子-2-获取合约代码"><a href="#例子-2-获取合约代码" class="header-anchor">#</a> 例子 2:获取合约代码</h3> <p>gas 相差无几，重点看一下 code 的背后原理</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+contract Demo {
+    // 24310 gas
+    function codeBySolidity(address _addr)
+        public
+        view
+        returns (bytes memory o_code)
+    {
+        return _addr.code;
+    }
+
+    // 24286 gas
+    function codeByAssembly(address _addr)
+        public
+        view
+        returns (bytes memory o_code)
+    {
+        assembly {
+            // 1.使用 extcodesize 获取合约内的代码大小
+            let size := extcodesize(_addr)
+
+            // 2.使用 mload 分配输出字节数组
+            // 类似 o_code = new bytes（size）
+            o_code := mload(0x40)
+
+            // 在 0x40 的位置存入数据
+            //      add(size, 0x20) :
+            //              size 加 0x20
+            //      add(add(size, 0x20), 0x1f)
+            //              size 加 0x20,再加 0x1f
+            //      not(0x1f)
+            //              0x1f 的按位非
+            //      and(add(add(size, 0x20), 0x1f), not(0x1f))
+            //          &quot;size 加 0x20,再加 0x1f&quot; 和 &quot;0x1f的按位非&quot; 的按位与
+            mstore(
+                0x40,
+                add(o_code, and(add(add(size, 0x20), 0x1f), not(0x1f)))
+            )
+
+            // 把长度保存到内存中
+            mstore(o_code, size)
+
+            // 实际获取代码，这需要汇编语言
+            extcodecopy(_addr, add(o_code, 0x20), 0, size)
+        }
+    }
+}
+</code></pre></div><h3 id="例子-3-计算数值数组的和"><a href="#例子-3-计算数值数组的和" class="header-anchor">#</a> 例子 3:计算数值数组的和</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity 0.8.17;
+
+library VectorSum {
+    // 因为目前的优化器在访问数组时无法移除边界检查，
+    // 所以这个函数的执行效率比较低。
+    function sumSolidity(uint256[] memory _data)
+        public
+        pure
+        returns (uint256 o_sum)
+    {
+        for (uint256 i = 0; i &lt; _data.length; ++i) o_sum += _data[i];
+    }
+
+    // 我们只能在数组范围内访问数组元素，所以我们可以在内联汇编中不做边界检查。
+    // 由于 ABI 编码中数组数据的第一个字（32 字节）的位置保存的是数组长度，
+    // 所以我们在访问数组元素时需要加入 0x20 作为偏移量。
+    function sumAsm(uint256[] memory _data)
+        public
+        pure
+        returns (uint256 o_sum)
+    {
+        for (uint256 i = 0; i &lt; _data.length; ++i) {
+            assembly {
+                o_sum := add(o_sum, mload(add(add(_data, 0x20), mul(i, 0x20))))
+            }
+        }
+    }
+
+    // 和上面一样，但在内联汇编内完成整个代码。
+    function sumPureAsm(uint256[] memory _data)
+        public
+        pure
+        returns (uint256 o_sum)
+    {
+        assembly {
+            // 取得数组长度（取前 32 字节）
+            let len := mload(_data)
+
+            // 略过长度字段。
+            //
+            // 保持临时变量以便它可以在原地增加。
+            //
+            // 注意：对 _data 数值的增加将导致 _data 在这个汇编语句块之后不再可用。
+            //      因为无法再基于 _data 来解析后续的数组数据。
+            let data := add(_data, 0x20)
+
+            // 迭代到数组数据结束
+            for {
+                let end := add(data, mul(len, 0x20))
+            } lt(data, end) {
+                data := add(data, 0x20)
+            } {
+                o_sum := add(o_sum, mload(data))
+            }
+        }
+    }
+}
+</code></pre></div><h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li>Assembly（内联汇编）与普通 Solidity 代码有什么区别？
+<ul><li>使用内联汇编，可以在 Solidity 源程序中嵌入汇编代码，对 EVM 有更细粒度的控制。</li></ul></li> <li>Assembly（内联汇编）的作用？
+<ul><li>内联汇编主要用在编写库函数时很有用，一般用于写工具函数，比如椭圆签名解析等。</li></ul></li> <li>Assembly（内联汇编）的常见方法有，作用分别是什么？
+<ul><li><code>:=</code></li> <li><code>add</code></li> <li><code>mload</code></li> <li><code>mul</code></li> <li><code>0x20</code> / <code>0x40</code></li></ul></li> <li>问题：内存数据 mload 时为什么从第 32 位开始?</li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/15.algorithm.html" class="prev">
+          算法
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/17.metadata.html">
+          元数据
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_1️⃣-基本格式" class="sidebar-link reco-side-_1️⃣-基本格式" data-v-b57cc07c>1️⃣ 基本格式</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#例子-不同代码块无法互相访问" class="sidebar-link reco-side-例子-不同代码块无法互相访问" data-v-b57cc07c>例子: 不同代码块无法互相访问</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#例子-简单的加法" class="sidebar-link reco-side-例子-简单的加法" data-v-b57cc07c>例子: 简单的加法</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_2️⃣-语言基础" class="sidebar-link reco-side-_2️⃣-语言基础" data-v-b57cc07c>2️⃣ 语言基础</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#声明与赋值" class="sidebar-link reco-side-声明与赋值" data-v-b57cc07c>声明与赋值</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#汇编只能读取局部变量" class="sidebar-link reco-side-汇编只能读取局部变量" data-v-b57cc07c>汇编只能读取局部变量</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_3️⃣-条件判断" class="sidebar-link reco-side-_3️⃣-条件判断" data-v-b57cc07c>3️⃣ 条件判断</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#if" class="sidebar-link reco-side-if" data-v-b57cc07c>if</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#switch" class="sidebar-link reco-side-switch" data-v-b57cc07c>switch</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_4️⃣-for-循环" class="sidebar-link reco-side-_4️⃣-for-循环" data-v-b57cc07c>4️⃣ for 循环</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_5️⃣-函数的定义和使用" class="sidebar-link reco-side-_5️⃣-函数的定义和使用" data-v-b57cc07c>5️⃣ 函数的定义和使用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#_6️⃣-evm-内置函数-内置操作码" class="sidebar-link reco-side-_6️⃣-evm-内置函数-内置操作码" data-v-b57cc07c>6️⃣ EVM 内置函数/内置操作码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#数学计算" class="sidebar-link reco-side-数学计算" data-v-b57cc07c>数学计算</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#比较关系" class="sidebar-link reco-side-比较关系" data-v-b57cc07c>比较关系</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#按位-移位" class="sidebar-link reco-side-按位-移位" data-v-b57cc07c>按位 &amp; 移位</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#evm-区块交易相关" class="sidebar-link reco-side-evm-区块交易相关" data-v-b57cc07c>EVM 区块交易相关</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#常见方法" class="sidebar-link reco-side-常见方法" data-v-b57cc07c>常见方法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#操作数据-大小" class="sidebar-link reco-side-操作数据-大小" data-v-b57cc07c>操作数据/大小</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#call-相关" class="sidebar-link reco-side-call-相关" data-v-b57cc07c>call 相关</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#结束执行" class="sidebar-link reco-side-结束执行" data-v-b57cc07c>结束执行</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#log-信息" class="sidebar-link reco-side-log-信息" data-v-b57cc07c>log 信息</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#🆗-实战应用" class="sidebar-link reco-side-🆗-实战应用" data-v-b57cc07c>🆗 实战应用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#例子-1-一个演示" class="sidebar-link reco-side-例子-1-一个演示" data-v-b57cc07c>例子 1:一个演示</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#例子-2-获取合约代码" class="sidebar-link reco-side-例子-2-获取合约代码" data-v-b57cc07c>例子 2:获取合约代码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#例子-3-计算数值数组的和" class="sidebar-link reco-side-例子-3-计算数值数组的和" data-v-b57cc07c>例子 3:计算数值数组的和</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/16.assembly.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/42.00e1217a.js" defer></script>
+  </body>
+</html>

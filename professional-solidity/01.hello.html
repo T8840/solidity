@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>01.初识 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/27.f2377326.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active open"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable"><span>教程:professional-solidity</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">01.初识</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_01-初识"><a href="#_01-初识" class="header-anchor">#</a> 01.初识</h1> <p>本章目录</p> <ul><li>1️⃣ 区块链基础</li> <li>2️⃣ Hello World</li> <li>3️⃣ 合约代码中的三种注释</li> <li>4️⃣ 合约结构介绍</li> <li>5️⃣ 全局的以太币单位</li> <li>6️⃣ 接收 ETH</li> <li>7️⃣ selfdestruct:合约自毁</li> <li>🆗 实战 1: 同志们好</li> <li>🆗 实战 2: 存钱罐合约</li> <li>🆗 实战 3: WETH 合约</li> <li>#️⃣ 问答题</li></ul> <h2 id="_1️⃣-区块链基础"><a href="#_1️⃣-区块链基础" class="header-anchor">#</a> 1️⃣ 区块链基础</h2> <p>Solidity 是在兼容 EVM 的区块链上开发智能合约的语言，我们不需要关心所在区块链底层逻辑，只要是兼容 EVM 的公链，我们都可以使用 Solidity 进行智能合约的编码。简单了解以下的区块链概念：</p> <ul><li>事务</li> <li>交易</li> <li>地址</li> <li>区块</li> <li>存储/内存/栈</li></ul> <h3 id="本节配套视频"><a href="#本节配套视频" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=1" target="_blank" rel="noreferrer">第一章第 1 节: 区块链基础</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=ao5nkAgx7kU&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=1" target="_blank" rel="noreferrer">第一章第 1 节: 区块链基础</a></li></ul> <h3 id="_1-事务"><a href="#_1-事务" class="header-anchor">#</a> 1.事务</h3> <p>事务意味着你想做的事情，要么一点没做，要么全部完成。具有原子性，不存在修改一半的情况。</p> <p>比如从 A 地址向 B 地址转账 100 元，那么数据库里 A 减 100 元，B 加 100 元。如果因为某些原因导致 A 已经减了 100 元，但是 B 加 100 元中间出现了异常。因为事务的原子性，发生失败后 A/B 地址都不会发生任何修改。这种场景在合约中经常发生，会经常看到 <em><a href="https://etherscan.io/tx/0xda8c0b80d8e240a83c8f6b067c4656babeb13e8e0ece4fd4292aa06252f1285c" target="_blank" rel="noopener noreferrer">out of gas<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></em> 异常，这是因为 gas 被耗尽。此时合约中做的所有修改都会被回滚。</p> <p>gas:合约的手续费；是作为用户为当前交易支付的手续费，每一笔交易都会收取 gas 费，目的是限制交易需要做的工作量，需要做的事情越多，所花费的 gas 也就越多；gas 会按照特定规则进行逐渐消耗，如果执行完成后还有剩余，gas 会在当前交易内原路返回到交易发起者的地址中。</p> <h3 id="_2-交易"><a href="#_2-交易" class="header-anchor">#</a> 2.交易</h3> <p>交易可以看作一个地址发送到另外一个地址的消息，可能包含一个二进制数据和以太币。</p> <ul><li>如果目标地址含有代码，则此代码会被执行，并以 payload 作为入参。</li> <li>如果目标地址是零地址，此交易将创建一个新合约。
+<ul><li>这时候用来创建合约的 payload 会被<strong>转为 EVM 字节码</strong>并<strong>执行</strong>，执行的输出作为合约代码永久存在区块链上。</li> <li>所以如果创建一个合约，并不需要向链上发送实际的合约代码，只需发送能够产生合约代码的代码就可以。</li></ul></li></ul> <p>区块链中的交易遵守事务的特性。交易总是由发送人（创建交易的地址）进行签名。区块链底层会确保只有持有该地址密钥才能发起交易。正因为这个特性，所以才能为区块链上特定状态的修改增加保护机制。</p> <p>比如在合约中指定某一个方法只有&quot;管理员&quot;账号可以用，我们只需要验证调用者是否为管理员地址就可以了，至于地址权限的保护事情并不需要关心，只要是该账号发起的交易，就认为是管理员在操作。安全方面我们需要考虑的是，如果某一个地址被盗了怎么样，通常这些是业务逻辑决定，比如多签钱包的业务。</p> <h3 id="_3-地址"><a href="#_3-地址" class="header-anchor">#</a> 3.地址</h3> <p>地址很多时候也被称为账户，EVM 中有两类地址，一类是外部地址，一类是合约地址。</p> <ul><li>外部地址：由<strong>公钥-私钥对</strong>控制
+<ul><li>常用的助记词，keystore 文件等只是方便用户储存，底层还是会转成私钥。</li> <li>一般是钱包应用创建的地址。公钥就是<code>0xABC</code>的这种以太坊收款地址，私钥可能是助记词生成，可能是 keystore 文件生成，也可能是用户直接保存的。</li></ul></li> <li>合约地址：由地址一起存储的代码控制。</li></ul> <p>无论外部地址，还是合约地址，对于 EVM 来说，都是一样的。每个地址都有一个键值对形式的持久化存储。其中 key 和 value 都是 256 位，我们称为存储。此外每个地址都会有一个以太币的余额，合约地址也是如此；余额会因为发送包含以太币的交易而改变。</p> <h3 id="_4-区块"><a href="#_4-区块" class="header-anchor">#</a> 4.区块</h3> <p>你可能听过区块链的双花攻击，女巫攻击等作恶方式。如果你没有听过也没有关系，因为它们对于智能合约开发来说并不重要，我们编写的 Solidity 代码能运行在以太坊网络，也可以运行在 BSC， Matic，Eos EVM 网络等，就像前文说的那样，无论他们采用什么底层逻辑，只要它们支持 EVM 就足够了，底层逻辑不用关心。</p> <p>我们需要关心的是，<strong>区块可能被回滚，交易可能被作废</strong>，所以会出现你发起的交易被回滚甚至从区块链中抹除掉的可能。区块链不能保证当前的交易一定包含在下一个区块中。如果你开发的合约有顺序关系，要注意这个特性。合约内的逻辑，不能将某一个块作为依赖。</p> <h3 id="_5-存储-内存-栈"><a href="#_5-存储-内存-栈" class="header-anchor">#</a> 5.存储/内存/栈</h3> <p><strong>存储</strong>：每一个地址都有一个持久化的内存，存储是将 256 位字映射到 256 位字的键值存储区。所以数据类型的最大值是 <code>uint256</code>/<code>int256</code>/<code>bytes32</code>，合约只能读写存储区内属于自己的部分。</p> <p><strong>内存</strong>：合约会试图为每一次消息调用获取一块被重新擦拭干净的内存实例。所以储存在内存中的数据，在函数执行完以后就会被销毁。内存是线性的，可按字节级寻址，但读的长度被限制为 256 位，而写的长度可以是 8 位或 256 位。</p> <p><strong>栈</strong>：合约的所有计算都在一个被称为栈（stack）的区域执行，栈最大有 1024 个元素，每一个元素长度是 256 bit；所以调用深度被限制为 1024 ，对复杂的操作，推荐使用循环而不是递归。</p> <h2 id="_2️⃣-hello-world"><a href="#_2️⃣-hello-world" class="header-anchor">#</a> 2️⃣ Hello World</h2> <p>Solidity 合约类似于面向对象语言中的类。合约中有用于数据持久化的状态变量，和可以修改状态变量的函数。 调用另一个合约实例中函数时，会切换执行时的上下文，此时前一个合约的状态变量就不能访问了。后面会逐步展开介绍，国际惯例，使用当前语言的 Hello World 作为第一个例子。</p> <h3 id="本节配套视频-2"><a href="#本节配套视频-2" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=2" target="_blank" rel="noreferrer">第一章第 2 节: Hello World</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=MP25t3nKSZM&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=2" target="_blank" rel="noreferrer">第一章第 2 节: Hello World</a></li></ul> <h3 id="_1-例子代码"><a href="#_1-例子代码" class="header-anchor">#</a> 1.例子代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Hello {
+    // 24509 gas
+    string public message = &quot;Hello World!&quot;; // 状态变量
+
+    // 24473
+    function fn1() public view returns (string memory) {
+        return message;
+    }
+
+    // 21801. 内存中直接返回
+    function fn2() public pure returns(string memory){
+        return &quot;Hello World!&quot;;
+    }
+
+    // 21880
+    function fn3() public pure returns(string memory){
+        return fn2(); // 使用方法；函数调用函数，没有this。直接调用
+    }
+}
+</code></pre></div><h3 id="_2-remix-编译-部署-运行"><a href="#_2-remix-编译-部署-运行" class="header-anchor">#</a> 2.remix 编译，部署，运行</h3> <p>Remix IDE 是学习合约的好帮手，即开即用，无需各种依赖，让我们可以专注于合约的学习和开发。我们需要了解基本的 Remix 部署和代码测试。</p> <p><strong>1.编写代码</strong>：点击左侧 <strong>File explorer</strong>，然后点击 <em>Create new file</em> 图标，创建 <code>helloword.sol</code> 文件，文件内容就是 Hello World 例子。</p> <p><strong>2.编译代码</strong>：点击左侧 <strong>Solidity compile</strong>，然后点击 <code>Compile helloword.sol</code>，出现绿色的&quot;对号&quot;就是 compilation successful 了。（小技巧：选中此页面的 <em>Auto compile</em> 可以自动编译最新修改保存后的代码，推荐选中此选项。）</p> <p><strong>3.部署合约</strong>：点击左侧 <strong>Deploy &amp; run transactions</strong> 页面，点击黄色按钮 「Depoly」，此时按钮下方区域会出现<strong>Deployed Contracts</strong>，这里就是刚刚部署出来的合约地址。</p> <p><strong>4.运行合约</strong>：展开<strong>Deployed Contracts</strong>中刚部署的合约，找到刚刚部署的 Hello 合约，点击 <code>message</code>/<code>fn1</code>/<code>fn2</code>/<code>fn3</code> 按钮都可以读取到<code>&quot;Hello World!&quot;</code>内容。</p> <h3 id="_3-hello-world-例子分析"><a href="#_3-hello-world-例子分析" class="header-anchor">#</a> 3.Hello World 例子分析</h3> <p>上面的代码获取 message 可以得到 <code>&quot;Hello World!&quot;</code>,调用 <code>fn1()</code>函数，也可以得到 <code>&quot;Hello World!&quot;</code>; 这是因为 <code>fn1</code> 里面的逻辑是返回 message。通过这个例子可以发现，合约内调用变量并不需要使用 <code>this</code> 之类的关键字，直接使用即可，调用函数也是如此，直接 <code>fnName([x])</code> 就可以。</p> <p>通过 Remix 调用详情我们可以发现，他们消耗的 gas 不相同。通常直接获取 <code>message</code> 更省钱，因为<code>message</code>储存在状态变量中，而函数<code>helloWorld</code>是读取了状态变量然后再返回出去。但是在 Remix 中有时候得到的结果却并不相同，不用太相信 Remix 内的 gas。在 Remix 中，代码顺序，变量名/函数名长短的修改都可以大大影响 gas 消耗，不要太相信 Remix 的 ga 消耗。</p> <p>在编写 solidity 代码时，保证安全的前提下，让合约消耗更少的 gas 是一个重要的优化方向。后面会有专门的一章进行 gas 优化的探讨，这里不再多展开。</p> <h2 id="_3️⃣-合约代码中的三种注释"><a href="#_3️⃣-合约代码中的三种注释" class="header-anchor">#</a> 3️⃣ 合约代码中的三种注释</h2> <p>我们看到第一行的代码是 <code>// SPDX-License-Identifier: MIT</code> 这里面的 <code>//</code> 符号，是注释符。用来标记和记录代码开发相关的事情，注释的内容是不会被程序运行，Solidity 支持单行注释和块注释，注释是为了更好的解释代码。<strong>请不要相信好的代码不需要注释这种鬼言论</strong>。代码中加入注释可以更好的团队协作，让自己更好的进行代码开发，以及让阅读者更快捷的理解代码逻辑。在实际工作中经常会出现自己写的代码一年半载之后再看，复杂些的逻辑可能需要浪费很多时间在代码理解上，如果再没有设计图和代码注释，简直想骂人。</p> <p>Solidity 支持 3 种注释方式；</p> <ul><li>单行注释</li> <li>块注释</li> <li>NatSpec 描述注释</li></ul> <h3 id="本节配套视频-3"><a href="#本节配套视频-3" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=3" target="_blank" rel="noreferrer">第一章第 3 节: 合约代码中的三种注释</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=QZ-1r4rjlyQ&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=3" target="_blank" rel="noreferrer">第一章第 3 节: 合约代码中的三种注释</a></li></ul> <h3 id="_1-单行注释"><a href="#_1-单行注释" class="header-anchor">#</a> 1.单行注释</h3> <p>格式: <code>// 注释内容</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>string message = &quot;Hello World!&quot;; // 这是单行注释
+</code></pre></div><p>如上，<code>//</code> 后面的内容都会被编译器忽略，为了可读性，一般会在<code>//</code>后面加一个空格。</p> <h3 id="_2-块注释"><a href="#_2-块注释" class="header-anchor">#</a> 2.块注释</h3> <p>格式如下，在 <code>/*</code> 与 <code>*/</code> 之间的内容，都被编译器忽略</p> <div class="language- extra-class"><pre class="language-text"><code>    /*
+    这是块注释
+    */
+</code></pre></div><p>为了可读性，一般块注释的行首都加 <code>*</code> 和空格，如下</p> <div class="language- extra-class"><pre class="language-text"><code>    /**
+     * 这是块注释
+     * 这是块注释
+     */
+</code></pre></div><h3 id="_3-natspec-描述注释"><a href="#_3-natspec-描述注释" class="header-anchor">#</a> 3.NatSpec 描述注释</h3> <p>单行使用 <code>///</code> 开始，多行使用 <code>/**</code> 开头以 <code>*/</code> 结尾。NatSpec 描述注释的作用非常重要，它是为函数、返回变量等提供丰富的文档。在编写合约的时候，强烈推荐使用 <code>NatSpec</code> 为所有的开放接口（只要是在 <code>ABI</code> 里呈现的内容）进行完整的注释。</p> <h4 id="⓵-简单演示"><a href="#⓵-简单演示" class="header-anchor">#</a> ⓵ 简单演示</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+/// @title  一个简单的数据存储演示
+/// @author Anbang
+/// @notice 您智能将此合约用于最基本的演示
+/// @dev    提供了存储方法/获取方法
+/// @custom:xx    自定义的描述/这个是实验的测试合约
+contract  TinyStorage {
+    // data
+    uint256 storedData;
+
+    /// @notice 储存 x
+    /// @param _x: storedData 将要修改的值
+    /// @dev   将数字存储在状态变量 storedData 中
+    function set(uint256 _x) public{
+        storedData = _x;
+    }
+
+    /// @notice 返回存储的值
+    /// @return 储存值
+    /// @dev   检索状态变量 storedData 的值
+    function get() public view returns(uint256){
+        return storedData;
+    }
+
+
+    /**
+     * @notice 第二种写法
+     * @param _x: XXXXX
+     * @dev   XXXXX
+     * @return XXXXX
+     * @inheritdoc :
+     */
+}
+</code></pre></div><p>上面所有标签都是可选的。下表解释了每个 NatSpec 标记的用途以及可以使用在哪些位置。我们可以选择合适的标记进行记录</p> <table><thead><tr><th>标签</th> <th>说明</th> <th>语境</th></tr></thead> <tbody><tr><td><code>@title</code></td> <td>描述 contract/interface 的标题</td> <td>contract, interface, library</td></tr> <tr><td><code>@author</code></td> <td>作者姓名</td> <td>contract, interface, library</td></tr> <tr><td><code>@notice</code></td> <td>向最终用户解释这是做什么的</td> <td>contract, interface, library,<br>function, 公共状态变量<br>event</td></tr> <tr><td><code>@dev</code></td> <td>向开发人员解释任何额外的细节</td> <td>contract, interface, library,<br>function, 状态变量, event</td></tr> <tr><td><code>@param</code></td> <td>记录参数（后面必须跟参数名称）</td> <td>function, event,<br>自定义错误</td></tr> <tr><td><code>@return</code></td> <td>函数的返回变量</td> <td>function, 公共状态变量</td></tr> <tr><td><code>@inheritdoc</code></td> <td>从基本函数中复制所有缺失的标签（必须后跟合约名称）</td> <td>function, 公共状态变量</td></tr> <tr><td><code>@custom:...</code></td> <td>自定义标签，语义由应用程序定义</td> <td>所有位置均可以</td></tr></tbody></table> <h4 id="⓶-文档输出"><a href="#⓶-文档输出" class="header-anchor">#</a> ⓶ 文档输出</h4> <p>使用 <code>NatSpec</code> 描述注释的另一个好处是，当被编译器解析时，上面示例中的代码将生成两个不同的 JSON 文件。</p> <ul><li>User Documentation：供最终用户在执行功能时作为通知使用的</li> <li>Developer Documentation：供开发人员使用的。</li></ul> <p>如果将上述合约另存为，<code>a.sol</code> 则您可以使用以下命令生成文档：</p> <div class="language- extra-class"><pre class="language-text"><code>solc --userdoc --devdoc a.sol
+</code></pre></div><h4 id="⓷-继承说明"><a href="#⓷-继承说明" class="header-anchor">#</a> ⓷ 继承说明</h4> <p>TODO: 在后面合约继承的时候再演示使用。</p> <p>如果函数是继承别的合约，没有 NatSpec 的函数将自动继承其基本函数的文档。但是下面三种情况是例外的：</p> <ul><li>当参数名称不同时。
+<ul><li>这时候是函数的重载，函数签名已经发生了改变。</li></ul></li> <li>当有多个基本功能时。
+<ul><li>这时候因为发生了冲突，supper 中有多个父级</li></ul></li> <li>当有一个明确的 <code>@inheritdoc</code> 标签指定应该使用哪个合约来继承时。</li></ul> <p>更多 NatSpec 请参考: <a href="https://github.com/aragon/radspec" target="_blank" rel="noopener noreferrer">https://github.com/aragon/radspec<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="_4️⃣-合约结构介绍"><a href="#_4️⃣-合约结构介绍" class="header-anchor">#</a> 4️⃣ 合约结构介绍</h2> <ol><li>SPDX 版权声明
+<ul><li>https://spdx.org/licenses/</li></ul></li> <li>pragma solidity 版本限制</li> <li>contract 关键字</li> <li>import 导入声明</li> <li>interface: 接口</li> <li>library:库合约</li></ol> <h3 id="本节配套视频-4"><a href="#本节配套视频-4" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=4" target="_blank" rel="noreferrer">第一章第 4 节: 合约结构介绍 1</a></li> <li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=5" target="_blank" rel="noreferrer">第一章第 4 节: 合约结构介绍 2</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=9qICkLTA6iA&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=4" target="_blank" rel="noreferrer">第一章第 4 节: 合约结构介绍 1</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=n0kX_EfhobI&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=5" target="_blank" rel="noreferrer">第一章第 4 节: 合约结构介绍 2</a></li></ul> <h3 id="_1-spdx-版权声明"><a href="#_1-spdx-版权声明" class="header-anchor">#</a> 1.SPDX 版权声明</h3> <p>第 1 行 <code>// SPDX-License-Identifier: MIT</code> 就是合约的版权声明。其中 <strong>SPDX-License-Identifier</strong>(SPDX 许可标示) 是标注当前的智能合约采用什么样的对外开放标准，该标准规定了别人是否拥有商业开发，学习使用等权利。代码中使用的 <code>MIT</code> 规定了其他人随便用该代码，但出问题不负责。<a href="https://spdx.org/licenses/MIT.html" target="_blank" rel="noopener noreferrer">MIT 详细解释<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>；SPDX 许可标示的注释在文件的任何位置都可以被编译器识别到的，按照规范建议把它放在文件的顶部第一行。</p> <p>如果一个项目开源了智能合约的源代码，可以更好地建立社区信任。但是由于提供源代码就不可避免的涉及到版权或者法律问题。所以 solidity 鼓励开源，但是开源并不等于放弃版权。如果你不想指定任何许可证，或者代码就是不想开源，Solidity 推荐使用 <code>UNLICENSED</code> ;<code>UNLICENSED</code> 不存在于 SPDX 许可证列表中,与 UNLICENSE （授予所有人所有权利）不同，它比 <code>UNLICENSE</code> 多一个 <code>D</code> 字母。</p> <p>需要注意: 源代码这里，编译器不会验证 SPDX 许可标示是否符合规范，比如我可以写为 <code>// SPDX-License-Identifier: ANBANG</code> ，并不会影响代码的运行。但是这里的标示会被打包在 <code>bytecode metadata</code> 里。</p> <h4 id="⓵-bytecode-metadata-介绍"><a href="#⓵-bytecode-metadata-介绍" class="header-anchor">#</a> ⓵ bytecode metadata 介绍</h4> <p>当我们使用 <code>remix</code> 编译合约的时候，会在根目录创建 <code>artifacts</code> 文件夹，其中包含 <code>build-info</code> 记录构建信息的文件夹，以及每个合约名字作为文件名的文件夹，比如 <code>contract Hello</code> 将生成</p> <ul><li><code>Hello.json</code> 文件</li> <li><code>Hello_metadata.json</code> 文件</li></ul> <h4 id="⓶-hello-json-文件结构"><a href="#⓶-hello-json-文件结构" class="header-anchor">#</a> ⓶ <code>Hello.json</code> 文件结构</h4> <div class="language- extra-class"><pre class="language-text"><code>{
+  deploy: {},
+  data: {
+    bytecode: {},
+    deployedBytecode: {},
+    gasEstimates: {},
+    methodIdentifiers: {},
+  },
+  abi: [],
+};
+</code></pre></div><h4 id="⓷-hello-metadata-json-文件结构"><a href="#⓷-hello-metadata-json-文件结构" class="header-anchor">#</a> ⓷ <code>Hello_metadata.json</code> 文件结构</h4> <div class="language- extra-class"><pre class="language-text"><code>{
+  compiler: {
+    version: &quot;0.8.17+commit.xxx&quot;,
+  },
+  language: &quot;Solidity&quot;,
+  output: {
+    abi: [],
+    devdoc: {},
+    userdoc: {},
+  },
+  settings: {},
+  sources: {
+    &quot;aaa.sol&quot;: {
+      keccak256:
+        &quot;0x637c141739144cd991b9350336a1f8c3b948811d7ed743fefb4aad99d7bb362f&quot;,
+      license: &quot;ANBANG&quot;,
+      urls: [
+        &quot;bzz-raw://9eea517225b90242d6e3761046f5f5a8f0a2393747c89f3af01f34ad00764dc4&quot;,
+        &quot;dweb:/ipfs/QmXp5wap9ZNC9fihdA7aLMe7bKWBjeAuv7khEuvKrgp9Bx&quot;,
+      ],
+    },
+  },
+  version: 1,
+};
+</code></pre></div><p><code>// SPDX-License-Identifier: ANBANG</code> 中的 <code>ANBANG</code> 就是在 <code>sources -&gt; filename.sol -&gt; license</code> 中</p> <ul><li><strong>总结:</strong> <ol><li>根据自己的合约情况，选择合适的版权声明可以避免很多不必要的版权麻烦。</li></ol></li> <li><strong>扩展:</strong> <ol><li>更多的 SPDX-License-Identifier 类型介绍，参照文章 <a href="https://spdx.org/licenses/" target="_blank" rel="noopener noreferrer">SPDX License List<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 详细阅读。</li> <li>Solidity 遵循 <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#license" target="_blank" rel="noopener noreferrer">npm 的 license 建议<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li>更多的 bytecode metadata 参照文章 <a href="#">合约的 metadata</a></li></ol></li></ul> <h3 id="_2-pragma-solidity-版本限制"><a href="#_2-pragma-solidity-版本限制" class="header-anchor">#</a> 2.pragma solidity 版本限制</h3> <p>第 2 行 <code>pragma solidity ^0.8.17;</code> 指令，它是告诉编译器，我当前的合约代码采用的是 Solidity 0.8.17 这个版本为基础编写的，解析部署时需要在匹配的版本下进行，在区块链浏览器上进行合约验证时，也需要选择匹配的版本。</p> <h4 id="⓵-使用-的意义和优点"><a href="#⓵-使用-的意义和优点" class="header-anchor">#</a> ⓵ 使用 <code>^</code> 的意义和优点</h4> <p>而 <code>^0.8.17</code> 中的 <code>^</code> 表示小版本兼容，大版本不兼容，相当于 <code>pragma solidity &gt;= 0.8.17 &lt; 0.9.0;</code>。他既不允许低于<code>0.8.17</code>的编译器编译，也不允许大于等于 <code>0.9.0</code> 版本的编译器进行编译。之所以这么写，不写死 <code>pragma solidity 0.8.17;</code> 是为了可以享受到编译器的补丁版，比如以后出来了 <code>0.8.40</code> 版本，那么当前合约是可以运行在未来的 <code>0.8.40</code> 这个新版本的编译器。但是如果是大版本升级到了 <code>0.9.0</code>，那么编译器不会用新版的<code>0.9.x</code>解析，会使用 0.8 的最后一个稳定版本来进行解析编译。这里如果不加 <code>^</code>,直接写<code>pragma solidity 0.8.17;</code>,就是告诉编译器，当前合约只选择在 <code>0.8.17</code> 版本来编译和部署；这样做的缺点就是享受不到以后出的补丁版的编译器。</p> <h4 id="⓶-跨大版本的合约"><a href="#⓶-跨大版本的合约" class="header-anchor">#</a> ⓶ 跨大版本的合约</h4> <p>如果你打算跨大版本的合约，可以使用<code>&gt;</code> /<code>&gt;=</code>/<code>&lt;</code>/<code>&lt;=</code>来操作，比如 <code>pragma solidity &gt;=0.7.0 &lt;0.9.0;</code>。</p> <p>注意：<code>pragma</code> 指令只对当前的源文件起作用，如果把文件 <code>B</code> 导入到文件 <code>A</code>，文件 B 的 pragma 将不会自动应用于文件 A。</p> <ul><li><strong>总结:</strong> <ol><li><code>pragma solidity ^0.8.17;</code> 是用来告诉编译器应该选择什么版本来解析编译当前代码。</li> <li><code>pragma</code> 指令只对当前的源文件起作用。</li></ol></li></ul> <p>注：一份源文件可以包含<strong>多个版本声明</strong>、多个导入声明和多个合约声明。</p> <h3 id="_3-contract-关键字"><a href="#_3-contract-关键字" class="header-anchor">#</a> 3.contract 关键字</h3> <p>第 3 行的 <code>contract Hello {}</code> 是合约的基本结构；其中 <code>contract</code> 声明了当前代码块内是一个完整的合约。而 <code>Hello</code> 是当前合约的名字，合约名称是必须的，首字母一般采用大写字母开头。</p> <p><code>contract</code> 代表特殊的意义，这种有特殊意义的词，在编程界里一般被称为 <code>保留关键字</code>；保留关键字是现在或者将来被用到的特殊代指，都有固定意义，所以保留关键字不能作为变量名和函数名字。</p> <ul><li><strong>总结:</strong> <ol><li>contract 基本结构是 <code>contract ContractName {}</code></li> <li>Solidity 合约中，合约的名字是必须的。</li> <li>合约的名称，一般约定为 大驼峰命名方式</li> <li>contract 是保留关键字</li> <li>保留关键字不能作为变量名和函数名</li></ol></li> <li><strong>扩展:</strong> <ol><li>合约的编写规范，参照 <a href="/solidity/forever/903.styleguide.html">合约编码规范</a></li> <li>更多保留关键字，参照 <a href="/solidity/source/03.variable.html#id11">变量名命名规则</a> 详细阅读。</li></ol></li></ul> <p>注：一份源文件可以包含多个版本声明、多个导入声明和<strong>多个合约声明</strong>。</p> <h4 id="⓵-变量"><a href="#⓵-变量" class="header-anchor">#</a> ⓵ 变量</h4> <p>合约内的 <code>message</code> 叫做状态变量，状态变量是永久地存储在合约存储中的值。关于变量的更多信息，会在后续 <a href="/solidity/source/03.variable.html">变量</a> 那一章详细介绍</p> <h4 id="⓶-函数"><a href="#⓶-函数" class="header-anchor">#</a> ⓶ 函数</h4> <p>函数是代码的可执行单元，是一组逻辑的集合。关于变量的更多信息，会在后续 <a href="/solidity/source/04.function.html">函数</a> 那一章详细介绍</p> <h4 id="⓷-this-关键字"><a href="#⓷-this-关键字" class="header-anchor">#</a> ⓷ this 关键字</h4> <p>Solidity 中 <code>this</code> 代表合约对象本身；</p> <ul><li>可以通过 <code>address(this)</code> 获取合约地址。</li> <li>可以通过 <code>this.fnName</code> 获取 external 函数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    function contractAds() external view returns (address) {
+        return address(this);
+    }
+
+    function testExternal() external view returns (address) {
+        return this.contractAds();
+    }
+}
+</code></pre></div><h4 id="⓸-合约地址-合约创建者地-合约调用者地址"><a href="#⓸-合约地址-合约创建者地-合约调用者地址" class="header-anchor">#</a> ⓸ 合约地址/合约创建者地/合约调用者地址</h4> <p>这三个地址概念一定要完全理解。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// 这三个地址的概念一定要理解清楚
+contract Demo {
+    address public owner;
+
+    constructor() {
+        // 可以用在 constructor 内获取当前合约地址
+        owner = address(this);
+
+        // 不可以在构造函数内调用函数，因为此时合约还没有完成构建好。
+        // this.caller(); 相当于从外部调用 caller 方法
+        // owner = this.caller();
+    }
+
+    function caller() external view returns (address) {
+        return this.contractAds(); // 内部调用 external 可见性的函数
+    }
+
+    function contractAds() external view returns (address) {
+        return address(this);
+    }
+}
+</code></pre></div><h4 id="⓹-合约属性-type-关键字"><a href="#⓹-合约属性-type-关键字" class="header-anchor">#</a> ⓹ 合约属性:type 关键字</h4> <ul><li><code>type(C).name</code>:获得合约名</li> <li><code>type(C).creationCode</code>:获得包含创建合约字节码的内存字节数组。它可以在内联汇编中构建自定义创建例程，尤其是使用 create2 操作码。 不能在合约本身或派生的合约访问此属性。 因为会引起循环引用。</li> <li><code>type(C).runtimeCode</code>:获得合约的运行时字节码的内存字节数组。这是通常由 C 的构造函数部署的代码。 如果 C 有一个使用内联汇编的构造函数，那么可能与实际部署的字节码不同。 还要注意库在部署时修改其运行时字节码以防范定期调用（guard against regular calls）。 与 .creationCode 有相同的限制，不能在合约本身或派生的合约访问此属性。 因为会引起循环引用。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Hello {
+    string public message = &quot;Hello World!&quot;;
+}
+
+contract Demo {
+    function name() external pure returns (string memory) {
+        return type(Hello).name;
+    }
+
+    function creationCode() external pure returns (bytes memory) {
+        return type(Hello).creationCode;
+    }
+    function runtimeCode() external pure returns (bytes memory) {
+        return type(Hello).runtimeCode;
+    }
+}
+</code></pre></div><p>除了上面介绍的版权声明，版本限制，contract 外，合约文件还包括 <code>import</code>, <code>interface</code>,<code>library</code>，一起展开介绍下</p> <h3 id="_4-import-导入声明"><a href="#_4-import-导入声明" class="header-anchor">#</a> 4.import 导入声明</h3> <p>功能：从其他文件内倒入需要的变量或者函数。</p> <h4 id="⓵-导入方式"><a href="#⓵-导入方式" class="header-anchor">#</a> ⓵ 导入方式</h4> <p>既可以导入<strong>本地文件</strong>，也可以导入 <strong>url</strong>(网络上的 ipfs，http 或者 git 文件)</p> <ol><li><strong>导入所有的全局标志</strong> <code>import &quot;filename&quot;;</code> 到当前全局范围
+<ol><li>导入本地文件:<code>import &quot;./ERC20.sol&quot;;</code>，其中<code>./</code>表示当前目录，查找路径参考</li> <li>导入网络文件:<code>import &quot;https://github.com/aaa/.../tools.sol&quot;;</code></li> <li>导入本地 NPM 库:
+<ol><li><code>$ npm install @openzeppelin/contracts</code></li> <li><code>import &quot;@openzeppelin/contracts/token/ERC721/ERC721.sol&quot;;</code></li></ol></li></ol></li> <li><strong>导入所有的全局标志，并创建新的全局符号</strong> <ol><li>方式一: <code>import * as symbolName from &quot;filename&quot;;</code></li> <li>方式二: <code>import &quot;filename&quot; as symbolName;</code></li></ol></li> <li>按需导入，按需修改名称
+<ol><li><code>import {symbol1 as aliasName, symbol2} from &quot;filename&quot;;</code></li></ol></li></ol> <p>不推荐导入变量标示名到当前全局范围的方式，因为不可控，容易污染当前的命名空间。如果全局导入，推荐使用 <code>import &quot;filename&quot; as symbolName;</code></p> <p>注：一份源文件可以包含多个版本声明、多<strong>个导入声明</strong>和多个合约声明。</p> <h4 id="⓶-导入时候的本地路径"><a href="#⓶-导入时候的本地路径" class="header-anchor">#</a> ⓶ 导入时候的本地路径</h4> <p>上文中的 filename 总是会按路径来处理，以 <code>/</code> 作为目录分割符、以 <code>.</code> 标示当前目录、以 <code>..</code> 表示父目录。 当 <code>.</code> 或 <code>..</code> 后面跟随的字符是 <code>/</code> 时，它们才能被当做当前目录或父目录。 只有路径以当前目录 <code>.</code> 或父目录 <code>..</code> 开头时，才能被视为相对路径。</p> <p>用 <code>import &quot;./x.sol&quot; as x;</code> 语句导入当前源文件同目录下的文件 <code>x.sol</code> 。 如果用<code>import &quot;x.sol&quot; as x;</code> 代替，可能会引入不同的文件（在全局 <code>include directory</code> 中）。</p> <p>最终导入哪个文件取决于编译器（见下文）到底是怎样解析路径的。 通常，目录层次不必严格映射到本地文件系统， 它也可以映射到能通过诸如 ipfs，http 或者 git 发现的资源。</p> <h3 id="_5-interface-接口"><a href="#_5-interface-接口" class="header-anchor">#</a> 5.interface: 接口</h3> <h4 id="⓵-接口使用案例"><a href="#⓵-接口使用案例" class="header-anchor">#</a> ⓵ 接口使用案例</h4> <p>在下面的例子中，定义了 cat 合约以及 dog 合约。他们都有 <code>eat</code> 方法.以此他们都可以被上面的 <code>animalEat</code> 接口所接收。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Cat {
+    uint256 public age;
+
+    function eat() public returns (string memory) {
+        age++;
+        return &quot;cat eat fish&quot;;
+    }
+
+    function sleep1() public pure returns (string memory) {
+        return &quot;sleep1&quot;;
+    }
+}
+
+contract Dog {
+    uint256 public age;
+
+    function eat() public returns (string memory) {
+        age += 2;
+        return &quot;dog miss you&quot;;
+    }
+
+    function sleep2() public pure returns (string memory) {
+        return &quot;sleep2&quot;;
+    }
+}
+
+interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test(address _addr) external returns (string memory) {
+        AnimalEat general = AnimalEat(_addr);
+        return general.eat();
+    }
+}
+</code></pre></div><h4 id="⓶-type-i-interfaceid"><a href="#⓶-type-i-interfaceid" class="header-anchor">#</a> ⓶ <code>type(I).interfaceId</code></h4> <p>返回接口<code>I</code> 的 <code>bytes4</code> 类型的接口 ID，接口 ID 参考： <a href="https://learnblockchain.cn/docs/eips/eip-165.html" target="_blank" rel="noopener noreferrer">EIP-165<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 定义的， 接口 ID 被定义为 XOR （异或） 接口内所有的函数的函数选择器（除继承的函数。</p> <p>上面的代码种，可以增加如下的函数来查看 <code>interfaceId</code>;</p> <div class="language- extra-class"><pre class="language-text"><code>contract Animal {
+    // ...
+    function interfaceId() external pure returns (bytes4) {
+        return type(AnimalEat).interfaceId;
+    }
+}
+</code></pre></div><p>更多内容在 <a href="/solidity/source/13.interface.html">interface:接口</a> 那一章详细介绍。</p> <h3 id="_6-library-库合约"><a href="#_6-library-库合约" class="header-anchor">#</a> 6.library:库合约</h3> <p>库与合约类似，但它的目的是在一个指定的地址，且仅部署一次，然后通过 EVM 的特性来复用代码。</p> <div class="language- extra-class"><pre class="language-text"><code>library Set {
+    struct Data { mapping(uint =&gt; bool) flags; }
+    function test(){
+    }
+}
+</code></pre></div><p>其他合约调用库文件的内容直接通过库文件名.方法名例如：<code>Set.test()</code>。</p> <p>更多内容在 <a href="/solidity/source/14.library.html">Library:库</a> 那一章详细介绍。</p> <h2 id="_5️⃣-全局的以太币单位"><a href="#_5️⃣-全局的以太币单位" class="header-anchor">#</a> 5️⃣ 全局的以太币单位</h2> <p>现实生活中经常会听说，提现 1.5 个以太币，或者某笔交易手续费花了 0.02 个以太坊等。这些带有小数点的数字是日常交流使用的。但是在合约内，却没有这种小数概念的货币金额。比如 1 个 ETH 的金额是 <code>10**18 wei</code>。</p> <h3 id="本节配套视频-5"><a href="#本节配套视频-5" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=6" target="_blank" rel="noreferrer">第一章第 5 节: 全局的以太币单位</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=QgZfwI_fVEg&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=6" target="_blank" rel="noreferrer">第一章第 5 节: 全局的以太币单位</a></li></ul> <h3 id="_1-基础单位"><a href="#_1-基础单位" class="header-anchor">#</a> 1.基础单位</h3> <p>为了方便合约开发者操作，也提供如下这种便捷的换算方式。</p> <p>以太币单位之间的换算就是在数字后边加上 <code>wei</code>、 <code>gwei</code>、 <code>ether</code> 来实现的，如果后面没有单位，缺省为 <code>wei</code>。例如 <code>1 ether == 1e18</code> 的逻辑判断值为 true。</p> <ul><li><code>1 ether = 1 * 10^18 wei</code></li> <li><code>1 ether = 1 * 10^9 gwei</code></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    // 返回 true
+    function test() public pure returns (bool a,bool b,bool c) {
+        a = 1 wei == 1;
+        b = 1 gwei == 1e9;
+        c = 1 ether == 1e18;
+    }
+}
+</code></pre></div><h3 id="_2-变量使用以太币单位"><a href="#_2-变量使用以太币单位" class="header-anchor">#</a> 2.变量使用以太币单位</h3> <p><strong>注意: 这些后缀不能直接用在变量后边</strong>。如果想用以太币单位来计算输入参数，你可以使用乘法来转换: <code>amountEth * 1 ether</code></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint256 public amount;
+
+    constructor() {
+        amount = 1;
+    }
+
+    function fnEth() public view returns (uint256) {
+        return amount + 1 ether; // 1000000000000000001
+    }
+
+    function fnGwei() public view returns (uint256) {
+        return amount + 1 gwei; // 1000000001
+    }
+
+    // 这些后缀不能直接用在变量后边。如果想用以太币单位来计算输入参数，你可以用如下方式来完成：
+    function testVar(uint256 amountEth) public view returns (uint256) {
+        return amount + amountEth * 1 ether;
+    }
+}
+</code></pre></div><h2 id="_6️⃣-接收-eth"><a href="#_6️⃣-接收-eth" class="header-anchor">#</a> 6️⃣ 接收 ETH</h2> <p>三个关键字</p> <ul><li>payable
+<ul><li>使用 payable 标记的<strong>函数</strong>可以用于发送和接收 Eth。</li> <li>使用 payable 标记的 <strong>地址变量</strong>，允许发送和接收 Eth。</li></ul></li> <li>fallback
+<ul><li>一个合约可以最多有一个回退函数。</li></ul></li> <li>receive
+<ul><li>一个合约最多有一个 <code>receive</code> 函数</li></ul></li></ul> <p>fallback 和 receive 不是普通函数，而是新的函数类型，有特别的含义，它们前面不需要加 <code>function</code> 这个关键字。加上 <code>function</code> 之后，它们就变成了一般的函数，只能按一般函数来去调用。同时 <code>receive</code> 和 <code>fallback</code> 需要注意 gas 消耗。</p> <p>本节介绍的是合约如何接收 ETH，至于合约如何发送 ETH，请阅读 <a href="/solidity/source/02.type-of-data.html#id24">两种形式的地址</a> 这一节。</p> <h3 id="本节配套视频-6"><a href="#本节配套视频-6" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=7" target="_blank" rel="noreferrer">第一章第 6 节: 接收 ETH</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=DkKdLwIL3-Y&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=7" target="_blank" rel="noreferrer">第一章第 6 节: 接收 ETH</a></li></ul> <h3 id="_1-payable"><a href="#_1-payable" class="header-anchor">#</a> 1.payable</h3> <ul><li>使用 payable 标记的<strong>函数</strong>可以用于发送和接收 Eth。
+<ul><li>payable 意味着在调用这个函数的消息中可以附带 Eth。</li></ul></li> <li>使用 payable 标记的 <strong>地址变量</strong>，允许发送和接收 Eth。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Payable {
+    // payable 标记函数
+    function deposit1() external payable {}
+
+    function deposit2() external {}
+
+    // payable 标记地址
+    function withdraw() external {
+        payable(msg.sender).transfer(address(this).balance);
+    }
+
+    // 通过 balance 属性，来查看余额。
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><p>可以使用 deposit 存款，但是如果使用 calldata 转账，则会失败，报错 <em>In order to receive Ether transfer the contract should have either 'receive' or payable 'fallback' function</em></p> <h3 id="_2-fallback"><a href="#_2-fallback" class="header-anchor">#</a> 2.fallback</h3> <p>fallback 函数是调用合约没有的方法时候执行，同时也可以设置为允许接收网络主币。</p> <ul><li>语法
+<ul><li>不带参数: <code>fallback () external [payable]</code></li> <li>带参数: <code>fallback (bytes calldata input) external [payable] returns (bytes memory output)</code></li> <li>没有<code>function</code>关键字。必须是<code>external</code>可见性，</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// function fallback() external payable {}
+// 正确写法不带 function，直接写 fallback，fallback 如果使用 function 修饰，则有警告
+// This function is named &quot;fallback&quot; but is not the fallback function of the contract.
+// If you intend this to be a fallback function, use  &quot;fallback(...) { ... }&quot; without
+// the &quot;function&quot; keyword to define it.
+</code></pre></div></li> <li>fallback 函数类型可以是 <code>payable</code>，也可以不是 <code>payable</code> 的;
+<ul><li>如果不是 <code>payable</code> 的，可以往合约发送非转账交易，如果交易里带有转账信息，交易会被 revert；</li> <li>如果是 <code>payable</code> 的，自然也就可以接受转账了。</li></ul></li> <li>尽管 <code>fallback</code> 可以是 payable 的，但并不建议这么做，声明为 <code>payable</code> 之后，其所消耗的 gas 最大量就会被限定在 2300。</li> <li>它可以是<code>virtual</code>的，可以被重载也可以有修改器（modifier）。</li></ul> <p><strong>回退函数在两种情况被调用</strong>：</p> <ul><li>向合约转账；
+<ul><li>如果使用 call 转账，会执行 fallback。</li> <li>如果使用合约内已有的 <code>deposit</code> 转账，不会执行 fallback</li></ul></li> <li>执行合约不存在的方法
+<ul><li>就会执行 fallback 函数。（执行合约不存在的方法时执行）</li></ul></li></ul> <h4 id="⓵-向合约转账"><a href="#⓵-向合约转账" class="header-anchor">#</a> ⓵ 向合约转账</h4> <p>fallback 函数始终会接收数据，但为了同时接收以太时，必须标记为　<code>payable</code>。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Payable {
+    event Log(string funName, address from, uint256 value, bytes data);
+
+    function deposit() external payable {}
+
+    // 通过 balance 属性，来查看余额。
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+
+    fallback() external payable {
+        emit Log(&quot;fallback&quot;, msg.sender, msg.value, msg.data);
+    }
+}
+</code></pre></div><h4 id="⓶-执行合约不存在的方法"><a href="#⓶-执行合约不存在的方法" class="header-anchor">#</a> ⓶ 执行合约不存在的方法</h4> <p>如果在一个对合约调用中，没有其他函数与给定的函数标识符匹配 fallback 会被调用．或者在没有 receive 函数时，而没有提供附加数据对合约调用，那么 fallback 函数会被执行。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract StoneCat {
+    uint256 public age = 0;
+    event eventFallback(string);
+
+    // 发送到这个合约的所有消息都会调用此函数（因为该合约没有其它函数）。
+    // 向这个合约发送以太币会导致异常，因为 fallback 函数没有 `payable` 修饰符
+    fallback() external {
+        age++;
+        emit eventFallback(&quot;fallbak&quot;);
+    }
+}
+
+interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test1(address _addr) external returns (string memory) {
+        AnimalEat general = AnimalEat(_addr);
+        return general.eat();
+    }
+    function test2(address _addr) external returns (bool success) {
+        AnimalEat general = AnimalEat(_addr);
+        (success,) = address(general).call(abi.encodeWithSignature(&quot;eat()&quot;));
+        require(success);
+    }
+}
+</code></pre></div><p>上面例子种，执行 StoneCat 合约 calldata，参数 <code>0x00</code> 可以成功，但是如果发送了以太币，则会失败，因为没有 paybale。</p> <p>直接使用方法是不行的，但是可以通过 call 调用，因为 call 不检查，这也官方是不推荐使用 call 的原因。</p> <h4 id="⓷-带参数的-fallback"><a href="#⓷-带参数的-fallback" class="header-anchor">#</a> ⓷ 带参数的 fallback</h4> <p>fallback 可以有输入值和输出值，都是 <code>bytes</code> 类型的数据。如果使用了带参数的版本，<code>input</code> 将包含发送到合约的完整数据，参数 input 等于<code>msg.data</code>，可以省略，并且通过 <code>output</code> 返回数据。 返回数据不是 ABI 编码过的数据，相反，它返回不经过修改的数据。与任何其他函数一样，只要有足够的 gas 传递给它，回退函数就可以执行复杂的操作。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    bytes public inputData1;
+    bytes public inputData2;
+
+    fallback (bytes calldata input) external  returns (bytes memory output){
+        inputData1 = input;
+        inputData2 = msg.data; // input 等于 msg.data
+        return input;
+    }
+}
+</code></pre></div><p>⚠️ 如果想要解码输入数据，那么前四个字节用作函数选择器，然后用<code>abi.decode</code> 与数组切片语法一起使用来解码 ABI 编码的数据：
+<code>(c, d) = abi.decode(_input[4:], (uint256, uint256));</code>请注意，这仅应作为最后的手段，而应使用对应的函数。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract StoneCat {
+    uint256 public age = 0;
+    bytes public inputData1;
+    bytes public inputData2;
+    uint256 public c;
+    uint256 public d;
+
+    event eventFallback(string);
+
+    fallback (bytes calldata input) external  returns (bytes memory output){
+        age++;
+        inputData1 = input;
+        inputData2 = msg.data;
+        (c, d) = abi.decode(msg.data[4:], (uint256, uint256));
+        emit eventFallback(&quot;fallbak&quot;);
+        return input;
+    }
+}
+
+interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test2(address _addr) external returns (bool success) {
+        AnimalEat general = AnimalEat(_addr);
+        (success, ) = address(general).call(abi.encodeWithSignature(&quot;eat()&quot;,123,456));
+        require(success);
+    }
+}
+</code></pre></div><h3 id="_3-receive-以太函数"><a href="#_3-receive-以太函数" class="header-anchor">#</a> 3.receive 以太函数</h3> <p>receive 只负责接收主币,一个合约最多有一个 <code>receive</code> 函数</p> <ul><li>语法 <code>receive() external payable {}</code> <ul><li>没有 <code>function</code> 关键字</li></ul> <div class="language- extra-class"><pre class="language-text"><code>  // function receive() external payable {}
+  // receive 如果使用 function 修饰，则有如下警告
+  // This function is named &quot;receive&quot; but is not the receive function of
+  // the contract. If you intend this to be a receive function,
+  // use &quot;receive(...) { ... }&quot; without the &quot;function&quot; keyword to define it.
+</code></pre></div></li> <li>没有参数、没有返回值。</li> <li><code>external payable</code> 是必须的
+<ul><li>receive 函数类型必须是 <code>payable</code> 的，并且里面的语句只有在通过外部地址往合约里转账的时候执行。</li></ul></li> <li>它可以是 <code>virtual</code> 的，可以被重载也可以有 修改器(modifier) 。</li> <li>如果没有定义 <code>接收函数 receive</code>，就会执行 <code>fallback</code> 函数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    event Log(string funName, address from, uint256 value, bytes data);
+
+    receive() external payable {
+        // receive 被调用的时候不存在 msg.data，所以不使用这个，直接用空字符串
+        emit Log(&quot;receive&quot;, msg.sender, msg.value, &quot;&quot;);
+    }
+
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><p>上面例子通过 calldata 执行转账，无参数时候会触发 receive 函数。但是如果有参数，比如<code>0x00</code>,则会报错 <em>'Fallback' function is not defined</em></p> <p>在对合约没有任何附加数据调用（通常是对合约转账）是会执行 <code>receive</code>函数．例如　通过 <code>.send()</code> or <code>.transfer()</code>。</p> <p>声明为 payable 之后，其所消耗的 gas 最大量就会被限定在 2300。除了基础的日志输出之外，进行其他操作的余地很小。下面的操作消耗会操作 2300 gas :</p> <ul><li>写入存储</li> <li>创建合约</li> <li>调用消耗大量 gas 的外部函数</li> <li>发送以太币</li></ul> <p>扩展阅读 ⚠️: 一个没有 receive 函数的合约，可以作为 <em>coinbase 交易</em> （又名<em>矿工区块回报</em> ）的接收者或者作为 <code>selfdestruct</code> 的目标来接收以太币。一个合约不能对这种以太币转移做出反应，因此也不能拒绝它们。这是 EVM 在设计时就决定好的，而且 Solidity 无法绕过这个问题。这也意味着 <code>address(this).balance</code> 可以高于合约中实现的一些手工记帐的总和（例如在 receive 函数中更新的累加器记帐）。</p> <h3 id="_4-receive-和-fallback-共存的调用"><a href="#_4-receive-和-fallback-共存的调用" class="header-anchor">#</a> 4.receive 和 fallback 共存的调用</h3> <p>注意：这里 fallback 需要是 <code>payable</code> 类型的。如下图:</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+
+    调用时发送了ETH
+            |
+判断 msg.data 是否为空
+          /     \
+        是       否
+是否存在 receive   fallbak()
+      /   \
+    存在   不存在
+    /        \
+receive()   fallbak()
+
+ */
+</code></pre></div><p><strong>总结</strong>: 只有 <code>msg.data</code> 为空，并且存在 <code>receive</code> 的时候，才会运行 <code>receive</code>。</p> <p>如果不存在 <code>receive</code> 以太函数，<code>payable</code> 的 <code>fallback</code> 函数也可以在纯以太转账的时候执行。但是推荐总是定义一个 receive 函数，而不是定义一个 payable 的 fallback 函数。否则会报警告 ⚠️:<em>Warning: This contract has a payable fallback function, but no receive ether function. Consider adding a receive ether function.</em></p> <div class="language- extra-class"><pre class="language-text"><code>
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// 这个合约会保留所有发送给它的以太币，没有办法返还。
+contract Demo {
+    uint256 public x;
+    uint256 public y;
+
+    event Log(string funName, address from, uint256 value, bytes data);
+
+    // 纯转账调用这个函数，例如对每个空empty calldata的调用
+    receive() external payable {
+        x = 1;
+        y = msg.value;
+        emit Log(&quot;receive&quot;, msg.sender, msg.value, &quot;&quot;);
+    }
+
+    // 除了纯转账外，所有的调用都会调用这个函数．
+    // (因为除了 receive 函数外，没有其他的函数).
+    // 任何对合约非空calldata 调用会执行回退函数(即使是调用函数附加以太).
+    fallback() external payable {
+        x = 2;
+        y = msg.value;
+        emit Log(&quot;fallback&quot;, msg.sender, msg.value, msg.data);
+    }
+
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><ul><li>输入以太币，然后无参数 calldata 调用</li> <li>输入以太币，然后参数<code>0x00</code> 进行 calldata 调用</li></ul> <p>如果 <code>receive</code>函数不存在，但是有 <code>payable</code> 的 fallback 回退函数 那么在进行纯以太转账时，fallback 函数会调用.如果两个函数都没有，这个合约就没法通过常规的转账交易接收以太（会抛出异常）。</p> <p>注意：<code>receive</code> 函数可能只有 2300 gas 可以使用（如，当使用 <code>send</code> 或<code>transfer</code> 时），</p> <p>⚠️: 一个没有定义 <code>fallback</code> 函数或 <code>receive</code> 函数的合约，直接接收以太币（没有函数调用，使用 <code>send</code> 或 <code>transfer</code>）会抛出一个异常， 并返还以太币。所以如果你想让你的合约在任何情况下都可以接收以太币，必须实现 <code>receive</code> 函数（使用 <code>payable fallback</code> 函数不再推荐，因为它会让借口混淆）。</p> <h2 id="_7️⃣-selfdestruct-合约自毁"><a href="#_7️⃣-selfdestruct-合约自毁" class="header-anchor">#</a> 7️⃣ selfdestruct:合约自毁</h2> <p>合约代码从区块链上移除的唯一方式是合约在合约地址上的执行自毁操作 <code>selfdestruct</code> 。<code>selfdestruct</code> 作用是 <strong>销毁合约</strong>，并<strong>把余额发送到指定地址类型 Address</strong>。</p> <p>做了两件事：</p> <ul><li>销毁合约:它使合约变为无效，删除该地址地字节码。</li> <li>它把合约的所有资金强制发送到目标地址。
+<ul><li>如果接受的地址是合约，即使里面没有 <code>fallback</code> 和 <code>receive</code> 也会发送过去</li></ul></li> <li>除非必要，不建议销毁合约。
+<ul><li>如果有人发送以太币到移除的合约，这些以太币可能将永远丢失</li> <li>如果要禁用合约，可以通过修改某个内部状态让所有函数无法执行，这样也可以达到目的。</li></ul></li> <li>即便一个合约的代码中没有显式地调用 <code>selfdestruct</code>，它仍然有可能通过 <code>delegatecall</code> 或 <code>callcode</code> 执行自毁操作。</li></ul> <p>⚠️：即使一个合约被 <code>selfdestruct</code> 删除，它仍然是区块链历史的一部分，区块链的链条中不可能无缘无故消失一个块，这样他们就没办法做校验了。 因此，使用 <code>selfdestruct</code> 与从硬盘上删除数据是不同的。</p> <p>请注意 <code>selfdestruct</code> 具有从 EVM 继承的一些特性：</p> <ul><li>接收合约的 <code>receive</code> 函数 不会执行。</li> <li>合约仅在交易结束时才真正被销毁，并且 <code>revert</code> 可能会“撤消”销毁。此外，当前合约内的所有函数都可以被直接调用，包括当前函数。</li></ul> <blockquote><p>在 0.5.0 之前, 还有一个 <code>suicide</code> ，它和 <code>selfdestruct</code> 语义是一样的。</p></blockquote> <h3 id="本节配套视频-7"><a href="#本节配套视频-7" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=8" target="_blank" rel="noreferrer">第一章第 7 节: selfdestruct:合约自毁</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=YgUdGXM-tcw&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=8" target="_blank" rel="noreferrer">第一章第 7 节: selfdestruct:合约自毁</a></li></ul> <h3 id="⓵-自我毁灭"><a href="#⓵-自我毁灭" class="header-anchor">#</a> ⓵ 自我毁灭</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Kill {
+    uint256 public aaa = 123;
+
+    constructor() payable {}
+
+    function kill() external{
+        selfdestruct(payable(msg.sender));
+    }
+
+    function bbb() external pure returns(uint256){
+        return 1;
+    }
+
+    fallback() external {}
+
+    receive() external payable {}
+}
+</code></pre></div><ol><li>先调用 <code>aaa</code>/<code>bbb</code>，查看输出值</li> <li>calldata 形式进行转账</li> <li>kill 销毁合约</li> <li>查看收到的金额</li> <li>查看 aaa 的值</li></ol> <h3 id="⓶-通过合约调用毁灭"><a href="#⓶-通过合约调用毁灭" class="header-anchor">#</a> ⓶ 通过合约调用毁灭</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Kill {
+    uint256 public aaa = 123;
+
+    constructor() payable {}
+
+    function kill() external {
+        selfdestruct(payable(msg.sender));
+    }
+
+    function bbb() external pure returns(uint256){
+        return 1;
+    }
+
+    fallback() external {}
+
+    receive() external payable {}
+}
+
+contract Helper {
+    // 没有 `fallback` 和 `receive`，正常没办法接受ETH主币
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+
+    // kill 后，此时 Helper 余额就会强制收到ETH主币
+    function kill(Kill _kill) external {
+        _kill.kill();
+    }
+}
+</code></pre></div><ol><li>部署 Kill</li> <li>先调用 <code>Kill.aaa</code>，查看输出值</li> <li>calldata 形式进行转账，查看余额</li> <li>部署 Helper</li> <li>查看 <code>Helper.getBalance</code> 返回值</li> <li>calldata 形式进行转账，此时会失败</li> <li>调用 <code>Helper.kill</code></li> <li>查看 <code>Helper.getBalance</code> 返回值</li> <li>查看 <code>Kill.aaa</code> 的值</li></ol> <h2 id="🆗-实战-1-同志们好"><a href="#🆗-实战-1-同志们好" class="header-anchor">#</a> 🆗 实战 1: 同志们好</h2> <p>为了让学习的内容，可以更好的使用，每一章后面都会最少有一个实战练习。当前是第一章，学习的内容比较简单和浅显，所以做一个简单的小联系就可以了。</p> <p>为此我写了这个阅兵式里<code>同志们好</code>的场景合约，用于能力自检，相当于加强版的 Hello World。再次提醒，本教程默认读者已经掌握了 Solidity 基本语言的使用方法。这并不是针对初次学习 Solidity 的教程。</p> <p>同志们好的场景：</p> <ul><li>领导说“同志们好”，回复“领导好”</li> <li>领导说“同志们辛苦了”，回复“为人民服务”</li></ul> <h3 id="_1-合约代码"><a href="#_1-合约代码" class="header-anchor">#</a> 1.合约代码</h3> <p>个人习惯是将代码按照功能进行区域划分，每一个区域使用如下注释标记。</p> <div class="language- extra-class"><pre class="language-text"><code>/*
+ * ========================================
+ * State Variables
+ * ========================================
+ */
+</code></pre></div><p>废话不多说，直接上代码：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+/// @title 一个模拟同志们好的简单演示
+/// @author Anbang
+/// @notice 您只能将此合约用于最基本的模拟演示
+/// @dev 本章主要内容的实战练习
+/// @custom:experimental 这是实验的合约。
+contract HelloComrades {
+    /*
+     * ========================================
+     * State Variables
+     * ========================================
+     */
+
+    /// @notice 用于标记当前进度
+    /// @dev 0:等待领导说&quot;同志们好&quot;，
+    /// @dev 1:等待同志们说&quot;领导好&quot;，
+    /// @dev 2:等待领导说&quot;同志们辛苦了&quot;
+    /// @dev 3:等待同志们说&quot;为人民服务&quot;
+    /// @dev 4:等待销毁。
+    /// @return 当前进度
+    uint8 public step = 0;
+
+    /// @notice 用于标记领导地址
+    /// @dev 不可变量，需要在构造函数内指定，以后就不能修改了
+    /// @return 当前领导的地址
+    address public immutable leader;
+
+    /// @notice 用于遇到错误时的无脑复读机式回复
+    string internal constant UNKNOWN =
+        unicode&quot;我不知道如何处理它,你找相关部门吧!&quot;;
+
+    /*
+     * ========================================
+     * Events
+     * ========================================
+     */
+
+    /// @notice 用于对当前 step 被修改时的信息通知
+    /// @dev 只要发生 step 修改，都需要抛出此事件
+    /// @param 当前修改的最新 step
+    event Step(uint8);
+
+    /// @notice 用于对当前合约的金额变动通知
+    /// @dev 只要发生金额修改，都需要抛出此事件
+    /// @param tag: 标记内容
+    /// @param from: 当前地址
+    /// @param value: 当前发送金额
+    /// @param data: 当前调用的data内容
+    event Log(string tag, address from, uint256 value, bytes data);
+
+    /*
+     * ========================================
+     * Modifier
+     * ========================================
+     */
+
+    /// @notice 检查只能领导调用
+    /// @dev 用于领导专用函数
+    modifier onlyLeader() {
+        require(msg.sender == leader, unicode&quot;必须领导才能说&quot;);
+        _;
+    }
+
+    /// @notice 检查只能非领导调用
+    /// @dev 用于非领导地址检测
+    modifier notLeader() {
+        require(
+            msg.sender != leader,
+            unicode&quot;不需要领导回答，需要同志们来回答&quot;
+        );
+        _;
+    }
+
+    /*
+     * ========================================
+     * Errors
+     * ========================================
+     */
+
+    /// @notice 自定义的错误，这种注释内容会在错误时显示出来
+    /// @dev 用于所有未知错误
+    /// This is a message des info.需要上方空一行，才可以显示出来
+    error MyError(string msg);
+
+    /*
+     * ========================================
+     * Constructor
+     * ========================================
+     */
+
+    /// @dev 用于领导地址的指定，后续不可修改
+    constructor(address _leader) {
+        require(_leader != address(0), &quot;invalid address&quot;);
+        leader = _leader;
+    }
+
+    /*
+     * ========================================
+     * Functions
+     * ========================================
+     */
+
+    /// @notice 用于领导说&quot;同志们好&quot;
+    /// @dev 只能在 step 为 0 时调用，只能领导调用，并且只能说&quot;同志们好&quot;
+    /// @param content: 当前领导说的内容
+    /// @return 当前调用的状态，true 代表成功
+    function hello(string calldata content) external onlyLeader returns (bool) {
+        if (step != 0) {
+            revert(UNKNOWN);
+        }
+        if (!review(content, unicode&quot;同志们好&quot;)) {
+            revert MyError(unicode&quot;必须说:同志们好&quot;);
+        }
+        step = 1;
+        emit Step(step);
+        return true;
+    }
+
+    /// @notice 用于同志们说&quot;领导好&quot;
+    /// @dev 只能在 step 为 1 时调用，只能非领导调用，并且只能说&quot;领导好&quot;
+    /// @param content: 当前同志们说的内容
+    /// @return 当前调用的状态，true 代表成功
+    function helloRes(string calldata content)
+        external
+        notLeader
+        returns (bool)
+    {
+        if (step != 1) {
+            revert(UNKNOWN);
+        }
+        if (!review(content, unicode&quot;领导好&quot;)) {
+            revert MyError(unicode&quot;必须说:领导好&quot;);
+        }
+        step = 2;
+        emit Step(step);
+        return true;
+    }
+
+    /// @notice 用于领导说&quot;同志们辛苦了&quot;
+    /// @dev 只能在 step 为 2 时调用，只能领导调用，并且只能说&quot;同志们辛苦了&quot;,还需给钱
+    /// @param content: 当前领导说的内容
+    /// @return 当前调用的状态，true 代表成功
+    function comfort(string calldata content)
+        external
+        payable
+        onlyLeader
+        returns (bool)
+    {
+        if (step != 2) {
+            revert(UNKNOWN);
+        }
+        if (!review(content, unicode&quot;同志们辛苦了&quot;)) {
+            revert MyError(unicode&quot;必须说:同志们辛苦了&quot;);
+        }
+        if (msg.value &lt; 2 ether) {
+            revert MyError(unicode&quot;给钱！！！最少2个以太币&quot;);
+        }
+        step = 3;
+        emit Step(step);
+        emit Log(&quot;comfort&quot;, msg.sender, msg.value, msg.data);
+        return true;
+    }
+
+    /// @notice 用于同志们说&quot;为人民服务&quot;
+    /// @dev 只能在 step 为 3 时调用，只能非领导调用，并且只能说&quot;为人民服务&quot;
+    /// @param content: 当前同志们说的内容
+    /// @return 当前调用的状态，true 代表成功
+    function comfortRes(string calldata content)
+        external
+        notLeader
+        returns (bool)
+    {
+        if (step != 3) {
+            revert(UNKNOWN);
+        }
+        if (!review(content, unicode&quot;为人民服务&quot;)) {
+            revert MyError(unicode&quot;必须说:为人民服务&quot;);
+        }
+        step = 4;
+        emit Step(step);
+        return true;
+    }
+
+    /// @notice 用于领导对
+    /// @dev 只能在 step 为 4 时调用，只能领导调用
+    /// @return 当前调用的状态，true 代表成功
+    function destruct() external onlyLeader returns (bool) {
+        if (step != 4) {
+            revert(UNKNOWN);
+        }
+        emit Log(&quot;selfdestruct&quot;, msg.sender, address(this).balance, &quot;&quot;);
+        selfdestruct(payable(msg.sender));
+        return true;
+    }
+
+    /*
+     * ========================================
+     * Helper
+     * ========================================
+     */
+
+    /// @notice 用于检查调用者说的话
+    /// @dev 重复检测内容的代码抽出
+    /// @param content: 当前内容
+    /// @param correctContent: 正确内容
+    /// @return 当前调用的状态，true 代表内容相同，通过检测
+     function review(string calldata content, string memory correctContent)
+     private
+     pure
+     returns(bool){
+         return keccak256(abi.encodePacked(content)) == keccak256(abi.encodePacked(correctContent));
+     }
+
+    receive() external payable {
+        emit Log(&quot;receive&quot;, msg.sender, msg.value, &quot;&quot;);
+    }
+
+    fallback() external payable {
+        emit Log(&quot;fallback&quot;, msg.sender, msg.value, msg.data);
+    }
+
+    /// @notice 用于获取当前合约内的余额
+    /// @dev 一个获取当前合约金额的辅助函数
+    /// @return 当前合约的余额
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><h3 id="_2-remix-部署测试"><a href="#_2-remix-部署测试" class="header-anchor">#</a> 2.Remix 部署测试</h3> <ul><li>部署合约
+<ul><li>需要输入 Leader 地址作为参数</li></ul></li> <li>点击 【leader】 查看信息</li> <li>点击 【destruct】 进行销毁
+<ul><li>此时报错，因为步骤不对</li></ul></li> <li>【hello】
+<ul><li>输入错的内容</li> <li>输入<em>同志们好</em></li> <li>查看 step 值</li></ul></li> <li>【helloRes】
+<ul><li>输入错的内容，此时提示，账号不对。</li> <li>切换账号后输入错的内容，提示<em>必须说:领导好</em></li> <li>输入<em>领导好</em></li> <li>查看 step 值</li></ul></li> <li>【comfort】
+<ul><li>输入错的内容，此时提示账号权限不对</li> <li>切换账号后，输入错的内容，提示<em>必须说:同志们辛苦了</em></li> <li>点击【hello】，此时说提示<em>我不知道如何处理它,你找相关部门吧!</em>，因为 step 不对。</li> <li>输入<em>同志们辛苦了</em>，此时提示必须给钱；（只有给了 2 个以上的以太币，才能说同志们辛苦了。）</li> <li>我们给 2 个 wei，假装是 2 个 ETH，看能否通过。（结果还是不能通过）</li> <li>给 2 个以太，并输入<em>同志们辛苦了</em>。此时可以通过了</li> <li>点击【getBalance】查看合约的余额</li> <li>查看 step 值</li></ul></li> <li>【comfortRes】
+<ul><li>点击【helloRes】，此时说提示<em>我不知道如何处理它,你找相关部门吧!</em>，因为 step 不对。</li> <li>切换账号后，输入错的内容，提示<em>必须说:为人民服务</em></li> <li>输入<em>为人民服务</em></li></ul></li> <li>【calldata】调用
+<ul><li>输入 1wei ，无参数直接调用；查看交易详情内的 logs，此时是 <strong>receive</strong>，余额变化多 1wei</li> <li>输入 2wei，参数使用<code>0x00</code>调用，查看交易详情内的 logs，此时是 <strong>fallback</strong>，余额变化多 2wei</li></ul></li> <li>【destruct】调用，注意查看余额变化。
+<ul><li>注意查看当前 leader 地址的余额</li> <li>先使用非 leader 地址触发【destruct】，提示错误</li> <li>然后是 leader 地址触发。查看交易详情种的 logs</li> <li>查看 leader 地址/ balance/step，都已经是默认值</li> <li>触发所有函数，此时函数都可以使用，但是都是默认值。</li></ul></li></ul> <h3 id="_3-案例知识点"><a href="#_3-案例知识点" class="header-anchor">#</a> 3.案例知识点</h3> <ul><li>合约的基本用法</li> <li>合约的构造函数使用</li> <li>函数的基本用法
+<ul><li>函数中条件判断和错误输出</li></ul></li> <li>事件和事件触发</li> <li>NatSpec 用法演示
+<ul><li>自定错误使用和触发，以及结合 <code>NatSpec</code> 抛出错误</li></ul></li> <li><code>fallback</code> 和 <code>receive</code> 的使用和不同之处</li> <li><code>immutable</code> 不可变量的使用</li> <li><code>constant</code> 常量的使用</li> <li>unicode 字面常量</li> <li>modifier 使用</li> <li><code>keccak256</code> 结合 <code>abi.encodePacked</code> 判断字符串是否相同</li></ul> <h3 id="_4-生成文档"><a href="#_4-生成文档" class="header-anchor">#</a> 4.生成文档</h3> <div class="language- extra-class"><pre class="language-text"><code>solc --userdoc --devdoc a.sol
+</code></pre></div><h3 id="_5-实战作业"><a href="#_5-实战作业" class="header-anchor">#</a> 5.实战作业</h3> <p>这个例子中 step，因为只有几个选择，尝试将 step 改为 enum 类型。</p> <h3 id="本节配套视频-8"><a href="#本节配套视频-8" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=9" target="_blank" rel="noreferrer">第一章: 实战 1: 同志们好</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=wJpmy1umX-k&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=9" target="_blank" rel="noreferrer">第一章: 实战 1: 同志们好</a></li></ul> <h2 id="🆗-实战-2-存钱罐合约"><a href="#🆗-实战-2-存钱罐合约" class="header-anchor">#</a> 🆗 实战 2: 存钱罐合约</h2> <ul><li>所有人都可以存钱
+<ul><li>ETH</li></ul></li> <li>只有合约 owner 才可以取钱</li> <li>只要取钱，合约就销毁掉 <code>selfdestruct</code></li> <li>扩展：支持主币以外的资产
+<ul><li>ERC20</li> <li>ERC721</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Bank {
+    // 状态变量
+    address public immutable owner;
+
+    // 事件
+    event Deposit(address _ads, uint256 amount);
+    event Withdraw(uint256 amount);
+
+    // receive
+    receive() external payable {
+        emit Deposit(msg.sender, msg.value);
+    }
+
+    // 构造函数
+    constructor() payable {
+        owner = msg.sender;
+    }
+
+    // 方法
+    function withdraw() external {
+        require(msg.sender == owner, &quot;Not Owner&quot;);
+        emit Withdraw(address(this).balance);
+        selfdestruct(payable(msg.sender));
+    }
+
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><h3 id="本节配套视频-9"><a href="#本节配套视频-9" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=10" target="_blank" rel="noreferrer">第一章: 实战 2: 存钱罐合约</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=yA8IMHdLq54&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=10" target="_blank" rel="noreferrer">第一章: 实战 2: 存钱罐合约</a></li></ul> <h2 id="🆗-实战-3-weth-合约"><a href="#🆗-实战-3-weth-合约" class="header-anchor">#</a> 🆗 实战 3: WETH 合约</h2> <p>WETH 是包装 ETH 主币，作为 ERC20 的合约。</p> <p>标准的 ERC20 合约包括如下几个</p> <ul><li>3 个查询
+<ul><li><code>balanceOf</code>: 查询指定地址的 Token 数量</li> <li><code>allowance</code>: 查询指定地址对另外一个地址的剩余授权额度</li> <li><code>totalSupply</code>: 查询当前合约的 Token 总量</li></ul></li> <li>2 个交易
+<ul><li><code>transfer</code>: 从当前调用者地址发送指定数量的 Token 到指定地址。
+<ul><li>这是一个写入方法，所以还会抛出一个 <code>Transfer</code> 事件。</li></ul></li> <li><code>transferFrom</code>: 当向另外一个合约地址存款时，对方合约必须调用 transferFrom 才可以把 Token 拿到它自己的合约中。</li></ul></li> <li>2 个事件
+<ul><li><code>Transfer</code></li> <li><code>Approval</code></li></ul></li> <li>1 个授权
+<ul><li><code>approve</code>: 授权指定地址可以操作调用者的最大 Token 数量。</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract WETH {
+    string public name = &quot;Wrapped Ether&quot;;
+    string public symbol = &quot;WETH&quot;;
+    uint8 public decimals = 18;
+
+    event Approval(address indexed src, address indexed delegateAds, uint256 amount);
+    event Transfer(address indexed src, address indexed toAds, uint256 amount);
+    event Deposit(address indexed toAds, uint256 amount);
+    event Withdraw(address indexed src, uint256 amount);
+
+    mapping(address =&gt; uint256) public balanceOf;
+    mapping(address =&gt; mapping(address =&gt; uint256)) public allowance;
+
+
+    function deposit() public payable {
+        balanceOf[msg.sender] += msg.value;
+        emit Deposit(msg.sender, msg.value);
+    }
+
+    function withdraw(uint256 amount) public {
+        require(balanceOf[msg.sender] &gt;= amount);
+        balanceOf[msg.sender] -= amount;
+        payable(msg.sender).transfer(amount);
+        emit Withdraw(msg.sender, amount);
+    }
+
+    function totalSupply() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    function approve(address delegateAds, uint256 amount) public returns (bool) {
+        allowance[msg.sender][delegateAds] = amount;
+        emit Approval(msg.sender, delegateAds, amount);
+        return true;
+    }
+
+    function transfer(address toAds, uint256 amount) public returns (bool) {
+        return transferFrom(msg.sender, toAds, amount);
+    }
+
+    function transferFrom(
+        address src,
+        address toAds,
+        uint256 amount
+    ) public returns (bool) {
+        require(balanceOf[src] &gt;= amount);
+
+        if (src != msg.sender) {
+            require(allowance[src][msg.sender] &gt;= amount);
+            allowance[src][msg.sender] -= amount;
+        }
+
+        balanceOf[src] -= amount;
+        balanceOf[toAds] += amount;
+
+        emit Transfer(src, toAds, amount);
+
+        return true;
+    }
+
+    fallback() external payable {
+        deposit();
+    }
+
+    receive() external payable {
+        deposit();
+    }
+
+}
+</code></pre></div><p>ETH 上的 WETH 合约参考:
+https://cn.etherscan.com/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2#code</p> <h3 id="本节配套视频-10"><a href="#本节配套视频-10" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=11" target="_blank" rel="noreferrer">第一章: 实战 3: WETH 合约</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=qXkC3VIFyp0&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=11" target="_blank" rel="noreferrer">第一章: 实战 3: WETH 合约</a></li></ul> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li><p>因为区块可以被撤回，编码时候有些需要注意的？</p> <ul><li>会出现你发起的交易被回滚甚至从区块链中抹除掉的可能。区块链不能保证当前的交易一定包含在下一个区块中。如果你开发的合约有顺序关系，要注意这个特性。合约内的逻辑，不能将某一个块作为依赖。</li></ul></li> <li><p>标记版本号有哪些方法？</p> <ul><li><code>^0.8.17</code></li> <li><code>0.8.17</code></li> <li><code>pragma solidity &gt;=0.7.0 &lt;0.9.0;</code></li></ul></li> <li><p>常用的版权声明有哪些，分别什么区别？</p> <ul><li><code>MIT</code>/<code>BUSL</code></li></ul></li> <li><p>聊一聊 NatSpec 注释</p> <ul><li>单行使用 <code>///</code> 开始，多行使用 <code>/**</code> 开头以 <code>*/</code> 结尾。NatSpec 描述注释的作用非常重要，它是为函数、返回变量等提供丰富的文档。在编写合约的时候，强烈推荐使用 <code>NatSpec</code> 为所有的开放接口（只要是在 <code>ABI</code> 里呈现的内容）进行完整的注释。</li> <li>可以输出错误，而不消耗 gas</li></ul></li> <li><p>聊一聊存储，内存，栈的内容</p> <ul><li><strong>存储</strong>：每一个地址都有一个持久化的内存，存储是将 256 位字映射到 256 位字的键值存储区。所以数据类型的最大值是 <code>uint256</code>/<code>int256</code>/<code>bytes32</code>，合约只能读写存储区内属于自己的部分。</li> <li><strong>内存</strong>：合约会试图为每一次消息调用获取一块被重新擦拭干净的内存实例。所以储存在内存中的数据，在函数执行完以后就会被销毁。内存是线性的，可按字节级寻址，但读的长度被限制为 256 位，而写的长度可以是 8 位或 256 位。</li> <li><strong>栈</strong>：合约的所有计算都在一个被称为栈（stack）的区域执行，栈最大有 1024 个元素，每一个元素长度是 256 bit；所以调用深度被限制为 1024 ，对复杂的操作，推荐使用循环而不是递归。</li></ul></li> <li><p>interface 如何使用</p> <ul><li><p>定义一个拥有某个方法的接口，传入地址后，调用地址。</p> <div class="language- extra-class"><pre class="language-text"><code>interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test(address _addr) external returns (string memory) {
+        AnimalEat general = AnimalEat(_addr);
+        return general.eat();
+    }
+}
+</code></pre></div></li></ul></li> <li><p><code>string message = &quot;Hello World!&quot;;</code> 这种没有明确标注可视范围的情况下，<code>message</code> 的可视范围是什么? 是 <code>internal</code> 还是 <code>private</code>?</p> <ul><li>private</li></ul></li> <li><p>变量如何使用以太币单位？</p> <ul><li>如果想用以太币单位来计算输入参数，你可以使用乘法来转换: <code>amountEth * 1 ether</code></li></ul></li> <li><p>receive 和 fallback 共存的调用？</p> <ul><li>只有 msg.data 为空，并且存在 receive 的时候，才会运行 receive。</li></ul></li> <li><p>receive 和 fallback 区别？</p> <ul><li>receive 只负责接收主币</li> <li>调用没有的方法时候执行,因为可以设置 payable，可以接收网络主币。尽管 fallback 可以是 payable 的，但并不建议这么做，声明为 payable 之后，其所消耗的 gas 最大量就会被限定在 2300。</li></ul></li> <li><p>合约没有 receive 和 fallback 可以接受以太币么？</p> <ul><li>可以接受，可以方法标记 payable 进行转账</li></ul></li> <li><p>聊一聊合约自毁 <code>selfdestruct</code>。</p> <ul><li>合约代码从区块链上移除的唯一方式是合约在合约地址上的执行自毁操作 selfdestruct 。selfdestruct 作用是 销毁合约，并把余额发送到指定地址类型 Address。</li> <li>销毁合约:它使合约变为无效，删除该地址地字节码。</li> <li>它把合约的所有资金强制发送到目标地址。
+<ul><li>如果接受的地址是合约，即使里面没有 <code>fallback</code> 和 <code>receive</code> 也会发送过去</li></ul></li> <li>除非必要，不建议销毁合约。
+<ul><li>如果有人发送以太币到移除的合约，这些以太币可能将永远丢失</li> <li>如果要禁用合约，可以通过修改某个内部状态让所有函数无法执行，这样也可以达到目的。</li></ul></li> <li>即便一个合约的代码中没有显式地调用 <code>selfdestruct</code>，它仍然有可能通过 <code>delegatecall</code> 或 <code>callcode</code> 执行自毁操作。</li> <li>即使一个合约被 <code>selfdestruct</code> 删除，它仍然是区块链历史的一部分，区块链的链条中不可能无缘无故消失一个块，这样他们就没办法做校验了。 因此，使用 <code>selfdestruct</code> 与从硬盘上删除数据是不同的。</li></ul></li> <li><p>合约进行<code>selfdestruct</code>后，还可以调用状态变量和函数么？</p> <ul><li>可以调用，但是返回默认值。如果想调用，也可以在存档节点里指定未删除的高度进行调用。</li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1️⃣-区块链基础" class="sidebar-link reco-side-_1️⃣-区块链基础" data-v-b57cc07c>1️⃣ 区块链基础</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频" class="sidebar-link reco-side-本节配套视频" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-事务" class="sidebar-link reco-side-_1-事务" data-v-b57cc07c>1.事务</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-交易" class="sidebar-link reco-side-_2-交易" data-v-b57cc07c>2.交易</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-地址" class="sidebar-link reco-side-_3-地址" data-v-b57cc07c>3.地址</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_4-区块" class="sidebar-link reco-side-_4-区块" data-v-b57cc07c>4.区块</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_5-存储-内存-栈" class="sidebar-link reco-side-_5-存储-内存-栈" data-v-b57cc07c>5.存储/内存/栈</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2️⃣-hello-world" class="sidebar-link reco-side-_2️⃣-hello-world" data-v-b57cc07c>2️⃣ Hello World</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-2" class="sidebar-link reco-side-本节配套视频-2" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-例子代码" class="sidebar-link reco-side-_1-例子代码" data-v-b57cc07c>1.例子代码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-remix-编译-部署-运行" class="sidebar-link reco-side-_2-remix-编译-部署-运行" data-v-b57cc07c>2.remix 编译，部署，运行</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-hello-world-例子分析" class="sidebar-link reco-side-_3-hello-world-例子分析" data-v-b57cc07c>3.Hello World 例子分析</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3️⃣-合约代码中的三种注释" class="sidebar-link reco-side-_3️⃣-合约代码中的三种注释" data-v-b57cc07c>3️⃣ 合约代码中的三种注释</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-3" class="sidebar-link reco-side-本节配套视频-3" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-单行注释" class="sidebar-link reco-side-_1-单行注释" data-v-b57cc07c>1.单行注释</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-块注释" class="sidebar-link reco-side-_2-块注释" data-v-b57cc07c>2.块注释</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-natspec-描述注释" class="sidebar-link reco-side-_3-natspec-描述注释" data-v-b57cc07c>3.NatSpec 描述注释</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_4️⃣-合约结构介绍" class="sidebar-link reco-side-_4️⃣-合约结构介绍" data-v-b57cc07c>4️⃣ 合约结构介绍</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-4" class="sidebar-link reco-side-本节配套视频-4" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-spdx-版权声明" class="sidebar-link reco-side-_1-spdx-版权声明" data-v-b57cc07c>1.SPDX 版权声明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-pragma-solidity-版本限制" class="sidebar-link reco-side-_2-pragma-solidity-版本限制" data-v-b57cc07c>2.pragma solidity 版本限制</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-contract-关键字" class="sidebar-link reco-side-_3-contract-关键字" data-v-b57cc07c>3.contract 关键字</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_4-import-导入声明" class="sidebar-link reco-side-_4-import-导入声明" data-v-b57cc07c>4.import 导入声明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_5-interface-接口" class="sidebar-link reco-side-_5-interface-接口" data-v-b57cc07c>5.interface: 接口</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_6-library-库合约" class="sidebar-link reco-side-_6-library-库合约" data-v-b57cc07c>6.library:库合约</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_5️⃣-全局的以太币单位" class="sidebar-link reco-side-_5️⃣-全局的以太币单位" data-v-b57cc07c>5️⃣ 全局的以太币单位</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-5" class="sidebar-link reco-side-本节配套视频-5" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-基础单位" class="sidebar-link reco-side-_1-基础单位" data-v-b57cc07c>1.基础单位</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-变量使用以太币单位" class="sidebar-link reco-side-_2-变量使用以太币单位" data-v-b57cc07c>2.变量使用以太币单位</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_6️⃣-接收-eth" class="sidebar-link reco-side-_6️⃣-接收-eth" data-v-b57cc07c>6️⃣ 接收 ETH</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-6" class="sidebar-link reco-side-本节配套视频-6" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-payable" class="sidebar-link reco-side-_1-payable" data-v-b57cc07c>1.payable</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-fallback" class="sidebar-link reco-side-_2-fallback" data-v-b57cc07c>2.fallback</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-receive-以太函数" class="sidebar-link reco-side-_3-receive-以太函数" data-v-b57cc07c>3.receive 以太函数</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_4-receive-和-fallback-共存的调用" class="sidebar-link reco-side-_4-receive-和-fallback-共存的调用" data-v-b57cc07c>4.receive 和 fallback 共存的调用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_7️⃣-selfdestruct-合约自毁" class="sidebar-link reco-side-_7️⃣-selfdestruct-合约自毁" data-v-b57cc07c>7️⃣ selfdestruct:合约自毁</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-7" class="sidebar-link reco-side-本节配套视频-7" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#⓵-自我毁灭" class="sidebar-link reco-side-⓵-自我毁灭" data-v-b57cc07c>⓵ 自我毁灭</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#⓶-通过合约调用毁灭" class="sidebar-link reco-side-⓶-通过合约调用毁灭" data-v-b57cc07c>⓶ 通过合约调用毁灭</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#🆗-实战-1-同志们好" class="sidebar-link reco-side-🆗-实战-1-同志们好" data-v-b57cc07c>🆗 实战 1: 同志们好</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_1-合约代码" class="sidebar-link reco-side-_1-合约代码" data-v-b57cc07c>1.合约代码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_2-remix-部署测试" class="sidebar-link reco-side-_2-remix-部署测试" data-v-b57cc07c>2.Remix 部署测试</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_3-案例知识点" class="sidebar-link reco-side-_3-案例知识点" data-v-b57cc07c>3.案例知识点</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_4-生成文档" class="sidebar-link reco-side-_4-生成文档" data-v-b57cc07c>4.生成文档</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#_5-实战作业" class="sidebar-link reco-side-_5-实战作业" data-v-b57cc07c>5.实战作业</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-8" class="sidebar-link reco-side-本节配套视频-8" data-v-b57cc07c>本节配套视频</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#🆗-实战-2-存钱罐合约" class="sidebar-link reco-side-🆗-实战-2-存钱罐合约" data-v-b57cc07c>🆗 实战 2: 存钱罐合约</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-9" class="sidebar-link reco-side-本节配套视频-9" data-v-b57cc07c>本节配套视频</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#🆗-实战-3-weth-合约" class="sidebar-link reco-side-🆗-实战-3-weth-合约" data-v-b57cc07c>🆗 实战 3: WETH 合约</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#本节配套视频-10" class="sidebar-link reco-side-本节配套视频-10" data-v-b57cc07c>本节配套视频</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/01.hello.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/27.f2377326.js" defer></script>
+  </body>
+</html>

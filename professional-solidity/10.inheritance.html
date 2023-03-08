@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>10.合约继承 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/36.61b3c3c3.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" aria-current="page" class="active sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">10.合约继承</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_10-合约继承"><a href="#_10-合约继承" class="header-anchor">#</a> 10.合约继承</h1> <p>实现继承的方式是通过复制包括多态的代码到子类来实现的。合约继承通过关键字 <code>is</code> 来实现。由于 Solidity 继承的实现方案是代码拷贝，所以合约继承后，部署到网络时，将变成一个合约，代码将从父类拷贝到子类中。</p> <ul><li>修饰符可以继承</li> <li>事件不可以继承，但是可以重载</li> <li><code>fallback</code> 可以继承，但是需要保持原有的 <code>payable/nonpayable</code></li> <li><code>receive</code> 可以继承，但是需要保持原有的 <code>payable/nonpayable</code></li></ul> <h2 id="_1️⃣-使用-is-实现继承"><a href="#_1️⃣-使用-is-实现继承" class="header-anchor">#</a> 1️⃣ 使用 <code>is</code> 实现继承</h2> <p>当一个合约从多个合约继承时，在区块链上只有一个合约被创建，所有基类合约（或称为父合约）的代码被编译到创建的合约中。这意味着对基类合约函数的所有内部调用也只是使用内部函数调用（super.f（..）将使用 JUMP 跳转而不是消息调用）。</p> <ul><li>继承: <strong>派生合约</strong>继承<strong>基础合约</strong>的属性和方法</li> <li>基础合约通常也被称为<strong>父合约</strong>，派生合约通常也称作<strong>子合约</strong>。</li> <li>下面是: &quot;男人&quot;继承&quot;人&quot;的演示。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Person {
+    string internal name;
+    uint256 age; // 状态变量默认是internal权限
+
+    event Log(string funName);
+
+    modifier onlyOwner() virtual {
+        age = 1;
+        _;
+    }
+
+    fallback() external payable virtual {
+        emit Log(&quot;fallback by Person&quot;);
+    }
+
+    receive() external payable virtual {
+        emit Log(&quot;receive by Person&quot;);
+    }
+}
+
+contract Man is Person {
+    constructor() {
+        name = &quot;Anbang&quot;;
+        age = 18;
+    }
+
+    event Log(string funName, address _ads);
+
+    modifier onlyOwner() override {
+        age = 99;
+        _;
+    }
+
+    function getName() external view returns (string memory) {
+        return name;
+    }
+
+    function getAge() external view returns (uint256) {
+        return age;
+    }
+
+    function getAge2() external onlyOwner returns (uint256) {
+        return age;
+    }
+
+    // fallback 和 receive 继承的时候，必须保证 payable/nonpayable 状态不变。
+    // Overriding function changes state mutability from &quot;payable&quot; to &quot;nonpayable&quot;.
+    // fallback() external override {
+    //     emit Log(&quot;fallback by man&quot;);
+    // }
+
+    fallback() external payable override {
+        emit Log(&quot;fallback by man&quot;);
+    }
+
+    receive() external payable override {
+        emit Log(&quot;receive by Man&quot;, msg.sender);
+    }
+}
+</code></pre></div><ul><li>父合约必须写在子合约的前面，
+<ul><li>否则会报错: <code>TypeError: Definition of base has to precede definition of derived contract</code></li></ul></li></ul> <h2 id="_2️⃣-子类可以继承父类哪些数据"><a href="#_2️⃣-子类可以继承父类哪些数据" class="header-anchor">#</a> 2️⃣ 子类可以继承父类哪些数据？</h2> <p>子类可以访问父类的权限修饰符只有：<code>public/internal</code>，不能是 <code>external/private</code>。</p> <ul><li>如果父类的状态变量和函数是 <code>private</code> 和 <code>external</code>，则子类不可以继承和访问。
+<ul><li>如果子类调用父类 <code>external</code> 修饰的函数，会报错:<code>Cannot call function via contract type name.</code></li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Person {
+    string internal name;
+    uint256 age; // 状态变量默认是internal权限
+    uint256 public hand = 2;
+    uint256 private privateState = 99;
+
+    function publicFn() public pure returns (uint256) {
+        return 1;
+    }
+
+    function internalFn() internal pure returns (uint256) {
+        return 2;
+    }
+
+    function privateFn() private pure returns (uint256) {
+        return 3;
+    }
+}
+
+contract Man is Person {
+    constructor() {
+        name = &quot;Anbang&quot;;
+        age = 18;
+    }
+
+    function getInfo()
+        external
+        view
+        returns (
+            string memory,
+            uint256,
+            uint256
+        )
+    {
+        return (name, age, hand);
+        // privateState 不可以访问
+    }
+
+    function getPublicFn() external pure returns (uint256) {
+        return publicFn();
+    }
+
+    function getInternalFn() external pure returns (uint256) {
+        return internalFn();
+    }
+
+    // 不可以访问 privateFn 的方法
+    // function getPrivateFn() external pure returns (uint256) {
+    //     return privateFn(); // Undeclared identifier.
+    // }
+}
+</code></pre></div><h2 id="_3️⃣-多重继承中的重名"><a href="#_3️⃣-多重继承中的重名" class="header-anchor">#</a> 3️⃣ 多重继承中的重名</h2> <ul><li>一个合约同时继承 2 个合约时，这种情况叫多重继承</li> <li>多重继承中不允许出现相同的<strong>函数名</strong>、<strong>事件名</strong>、<strong>修改器名</strong>以及<strong>状态变量名</strong>等。</li></ul> <p>如下继承会报错，不允许编译:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    string internal name;
+    event log();
+    modifier onlyOwner() {
+        _;
+    }
+
+    function test() internal {}
+}
+
+contract B {
+    string internal name;
+    event log();
+    modifier onlyOwner() {
+        _;
+    }
+
+    function test() internal {}
+}
+
+contract C is A, B {}
+</code></pre></div><p>多重继承函数中 getter 函数重名也不可以，如下是<strong>比较隐蔽的冲突情况</strong>：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    uint256 public data = 10;
+}
+
+contract B {
+    // data函数之所以出错
+    // 是因为和 A 中状态变量 data 的 getter 函数重名。
+    function data() public returns (uint256) {
+        return 1;
+    }
+}
+
+contract C is A, B {}
+</code></pre></div><p>当继承时合约出现了一下相同名字会被认为是一个错误：</p> <ul><li>函数 和 修改器/modifier 同名</li> <li>函数 和 事件同名</li> <li>事件和 修改器/modifier 同名</li> <li>有一种例外情况，状态变量的 <code>getter</code> 函数可以覆盖 <code>external</code> 函数。</li></ul> <h2 id="_4️⃣-重写函数"><a href="#_4️⃣-重写函数" class="header-anchor">#</a> 4️⃣ 重写函数</h2> <p>solidity 引入了 <code>abstract</code>, <code>virtual</code>, <code>override</code> 几个关键字，用于重写函数。父合约标记为 <code>virtual</code>函数可以在继承合约里重写(overridden)以更改他们的行为。重写的函数需要使用关键字 <code>override</code> 修饰。</p> <p>继承的方法重写需要注意的点:</p> <ul><li>父合约方法需要标示为<strong>可修改</strong>，使用关键字 <code>virtual</code>，</li> <li>子合约方法需要标示为<strong>覆盖</strong>，使用关键词 <code>override</code> <ul><li>对于多重继承，如果有多个父合约有相同定义的函数， override 关键字后必须指定所有父合约名。</li></ul></li> <li>基础合约中可以包含没有实现代码的函数，也就是纯虚函数，那么基础合约必须声明为 <code>abstract</code>。</li> <li>继承多个合约时，所有同名的可修改函数都需要重写</li> <li>继承后重写合约方法，各个合约内的函数可见性需要一致</li> <li>可变性可以按照以下顺序更改为更严格的一种： <code>nonpayable</code> 可以被 <code>view</code> 和<code>pure</code> 覆盖。 <code>view</code> 可以被 <code>pure</code> 覆盖。 <code>payable</code>是一个例外，不能更改为任何其他可变性。</li></ul> <h3 id="_1-virtual-和-override"><a href="#_1-virtual-和-override" class="header-anchor">#</a> 1.virtual 和 override</h3> <p>以下例子，B 继承 A，C 继承 B</p> <ul><li>A 是爷爷</li> <li>B 是爸爸</li> <li>C 是孙子</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    function test1() public pure virtual returns (string memory) {
+        return &quot;test1 from A&quot;;
+    }
+
+    // 使用 public 和 external 都可以
+    function test2() external pure virtual returns (string memory) {
+        return &quot;test2 from A&quot;;
+    }
+
+    function test3() public pure virtual returns (string memory) {
+        return &quot;test3 from A&quot;;
+    }
+}
+
+contract B is A {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from B&quot;;
+    }
+
+    function test2() external pure override returns (string memory) {
+        return &quot;test2 from B&quot;;
+    }
+}
+
+contract C is B {
+    function test1() public pure override returns (string memory) {
+        return &quot;test1 from C&quot;;
+    }
+}
+</code></pre></div><p>对于多重继承，如果有多个父合约有相同定义的函数， <code>override</code> 关键字后必须指定所有父合约名。</p> <div class="language- extra-class"><pre class="language-text"><code>pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+contract Base1
+{
+    function foo() virtual public {}
+}
+
+contract Base2
+{
+    function foo() virtual public {}
+}
+
+contract Inherited is Base1, Base2
+{
+    // 继承自两个基类合约定义的foo(), 必须显示的指定 override
+    function foo() public override(Base1, Base2) {}
+}
+</code></pre></div><p>不过如果（重写的）函数继承自一个公共的父合约， <code>override</code> 是可以不用显示指定的。 例如：</p> <div class="language- extra-class"><pre class="language-text"><code>pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+contract A { function f() public pure{} }
+contract B is A {}
+contract C is A {}
+// 不用显示  override
+contract D is B, C {}
+</code></pre></div><p>更正式地说，如果存在父合约是签名函数的所有重写路径的一部分，则不需要重写（直接或间接）从多个基础继承的函数，并且（1）父合约实现了该函数，从当前合约到父合约的路径都没有提到具有该签名的函数，或者（2）父合约没有实现该函数，并且存在从当前合约到该父合约的所有路径中，最多只能提及该函数。</p> <p>从这个意义上说，签名函数的重写路径是通过继承图的路径，该路径始于所考虑的合约，并终止于提及具有该签名的函数的合约。</p> <p>如果函数没有标记为 <code>virtual</code> ，那么派生合约将不能更改函数的行为（即不能重写）。</p> <p>.. note::<code>private</code> 的函数是不可以标记为 <code>virtual</code> 的。</p> <p>.. note::除接口之外（因为接口会自动作为 <code>virtual</code> ），没有实现的函数必须标记为<code>virtual</code></p> <p>.. note::从 Solidity 0.8.8 开始, 在重写接口函数时不再要求 <code>override</code>
+关键字，除非函数在多个父合约定义。</p> <p>如果 getter 函数的参数和返回值都和外部函数一致时，外部（external）函数是可以被 public 的状态变量被重写的，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>
+    pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+    contract A
+    {
+        function f() external view virtual returns(uint) { return 5; }
+    }
+
+    contract B is A
+    {
+        uint public override f;
+    }
+
+</code></pre></div><p>⚠️ : 尽管 public 的状态变量可以重写外部函数，但是 public 的状态变量不能被重写。</p> <h3 id="_2-abstract-抽象合约"><a href="#_2-abstract-抽象合约" class="header-anchor">#</a> 2.abstract（抽象合约）</h3> <p>基础合约中可以包含没有实现代码的函数，也就是纯虚函数，那么基础合约必须声明为 <code>abstract</code>。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+abstract contract IERC20 {
+    function transfer() external virtual returns (bool);
+}
+
+contract ERC20 is IERC20 {
+    function transfer() external pure override returns (bool) {
+        return true;
+    }
+}
+</code></pre></div><p>扩展: 这里的 <code>abstract</code>，也可以使用 <code>interface</code> 来解决。 更多 <code>interface</code> 内容，请参考 <a href="/solidity/source/13.interface.html">interface:接口</a> 详细阅读。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC20 {
+    function transfer() external returns (bool);
+}
+
+contract ERC20 is IERC20 {
+    function transfer() external pure returns (bool) {
+        return true;
+    }
+}
+</code></pre></div><h2 id="_5️⃣-多级继承的代码书写顺序-线性化"><a href="#_5️⃣-多级继承的代码书写顺序-线性化" class="header-anchor">#</a> 5️⃣ 多级继承的代码书写顺序（线性化）</h2> <p>Solidity 语言的多重继承采用线性继承方式。继承顺序很重要，判断顺序的一个简单规则是按照<strong>从“最类似基类”到“最多派生”的顺序指定基类</strong>。</p> <p>原则：<strong>先写基础合约，再写派生合约。</strong></p> <p><strong>小技巧：可以先画继承逻辑图，然后按照从上到下，从左到右的顺序来写合约；</strong></p> <p>上面 <strong>virtual 和 override</strong> 的介绍例子中，合约继承逻辑图如下：</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+A
+|
+B
+|
+C
+ */
+</code></pre></div><p>B 继承 A，C 继承 B。所以写的时候顺序是: <code>A =&gt; B =&gt; C</code></p> <h3 id="_1-继承案例一"><a href="#_1-继承案例一" class="header-anchor">#</a> 1.继承案例一</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+ B   A
+  \ /
+   C
+ */
+</code></pre></div><p>C 继承 A 和 B。</p> <p>写的时候顺序是: <code>A &gt; B &gt; C</code> / <code>B &gt; A &gt; C</code> 都是可以的</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    function test1() public pure virtual returns (string memory) {
+        return &quot;test1 from A&quot;;
+    }
+}
+
+contract B {
+    function test2() public pure virtual returns (string memory) {
+        return &quot;test2 from B&quot;;
+    }
+}
+
+contract C is A, B {
+    function test3() public pure returns (string memory) {
+        return &quot;test3 from C&quot;;
+    }
+}
+</code></pre></div><h3 id="_2-继承案例二"><a href="#_2-继承案例二" class="header-anchor">#</a> 2.继承案例二</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+    A
+  / |
+B   |
+  \ |
+    C
+ */
+</code></pre></div><p>B 继承 A，C 继承 A 和 B。<strong>注意:这里是 C 继承 A 和 B，不是 C 继承 B 和 A</strong>。</p> <p>写的时候顺序是: <code>A &gt; B &gt; C</code></p> <p><strong>代码如下:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    function test1() public pure virtual returns (string memory) {
+        return &quot;test1 from A&quot;;
+    }
+
+    // 使用 public 和 external 都可以
+    function test2() external pure virtual returns (string memory) {
+        return &quot;test2 from A&quot;;
+    }
+
+    function test3() public pure virtual returns (string memory) {
+        return &quot;test3 from A&quot;;
+    }
+}
+
+contract B is A {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from B&quot;;
+    }
+
+    function test2() external pure virtual override returns (string memory) {
+        return &quot;test2 from B&quot;;
+    }
+}
+
+// 这里必须是 contract C is A, B
+// 不能使用 contract C is B, A
+contract C is A, B {
+    function test1() public pure override(A, B) returns (string memory) {
+        return &quot;test1 from C&quot;;
+    }
+
+    // overrid内参数顺序无所谓，
+    // C 内必须重写 A 和 B，否则会报错
+    function test2() public pure override(B, A) returns (string memory) {
+        return &quot;test1 from C&quot;;
+    }
+}
+</code></pre></div><ul><li><strong>C 继承 A 和 B 时候，所有 A 和 B 函数相同名字的方法，都需要重写。</strong> <ul><li>否则会报错:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>Derived contract must override function &quot;functionName&quot;.
+Two or more base classes define function with same name and parameter types.
+</code></pre></div></li> <li><strong>多重继承时候，需要先写基础合约，再写派生合约</strong> <ul><li>写合约 C 的时候，必须写成<code>contract C is A, B</code>，不能写<code>contract C is B, A</code></li> <li>否则会报错:<code>TypeError: Linearization of inheritance graph impossible</code>。</li></ul></li></ul> <h3 id="_3-继承案例三"><a href="#_3-继承案例三" class="header-anchor">#</a> 3.继承案例三</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+    A
+  / |
+B   |
+  \ |
+    C
+    |
+    D
+ */
+</code></pre></div><p>B 继承 A，C 继承 A 和 B，D 继承 C。（<strong>注意:这里是 C 继承 A 和 B，不是 C 继承 B 和 A</strong>），所以写的时候顺序是: <code>A &gt; B &gt; C &gt; D</code></p> <p>D 继承 C 时候，没有同名函数的冲突，所以 test1 和 test2 随便是否重写。</p> <p><strong>代码如下</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    function test1() public pure virtual returns (string memory) {
+        return &quot;test1 from A&quot;;
+    }
+
+    // 使用 public 和 external 都可以
+    function test2() external pure virtual returns (string memory) {
+        return &quot;test2 from A&quot;;
+    }
+
+    function test3() public pure virtual returns (string memory) {
+        return &quot;test3 from A&quot;;
+    }
+}
+
+contract B is A {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from B&quot;;
+    }
+
+    function test2() external pure virtual override returns (string memory) {
+        return &quot;test2 from B&quot;;
+    }
+}
+
+// 这里必须是 contract C is A, B
+// 不能使用 contract C is B, A
+contract C is A, B {
+    function test1()
+        public
+        pure
+        virtual
+        override(A, B)
+        returns (string memory)
+    {
+        return &quot;test1 from C&quot;;
+    }
+
+    // overrid内参数顺序无所谓，
+    function test2()
+        public
+        pure
+        virtual
+        override(B, A)
+        returns (string memory)
+    {
+        return &quot;test1 from C&quot;;
+    }
+}
+
+contract D is C {
+    function test1() public pure override returns (string memory) {
+        return &quot;test1 from D&quot;;
+    }
+}
+</code></pre></div><h3 id="_4-继承案例四"><a href="#_4-继承案例四" class="header-anchor">#</a> 4.继承案例四</h3> <div class="language- extra-class"><pre class="language-text"><code>/**
+     A
+   / |
+  /  |
+B    C
+  \  |
+   \ D
+    \|
+     E
+ */
+</code></pre></div><p>B 继承 A，C 继承 A，D 继承 C，E 继承 B 和 D。所以写的时候顺序是: <code>A &gt; B &gt; C &gt; D</code></p> <p><strong>例子如下:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    function test1() public pure virtual returns (string memory) {
+        return &quot;test1 from A&quot;;
+    }
+
+    // 使用 public 和 external 都可以
+    function test2() external pure virtual returns (string memory) {
+        return &quot;test2 from A&quot;;
+    }
+
+    function test3() public pure virtual returns (string memory) {
+        return &quot;test3 from A&quot;;
+    }
+}
+
+contract B is A {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from B&quot;;
+    }
+
+    function test2() external pure virtual override returns (string memory) {
+        return &quot;test2 from B&quot;;
+    }
+}
+
+contract C is A {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from C&quot;;
+    }
+}
+
+contract D is C {
+    function test1() public pure virtual override returns (string memory) {
+        return &quot;test1 from D&quot;;
+    }
+}
+
+contract D is B, D {
+    function test1() public pure override(B, D) returns (string memory) {
+        return &quot;test1 from E&quot;;
+    }
+
+    // 必须要重写 test2 ，因为此时 B 和 D 内都有test2方法，但是D内继承A的test2方法，冲突了。
+    // 需要要写  override(B, A)，不能写 override(B, D)，否则会报如下错误
+    // Function needs to specify overridden contract &quot;A&quot;.
+    // Invalid contract specified in override list: &quot;D&quot;.
+
+    // 下面是错误的写法
+    // function test2() public pure override(B, D) returns (string memory) {
+
+    // 下面是正确的写法
+    function test2() public pure override(B, A) returns (string memory) {
+        return &quot;test2 from E&quot;;
+    }
+}
+</code></pre></div><p>E 内必须要重写 test2 ，因为此时 B 和 D 内都有 test2 方法，但是 D 内继承 A 的 test2 方法，需要要写 override(B, A)，不能写 override(B, D)，否则会报错误:</p> <div class="language- extra-class"><pre class="language-text"><code>Function needs to specify overridden contract &quot;A&quot;.
+Invalid contract specified in override list: &quot;D&quot;.
+</code></pre></div><h2 id="_6️⃣-继承中两种构造函数传参方式"><a href="#_6️⃣-继承中两种构造函数传参方式" class="header-anchor">#</a> 6️⃣ 继承中两种构造函数传参方式</h2> <p>继承的父合约，如果有构造函数并且需要传入参数，我们有以下几种方法进行参数传入</p> <h3 id="两种传参方法"><a href="#两种传参方法" class="header-anchor">#</a> 两种传参方法</h3> <ul><li><strong>方法 1</strong>: 固定值传参。（该方式不能在部署时动态输入）。
+<ul><li>如果我们已经知道基类初始化参数，那么就可以在派生类的继承声明中，直接传递参数给基类的构造函数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>contract C is A(&quot;n&quot;),B(&quot;v&quot;) {}
+</code></pre></div></li> <li><strong>方法 2</strong>: 动态传参
+<ul><li>如果我们需要在部署时或者运行时，由调用方传递基类初始化参数。在这种情况下，我们需要编写一个新的构造函数，传递参数给基类。</li> <li>部署子合约的时候，传入参数到构造函数，该种方法是动态的值，可以部署的时候动态输入</li></ul> <div class="language- extra-class"><pre class="language-text"><code>contract D is A {
+  constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li> <li><strong>混写</strong>: 方法 1 和方法 2 可以混合使用<div class="language- extra-class"><pre class="language-text"><code>contract E is A, B(&quot;EEEEEEEEEEEEE&quot;) {
+  constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li></ul> <p><strong>例子如下:</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    string public nameA;
+
+    constructor(string memory _name) {
+        nameA = _name;
+    }
+}
+
+contract B {
+    string public nameB;
+
+    constructor(string memory _name) {
+        nameB = _name;
+    }
+}
+
+// 方法1: 继承时候直接传入参数，该种方法是固定值，不能动态输入
+contract C is A(&quot;Name From C&quot;) {
+
+}
+
+// 方法2: 部署子合约的时候，传入参数到构造函数，该种方法是动态的值，可以部署的时候动态输入
+contract D is A {
+    constructor(string memory _name) A(_name) {}
+}
+
+//  混合使用
+contract E is A, B(&quot;EEEEEEEEEEEEE&quot;) {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div><h2 id="_7️⃣-继承中构造函数的执行顺序"><a href="#_7️⃣-继承中构造函数的执行顺序" class="header-anchor">#</a> 7️⃣ 继承中构造函数的执行顺序</h2> <p>多重继承中，构造函数的执行会按照定义时的继承顺序进行，与构造函数中定义顺序无关。</p> <p>原则: <strong>构造函数的执行顺序按照继承的顺序。</strong></p> <p><strong>例子:</strong></p> <ol><li>如下是先执行 A，再执行 B</li></ol> <div class="language- extra-class"><pre class="language-text"><code>contract E is A, B(&quot;EEEEEEEEEEEEE&quot;) {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div><ol start="2"><li>如下是先执行 B，再执行 A</li></ol> <div class="language- extra-class"><pre class="language-text"><code>contract E is B(&quot;EEEEEEEEEEEEE&quot;),A {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div><p><strong>例子如下</strong>:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    event logA(string);
+
+    constructor(string memory _name) {
+        emit logA(_name);
+    }
+}
+
+contract B {
+    event logB(string);
+
+    constructor(string memory _name) {
+        emit logB(_name);
+    }
+}
+
+//  混合使用
+contract E is A, B(&quot;EEE&quot;) {
+    constructor(string memory _name) A(_name) {}
+}
+
+contract F is B(&quot;FFF&quot;), A {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div><p>部署 E 时候，输入 <code>Anbang</code>，输出的 log 如下:<strong>先执行 A，再执行 B</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+	<span class="token punctuation">{</span>
+		<span class="token property">&quot;from&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0xed27012c24FDa47A661De241c4030ecB9D18a76d&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;topic&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0xb911c6b2723a9b89f3c8a0ce3f2dca6648150807aa6d6959fb18fa31748efcee&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token string">&quot;logA&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Anbang&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span>
+		<span class="token property">&quot;from&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0xed27012c24FDa47A661De241c4030ecB9D18a76d&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;topic&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0x2a205cc759862a651d0a138a2245cac3f4b3214b93707a9d0fe4eb716f66f786&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token string">&quot;logB&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EEE&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>部署 F 时候，输入 <code>Anbang</code>，输出的 log 如下:<strong>先执行 B，再执行 A</strong></p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">[</span>
+	<span class="token punctuation">{</span>
+		<span class="token property">&quot;from&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0x3D42AD7A3AEFDf99038Cd61053913CFCA4944b95&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;topic&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0x2a205cc759862a651d0a138a2245cac3f4b3214b93707a9d0fe4eb716f66f786&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token string">&quot;logB&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;FFF&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">{</span>
+		<span class="token property">&quot;from&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0x3D42AD7A3AEFDf99038Cd61053913CFCA4944b95&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;topic&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0xb911c6b2723a9b89f3c8a0ce3f2dca6648150807aa6d6959fb18fa31748efcee&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;event&quot;</span><span class="token operator">:</span> <span class="token string">&quot;logA&quot;</span><span class="token punctuation">,</span>
+		<span class="token property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+			<span class="token property">&quot;0&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Anbang&quot;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h2 id="_8️⃣-两种子合约调用父合约的方法"><a href="#_8️⃣-两种子合约调用父合约的方法" class="header-anchor">#</a> 8️⃣ 两种子合约调用父合约的方法</h2> <p>有两种方法可以调用</p> <ol><li>直接使用合约名调用 <code>ParentContractName.functionName()</code>;</li> <li>使用 super 关键字 <code>super.functionName()</code> <ul><li>super 会自动寻找父合约，并执行对应的方法；</li> <li><strong>如果是多个父级，那么父级都会执行。但有时候又不会，执行顺序的原理，这些需要详细的了解</strong></li> <li>如果 super 导致 2 个父级同时触发同一个爷爷合约的相同方法；则爷爷的方法只执行一次。一个合约的同一个方法只会执行一次，不会执行多次。</li></ul></li></ol> <h3 id="_1-直接使用合约名调用"><a href="#_1-直接使用合约名调用" class="header-anchor">#</a> 1.直接使用合约名调用</h3> <p>执行顺序：像水中的冒泡一样，由下向上进行执行。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    event Log(string msg);
+
+    function test1() public virtual {
+        emit Log(&quot;A.test1&quot;);
+    }
+}
+
+contract B is A {
+    function test1() public virtual override {
+        emit Log(&quot;B.test1&quot;);
+        A.test1();
+    }
+}
+</code></pre></div><p>上面的例子执行顺序是</p> <div class="language- extra-class"><pre class="language-text"><code>1. B.test1
+2. A.test1
+</code></pre></div><h3 id="_2-使用-super-关键字调用"><a href="#_2-使用-super-关键字调用" class="header-anchor">#</a> 2.使用 super 关键字调用</h3> <h4 id="基础继承"><a href="#基础继承" class="header-anchor">#</a> 基础继承</h4> <p>执行顺序：像水中的冒泡一样，由下向上进行执行。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    event Log(string msg);
+
+    function test1() public virtual {
+        emit Log(&quot;A.test1&quot;);
+    }
+}
+
+contract C is A {
+    function test1() public virtual override {
+        emit Log(&quot;C.test1&quot;);
+        super.test1();
+    }
+}
+</code></pre></div><p>上面的例子执行顺序是</p> <div class="language- extra-class"><pre class="language-text"><code>1. C.test1
+2. A.test1
+</code></pre></div><h4 id="多重继承"><a href="#多重继承" class="header-anchor">#</a> 多重继承</h4> <p>写一个如下逻辑的继承</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+   A
+ /   \
+B     C
+ \   /
+   D
+ */
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    event Log(string msg);
+
+    function test1() public virtual {
+        emit Log(&quot;A.test1&quot;);
+    }
+}
+
+contract B is A {
+    function test1() public virtual override {
+        emit Log(&quot;B.test1&quot;);
+        A.test1();
+    }
+}
+
+contract C is A {
+    function test1() public virtual override {
+        emit Log(&quot;C.test1&quot;);
+        super.test1();
+    }
+}
+
+contract D is B, C {
+    function test1() public override(B, C) {
+        emit Log(&quot;D.test1&quot;);
+        // 因为 B 和 C 都是 D 的父级，所以B和C都会执行
+        super.test1();
+    }
+}
+</code></pre></div><p>执行顺序：像水中的冒泡一样，由下向上进行执行。</p> <div class="language- extra-class"><pre class="language-text"><code>1. D.test1
+1. C.test1
+1. B.test1
+1. A.test1 (这里 A 只执行一次)
+</code></pre></div><p><strong>警告</strong> : 为什么先输出 C，后输出 B ?</p> <p>上面的例子，如果代码中 B 和 C 换顺序，还是执行的 <code>DCBA</code>。开始怀疑和函数名字的 hash 结果顺序有关系，看完下面的继续研究代码，可以得出结论，复杂继承的时候，supper 方式就像一个疯子一样没有规律可言。我们能做的就是避开使用它。</p> <h2 id="_9️⃣-多重继承合约不要使用-supper"><a href="#_9️⃣-多重继承合约不要使用-supper" class="header-anchor">#</a> 9️⃣ 多重继承合约不要使用 supper</h2> <p>写一个如下逻辑的继承</p> <div class="language- extra-class"><pre class="language-text"><code>/**
+   A
+ /   \
+B     C
+| \  /|
+|  \/ |
+|  /\ |
+| /  \|
+D     E
+ */
+</code></pre></div><p><strong>代码如下</strong>:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    event Log(string msg);
+
+    // 继承后重写合约方法，可见性需要一致
+    function test1() public virtual {
+        emit Log(&quot;A.test1&quot;);
+    }
+}
+
+contract B is A {
+    // 执行 B.test1 后
+    // 1. B.test1
+    // 2. A.test1
+    function test1() public virtual override {
+        emit Log(&quot;B.test1&quot;);
+        A.test1();
+    }
+}
+
+contract C is A {
+    // 执行 C.test1 后
+    // 1. C.test1
+    // 2. A.test1
+    function test1() public virtual override {
+        emit Log(&quot;C.test1&quot;);
+        super.test1();
+    }
+}
+
+contract D is B, C {
+    // 执行 D.test1 后
+    // 1. D.test1
+    // 2. C.test1
+    // 3. B.test1
+    // 4. A.test1
+    function test1() public override(B, C) {
+        emit Log(&quot;D.test1&quot;);
+        super.test1();
+    }
+}
+
+// 代码 contract D is B, C 改成 contract E is C, B 后 , C.test1 不执行了。
+contract E is C, B {
+    // 执行 E.test1 后
+    // 1. E.test1
+    // 3. B.test1
+    // 4. A.test1
+    function test1() public override(B, C) {
+        emit Log(&quot;E.test1&quot;);
+        // B 和 C 都是 E 的父级，为啥B执行，而C不执行
+        super.test1();
+    }
+}
+</code></pre></div><p><strong>疑问: 执行 E.test1 后,输出如下结果，这是没有任何规律的，并且丢失数据</strong>，在这种多重继承的时候，调用父合约不要 supper，直接使用合约名字是最稳妥的办法，切记切记。</p> <div class="language- extra-class"><pre class="language-text"><code>1. E.test1
+3. B.test1
+4. A.test1
+</code></pre></div><h2 id="🆗-实战应用"><a href="#🆗-实战应用" class="header-anchor">#</a> 🆗 实战应用</h2> <p>下面的例子进行了详细的说明。</p> <div class="language- extra-class"><pre class="language-text"><code>    // SPDX-License-Identifier: GPL-3.0
+    pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+    contract Owned {
+        constructor() public { owner = payable(msg.sender); }
+        address payable owner;
+    }
+
+    // 使用 is 从另一个合约派生。派生合约可以访问所有非私有成员，包括内部（internal）函数和状态变量，
+    // 但无法通过 this 来外部访问。
+    contract Destructible is Owned {
+
+     // 关键字`virtual`表示该函数可以在派生类中“overriding”。
+
+         function destroy() virtual public { if (msg.sender == owner)
+selfdestruct(owner); } }
+
+    // 这些抽象合约仅用于给编译器提供接口。
+    // 注意函数没有函数体。
+    // 如果一个合约没有实现所有函数，则只能用作接口。
+    abstract contract Config {
+        function lookup(uint id) public virtual returns (address adr);
+    }
+
+    abstract contract NameReg {
+        function register(bytes32 name) public virtual;
+        function unregister() public virtual;
+     }
+
+    // 可以多重继承。请注意，owned 也是 Destructible 的基类，
+    // 但只有一个 owned 实例（就像 C++ 中的虚拟继承）。
+    contract Named is Owned, Destructible {
+        constructor(bytes32 name) {
+            Config config = Config(0xD5f9D8D94886E70b06E474c3fB14Fd43E2f23970);
+            NameReg(config.lookup(1)).register(name);
+        }
+
+        // 函数可以被另一个具有相同名称和相同数量/类型输入的函数重载。
+        // 如果重载函数有不同类型的输出参数，会导致错误。
+        // 本地和基于消息的函数调用都会考虑这些重载。
+
+//如果要覆盖函数，则需要使用 `override` 关键字。
+如果您想再次覆盖此函数，则需要再次指定`virtual`关键字。
+
+        function destroy() public virtual override {
+            if (msg.sender == owner) {
+                Config config = Config(0xD5f9D8D94886E70b06E474c3fB14Fd43E2f23970);
+                NameReg(config.lookup(1)).unregister();
+                // 仍然可以调用特定的重载函数。
+                Destructible.destroy();
+            }
+        }
+    }
+
+    // 如果构造函数接受参数，
+    // 则需要在声明（合约的构造函数）时提供，
+    // 或在派生合约的构造函数位置以修改器调用风格提供（见下文）。
+    contract PriceFeed is Owned, Destructible, Named(&quot;GoldFeed&quot;) {
+        function updateInfo(uint newInfo) public {
+            if (msg.sender == owner) info = newInfo;
+        }
+
+        // Here, we only specify `override` and not `virtual`.
+        // This means that contracts deriving from `PriceFeed`
+        // cannot change the behaviour of `destroy` anymore.
+        function destroy() public override(Destructible, Named) { Named.destroy(); }
+
+        function get() public view returns(uint r) { return info; }
+
+        uint info;
+    }
+</code></pre></div><p>注意，在上边的代码中，我们调用 <code>Destructible.destroy()</code>
+来&quot;转发&quot;销毁请求。 这样做法是有问题的，在下面的例子中可以看到：</p> <div class="language- extra-class"><pre class="language-text"><code>
+    // SPDX-License-Identifier: GPL-3.0
+    pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+    contract owned {
+        constructor() { owner = payable(msg.sender); }
+        address owner;
+    }
+
+    contract Destructible is owned {
+        function destroy() public virtual {
+            if (msg.sender == owner) selfdestruct(owner);
+        }
+    }
+
+    contract Base1 is Destructible {
+        function destroy() public virtual override  {
+            /* 清除操作 1 */
+            Destructible.destroy();
+        }
+    }
+
+    contract Base2 is Destructible {
+        function destroy() public { /* 清除操作 2 */ Destructible.destroy(); }
+    }
+
+    contract Final is Base1, Base2 {
+        function destroy() public override(Base1, Base2) { Base2.destroy(); }
+    }
+
+</code></pre></div><p>。 解决此问题的方法是使用 super：</p> <p>调用 <code>Final.destroy()</code> 时会调用 <code>Base2.destroy</code>，
+因为我们在最终重写中显式指定了它。 但是此函数将绕过 <code>Base1.destroy</code>,
+解决这个问题的方法是使用 <code>super</code>：</p> <div class="language- extra-class"><pre class="language-text"><code>
+    // SPDX-License-Identifier: GPL-3.0
+    pragma solidity &gt;=0.7.0 &lt;0.9.0;
+
+    contract owned {
+        constructor() { owner = payable(msg.sender); }
+        address owner;
+    }
+
+    contract Destructible is owned {
+        function destroy() virtual public {
+            if (msg.sender == owner) selfdestruct(owner);
+        }
+    }
+
+    contract Base1 is Destructible {
+        function destroy() public virtual override { /* 清除操作 1 */ super.destroy(); }
+    }
+
+
+    contract Base2 is Destructible {
+        function destroy() public  virtual override { /* 清除操作 2 */ super.destroy(); }
+    }
+
+    contract Final is Base1, Base2 {
+        function destroy() public override(Base1, Base2) { super.destroy(); }
+    }
+
+</code></pre></div><p>如果 <code>Base2</code> 调用 <code>super</code> 的函数，它不会简单在其基类合约上调用该函数。
+相反，它在最终的继承关系图谱的下一个基类合约中调用这个函数，所以它会调用
+<code>Base1.destroy()</code> （注意最终的继承序列是------从最终派生合约开始：Final,
+Base2, Base1, Destructible, ownerd）。 在类中使用 super
+调用的实际函数在当前类的上下文中是未知的，尽管它的类型是已知的。
+这与普通的虚拟方法查找类似。</p> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li>继承如何实现？
+<ul><li>使用 <code>is</code> 实现继承</li> <li>继承: <strong>派生合约</strong>继承<strong>基础合约</strong>的属性和方法</li> <li>基础合约通常也被称为<strong>父合约</strong>，派生合约通常也称作<strong>子合约</strong>。</li> <li>父合约必须写在子合约的前面，否则会报错</li></ul></li> <li>子类可以继承父类哪些数据？
+<ul><li>子类可以访问父类的权限修饰符只有：<code>public/internal</code>，不能是 <code>external/private</code>。</li></ul></li> <li>多重继承中哪些属于重名？
+<ul><li>一个合约同时继承 2 个合约时，这种情况叫多重继承</li> <li>多重继承中不允许出现相同的<strong>函数名</strong>、<strong>事件名</strong>、<strong>修改器名</strong>以及<strong>状态变量名</strong>等。多重继承函数中 getter 函数重名也不可以。</li> <li>当继承时合约出现了一下相同名字会被认为是一个错误：
+<ul><li>函数 和 修改器/modifier 同名</li> <li>函数 和 事件同名</li> <li>事件和 修改器/modifier 同名</li> <li>有一种例外情况，状态变量的 <code>getter</code> 函数可以覆盖 <code>external</code> 函数。</li></ul></li></ul></li> <li>如何重写函数？
+<ul><li>solidity 引入了 <code>abstract</code>, <code>virtual</code>, <code>override</code> 几个关键字，用于重写函数。</li> <li>父合约方法需要标示为<strong>可修改</strong>，使用关键字 <code>virtual</code>，</li> <li>子合约方法需要标示为<strong>覆盖</strong>，使用关键词 <code>override</code> <ul><li>对于多重继承，如果有多个父合约有相同定义的函数， override 关键字后必须指定所有父合约名。</li></ul></li> <li>基础合约中可以包含没有实现代码的函数，也就是纯虚函数，那么基础合约必须声明为 <code>abstract</code>。（<code>abstract</code>，也可以使用 <code>interface</code> 来解决。）</li> <li>继承多个合约时，所有同名的可修改函数都需要重写</li> <li>继承后重写合约方法，各个合约内的函数可见性需要一致</li> <li>可变性可以按照以下顺序更改为更严格的一种： <code>nonpayable</code> 可以被 <code>view</code> 和<code>pure</code> 覆盖。 <code>view</code> 可以被 <code>pure</code> 覆盖。 <code>payable</code>是一个例外，不能更改为任何其他可变性。</li></ul></li> <li>多级继承的代码书写顺序？
+<ul><li>按照从“最类似基类”到“最多派生”的顺序指定基类。</li> <li>原则：先写基础合约，再写派生合约。</li> <li>小技巧：可以先画继承逻辑图，然后按照从上到下，从左到右的顺序来写合约；</li></ul></li> <li>继承中两种构造函数传参方式。
+<ul><li><strong>方法 1</strong>: 固定值传参。（该方式不能在部署时动态输入）。
+<ul><li>如果我们已经知道基类初始化参数，那么就可以在派生类的继承声明中，直接传递参数给基类的构造函数。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>contract C is A(&quot;n&quot;),B(&quot;v&quot;) {}
+</code></pre></div></li> <li><strong>方法 2</strong>: 动态传参
+<ul><li>如果我们需要在部署时或者运行时，由调用方传递基类初始化参数。在这种情况下，我们需要编写一个新的构造函数，传递参数给基类。</li> <li>部署子合约的时候，传入参数到构造函数，该种方法是动态的值，可以部署的时候动态输入</li></ul> <div class="language- extra-class"><pre class="language-text"><code>contract D is A {
+  constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li> <li><strong>混写</strong>: 方法 1 和方法 2 可以混合使用<div class="language- extra-class"><pre class="language-text"><code>contract E is A, B(&quot;EEEEEEEEEEEEE&quot;) {
+  constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li></ul></li> <li>继承中构造函数的执行顺序
+<ul><li>多重继承中，构造函数的执行会按照定义时的继承顺序进行，与构造函数中定义顺序无关。原则: <strong>构造函数的执行顺序按照继承的顺序。</strong></li> <li>如下是先执行 A，再执行 B<div class="language- extra-class"><pre class="language-text"><code>contract E is A, B(&quot;EEEEEEEEEEEEE&quot;) {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li> <li>如下是先执行 B，再执行 A<div class="language- extra-class"><pre class="language-text"><code>contract E is B(&quot;EEEEEEEEEEEEE&quot;),A {
+    constructor(string memory _name) A(_name) {}
+}
+</code></pre></div></li></ul></li> <li>子合约调用父合约的方法
+<ol><li>直接使用合约名调用 <code>ParentContractName.functionName()</code>;</li> <li>使用 super 关键字 <code>super.functionName()</code> <ul><li>super 会自动寻找父合约，并执行对应的方法；</li> <li><strong>如果是多个父级，那么父级都会执行。但有时候又不会，执行顺序的原理，这些需要详细的了解</strong></li> <li>如果 super 导致 2 个父级同时触发同一个爷爷合约的相同方法；则爷爷的方法只执行一次。一个合约的同一个方法只会执行一次，不会执行多次。</li></ul></li> <li>执行顺序：像水中的冒泡一样，由下向上进行执行。但是如果多层级的执行，顺序规律还没有找到规律。</li></ol></li> <li>聊一聊合约继承
+<ul><li>以上的内容精简回答</li> <li>修饰符可以继承</li> <li>事件不可以继承，但是可以重载</li> <li><code>fallback</code> 可以继承，但是需要保持原有的 <code>payable/nonpayable</code></li> <li><code>receive</code> 可以继承，但是需要保持原有的 <code>payable/nonpayable</code></li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/09.event.html" class="prev">
+          事件
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/11.call-other.html">
+          合约调用合约
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_1️⃣-使用-is-实现继承" class="sidebar-link reco-side-_1️⃣-使用-is-实现继承" data-v-b57cc07c>1️⃣ 使用 is 实现继承</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_2️⃣-子类可以继承父类哪些数据" class="sidebar-link reco-side-_2️⃣-子类可以继承父类哪些数据" data-v-b57cc07c>2️⃣ 子类可以继承父类哪些数据？</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_3️⃣-多重继承中的重名" class="sidebar-link reco-side-_3️⃣-多重继承中的重名" data-v-b57cc07c>3️⃣ 多重继承中的重名</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_4️⃣-重写函数" class="sidebar-link reco-side-_4️⃣-重写函数" data-v-b57cc07c>4️⃣ 重写函数</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_1-virtual-和-override" class="sidebar-link reco-side-_1-virtual-和-override" data-v-b57cc07c>1.virtual 和 override</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_2-abstract-抽象合约" class="sidebar-link reco-side-_2-abstract-抽象合约" data-v-b57cc07c>2.abstract（抽象合约）</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_5️⃣-多级继承的代码书写顺序-线性化" class="sidebar-link reco-side-_5️⃣-多级继承的代码书写顺序-线性化" data-v-b57cc07c>5️⃣ 多级继承的代码书写顺序（线性化）</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_1-继承案例一" class="sidebar-link reco-side-_1-继承案例一" data-v-b57cc07c>1.继承案例一</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_2-继承案例二" class="sidebar-link reco-side-_2-继承案例二" data-v-b57cc07c>2.继承案例二</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_3-继承案例三" class="sidebar-link reco-side-_3-继承案例三" data-v-b57cc07c>3.继承案例三</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_4-继承案例四" class="sidebar-link reco-side-_4-继承案例四" data-v-b57cc07c>4.继承案例四</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_6️⃣-继承中两种构造函数传参方式" class="sidebar-link reco-side-_6️⃣-继承中两种构造函数传参方式" data-v-b57cc07c>6️⃣ 继承中两种构造函数传参方式</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#两种传参方法" class="sidebar-link reco-side-两种传参方法" data-v-b57cc07c>两种传参方法</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_7️⃣-继承中构造函数的执行顺序" class="sidebar-link reco-side-_7️⃣-继承中构造函数的执行顺序" data-v-b57cc07c>7️⃣ 继承中构造函数的执行顺序</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_8️⃣-两种子合约调用父合约的方法" class="sidebar-link reco-side-_8️⃣-两种子合约调用父合约的方法" data-v-b57cc07c>8️⃣ 两种子合约调用父合约的方法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_1-直接使用合约名调用" class="sidebar-link reco-side-_1-直接使用合约名调用" data-v-b57cc07c>1.直接使用合约名调用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_2-使用-super-关键字调用" class="sidebar-link reco-side-_2-使用-super-关键字调用" data-v-b57cc07c>2.使用 super 关键字调用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#_9️⃣-多重继承合约不要使用-supper" class="sidebar-link reco-side-_9️⃣-多重继承合约不要使用-supper" data-v-b57cc07c>9️⃣ 多重继承合约不要使用 supper</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#🆗-实战应用" class="sidebar-link reco-side-🆗-实战应用" data-v-b57cc07c>🆗 实战应用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/10.inheritance.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/36.61b3c3c3.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>06.错误处理 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/32.a8886025.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" aria-current="page" class="active sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">06.错误处理</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_06-错误处理"><a href="#_06-错误处理" class="header-anchor">#</a> 06.错误处理</h1> <p>Solidity 如果遇到异常错误，是通过回退状态的方式来进行处理。发生异常时，会撤消当前调用和所有子调用改变的状态变量，同时给调用者返回一个错误标识。</p> <p>调用者调用某个函数方法，要么成功修改了所有状态变量，要么遇到异常不修改任何状态变量，不存在成功修改部分变量的情况，</p> <p>Solidity 提供了 <strong>require</strong> 、<strong>assert</strong> 和 <strong>revert</strong> 来处理异常。同时可以使用 <code>error</code> 关键字来实现错误。</p> <p>跟用错误字符串相比， error 更便宜并且允许你编码额外的数据，还可以用 <code>NatSpec</code> 为用户去描述错误。</p> <p>Solidity 使用状态恢复异常来处理错误。这种异常将撤消对当前调用（及其所有子调用）中的状态所做的所有更改，并且还向调用者标记错误。</p> <p>如果异常在子调用发生，那么异常会自动冒泡到顶层（例如：异常会重新抛出），除非他们在 <code>try/catch</code> 语句中捕获了错误。 但是如果是在 <code>send</code> 和 低级 <code>call</code>, <code>delegatecall</code> 和 <code>staticcall</code> 的调用里发生异常时， 他们会返回 <code>false</code> （第一个返回值） 而不是冒泡异常。</p> <p>警告注意：根据 EVM 的设计，如果被调用的地址不存在，低级别函数 <code>call</code>, <code>delegatecall</code> 和 <code>staticcall</code> 第一个返回值同样是 <code>true</code>。 如果需要，请在调用之前检查账号的存在性。</p> <p>异常可以包含错误数据，以 error 示例 的形式传回给调用者。 内置的错误 <code>Error(string)</code> 和 <code>Panic(uint256)</code> 被作为特殊函数使用，下面将解释。 <code>Error</code> 用于 “常规” 错误条件，而 <code>Panic</code> 用于在（无 bug）代码中不应该出现的错误。</p> <p>函数 assert 和 require 可用于检查条件并在条件不满足时抛出异常。</p> <p>⚠️ 注意：永远不要相信错误数据。默认情况下，错误数据会通过外部调用链向上冒泡，这意味着一个合约可能会收到一个它直接调用的任何合约中没有定义的错误。此外，任何合约都可以通过返回与错误签名相匹配的数据来伪造任何错误，即使该错误没有在任何地方定义。</p> <h2 id="_1️⃣-require"><a href="#_1️⃣-require" class="header-anchor">#</a> 1️⃣ require</h2> <p>require 用来严查某些条件，如果不满足这些雕件，就会回退所有状态的变化。</p> <h3 id="_1-语法"><a href="#_1-语法" class="header-anchor">#</a> 1.语法</h3> <div class="language- extra-class"><pre class="language-text"><code>require(condition[, 'Something bad happened'])
+</code></pre></div><p>如果条件不满足则撤销状态更改 ，用于检查由输入或者外部组件引起的错误。可以同时提供一个错误消息。</p> <ul><li>require 函数常常用来检查输入变量或状态变量是否满足条件，以及验证调用外部合约的返回值。</li> <li>require 可以有返回值，例如：<code>require(condition, 'Something bad happened');</code>。</li> <li>require 的返回值不宜过长，因为返回信息需要消耗 gas。
+<ul><li>备注：在例子 2 测试中，并没有证明长度越长，消耗的 gas 越多。</li></ul></li></ul> <p>例子</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint256 public amount = 0;
+
+    function test(uint256 _x) external {
+        require(_x &lt; 10, &quot;My error info 1&quot;); // _x &gt;= 10 时候会报错
+        amount = _x;
+        require(_x &gt; 20); // _x &lt;= 10 时候会报错
+    }
+}
+</code></pre></div><p><strong>注解</strong> <code>require</code> 是一个像其他函数一样可被执行的函数。意味着，所有的参数在函数被执行之前就都会被执行。 尤其，在
+<code>require(condition, f())</code> 里，函数 <code>f</code> 会被执行，即便 <code>condition</code> 为 True .</p> <h3 id="_2-gas-测试"><a href="#_2-gas-测试" class="header-anchor">#</a> 2.gas 测试</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo1 {
+    // 21611 gas
+    function test1(uint256 _x) external pure {
+        require(
+            _x &lt; 10,
+            &quot;My error info 1 balalaba balalaba balalaba balalaba balalaba &quot;
+        );
+    }
+}
+contract Demo2 {
+    // 21611 gas
+    function test2(uint256 _x) external pure {
+        require(_x &lt; 10, &quot;Error&quot;);
+    }
+}
+contract Demo3 {
+    // 21611 gas
+    function test3(uint256 _x) external pure {
+        require(_x &lt; 10, &quot;error&quot;);
+    }
+}
+</code></pre></div><h3 id="_3-使用场景"><a href="#_3-使用场景" class="header-anchor">#</a> 3.使用场景</h3> <ul><li>验证用户输入，例如：<code>require(input_var&gt;100)</code></li> <li>验证外部合约的调用结果，例如：<code>require(external.send(amount))</code></li> <li>在执行状态更改操作之前验证状态条件，例如：<code>require(block.number &gt; 49999)</code> 或 <code>require(balance[msg.sender]&gt;=amount)</code></li> <li>require() 语句的失败报错，应该被看作一个正常的判断语句流程不能通过的事件。</li></ul> <p>一般来说，使用 <code>require()</code> 的频率更多，通常应用于函数的开头和函数修改器内。</p> <p>一句话: <strong>require() 函数用于检测输入变量或状态变量是否满足条件，以及验证调用外部合约的返回值。</strong></p> <h2 id="_2️⃣-assert"><a href="#_2️⃣-assert" class="header-anchor">#</a> 2️⃣ assert</h2> <h3 id="_1-语法-2"><a href="#_1-语法-2" class="header-anchor">#</a> 1.语法</h3> <div class="language- extra-class"><pre class="language-text"><code>assert(bool condition)
+</code></pre></div><p>如果不满足条件，则会导致 Panic 错误，则撤销状态更改 - 用于检查内部错误。</p> <p><code>assert()</code>与 <code>require()</code> 语句都需要满足括号中的条件，才能进行后续操作，若不满足则抛出错误。</p> <ul><li>assert：断言，不能包括报错信息的。</li></ul> <p><strong>例子</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint256 public amount = 0;
+
+    function test1(uint256 _x) external {
+        require(_x &lt; 10, &quot;My error info 1&quot;); // _x &gt;= 10 时候会报错
+        amount = _x;
+        assert(amount == _x); // 必须等于_x，否则抛出错误
+    }
+
+    function test2(uint256 _x) external {
+        require(_x &lt; 10, &quot;My error info 1&quot;); // _x &gt;= 10 时候会报错
+        amount = _x;
+        assert(amount == 8); // 必须等于8，否则抛出错误
+    }
+}
+</code></pre></div><h3 id="_2-使用场景"><a href="#_2-使用场景" class="header-anchor">#</a> 2.使用场景</h3> <ul><li>检查溢出</li> <li>检查不变量</li> <li>更改后验证状态</li> <li>预防永远不会发生的情况</li> <li>assert()语句的失败报错，意味着发生了代码层面的错误事件，很大可能是合约中有一个 bug 需要修复。</li> <li>也可以智能合约写测试。</li></ul> <p>一般来说，使用 <code>assert()</code>的频率较少，通常用于函数的结尾。基本上，<code>require()</code> 应该用于检查条件，而 <code>assert()</code> 只是为了防止发生任何非常糟糕的事情。</p> <h3 id="_3-扩展"><a href="#_3-扩展" class="header-anchor">#</a> 3.扩展</h3> <p>assert 函数会创建一个 <code>Panic(uint256)</code> 类型的错误。同样的错误在以下列出的特定情形会被编译器创建。</p> <p>assert 函数应该只用于测试内部错误，检查不变量，正常的函数代码永远不会产生 Panic, 甚至是基于一个无效的外部输入时。 如果发生了，那就说明出现了一个需要你修复的 bug。如果使用得当，语言分析工具可以识别出那些会导致 Panic 的 assert 条件和函数调用。</p> <p>下列情况将会产生一个 Panic 异常： 错误数据会提供的错误码编号，用来指示 Panic 的类型：</p> <ol><li>0x00: 用于常规编译器插入的 Panic。</li> <li>0x01: 如果你调用 <code>assert</code> 的参数（表达式）结果为 false 。</li> <li>0x11: 在 <code>unchecked { ... }</code> 外，如果算术运算结果向上或向下溢出。</li> <li>0x12; 如果你用零当除数做除法或模运算（例如 <code>5 / 0</code> 或 <code>23 % 0</code> ）。</li> <li>0x21: 如果你将一个太大的数或负数值转换为一个枚举类型。</li> <li>0x22: 如果你访问一个没有正确编码的存储 byte 数组.</li> <li>0x31: 如果在空数组上 <code>.pop()</code> 。</li> <li>0x32: 如果你访问 <code>bytesN</code> 数组（或切片）的索引太大或为负数。(例如：
+<code>x[i]</code> 而 <code>i &gt;= x.length</code> 或 <code>i &lt; 0</code>).</li> <li>0x41: 如果你分配了太多的内内存或创建了太大的数组。</li> <li>0x51: 如果你调用了零初始化内部函数类型变量。</li></ol> <h2 id="_3️⃣-revert"><a href="#_3️⃣-revert" class="header-anchor">#</a> 3️⃣ revert</h2> <p>语法: <code>revert([string memory reason])</code></p> <ul><li>使用 revert：抛出错误,它使用圆括号接受一个字符串：语句将一个自定义的错误作为直接参数，没有括号：<div class="language- extra-class"><pre class="language-text"><code>revert();
+revert(&quot;description&quot;);
+</code></pre></div></li> <li>使用 <code>revert()</code> 会触发一个没有任何错误数据的回退，而 <code>revert(&quot;description&quot;)</code> 会产生一个 <code>Error(string)</code> 错误。</li> <li>使用 revert：触发自定义错误 ·<code>revert CustomError(arg1, arg2);</code> <ul><li>可以接收参数，方便判断。比如可以传入 <code>msg.sender</code> / 函数参数 等</li></ul></li></ul> <p>终止运行并撤销状态更改。可以同时提供一个解释性的字符串。</p> <p><strong>例子</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract ErrorDemo {
+    function testRevert(uint256 _x) external pure {
+        if (_x &gt; 10) {
+            revert(&quot;_x &gt; 10&quot;);
+        }
+    }
+
+    // 自定义错误
+    error MyError(address call, uint256 _i);
+
+    function testCustomError(uint256 _x) external view {
+        if (_x &gt; 10) {
+            revert MyError(msg.sender, _x);
+        }
+    }
+}
+</code></pre></div><p>只要参数没有额外的附加效果，使用 <code>if (!condition) revert(...);</code> 和 <code>require(condition, ...);</code> 是等价的，例如当参数是字符串的情况。</p> <h2 id="_4️⃣-三种方式的总结"><a href="#_4️⃣-三种方式的总结" class="header-anchor">#</a> 4️⃣ 三种方式的总结</h2> <h3 id="_1-require、assert-不同点"><a href="#_1-require、assert-不同点" class="header-anchor">#</a> 1.require、assert 不同点</h3> <ul><li><code>require(false)</code> 编译为 <code>0xfd</code>，这是 <code>revert()</code> 的操作码，<strong>所以会退还所有剩余的 gas，同时可以返回一个自定义的报错信息</strong>。</li> <li><code>assert(false)</code> 编译为 <code>0xfe</code>，这是一个无效的操作码，<strong>所以会消耗掉所有剩余的 gas，并恢复所有的操作</strong>。</li> <li><code>require</code> 的 gas 消耗要小于 <code>assert</code>，而且可以有返回值，使用更为灵活。</li></ul> <p>错误信息：</p> <p><code>require</code> 函数可以创建无错误提示的错误，也可以创建一个 <code>Error(string)</code>类型的错误。 <code>require</code>函数应该用于确认条件有效性，例如输入变量，或合约状态变量是否满足条件，或验证外部合约调用返回的值。</p> <p>当前不可以使用混合使用 require 和自定义错误，而是需要使用 <code>if (!condition) revert CustomError();</code> 。</p> <p>下列情况将会产生一个 <code>Error(string)</code>（或无错误提示）的错误：</p> <ol><li>如果你调用 <code>require(x)</code> ，而 <code>x</code> 结果为 <code>false</code> 。</li> <li>如果你使用 <code>revert()</code> 或者 <code>revert(&quot;description&quot;)</code> 。</li> <li>如果你在不包含代码的合约上执行外部函数调用。</li> <li>如果你通过合约接收以太币，而又没有 <code>payable</code>
+修饰符的公有函数（包括构造函数和 fallback 函数）。</li> <li>如果你的合约通过公有 getter 函数接收 Ether 。</li></ol> <p>在下面的情况下，来自外部调用的错误数据（如果提供的话）被转发，这意味可能<code>Error</code> 或 <code>Panic</code> 都有可能触发。</p> <ol><li>如果 <code>.transfer()</code> 失败。</li> <li>如果你通过消息调用调用某个函数，但该函数没有正确结束（例如, 它耗尽了
+gas，没有匹配函数，或者本身抛出一个异常），不包括使用低级别 <code>call</code>
+， <code>send</code> ， <code>delegatecall</code> ， <code>callcode</code> 或 <code>staticcall</code>
+的函数调用。低级操作不会抛出异常，而通过返回 <code>false</code> 来指示失败。</li> <li>如果你使用 <code>new</code> 关键字创建合约，但合约创建没有正确结束。</li></ol> <p>你可以选择给 <code>require</code> 提供一个消息字符串，但 <code>assert</code> 不行。</p> <p>如果你没有为 <code>require</code> 提供一个字符串参数，它会用空错误数据进行 revert， 甚至不包括错误选择器。</p> <p>在下例中，你可以看到如何轻松使用 <code>require</code> 检查输入条件以及如何使用
+<code>assert</code> 检查内部错误.</p> <div class="language-solidity extra-class"><pre class="language-solidity"><code>
+    <span class="token comment">// SPDX-License-Identifier: GPL-3.0</span>
+    <span class="token keyword">pragma</span> <span class="token keyword">solidity</span> <span class="token operator">&gt;=</span><span class="token version number">0.5.0</span> <span class="token operator">&lt;</span><span class="token version number">0.9.0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">contract</span> <span class="token class-name">Sharer</span> <span class="token punctuation">{</span>
+        <span class="token keyword">function</span> <span class="token function">sendHalf</span><span class="token punctuation">(</span><span class="token builtin">address</span> addr<span class="token punctuation">)</span> <span class="token keyword">public</span> <span class="token keyword">payable</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token builtin">uint</span> balance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">require</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>value <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">&quot;Even value required.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token builtin">uint</span> balanceBeforeTransfer <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+            addr<span class="token punctuation">.</span><span class="token function">transfer</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>value <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token comment">// 由于转账函数在失败时抛出异常并且不会调用到以下代码，因此我们应该没有办法检查仍然有一半的钱。</span>
+            <span class="token keyword">assert</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>balance <span class="token operator">==</span> balanceBeforeTransfer <span class="token operator">-</span> msg<span class="token punctuation">.</span>value <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>balance<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><p>在内部， Solidity 对异常执行回退操作（指令 <code>0xfd</code> ），从而让 EVM 回退对状态所做的所有更改。回退的原因是无法安全地继续执行，因为无法达到预期的结果。 因为我们想要保持交易的原子性，最安全的动作是回退所有的更改，并让整个交易（或至少调用）没有任何新影响。</p> <p>在这两种情况下，调用者都可以使用 <code>try</code>/ <code>catch</code>来应对此类失败，但是被调用函数的更改将始终被还原。</p> <p><strong>请注意</strong>， 在 0.8.0 之前，Panic 异常使用 <code>invalid</code> 指令，其会消耗了所有可用的 gas。 使用 <code>require</code> 的异常，在 Metropolis 版本之前会消耗所有的 gas。</p> <h3 id="_2-require、assert、revert-共同点"><a href="#_2-require、assert、revert-共同点" class="header-anchor">#</a> 2.require、assert、revert 共同点</h3> <p>以下三个语句的功能完全相同：</p> <div class="language- extra-class"><pre class="language-text"><code>// revert
+if(msg.sender != owner) {
+   revert();
+ }
+// require
+require(msg.sender == owner);
+
+// assert
+assert(msg.sender == owner);
+</code></pre></div><p><strong>例子</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract ErrorDemo {
+    function testRequire(uint256 _x) external pure {
+        require(_x &gt; 10, &quot;_x &gt; 10&quot;);
+    }
+
+    function testRevert(uint256 _x) external pure {
+        if (_x &gt; 10) {
+            revert(&quot;_x &gt; 10&quot;);
+        }
+    }
+
+    function testAssert(uint256 _x) external pure {
+        assert(_x == 10);
+    }
+
+    error MyError(address call, uint256 _i);
+
+    function testCustomError(uint256 _x) external view {
+        if (_x &gt; 10) {
+            revert MyError(msg.sender, _x);
+        }
+    }
+}
+</code></pre></div><h2 id="_5️⃣-自定义-error"><a href="#_5️⃣-自定义-error" class="header-anchor">#</a> 5️⃣ 自定义 Error</h2> <p>Solidity 中的错误（关键字 error）提供了一种方便且省 gas 的方式来向用户解释为什么一个操作会失败。它们可以被定义在合约（包括接口和库）内部和外部。</p> <ul><li><code>error</code> 只能通过 <code>revert</code> 触发</li> <li>使用自定义 error 抛出错误，向调用者描述错误信息。</li> <li>开发者可以在任何时候，任何条件下触发 自定义 Error</li> <li>error 花费更少的 gas。</li> <li><code>error</code> 可以定义在 contract 之外。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// 自定义错误
+error MyError1(address call, uint256 _i);
+
+contract ErrorDemo {
+    // 自定义错误
+    error MyError2(address call, uint256 _i);
+
+    function testCustom1(uint256 _x) external view {
+        if (_x &gt; 10) {
+            revert MyError1(msg.sender, _x);
+        }
+    }
+
+    function testCustom2(uint256 _x) external view {
+        if (_x &gt; 10) {
+            revert MyError2(msg.sender, _x);
+        }
+    }
+}
+</code></pre></div><p>错误必须与 revert 语句 一起使用。它会还原当前调用中的发生的所有变化，并将错误数据传回给调用者。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.4;
+
+/// 转账时，没有足够的余额。
+/// @param available balance available.
+/// @param required requested amount to transfer.
+error InsufficientBalance(uint256 available, uint256 required);
+
+contract TestToken {
+    mapping(address =&gt; uint) balance;
+    function transfer(address to, uint256 amount) public {
+        if (amount &gt; balance[msg.sender])
+            revert InsufficientBalance({
+                available: balance[msg.sender],
+                required: amount
+            });
+        balance[msg.sender] -= amount;
+        balance[to] += amount;
+    }
+    // ...
+}
+</code></pre></div><p>错误不能被重写或覆盖，但是可以继承。只要作用域不同，同一个错误可以在多个地方定义。只能使用 <code>revert</code> 语句创建错误实例。</p> <p>错误产生的数据，会通过 revert 操作传递给调用者，可以交由链外组件处理或在 try/catch 语句 中捕获它。注意，只有外部调用的错误才能被捕获。发生在内部调用或同一函数内的 revert 不能被捕获。</p> <p>如果是调用 <code>Error(string)</code> 函数，这里提供的字符串将经过 ABI 编码。<code>revert(&quot;Not enough Ether provided.&quot;);</code> 会产生如下的十六进制错误返回值：</p> <div class="language- extra-class"><pre class="language-text"><code>// Error(string) 的函数选择器
+0x08c379a0
+
+// 数据的偏移量（32）
+0x0000000000000000000000000000000000000000000000000000000000000020
+
+// 字符串长度（26）
+0x000000000000000000000000000000000000000000000000000000000000001a
+
+// 字符串数据（&quot;Not enough Ether provided.&quot; 的 ASCII 编码，26字节）
+0x4e6f7420656e6f7567682045746865722070726f76696465642e000000000000
+</code></pre></div><p>提示信息可以通过 <code>try/catch</code> （下面介绍）来获取到。</p> <blockquote><p><code>revert()</code>之前有一个同样用法的 <code>throw</code>，它在 0.4.13 版本弃用，在 0.5.0 移除。</p></blockquote> <h2 id="_6️⃣-natspec-error"><a href="#_6️⃣-natspec-error" class="header-anchor">#</a> 6️⃣ Natspec Error</h2> <p>使用一个自定义的错误实例通常会比字符串描述便宜得多。因为你可以使用错误名来描述它，它只被编码为四个字节。更长的描述可以通过 NatSpec 提供，这不会产生任何费用。</p> <p>通过三个斜杠 <code>///</code> 定义的错误，它比<code>require</code>更省 gas。推荐代替 require 使用。</p> <p>如果错误没有任何参数，错误只需要四个字节的数据，你可以使用 NatSpec，来进一步解释错误背后的原因，NatSpec 不会存储在链上。这个方式使得它同时也是一个非常便宜和方便的错误报告功能。</p> <p>更具体地说，一个错误实例的 ABI 编码方式与调用相同名称和类型的函数的方式相同，它作为<code>revert</code> 操作码的返回数据使用。 这意味着错误数据由一个 4 字节的选择器和 ABI-encoded 数据组成。选择器是错误的签名的 keccak256 哈希的前四个字节组成。</p> <p>代码结构如下</p> <div class="language- extra-class"><pre class="language-text"><code>/// this is netspec error info
+error MyError1();
+</code></pre></div><p>例子如下:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract ErrorDemo {
+    // netspec error
+    /// this is netspec error info,this is netspec error info,this is netspec error info,this is netspec error info,this is netspec error info
+    error MyError1();
+
+    /// 这是一个错误！老铁，你的输入参数错啦，必须要大于10的数字才可以通过！
+    error MyError2();
+
+    // 21647 gas
+    function test1(uint256 _x) external pure {
+        if (_x &lt; 10) {
+            revert MyError1();
+        }
+    }
+
+    // 21691 gas
+    function test2(uint256 _x) external pure {
+        if (_x &lt; 10) {
+            revert MyError2();
+        }
+    }
+
+    // 22036 gas
+    function test3(uint256 _x) external pure {
+        require(
+            _x &gt; 10,
+            &quot;this is netspec error info,this is netspec error info,this is netspec error info,this is netspec error info,this is netspec error info&quot;
+        );
+    }
+
+    // 21974 gas
+    function test4(uint256 _x) external pure {
+        require(
+            _x &gt; 10,
+            unicode&quot;这是一个错误！老铁，你的输入参数错啦，必须要大于10的数字才可以通过！&quot;
+        );
+    }
+}
+</code></pre></div><h2 id="_7️⃣-try-catch"><a href="#_7️⃣-try-catch" class="header-anchor">#</a> 7️⃣ try catch</h2> <p>在当前合约发起对外部合约的调用，如果外部合约调用执行失败被 revert，外部合约状态会被回滚，当前合约状态也会被回滚。这是正常的逻辑。</p> <p>但有时候我们并不想这样，要是能够捕获外部合约调用异常，然后根据情况做自己的处理会更好吗！所以，这种场景下适应于使用 <code>try...catch</code> 语句。</p> <p><code>try catch</code>仅用于 外部函数调用　和合约创建调用。</p> <ul><li>外部函数调用</li> <li>合约创建调用</li></ul> <h3 id="_1-语法-3"><a href="#_1-语法-3" class="header-anchor">#</a> 1.语法</h3> <div class="language- extra-class"><pre class="language-text"><code>try this.count() {
+    // 成功逻辑
+    return &quot;success&quot;;
+} catch Error(string memory reason) {
+    // 失败的逻辑: require / revert
+    // 调用 count() 失败时执行，通常是不满足 require 语句条件或触发 revert 语句时所引起的调用失败
+    return reason;
+} catch (bytes memory) {
+    // 失败逻辑
+    // 调用 count() 异常时执行，通常是触发 assert 语句或除 0 等比较严重错误时会执行
+    return &quot;assert error&quot;;
+}
+</code></pre></div><p>上面的逻辑也可以简写如下</p> <div class="language- extra-class"><pre class="language-text"><code>try this.count() {
+    // 成功逻辑
+    return &quot;success&quot;;
+} catch (bytes memory) {
+    // 失败逻辑: require / revert / assert
+     return &quot;assert error&quot;;
+}
+</code></pre></div><p><strong>例子</strong></p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Manager {
+    // function count() public pure returns (int256) {
+    //     require(1 == 2, &quot;require error&quot;);
+    //     return 2;
+    // }
+
+    function count() public pure returns (int256) {
+        assert(1 == 2);
+        return 2;
+    }
+
+    function test() public view returns (string memory) {
+        // this 代表当前函数
+        try this.count() {
+            return &quot;success&quot;;
+        } catch Error(string memory reason) {
+            // reason 是出错原因
+            // 调用 count() 失败时执行，通常是不满足 require 语句条件
+            // 或触发 revert 语句时所引起的调用失败
+            return reason;
+        } catch (bytes memory) {
+            // 调用 count() 异常时执行，通常是触发 assert 语句或除 0 等比较严重错误时会执行
+            return &quot;assert error&quot;;
+        }
+    }
+}
+</code></pre></div><p>也可以去掉<code>catch Error(string memory reason)</code>，只使用 <code>catch (bytes memory)</code>；</p> <p>如下的测试</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Manager {
+    function count() public pure returns (int256) {
+        require(1 == 2, &quot;require error&quot;);
+        return 2;
+    }
+
+    function test() public view returns (string memory) {
+        // this 代表当前函数
+        try this.count() {
+            return &quot;success&quot;;
+        } catch (bytes memory) {
+            // 调用 count() 异常时执行，通常是触发 assert 语句或除 0 等比较严重错误时会执行
+            return &quot;assert error&quot;;
+        }
+    }
+}
+</code></pre></div><p>外部调用的失败，可以通过 try/catch 语句来捕获，例如：</p> <div class="language- extra-class"><pre class="language-text"><code> // SPDX-License-Identifier: GPL-3.0
+pragma solidity &gt;=0.8.1;
+
+interface DataFeed { function getData(address token) external returns (uint value); }
+
+contract FeedConsumer {
+    DataFeed feed;
+    uint errorCount;
+    function rate(address token) public returns (uint value, bool success) {
+        // 如果错误超过 10 次，永久关闭这个机制
+        require(errorCount &lt; 10);
+        try feed.getData(token) returns (uint v) {
+            return (v, true);
+        } catch Error(string memory /*reason*/) {
+            // This is executed in case
+            // revert was called inside getData
+            // and a reason string was provided.
+            errorCount++;
+            return (0, false);
+        }  catch Panic(uint /*errorCode*/) {
+            // This is executed in case of a panic,
+            // i.e. a serious error like division by zero
+            // or overflow. The error code can be used
+            // to determine the kind of error.
+            errorCount++;
+            return (0, false);
+        } catch (bytes memory /*lowLevelData*/) {
+            // This is executed in case revert() was used。
+            errorCount++;
+            return (0, false);
+        }
+    }
+}
+</code></pre></div><p><code>try</code> 关键词后面必须有一个表达式，代表外部函数调用或合约创建（<code>new ContractName()</code>）。</p> <p>以下内容摘自文档：</p> <p>在表达式上的错误不会被捕获（例如，如果它是一个复杂的表达式，还涉及内部函数调用），只有外部调用本身发生的 revert 可以捕获。 接下来的 <code>returns</code> 部分（是可选的）声明了与外部调用返回的类型相匹配的返回变量。在没有错误的情况下，这些变量被赋值，合约将继续执行第一个成功块内代码。如果到达成功块的末尾，则在 <code>catch</code> 块之后继续执行。</p> <p>Solidity 根据错误的类型，支持不同种类的捕获代码块：</p> <ul><li><code>catch Error(string memory reason) { ... }</code>: 如果错误是由 <code>revert(&quot;reasonString&quot;)</code> 或 <code>require(false, &quot;reasonString&quot;)</code>（或导致这种异常的内部错误）引起的，则执行这个 catch 子句。</li> <li><code>catch Panic(uint errorCode) { ... }</code>: 如果错误是由 panic 引起的（如： <code>assert</code> 失败，除以 0，无效的数组访问，算术溢出等），将执行这个 catch 子句。</li> <li><code>catch (bytes memory lowLevelData) { ... }</code>: 如果错误签名不符合任何其他子句，如果在解码错误信息时出现了错误，或者如果异常没有一起提供错误数据。在这种情况下，子句声明的变量提供了对低级错误数据的访问。</li> <li><code>catch { ... }</code>: 如果你对错误数据不感兴趣，你可以直接使用 <code>catch { ... }</code> (甚至是作为唯一的 catch 子句) 而不是前面几个 catch 子句。</li></ul> <p>有计划在未来支持其他类型的错误数据。 <code>Error</code> 和 <code>Panic</code> 字符串目前是按原样解析的，不作为标识符处理。</p> <p>为了捕捉所有的错误情况，你至少要有子句 <code>catch { ... }</code> 或 <code>catch (bytes memory lowLevelData) { ... }</code>.</p> <p>在 <code>returns</code> 和 <code>catch</code> 子句中声明的变量只在后面的块的范围内有效。</p> <p><strong>注解</strong>: 如果在 try/catch 语句内部返回的数据解码过程中发生错误，这将导致当前执行的合约出现异常，如此，它不会在 catch 子句中被捕获到。如果在 <code>catch Error(string memory reason)</code> 的解码过程中出现错误，并且有一个低级的 catch 子句，那么这个错误就会在低级 catch 子句被捕获。</p> <p><strong>注解</strong>: 如果执行到一个 catch 子句，那么外部调用的状态改变已经被回退了。如果执行到了成功块，那么外部调用的状态改变是有效的。如果状态改变已经被回退，那么要么在 catch 块中继续执行，要么是 try/catch 语句的执行本身被回退（例如由于上面提到的解码失败或由于没有提供低级别的 catch 子句时）。</p> <p><strong>注解</strong>:调用失败背后的原因可能是多方面的。请不要认为错误信息是直接来自被调用的合约。错误可能发生在调用链的更深处，而被调用的合约只是转发了（冒泡）错误。
+另外，这可能是由于 out-of-gas 情况，而不是一个逻辑错误状况：调用者总是在调用中保留至少 1/64 的 gas，这样即使被调合约 gas 用完，调用方仍有一些 gas 预留（处理剩余逻辑）。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/05.operator.html" class="prev">
+          操作符
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/07.control-flow.html">
+          流程控制
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_1️⃣-require" class="sidebar-link reco-side-_1️⃣-require" data-v-b57cc07c>1️⃣ require</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_1-语法" class="sidebar-link reco-side-_1-语法" data-v-b57cc07c>1.语法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_2-gas-测试" class="sidebar-link reco-side-_2-gas-测试" data-v-b57cc07c>2.gas 测试</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_3-使用场景" class="sidebar-link reco-side-_3-使用场景" data-v-b57cc07c>3.使用场景</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_2️⃣-assert" class="sidebar-link reco-side-_2️⃣-assert" data-v-b57cc07c>2️⃣ assert</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_1-语法-2" class="sidebar-link reco-side-_1-语法-2" data-v-b57cc07c>1.语法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_2-使用场景" class="sidebar-link reco-side-_2-使用场景" data-v-b57cc07c>2.使用场景</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_3-扩展" class="sidebar-link reco-side-_3-扩展" data-v-b57cc07c>3.扩展</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_3️⃣-revert" class="sidebar-link reco-side-_3️⃣-revert" data-v-b57cc07c>3️⃣ revert</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_4️⃣-三种方式的总结" class="sidebar-link reco-side-_4️⃣-三种方式的总结" data-v-b57cc07c>4️⃣ 三种方式的总结</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_1-require、assert-不同点" class="sidebar-link reco-side-_1-require、assert-不同点" data-v-b57cc07c>1.require、assert 不同点</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_2-require、assert、revert-共同点" class="sidebar-link reco-side-_2-require、assert、revert-共同点" data-v-b57cc07c>2.require、assert、revert 共同点</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_5️⃣-自定义-error" class="sidebar-link reco-side-_5️⃣-自定义-error" data-v-b57cc07c>5️⃣ 自定义 Error</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_6️⃣-natspec-error" class="sidebar-link reco-side-_6️⃣-natspec-error" data-v-b57cc07c>6️⃣ Natspec Error</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_7️⃣-try-catch" class="sidebar-link reco-side-_7️⃣-try-catch" data-v-b57cc07c>7️⃣ try catch</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/06.error.html#_1-语法-3" class="sidebar-link reco-side-_1-语法-3" data-v-b57cc07c>1.语法</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/32.a8886025.js" defer></script>
+  </body>
+</html>

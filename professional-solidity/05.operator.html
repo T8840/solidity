@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>05.运算操作符 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/31.4c918904.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" aria-current="page" class="active sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">05.运算操作符</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_05-运算操作符"><a href="#_05-运算操作符" class="header-anchor">#</a> 05.运算操作符</h1> <ul><li>算术运算符</li> <li>比较运算符</li> <li>逻辑运算符/关系运算符</li> <li>赋值运算符</li> <li>条件运算符/三元运算符</li> <li>位运算符</li> <li>delete</li> <li>unchecked</li> <li><strong>两个类型不一样的操作数，也可以进行算术和位操作运算</strong>。
+<ul><li>例如，你可以计算 y = x + z ，其中 x 是 <code>uint8</code> ， z 是 <code>int32</code> 类型。 在这些情况下，将使用以下机制来确定运算结果的类型（这在溢出的情况下很重要）。</li> <li>如果右操作数的类型可以隐含地转换为左操作数的类型的类型，则使用左操作数的类型。</li> <li>如果左操作数的类型可以隐含地转换为右操作数的类型的类型，则使用右操作数的类型。</li> <li>否则，该操作不被允许。</li></ul></li></ul> <p>如果其中一个操作数是一个常量数字，会首先被转换为能容纳该值的最小的类型 (相同位数时，无符号类型被认为比有符号类型 “小”)。 如果两者都是常量数字，则以任意的精度进行计算。</p> <p>操作符的结果类型与执行操作的类型相同，除了比较运算符，其结果总是 <code>bool</code>。</p> <p>运算符 <code>**</code>（幂）， <code>&lt;&lt;</code> 和 <code>&gt;&gt;</code> 使用左边操作数的类型来作为运算结果类型。</p> <h2 id="_1️⃣-算术运算符"><a href="#_1️⃣-算术运算符" class="header-anchor">#</a> 1️⃣ 算术运算符</h2> <ul><li><code>+</code>，<code>-</code>，<code>*</code>，<code>/</code>，<code>%</code>(取余,取模)，</li> <li><code>++</code>(递增),<code>--</code>(递减),<code>+=</code>(加法赋值),<code>-=</code>(减法赋值)</li> <li><code>**</code>（次方）</li></ul> <p>不废话，直接上代码；</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 5;
+    uint256 public b = 2;
+    uint256 public c1 = a + b;
+    uint256 public c2 = a - b;
+    uint256 public c3 = a * b;
+    uint256 public c4 = a / b;
+    uint256 public c5 = a % b;
+
+    // uint256 public c6 = a++; // 会影响a的值
+
+    function increment1() public view returns (uint256) {
+        uint256 temp = a;
+        return temp++;
+    }
+
+    function increment2() public view returns (uint256) {
+        uint256 temp = a;
+        return ++temp;
+    }
+
+    function reduce1() public view returns (uint256) {
+        uint256 temp = a;
+        return temp--;
+    }
+
+    function reduce2() public view returns (uint256) {
+        uint256 temp = a;
+        return --temp;
+    }
+
+    function plusAssign() public view returns (uint256) {
+        uint256 temp = a;
+        return temp += 2;
+    }
+
+    function minusAssign() public view returns (uint256) {
+        uint256 temp = a;
+        return temp -= 2;
+    }
+
+    function test1() public view returns (uint256) {
+        return b**3;
+    }
+}
+</code></pre></div><h3 id="unchecked"><a href="#unchecked" class="header-anchor">#</a> unchecked</h3> <p>默认情况下，算术运算都会进行溢出检查，但是也可以禁用检查，可以通过 <code>unchecked block</code> 来禁用检查，此时会返回截断的结果。</p> <div class="language- extra-class"><pre class="language-text"><code>function f(uint a, uint b) pure public returns (uint) {
+    // 减法溢出会返回“截断”的结果
+    unchecked { return a - b; }
+}
+</code></pre></div><p>溢出的检查功能是在 <code>0.8.0</code> 版本加入的，在此版本之前，请使用 <strong>OpenZepplin SafeMath</strong> 库。</p> <h3 id="一元运算负"><a href="#一元运算负" class="header-anchor">#</a> 一元运算负 <code>-</code></h3> <p>表达式 <code>-x</code> 相当于 <code>(T(0) - x)</code> 这里 <code>T</code> 是指 <code>x</code> 的类型。 <code>-x</code> 只能应用在有符号型的整数上。 如果 <code>x</code> 为负数， <code>-x</code> 为正数。</p> <p>由于使用两进制补码表示数据，你还需要小心:如果有 <code>int x = type(int).min;</code>， 那 <code>-x</code> 将不在正数取值的范围内。 这意味着这个检测 <code>unchecked { assert(-x == x); }</code> 是可以通过的（即这种情况下，不能假设它的负数会是正数），如果是 checked 模式，则会触发异常。</p> <h3 id="除法运算"><a href="#除法运算" class="header-anchor">#</a> 除法运算</h3> <p>除法运算结果的类型始终是其中一个操作数的类型，整数除法总是产生整数。在 Solidity 中，分数会取零。 这意味着 <code>int256(-5) / int256(2) == int256(-2)</code> 。</p> <h3 id="模运算-取余"><a href="#模运算-取余" class="header-anchor">#</a> 模运算（取余）</h3> <p>模运算 <code>a％n</code> 是在操作数 <code>a</code> 的除以 <code>n</code> 之后产生余数 <code>r</code> ，其中 <code>q = int(a / n)</code> 和 <code>r = a - (n * q)</code> 。 这意味着模运算结果与左操作数相同的符号相同（或零）。 对于 负数的 a : <code>a % n == -(-a % n)</code>， 几个例子：</p> <ul><li><code>int256(5) % int256(2) == int256(1)</code></li> <li><code>int256(5) % int256(-2) == int256(1)</code></li> <li><code>int256(-5) % int256(2) == int256(-1)</code></li> <li><code>int256(-5) % int256(-2) == int256(-1)</code></li></ul> <p>对 0 取模会发生错误 <code>Panic</code> 错误，该检查不能通过<code>unchecked { … }</code> 。</p> <h3 id="幂运算"><a href="#幂运算" class="header-anchor">#</a> 幂运算</h3> <p>幂运算仅适用于无符号类型。 结果的类型总是等于基数的类型. 请注意类型足够大以能够容纳幂运算的结果，要么发生潜在的 assert 异常或者使用截断模式。</p> <p>在 <code>checked</code> 模式下，幂运算仅会为小基数使用相对便宜的 <code>exp</code> 操作码。 例如 <code>x**3</code> 的例子，表达式 <code>x*x*x</code> 也许更便宜。 在任何情况下，都建议进行 <code>gas</code> 消耗测试和使用优化器。</p> <p>扩展 TODO: 可以自己测试多少为临界值</p> <p>注意 <code>0**0</code> 在 EVM 中定义为 1 。</p> <h3 id="i-和-i-区别"><a href="#i-和-i-区别" class="header-anchor">#</a> i++ 和 ++i 区别</h3> <ul><li><code>a = i++</code>: 先把 i 的值赋予 a，然后在执行 i=i+1；</li> <li><code>a = ++i</code>: 先执行 i=i+1，然后在把 i 的值赋予 a；</li></ul> <h4 id="for-循环中-i-更省钱"><a href="#for-循环中-i-更省钱" class="header-anchor">#</a> for 循环中，++i 更省钱</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    // 25153 gas
+    function test1() public pure returns (uint256 temp) {
+        for (uint256 index = 0; index &lt; 10; index++) {
+            temp += index;
+        }
+    }
+
+    // 25081 gas
+    function test2() public pure returns (uint256 temp) {
+        for (uint256 index = 0; index &lt; 10; ++index) {
+            temp += index;
+        }
+    }
+}
+</code></pre></div><h3 id="赋值运算符"><a href="#赋值运算符" class="header-anchor">#</a> 赋值运算符</h3> <ul><li><code>=</code>(简单赋值)</li> <li><code>+=</code> (相加赋值)</li> <li><code>−=</code> (相减赋值)</li> <li><code>*=</code> (相乘赋值)</li> <li><code>/=</code> (相除赋值)</li> <li><code>%=</code> (取模赋值)</li></ul> <p>注意： 同样的逻辑也适用于位运算符，因此它们将变成 <code>&lt;&lt;=</code>、<code>&gt;&gt;=</code>、<code>&gt;&gt;=</code>、<code>&amp;=</code>、<code>|=</code>和<code>^=</code>。</p> <p>不废话，直接上代码；</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 20;
+    uint256 public b = 10;
+
+    function test1() public view returns (uint256 temp) {
+        temp = a + b;
+    }
+
+    function test2() public view returns (uint256 temp) {
+        temp = a;
+        temp += b;
+    }
+
+    function test3() public view returns (uint256 temp) {
+        temp = a;
+        temp -= b;
+    }
+
+    function test4() public view returns (uint256 temp) {
+        temp = a;
+        temp *= b;
+    }
+
+    function test5() public view returns (uint256 temp) {
+        temp = a;
+        temp /= b;
+    }
+
+    function test6() public view returns (uint256 temp) {
+        temp = a;
+        temp %= b;
+    }
+}
+</code></pre></div><p><code>a += e</code> 等同于 <code>a = a + e</code>。其它运算符如 <code>-=</code>， <code>*=</code>， <code>/=</code>， <code>%=</code>， <code>|=</code>， <code>&amp;=</code> ， <code>^=</code> ， <code>&lt;&lt;=</code> 和 <code>&gt;&gt;=</code> 都是如此定义的。</p> <ul><li><code>a++</code> 和 <code>a--</code> 分别等同于 <code>a += 1</code> 和 <code>a -= 1</code>，但表达式本身的值等于 <code>a</code> 在计算之前的值。</li> <li>与之相反， <code>--a</code> 和 <code>++a</code> 虽然最终 <code>a</code> 的结果与之前的表达式相同，但表达式的返回值是计算之后的值。</li></ul> <h2 id="_2️⃣-关系运算符"><a href="#_2️⃣-关系运算符" class="header-anchor">#</a> 2️⃣ 关系运算符</h2> <p>关系运算符一共有六种：分别为： 大于 、小于 、 大于等于 、 小于等于 、 等于 和 不等于 。</p> <ul><li><code>&gt;</code> (大于)</li> <li><code>&lt;</code> (小于)</li> <li><code>&gt;=</code> (大于等于)</li> <li><code>&lt;=</code> (小于等于)</li> <li><code>==</code> (等于)</li> <li><code>!=</code> (不等于)</li></ul> <p><strong>返回的结果是一个布尔值；</strong></p> <p>直接上代码；</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 20;
+    uint256 public b = 10;
+
+    function test1() public view returns (bool) {
+        return a == b;
+    }
+
+    function test2() public view returns (bool) {
+        return a != b;
+    }
+
+    function test3() public view returns (bool) {
+        return a &gt; b;
+    }
+
+    function test4() public view returns (bool) {
+        return a &gt;= b;
+    }
+
+    function test5() public view returns (bool) {
+        return a &lt; b;
+    }
+
+    function test6() public view returns (bool) {
+        return a &lt;= b;
+    }
+}
+</code></pre></div><h3 id="布尔类型-支持的运算符"><a href="#布尔类型-支持的运算符" class="header-anchor">#</a> 布尔类型 支持的运算符</h3> <ul><li>包括：<code>!</code>逻辑非</li> <li><code>==</code>等于，<code>!=</code> 不等于</li> <li><code>&amp;&amp;</code>逻辑与，<code>||</code>逻辑或
+<ul><li><code>&amp;&amp;</code>，<code>||</code> 为短路运算符</li></ul></li></ul> <h3 id="地址类型-支持的运算符"><a href="#地址类型-支持的运算符" class="header-anchor">#</a> 地址类型 支持的运算符</h3> <ul><li><code>&lt;=</code>, <code>&lt;</code>, <code>==</code>, <code>!=</code>, <code>&gt;=</code> and <code>&gt;</code></li></ul> <h4 id="和"><a href="#和" class="header-anchor">#</a> <code>==</code> 和 <code>!=</code></h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    address public immutable owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function isOwner() external view returns (bool) {
+        return owner == msg.sender;
+    }
+
+    function test1(address _ads) external pure returns (bool) {
+        return address(0) != _ads;
+    }
+}
+</code></pre></div><h4 id=""><a href="#" class="header-anchor">#</a> <code>&gt;</code> <code>&gt;=</code> <code>&lt;</code> <code>&lt;=</code></h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    function test1(address _ads) external pure returns (bool) {
+        return _ads &gt; address(9);
+    }
+
+    function test2(address _ads) external pure returns (bool) {
+        return _ads &gt;= address(9);
+    }
+
+    function test3(address _ads) external pure returns (bool) {
+        return _ads &lt; address(9);
+    }
+
+    function test4(address _ads) external pure returns (bool) {
+        return _ads &lt;= address(9);
+    }
+}
+</code></pre></div><h4 id="交换地址"><a href="#交换地址" class="header-anchor">#</a> 交换地址</h4> <p>Uniswap V2 中 createPair 时的判断逻辑：</p> <div class="language- extra-class"><pre class="language-text"><code>(address token0, address token1) = tokenA &lt; tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
+require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
+require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // single check is sufficient
+</code></pre></div><h3 id="定长字节数组-支持的运算符"><a href="#定长字节数组-支持的运算符" class="header-anchor">#</a> 定长字节数组 支持的运算符</h3> <ul><li>比较运算符： <code>&lt;=</code>， <code>&lt;</code>， <code>==</code>， <code>!=</code>， <code>&gt;=</code>， <code>&gt;</code> （返回布尔型）</li> <li>位运算符： <code>&amp;</code>， <code>|</code>， <code>^</code> （按位异或）， <code>~</code> （按位取反）</li> <li>移位运算符： <code>&lt;&lt;</code> （左移位）， <code>&gt;&gt;</code> （右移位）</li> <li>索引访问：如果 <code>x</code> 是 <code>bytesI</code> 类型，那么 <code>x[k]</code> （其中 0 &lt;= k &lt; I）返回第 k 个字节（只读）。</li></ul> <p>该类型可以和作为右操作数的无符号整数类型进行移位运算（但返回结果的类型和左操作数类型相同），右操作数表示需要移动的位数。 进行有符号整数位移运算会引发运行时异常。</p> <h2 id="_3️⃣-逻辑运算符"><a href="#_3️⃣-逻辑运算符" class="header-anchor">#</a> 3️⃣ 逻辑运算符</h2> <h3 id="_1-基础用法"><a href="#_1-基础用法" class="header-anchor">#</a> 1. 基础用法</h3> <ul><li>&amp;&amp; (逻辑与)
+<ul><li>如果两个操作数都是 true ，则条件为真。</li></ul></li> <li>|| (逻辑或)
+<ul><li>如果两个操作数有一个为 true ，则条件为真。</li></ul></li> <li>! (逻辑非)
+<ul><li>反转操作数的逻辑状态。如果条件为真，则逻辑非操作将使其为假。</li></ul></li></ul> <p>不废话，直接上代码；</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 20;
+    uint256 public b = 10;
+
+    function test1() public view returns (bool) {
+        bool assertion1 = a &gt; 15;
+        bool assertion2 = b &gt; 15;
+        return assertion1 &amp;&amp; assertion2;
+    }
+
+    function test2() public view returns (bool) {
+        bool assertion1 = a &gt; 15;
+        bool assertion2 = b &gt; 15;
+        return assertion1 || assertion2;
+    }
+
+    function test3() public view returns (bool assertion1, bool assertion2) {
+        assertion1 = a &gt; 15;
+        assertion2 = !(b &gt; 15);
+    }
+}
+</code></pre></div><h3 id="_2-和-的短路用法"><a href="#_2-和-的短路用法" class="header-anchor">#</a> 2. <code>&amp;&amp;</code> 和 <code>||</code> 的短路用法</h3> <p>原理:</p> <ul><li><code>A &amp;&amp; B</code>,如果 A 为 false，B 就不执行了</li> <li><code>A || B</code>,如果 A 为 true，B 就不执行了</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 10;
+    uint256 public b = 20;
+
+    event Assertion1(string msg);
+    event Assertion2(string msg);
+
+    // 29319 gas
+    function test1() public returns (bool) {
+        return assertion1() || assertion2();
+    }
+
+    // 29365 gas
+    function testA() public returns (bool) {
+        bool as1 = assertion1();
+        bool as2 = assertion2();
+        return as1 &amp;&amp; as2;
+    }
+
+    // 25430 gas
+    // 因为短路操作，减少了很多 gas
+    function testB() public returns (bool) {
+        return assertion1() &amp;&amp; assertion2();
+    }
+
+    function assertion1() private returns (bool) {
+        emit Assertion1(&quot;Assertion1 run&quot;);
+        return a &gt; 15;
+    }
+
+    function assertion2() private returns (bool) {
+        emit Assertion2(&quot;Assertion1 run&quot;);
+        return b &gt; 15;
+    }
+}
+</code></pre></div><p>合理的使用短路操作，可以省一些 gas 费。</p> <h2 id="_4️⃣-三元运算符"><a href="#_4️⃣-三元运算符" class="header-anchor">#</a> 4️⃣ 三元运算符</h2> <p>三元运算符是一个表达是形式： <code>&lt;expression&gt; ? &lt;trueExpression&gt; : &lt;falseExpression&gt;</code> 。 它根据 <code>&lt;expression&gt;</code> 的执行结果，选择后两个给定表达式中的一个。 如果 <code>&lt;expression&gt;</code> 执行结果 true ，那么 <code>&lt;trueExpression&gt;</code> 将被执行，否则 <code>&lt;falseExpression&gt;</code> 被执行。</p> <p>代码如下:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 20;
+    uint256 public b = 10;
+
+    function test1() public view returns (bool) {
+        uint256 temp = a + b;
+        return temp &gt; 25 ? true : false;
+    }
+
+    function test2() public view returns (bool) {
+        uint256 temp = a + b;
+        return temp &lt; 25 ? true : false;
+    }
+}
+</code></pre></div><p>三元运算符的结果类型是由两个操作数的类型决定的，方法与上面一样，如果需要的话，首先转换为它们的最小可容纳类型（mobile type ）。</p> <p>因此， <code>255 + (true ? 1 : 0)</code> 将由于算术溢出而被回退。 原因是 <code>(true ? 1 : 0)</code> 是 uint8 类型，这迫使加法也要在 <code>uint8</code> 中执行。 而 <code>256</code> 超出了这个类型所允许的范围。</p> <p>另一个结果是，像 <code>1.5 + 1.5</code> 这样的表达式是有效的，但 <code>1.5 + (true ? 1.5 : 2.5)</code> 则无效。 这是因为前者是以无限精度来进行有理表达式运算，只有它的最终结果值才是重要的。 后者涉及到将小数有理数转换为整数，这在目前是不允许的。</p> <h2 id="_5️⃣-位运算符"><a href="#_5️⃣-位运算符" class="header-anchor">#</a> 5️⃣ 位运算符</h2> <p>位运算在数字的二进制补码表示上执行。 这意味着： <code>~int256(0)== int256(-1)</code>。</p> <p>假设 A 等于 2；B 等于 3。</p> <ul><li><code>&amp;</code> (位与): 对其整数参数的每个位执行位与操作。
+<ul><li>例: (A &amp; B) 为 2.</li></ul></li> <li><code>|</code> (位或): 对其整数参数的每个位执行位或操作。
+<ul><li>例: (A | B) 为 3.</li></ul></li> <li><code>^</code> (位异或): 对其整数参数的每个位执行位异或操作。
+<ul><li>例: (A ^ B) 为 1.</li></ul></li> <li><code>~</code> (位非): 一元操作符，反转操作数中的所有位。
+<ul><li>例: (~B) 为 -4.</li></ul></li> <li><code>&lt;&lt;</code> (左移位)): 将第一个操作数中的所有位向左移动，移动的位置数由第二个操作数指定，新的位由 0 填充。将一个值向左移动一个位置相当于乘以 2，移动两个位置相当于乘以 4，以此类推。
+<ul><li>例: (A &lt;&lt; 1) 为 4.</li></ul></li> <li><code>&gt;&gt;</code> (右移位): 左操作数的值向右移动，移动位置数量由右操作数指定
+<ul><li>例: (A &gt;&gt; 1) 为 1.</li></ul></li></ul> <p>如果两个中的任一个数是小数，则不允许进行位运算。如果指数是小数的话，也不支持幂运算（因为这样可能会得到一个无理数）。</p> <p>数学运算:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public a = 5;
+    uint256 public b = 2;
+
+    // 左移操作符将第一个操作数向左移动指定位数，左边超出的位数将会被清除，右边将会补零。
+    function test2() public view returns (uint256) {
+        // a: ...000000000101
+        // b: ...000000000010
+        // ------------------
+        // =: 00...000000010100
+        // =: ...000000010100
+        return a &lt;&lt; b;
+    }
+
+    // 右移操作符 (&gt;&gt;) 是将一个操作数按指定移动的位数向右移动，右边移出位被丢弃，左边移出的空位补符号位。
+    function test3() public view returns (uint256) {
+        // a: ...000000000101
+        // b: ...000000000010
+        // ------------------
+        // =: ...00000000000101
+        // =: ...000000000001
+        return a &gt;&gt; b;
+    }
+}
+</code></pre></div><p>移位操作的结果具有左操作数的类型，同时会截断结果以匹配类型。 右操作数必须是无符号类型。尝试按带符号的类型移动将产生编译错误。<strong>对于移位操作不会像算术运算那样执行溢出检查，其结果总是被截断。</strong></p> <p>移位可以通过用 2 的幂的乘法来 “模拟”(方法如下)。请注意，左操作数的截断总是在最后发生。</p> <ul><li><code>x &lt;&lt; y</code> 等于数学表达式 <code>x * 2 ** y</code>。
+<ul><li><code>5 &lt;&lt; 2</code> = <code>5*2**2</code> = 20</li></ul></li> <li><code>x &gt;&gt; y</code> 等于数学表达式 <code>x / 2 ** y</code> ， 四舍五入到负无穷。
+<ul><li><code>5 &gt;&gt; 2</code> = <code>5/2**2</code> = 1</li></ul></li></ul> <h2 id="_6️⃣-delete"><a href="#_6️⃣-delete" class="header-anchor">#</a> 6️⃣ delete</h2> <p><code>delete a</code> 的结果是将 <code>a</code> 类型初始值赋值给<code>a</code>。换句话说，在 <code>delete a</code> 之后 <code>a</code> 的值与在没有赋值的情况下声明 <code>a</code> 的情况相同。</p> <p><code>delete</code> 适用于整型，数组，结构体映射。</p> <ul><li>对于整型变量：相当于 <code>a = 0</code>。</li> <li>对于动态数组：是将重置为数组长度为 0 的数组</li> <li>对于静态数组：是将数组中的所有元素重置为初始值。</li> <li>对于数组而言：<code>delete a[x]</code> 仅删除数组索引 <code>x</code> 处的元素，其他的元素和长度不变，这为数组留出了一个空位。如果打算删除项，映射可能是更好的选择。</li> <li>对于结构体：则将结构体中的所有属性(成员)重置。</li> <li>mapping : 是将所选择的 key 重置为初始值。</li></ul> <p>代码如下:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    struct Book {
+        string title;
+        string author;
+        uint256 book_id;
+    }
+
+    // 整数
+    uint256 public a1 = 1;
+    int256 public a2 = -1;
+
+    // 数组
+    uint256[2] b1 = [1, 2]; // 定长
+    uint256[] b2 = [1, 2]; // 变长
+
+    // mapping
+    mapping(address =&gt; uint256) public balances;
+
+    // struct
+    Book public java; // 一本 java 书
+
+    constructor() {
+        java = Book({title: &quot;Java&quot;, author: &quot;LiSi&quot;, book_id: 1});
+        balances[msg.sender] = 999;
+    }
+
+    function deleteFn() public {
+        delete a1;
+        delete a2;
+        delete b1;
+        delete b2;
+        delete balances[msg.sender];
+        delete java;
+    }
+
+    function getB1() public view returns (uint256[2] memory) {
+        return b1;
+    }
+
+    function getB2() public view returns (uint256[] memory) {
+        return b2;
+    }
+}
+</code></pre></div><p>需要注意以下几点：</p> <p><code>delete</code> 对整个映射是无效的（因为映射的键可以是任意的，通常也是未知的）。因此在你删除一个结构体时，结果将重置所有的非映射属性（成员），这个过程是递归进行的，除非它们是映射。然而，单个的键及其映射的值是可以被删除的。</p> <p>理解 <code>delete a</code> 的效果就像是给 <code>a</code> 赋值很重要，换句话说，这相当于在 <code>a</code>中存储了一个新的对象。</p> <p>当 <code>a</code> 是应用变量时，我们可以看到这个区别， <code>delete a</code> 它只会重置 <code>a</code> 本身，而不是更改它之前引用的值。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract DeleteLBC {
+    uint256 data;
+    uint256[] dataArray;
+
+    function f() public {
+        uint256 x = data;
+        delete x; // 将 x 设为 0，并不影响数据
+        delete data; // 将 data 设为 0，并不影响 x，因为它仍然有个副本
+        uint256[] storage y = dataArray;
+        delete dataArray;
+        // 将 dataArray.length 设为 0，但由于 uint[] 是一个复杂的对象，y 也将受到影响，
+        // 因为它是一个存储位置是 storage 的对象的别名。
+        // 另一方面：&quot;delete y&quot; 是非法的，引用了 storage 对象的局部变量只能由已有的 storage 对象赋值。
+        assert(y.length == 0);
+    }
+}
+</code></pre></div><h2 id="_7️⃣-操作符的优先级"><a href="#_7️⃣-操作符的优先级" class="header-anchor">#</a> 7️⃣ 操作符的优先级</h2> <table border="1" class="docutils"><colgroup><col width="13%"> <col width="40%"> <col width="47%"></colgroup> <thead valign="bottom"><tr class="row-odd"><th class="head">优先级</th> <th class="head">描述</th> <th class="head">操作符</th></tr></thead> <tbody valign="top"><tr class="row-even"><td rowspan="6"><em>1</em></td> <td>后置自增和自减</td> <td><code class="docutils literal notranslate"><span class="pre">++</span></code>, <code class="docutils literal notranslate"><span class="pre">--</span></code></td></tr> <tr class="row-odd"><td>创建类型实例</td> <td><code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">&lt;typename&gt;</span></code></td></tr> <tr class="row-even"><td>数组元素</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;array&gt;[&lt;index&gt;]</span></code></td></tr> <tr class="row-odd"><td>访问成员</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;object&gt;.&lt;member&gt;</span></code></td></tr> <tr class="row-even"><td>函数调用</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;func&gt;(&lt;args...&gt;)</span></code></td></tr> <tr class="row-odd"><td>小括号</td> <td><code class="docutils literal notranslate"><span class="pre">(&lt;statement&gt;)</span></code></td></tr> <tr class="row-even"><td rowspan="5"><em>2</em></td> <td>前置自增和自减</td> <td><code class="docutils literal notranslate"><span class="pre">++</span></code>, <code class="docutils literal notranslate"><span class="pre">--</span></code></td></tr> <tr class="row-odd"><td>一元运算的加和减</td> <td><code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></td></tr> <tr class="row-even"><td>一元操作符</td> <td><code class="docutils literal notranslate"><span class="pre">delete</span></code></td></tr> <tr class="row-odd"><td>逻辑非</td> <td><code class="docutils literal notranslate"><span class="pre">!</span></code></td></tr> <tr class="row-even"><td>按位非</td> <td><code class="docutils literal notranslate"><span class="pre">~</span></code></td></tr> <tr class="row-odd"><td><em>3</em></td> <td>乘方</td> <td><code class="docutils literal notranslate"><span class="pre"><em>*</em></span></code></td></tr> <tr class="row-even"><td><em>4</em></td> <td>乘、除和模运算</td> <td><code class="docutils literal notranslate"><span class="pre"></span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">%</span></code></td></tr> <tr class="row-odd"><td><em>5</em></td> <td>算术加和减</td> <td><code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code></td></tr> <tr class="row-even"><td><em>6</em></td> <td>移位操作符</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;&gt;</span></code></td></tr> <tr class="row-odd"><td><em>7</em></td> <td>按位与</td> <td><code class="docutils literal notranslate"><span class="pre">&amp;</span></code></td></tr> <tr class="row-even"><td><em>8</em></td> <td>按位异或</td> <td><code class="docutils literal notranslate"><span class="pre">^</span></code></td></tr> <tr class="row-odd"><td><em>9</em></td> <td>按位或</td> <td><code class="docutils literal notranslate"><span class="pre">|</span></code></td></tr> <tr class="row-even"><td><em>10</em></td> <td>非等操作符</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></td></tr> <tr class="row-odd"><td><em>11</em></td> <td>等于操作符</td> <td><code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code></td></tr> <tr class="row-even"><td><em>12</em></td> <td>逻辑与</td> <td><code class="docutils literal notranslate"><span class="pre">&amp;&amp;</span></code></td></tr> <tr class="row-odd"><td><em>13</em></td> <td>逻辑或</td> <td><code class="docutils literal notranslate"><span class="pre">||</span></code></td></tr> <tr class="row-even"><td><em>14</em></td> <td>三元操作符</td> <td><code class="docutils literal notranslate"><span class="pre">&lt;conditional&gt;</span> <span class="pre">?</span> <span class="pre">&lt;if-true&gt;</span> <span class="pre">:</span> <span class="pre">&lt;if-false&gt;</span></code></td></tr> <tr class="row-odd"><td><em>15</em></td> <td>赋值操作符</td> <td><code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">|=</span></code>, <code class="docutils literal notranslate"><span class="pre">^=</span></code>, <code class="docutils literal notranslate"><span class="pre">&amp;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&lt;=</span></code>,
+<code class="docutils literal notranslate"><span class="pre">&gt;&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, <code class="docutils literal notranslate"><span class="pre">/=</span></code>,
+<code class="docutils literal notranslate"><span class="pre">%=</span></code></td></tr> <tr class="row-even"><td><em>16</em></td> <td>逗号</td> <td><code class="docutils literal notranslate"><span class="pre">,</span></code></td></tr></tbody></table> <p>表达式的计算顺序不是特定的（更准确地说，表达式树中某节点的字节点间的计算顺序不是特定的，但它们的结算肯定会在节点自己的结算之前）。该规则只能保证语句按顺序执行，布尔表达式的短路执行。</p> <h2 id="_8️⃣-不同数据类型的总结"><a href="#_8️⃣-不同数据类型的总结" class="header-anchor">#</a> 8️⃣ 不同数据类型的总结</h2> <h3 id="整型-支持的运算符"><a href="#整型-支持的运算符" class="header-anchor">#</a> 整型 支持的运算符</h3> <ul><li>比较运算符: <code>&lt;=</code> , <code>&lt;</code> , <code>==</code> , <code>!=</code> , <code>&gt;=</code> , <code>&gt;</code> 比较结果的返回值为 bool 类型</li> <li>位运算符：<code>&amp;</code> ，<code>|</code>，<code>^</code>（异或），<code>~</code>（非,位取反）</li> <li>移位运算符: <code>&lt;&lt;</code>（左移） ， <code>&gt;&gt;</code>(右移)</li> <li>数学运算：
+<ul><li><code>+</code>，<code>-</code>， 一元运算负 <code>-</code> （仅针对有符号整型）,<code>*</code>，<code>/</code>，<code>%</code>(取余)，</li> <li><code>++</code>,<code>--</code>,<code>+=</code>,<code>-=</code></li> <li><code>**</code>（次方）</li></ul></li></ul> <h3 id="定长浮点型-支持的运算符"><a href="#定长浮点型-支持的运算符" class="header-anchor">#</a> 定长浮点型 支持的运算符</h3> <p>比较运算符：<code>&lt;=</code>， <code>&lt;</code>， <code>==</code>， <code>!=</code>， <code>&gt;=</code>， <code>&gt;</code> （返回值是布尔型）
+算术运算符：<code>+</code>， <code>-</code>， 一元运算 <code>-</code>， 一元运算 <code>+</code>， <code>*</code>， <code>/</code>， <code>%</code> （取余数）</p> <ul><li>比较：<code>==</code>，<code>!=</code>，<code>&gt;</code>，<code>&gt;=</code>，<code>&lt;</code>，<code>&lt;=</code> <ul><li>返回值为 bool 类型。</li></ul></li> <li>位运算符：<code>&amp;</code>，<code>|</code>，<code>^</code>(异或)，<code>~</code>非</li></ul> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li>算数运算符的注意
+<ul><li>表达式 <code>-x</code> 相当于 <code>(T(0) - x)</code> 这里 <code>T</code> 是指 <code>x</code> 的类型。 <code>-x</code> 只能应用在有符号型的整数上。</li> <li>整数除法总是产生整数。</li></ul></li> <li>一元运算负 <code>-</code> 有什么需要注意的
+<ul><li>表达式 <code>-x</code> 相当于 <code>(T(0) - x)</code> 这里 <code>T</code> 是指 <code>x</code> 的类型。 <code>-x</code> 只能应用在有符号型的整数上。 如果 <code>x</code> 为负数， <code>-x</code> 为正数。</li> <li>由于使用两进制补码表示数据，你还需要小心:如果有 <code>int x = type(int).min;</code>， 那 <code>-x</code> 将不在正数取值的范围内。 这意味着这个检测 <code>unchecked { assert(-x == x); }</code> 是可以通过的（即这种情况下，不能假设它的负数会是正数），如果是 checked 模式，则会触发异常。</li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/04.function.html" class="prev">
+          函数
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/06.error.html">
+          错误处理
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_1️⃣-算术运算符" class="sidebar-link reco-side-_1️⃣-算术运算符" data-v-b57cc07c>1️⃣ 算术运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#unchecked" class="sidebar-link reco-side-unchecked" data-v-b57cc07c>unchecked</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#一元运算负" class="sidebar-link reco-side-一元运算负" data-v-b57cc07c>一元运算负 -</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#除法运算" class="sidebar-link reco-side-除法运算" data-v-b57cc07c>除法运算</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#模运算-取余" class="sidebar-link reco-side-模运算-取余" data-v-b57cc07c>模运算（取余）</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#幂运算" class="sidebar-link reco-side-幂运算" data-v-b57cc07c>幂运算</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#i-和-i-区别" class="sidebar-link reco-side-i-和-i-区别" data-v-b57cc07c>i++ 和 ++i 区别</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#赋值运算符" class="sidebar-link reco-side-赋值运算符" data-v-b57cc07c>赋值运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_2️⃣-关系运算符" class="sidebar-link reco-side-_2️⃣-关系运算符" data-v-b57cc07c>2️⃣ 关系运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#布尔类型-支持的运算符" class="sidebar-link reco-side-布尔类型-支持的运算符" data-v-b57cc07c>布尔类型 支持的运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#地址类型-支持的运算符" class="sidebar-link reco-side-地址类型-支持的运算符" data-v-b57cc07c>地址类型 支持的运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#定长字节数组-支持的运算符" class="sidebar-link reco-side-定长字节数组-支持的运算符" data-v-b57cc07c>定长字节数组 支持的运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_3️⃣-逻辑运算符" class="sidebar-link reco-side-_3️⃣-逻辑运算符" data-v-b57cc07c>3️⃣ 逻辑运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_1-基础用法" class="sidebar-link reco-side-_1-基础用法" data-v-b57cc07c>1. 基础用法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_2-和-的短路用法" class="sidebar-link reco-side-_2-和-的短路用法" data-v-b57cc07c>2. &amp;&amp; 和 || 的短路用法</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_4️⃣-三元运算符" class="sidebar-link reco-side-_4️⃣-三元运算符" data-v-b57cc07c>4️⃣ 三元运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_5️⃣-位运算符" class="sidebar-link reco-side-_5️⃣-位运算符" data-v-b57cc07c>5️⃣ 位运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_6️⃣-delete" class="sidebar-link reco-side-_6️⃣-delete" data-v-b57cc07c>6️⃣ delete</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_7️⃣-操作符的优先级" class="sidebar-link reco-side-_7️⃣-操作符的优先级" data-v-b57cc07c>7️⃣ 操作符的优先级</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#_8️⃣-不同数据类型的总结" class="sidebar-link reco-side-_8️⃣-不同数据类型的总结" data-v-b57cc07c>8️⃣ 不同数据类型的总结</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#整型-支持的运算符" class="sidebar-link reco-side-整型-支持的运算符" data-v-b57cc07c>整型 支持的运算符</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#定长浮点型-支持的运算符" class="sidebar-link reco-side-定长浮点型-支持的运算符" data-v-b57cc07c>定长浮点型 支持的运算符</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/05.operator.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/31.4c918904.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>03.变量 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/29.dd2c0633.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" aria-current="page" class="active sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">03.变量</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_03-变量"><a href="#_03-变量" class="header-anchor">#</a> 03.变量</h1> <p>上一章我们学习了 Solidity 中的数据知识，数据是编程语言的生产生活资料，而变量是数据的代言人。我们在 Solidity 中很多时候不直接使用数据，而是使用变量外表示数据。数据作为最基础的生产资料，而变量作为代言人，同样非常重要。</p> <p>Solidity 是一种静态类型语言，这意味着每个变量（状态变量和局部变量）都需要在编译时指定变量的类型。</p> <h2 id="_1️⃣-变量基础知识"><a href="#_1️⃣-变量基础知识" class="header-anchor">#</a> 1️⃣ 变量基础知识</h2> <p>回顾一下前面两章提到的变量：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract DataTypes {
+    string public myString = &quot;hello world&quot;;
+    bool public b = true;
+    uint256 public u = 123;
+
+    int256 public i = -123;
+    int256 public minInt = type(int256).min; // 获取最小值
+    int256 public maxInt = type(int256).max; // 获取最大值
+    address public ads = 0xffD0d80c48F6C3C5387b7cfA7AA03970bdB926ac;
+    bytes32 public bys32 = &quot;abc&quot;;
+}
+</code></pre></div><h3 id="本节配套视频"><a href="#本节配套视频" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=46" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=lrZNZaezP5A&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=46" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-初始默认值"><a href="#_1-初始默认值" class="header-anchor">#</a> 1.初始默认值</h3> <p><strong>Solidity 是一种静态类型语言</strong>，这意味着需要在声明期间指定变量类型。</p> <p>在 Solidity 中没有 null 或者 undefined 的概念，但是新声明的变量总是有一个默认值，具体的默认值跟类型相关，比如 int 类型的默认值为 0。每个变量声明时，都有一个基于其类型的默认值。</p> <h4 id="⓵-默认值的两个要点"><a href="#⓵-默认值的两个要点" class="header-anchor">#</a> ⓵ 默认值的两个要点</h4> <ol><li>Solidity 智能合约中所有的变量，都有默认值，没有 null 或者 undefined 的概念。</li> <li>这些变量在没有被赋值之前，它的值已默认值的形式存在。</li></ol> <h4 id="⓶-例子演示"><a href="#⓶-例子演示" class="header-anchor">#</a> ⓶ 例子演示</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract DefaultValues {
+    string public str; // &quot;&quot;
+    bool public b; // false
+    int256 public intValue; // 0
+    uint256 public count; // 0
+
+    address public ads; // 0x0000000000000000000000000000000000000000
+
+    // 0x0000000000000000000000000000000000000000000000000000000000000000
+    bytes32 public bt32;
+
+    // array
+    uint256[] public arr;
+    // enum
+    enum Status {
+        None,
+        Pending,
+        Shiped,
+        Completed,
+        Rejected,
+        Canceled
+    }
+    Status public status;
+
+    function getArr() external view returns (uint256[] memory) {
+        return arr;
+    }
+}
+</code></pre></div><h4 id="⓷-默认值总结"><a href="#⓷-默认值总结" class="header-anchor">#</a> ⓷ 默认值总结</h4> <ul><li>string: <code>&quot;&quot;</code></li> <li>bool: <code>false</code></li> <li>int256: <code>0</code></li> <li>uint256: <code>0</code></li> <li>address: <code>0x0000000000000000000000000000000000000000</code></li> <li>bytes32: <code>0x0000000000000000000000000000000000000000000000000000000000000000</code></li> <li>enum: <code>0</code></li> <li>动态数组: <code>[]</code></li> <li>定长数组: 每个元素的默认值</li> <li><code>mapping</code> / <code>strucr</code> 均为所在类型的默认值</li></ul> <p>上述的这些值也可以通过 <code>delete</code> 操作符来实现，详细参考 <a href="/solidity/source/05.operator.html#delete">delete 操作赋</a>，在数据那一章也多次提到通过<code>delete</code> 操作符来使指定元素恢复默认值。</p> <h3 id="_2-作用域和声明"><a href="#_2-作用域和声明" class="header-anchor">#</a> 2.作用域和声明</h3> <p>Solidity 中的作用域规则遵循了 C99：</p> <h4 id="⓵-作用域的规则"><a href="#⓵-作用域的规则" class="header-anchor">#</a> ⓵ 作用域的规则</h4> <ul><li>变量将会从它们被声明之后可见，直到一对 <code>{}</code> 块的结束。</li> <li>对于参数形式的变量（例如：函数参数、修饰器参数、catch 参数等等）在其后接着的代码块内有效。
+<ul><li>这些代码块是函数的实现，catch 语句块等。</li> <li>有一个例外，在 for 循环语句中初始化的变量，其可见性仅维持到 <code>for</code> 循环的结束。</li></ul></li> <li>那些定义在代码块之外的变量，比如函数、合约、自定义类型等等，并不会影响它们的作用域特性。
+<ul><li>意味着你可以在实际声明状态变量的语句之前就使用它们，并且递归地调用函数。</li></ul></li></ul> <h4 id="⓶-例子演示-2"><a href="#⓶-例子演示-2" class="header-anchor">#</a> ⓶ 例子演示</h4> <p>基于上面总结规则，下边的例子两个变量虽然名字一样，但却在不同的作用域里。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    function minimalScoping() public pure returns (uint256) {
+        uint256 same;
+        {
+            uint256 same;
+            same = 1;
+        }
+
+        {
+            uint256 same;
+            same = 3;
+        }
+        return same;
+    }
+}
+</code></pre></div><p>作为 C99 作用域规则的特例，请注意在下边的例子里，第一次对 x 的赋值会改变上一层中声明的变量值。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    function f() public pure returns (uint256) {
+        uint256 x = 1;
+        {
+            // This declaration shadows an existing declaration.
+            x = 2; // 这个赋值会影响在外层声明的变量
+
+            // Unused local variable.
+            uint256 x;
+        }
+        return x; // x has value 2
+    }
+}
+</code></pre></div><p>在 Solidity 中，如果在内部作用域中使用和外层相同的变量名，会收到警告信息。这种警告是告诉开发者<code>外层声明的变量被“覆盖”</code>了，谨慎检查下是不是期望的。</p> <p>上面例子中的 f 函数的 return 值 可以改写为下面的：</p> <div class="language- extra-class"><pre class="language-text"><code>function f() public pure returns (uint256 x) {
+    x = 1;
+    {
+        x = 2;
+        uint256 x;
+    }
+}
+</code></pre></div><h4 id="⓷-必须先声明再赋值"><a href="#⓷-必须先声明再赋值" class="header-anchor">#</a> ⓷ 必须先声明再赋值</h4> <p>在 Solidity 现在的版本中，变量必须先声明再赋值，顺序不能倒。</p> <p>0.5.0 版本之前，一个变量声明在函数的任意位置，都可以使他在整个函数范围内可见。从 0.5.0 版本开始以后就不能这样了。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    // ✅
+    function t() public pure returns (uint256) {
+        uint256 x;
+        x = 2;
+        return x;
+    }
+
+    // ❌
+    function f() public pure returns (uint256) {
+        // DeclarationError: Undeclared identifier.
+        // &quot;x&quot; is not (or not yet) visible at this point.
+        x = 2;
+        uint256 x;
+        return x;
+    }
+}
+</code></pre></div><h4 id="⓸-合约外定义的类型和函数"><a href="#⓸-合约外定义的类型和函数" class="header-anchor">#</a> ⓸ 合约外定义的类型和函数</h4> <ul><li>合约外面可以定义函数和数据结构
+<ul><li>定义在合约外面的函数，叫自由函数</li> <li>定义在合约外面的类型，可以被多个合约使用</li></ul></li> <li>不可以定义变量
+<ul><li>但是可以定义常量，常量那一节有介绍</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// 结构:
+//      定义在合约外面
+//      可以被多个合约同时使用
+struct Book {
+    string title;
+    string author;
+    uint256 book_id;
+}
+
+// 自由函数:
+//      定义在合约外面
+//      没有可见性
+function getBalance() view returns (uint256) {
+    return address(msg.sender).balance;
+}
+
+
+function add(uint256 a_, uint256 b_) pure returns (uint256) {
+    return a_+b_;
+}
+
+contract Demo1 {
+    Book public book1 = Book(&quot;Solidity&quot;, &quot;Anbang&quot;, 1);
+    function f() public view returns (uint256) {
+        return getBalance();
+    }
+    function test() public pure returns (uint256) {
+        return add(100,200);
+    }
+
+}
+
+contract Demo2 {
+    Book public book2 = Book(&quot;Solidity 2&quot;, &quot;Anbang&quot;, 2);
+}
+</code></pre></div><h3 id="_3-变量的三种状态"><a href="#_3-变量的三种状态" class="header-anchor">#</a> 3.变量的三种状态</h3> <p>按作用域划分，状态可以分为下面三种状态：</p> <ul><li>状态变量:
+<ul><li>变量值永久保存在智能合约存储空间中，相当于属于已经写入到区块链中，可以随时调用，除非该条链消失。</li> <li>特点:定义在智能合约的存储空间中</li></ul></li> <li>局部变量:
+<ul><li>变量值仅在函数执行过程中有效,供函数内部使用；调用函数时，在虚拟机的内存中；函数退出后，变量无效。类似&quot;闭包&quot;的特性。</li> <li>特点: 定义在函数内部</li></ul></li> <li>全局变量:
+<ul><li>保存在全局命名空间，用于获取区块链相关信息的特殊变量。</li> <li>特点:存在于 EVM 虚拟机中，不用定义，直接获取即可。</li></ul></li></ul> <h4 id="⓵-状态变量"><a href="#⓵-状态变量" class="header-anchor">#</a> ⓵ 状态变量</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Var{
+    uint256 public myUint = 123;
+    function changeMyUint (uint256 x) external returns (uint256 ){
+        myUint = x;
+        return myUint;
+    }
+}
+</code></pre></div><h4 id="⓶-局部变量"><a href="#⓶-局部变量" class="header-anchor">#</a> ⓶ 局部变量</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Var{
+     function test() external pure returns (uint256){
+        uint256 local = 2;// 局部变量
+        return local;
+    }
+}
+</code></pre></div><h4 id="⓷-全局变量"><a href="#⓷-全局变量" class="header-anchor">#</a> ⓷ 全局变量</h4> <ul><li><code>msg.sender</code></li> <li><code>msg.value</code></li> <li><code>block.timestamp</code></li> <li><code>block.number</code></li></ul> <p>先简单了解下，后面会有一节进行详细介绍。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    address public owner = msg.sender; // 在状态变量中使用
+
+    // 在函数内使用
+    function global() external view returns(address,uint256,uint256){
+        return(msg.sender,block.timestamp,block.number);
+    }
+}
+</code></pre></div><p><strong>msg.sender</strong>：表示当前调用方法时的发起人。</p> <p>一个智能合约既可以被合约创建者调用，也可以被其它人调用。合约创建者，即合约拥有者，也就是指合约部署者，<strong>如何判断合约的拥有者</strong>？ 第一次部署的时候进行定义，即在构造函数中定义：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    address public _owner;
+
+    constructor() {
+        _owner = msg.sender;
+    }
+}
+</code></pre></div><h2 id="_2️⃣-constant-常量"><a href="#_2️⃣-constant-常量" class="header-anchor">#</a> 2️⃣ Constant 常量</h2> <ul><li>普通变量与常量:普通的状态变量，添加 <code>constant</code> 关键词即可声明为常量</li> <li>与常规状态变量相比，常量的 gas 要低很多。</li> <li>常量名字一般使用全大写。</li> <li>常量赋值后不可以修改。</li> <li>常量必须声明和初始化一起做掉，否则编译不通过。</li> <li>常量的值储存原理
+<ul><li>常量的值在编译器确定，因为在编译器确定，所以不能定义在函数内。</li> <li>编译器并不会为 <code>constant</code> 常量在 <code>storage</code> 上预留空间，它们的每次出现都会被替换为相应的常量表达式（它可能被优化器计算为实际的某个值）。</li> <li>因为不是储存在<code>storage</code> 上，所以函数内读取常量不算<code>view</code>，可以使用 pure</li> <li>因为不是储存在<code>storage</code> 上，所以可以在任意位置定义常量，比如在合约外面</li> <li>也可以在文件级别定义 constant 变量（0.7.2 之后的特性）。</li></ul></li> <li>引用类型只支持字符串
+<ul><li>不是所有的类型都支持常量，当前支持的仅有<strong>值类型</strong>（包括地址类型）/<strong>字符串</strong>。</li></ul></li> <li>可以使用内建函数赋值常量</li></ul> <h3 id="本节配套视频-2"><a href="#本节配套视频-2" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=47" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=OH0F_1XIDE0&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=47" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-普通变量与常量"><a href="#_1-普通变量与常量" class="header-anchor">#</a> 1.普通变量与常量</h3> <p>普通的状态变量，添加 <code>constant</code> 关键词即可声明为常量</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    string name1 = &quot;Anbang&quot;;
+    string constant name2 = &quot;Anbang&quot;;
+}
+</code></pre></div><h3 id="_2-常量相比变量更省钱"><a href="#_2-常量相比变量更省钱" class="header-anchor">#</a> 2.常量相比变量更省钱</h3> <p>与常规状态变量相比，常量的 gas 要低很多。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    // 24465
+    string public name1 = &quot;Anbang&quot;;
+
+    // 21793
+    string public constant name2 = &quot;Anbang&quot;;
+}
+</code></pre></div><h3 id="_3-常量名字一般使用全大写"><a href="#_3-常量名字一般使用全大写" class="header-anchor">#</a> 3.常量名字一般使用全大写</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    string public constant NAME = &quot;Anbang&quot;;
+}
+</code></pre></div><h3 id="_4-常量赋值后不可以修改"><a href="#_4-常量赋值后不可以修改" class="header-anchor">#</a> 4.常量赋值后不可以修改</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    string public name = &quot;Anbang&quot;;
+    string public constant NAME = &quot;Anbang&quot;;
+
+    function set1() external{
+        name = &quot;Anbang Chu&quot;;
+    }
+
+    // function set2() external{
+    //     // Cannot assign to a constant variable.
+    //     NAME = &quot;Anbang Chu&quot;;
+    // }
+}
+</code></pre></div><h3 id="_5-常量必须声明和初始化一起做掉"><a href="#_5-常量必须声明和初始化一起做掉" class="header-anchor">#</a> 5.常量必须声明和初始化一起做掉</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    //  Uninitialized &quot;constant&quot; variable.
+    string public constant NAME;
+}
+</code></pre></div><h3 id="_6-常量的值储存原理"><a href="#_6-常量的值储存原理" class="header-anchor">#</a> 6.常量的值储存原理</h3> <ul><li>常量的值在编译器确定，因为在编译器确定，所以不能定义在函数内。</li> <li>编译器并不会为 <code>constant</code> 常量在 <code>storage</code> 上预留空间，它们的每次出现都会被替换为相应的常量表达式（它可能被优化器计算为实际的某个值）。</li> <li>因为不是储存在<code>storage</code> 上，所以函数内读取常量不算<code>view</code>，可以使用 pure</li> <li>因为不是储存在<code>storage</code> 上，所以可以在任意位置定义常量，比如在合约外面</li> <li>也可以在文件级别定义 constant 变量（0.7.2 之后的特性）。</li></ul> <h4 id="⓵-不能定义在函数内"><a href="#⓵-不能定义在函数内" class="header-anchor">#</a> ⓵ 不能定义在函数内</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    // The &quot;constant&quot; keyword can only be used for state variables
+    //  or variables at file level.
+    function getName() external pure returns(string memory){
+        string memory constant NAME = &quot;Anbang&quot;;
+        return NAME;
+    }
+}
+</code></pre></div><h4 id="⓶-函数内读取常量不属于-view"><a href="#⓶-函数内读取常量不属于-view" class="header-anchor">#</a> ⓶ 函数内读取常量不属于 view</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo1 {
+    string public constant NAME = &quot;Anbang1&quot;;
+    string public name = &quot;Anbang2&quot;;
+
+    function getName() external view returns(string memory){
+        return name;
+    }
+
+    function getNAME() external pure returns(string memory){
+        return NAME;
+    }
+}
+</code></pre></div><h4 id="⓷-可以在合约外面定义常量"><a href="#⓷-可以在合约外面定义常量" class="header-anchor">#</a> ⓷ 可以在合约外面定义常量</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+string constant NAME = &quot;Anbang1&quot;;
+
+contract Demo1 {
+    function getNAME() external pure returns(string memory){
+        return NAME;
+    }
+}
+</code></pre></div><h4 id="⓸-常量可以定义在文件中"><a href="#⓸-常量可以定义在文件中" class="header-anchor">#</a> ⓸ 常量可以定义在文件中</h4> <p><code>info.sol</code> 文件</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+string constant NAME1 = &quot;Anbang1&quot;;
+string constant NAME2 = &quot;Anbang2&quot;;
+</code></pre></div><p><code>demo.sol</code> 文件：引用 info 文件。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+import &quot;./info.sol&quot; as INFO;
+
+contract Demo1 {
+    function getNAME() external pure returns(string memory){
+        return INFO.NAME1;
+    }
+}
+</code></pre></div> <h3 id="_7-引用类型支持-string-和-bytes"><a href="#_7-引用类型支持-string-和-bytes" class="header-anchor">#</a> 7.引用类型支持 string 和 bytes</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    // string &lt;=&gt; bytes
+    string public constant NAME1 = &quot;Anbang1&quot;;
+    bytes public  constant NAME2 = &quot;Anbang1&quot;;
+
+    // Only constants of value type and byte array type are implemented.
+    // uint256[] public constant  NAME3 = [1,2,3];
+}
+</code></pre></div><h3 id="_8-常见的赋值方式"><a href="#_8-常见的赋值方式" class="header-anchor">#</a> 8.常见的赋值方式</h3> <p>如果状态变量声明为 <code>constant</code>(常量)。在这种情况下，只能使用那些在编译时有确定值的表达式来给它们赋值。</p> <ul><li>允许可能对内存分配产生 side effect（副作用）的表达式，但那些可能对其他内存对象产生副作用的表达式则不允许。
+<ul><li>内建（built-in）函数 <code>keccak256</code> ， <code>sha256</code> ， <code>ripemd160</code> ，<code>ecrecover</code> ， <code>addmod</code> 和 <code>mulmod</code>是允许的（即使他们确实会调用外部合约， <code>keccak256</code> 除外）。</li> <li>允许内存分配器的副作用的原因是它可以构造复杂的对象，例如：查找表（lookup-table）。 此功能尚不完全可用。</li></ul></li></ul> <h4 id="⓵-运算符赋值"><a href="#⓵-运算符赋值" class="header-anchor">#</a> ⓵ 运算符赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo1 {
+    uint256 public constant VERSION = 1+1;
+
+    // 100个ETH
+    // 100000000000000000000
+    uint256 public  constant VALUE = 100 * 10**18; // 运算符赋值
+
+    // 1小时
+    uint256 public  constant H = 60 * 60;
+}
+</code></pre></div><h4 id="⓶-使用-address"><a href="#⓶-使用-address" class="header-anchor">#</a> ⓶ 使用 address</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    address public constant ZERO = address(0);
+}
+</code></pre></div><h4 id="⓷-密码学函数赋值"><a href="#⓷-密码学函数赋值" class="header-anchor">#</a> ⓷ 密码学函数赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    uint256 public constant a = addmod(4, 5, 3);
+    uint256 public constant b = mulmod(4, 5, 3);
+    bytes32 public constant c1 = sha256(&quot;Hello&quot;);
+    bytes32 public constant c2 = ripemd160(&quot;Hello&quot;);
+    bytes32 public constant myBytes32 = keccak256(&quot;Hello&quot;);
+}
+</code></pre></div><h4 id="⓸-禁止的一些赋值"><a href="#⓸-禁止的一些赋值" class="header-anchor">#</a> ⓸ 禁止的一些赋值</h4> <p>不允许使用状态变量/区块链数据来赋值，也不允许外部合约调用来赋值。</p> <ul><li>任何通过访问 storage，区块链数据（例如 <code>block.timestamp</code>,<code>address(this).balance</code> 或者 <code>block.number</code>）或执行数据（ <code>msg.value</code> 或<code>gasleft()</code> ） 或对外部合约的调用来给它们赋值都是不允许的。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    address public ads1 = msg.sender;
+    // address public constant ads2 = msg.sender;
+}
+</code></pre></div><h2 id="_3️⃣-immutable-不可变量"><a href="#_3️⃣-immutable-不可变量" class="header-anchor">#</a> 3️⃣ Immutable 不可变量</h2> <p>上一节我们学习了常量，常量的值是在编译器确定，因为在编译器确定，常量必须声明和初始化一起做掉，否则编译不通过。这就给很多只需要一次赋值，但是又必须需要动态赋值的场景带来了不变。比如合约的 owner 地址等场景。</p> <p>然后上面的苦恼，可以通过不可变量来解决。如果我们想要一个变量，赋值后就不可以修改，而且值是部署时候动态赋值，那么可以使用不可变量的类型。通过 <code>immutable</code> 关键字可以声明为不可变量，不可变量的限制要比声明为常量(<code>constant</code>) 的变量的限制少：</p> <p>不可变量可以声明和赋值一起做掉，也可以 storage 中声明，在合约的构造函数中赋值。无论在哪里赋值，只能赋值一次，也带来更多的安全性。</p> <ul><li><strong>原理</strong>: 在部署的时候确定变量的值，它是一个运行时赋值。
+<ul><li>扩展了解: 如果要将编译器生成的运行时代码与实际存储在区块链中的代码进行比较，需要明白：编译器生成的合约创建代码将在返回合约之前<strong>修改合约的运行时代码</strong>，方法是将对不可变量的所有引用替换为分配给它们的值。</li></ul></li> <li><strong>特点</strong>:它既有 constant 常量不可修改和 Gas 费用低的优势，又有变量动态赋值的优势。
+<ul><li>Solidity <code>immutable</code> 是另一种常量的表达方式。</li></ul></li> <li><strong>原则</strong>:
+<ul><li><code>immutable</code> 可以声明和初始化一起做掉，也可以部署时在<code>constructor</code>中做掉。</li> <li><code>immutable</code> 必须在<code>constructor</code>运行截止时就赋值</li> <li><code>immutable</code> 不能用在引用数据类型上
+<ul><li>当前<code>constant</code>支持字符串,<code>immutable</code>不支持字符串</li></ul></li></ul></li> <li><strong>应用场景</strong>：
+<ul><li>在创建不可转移的 <code>owner</code> 时</li> <li>在创建 ERC20 的 <code>name</code>,<code>symbol</code>,<code>decimals</code> 时</li></ul></li></ul> <h3 id="本节配套视频-3"><a href="#本节配套视频-3" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=48" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=HAA1x_1U_Kc&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=48" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-声明和初始化一起做掉"><a href="#_1-声明和初始化一起做掉" class="header-anchor">#</a> 1.声明和初始化一起做掉</h3> <p>像常量一样赋值:</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint256 public constant U1 = 123;
+    uint256 public immutable u2 = 456;
+}
+</code></pre></div><h3 id="_2-声明后在-constructor-中赋值"><a href="#_2-声明后在-constructor-中赋值" class="header-anchor">#</a> 2.声明后在 <code>constructor</code> 中赋值</h3> <h4 id="⓵-constructor-正常赋值"><a href="#⓵-constructor-正常赋值" class="header-anchor">#</a> ⓵ constructor 正常赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>address public immutable adsImmut;
+constructor() {
+    adsImmut = msg.sender;
+}
+</code></pre></div><h4 id="⓶-constructor-参数赋值"><a href="#⓶-constructor-参数赋值" class="header-anchor">#</a> ⓶ constructor 参数赋值</h4> <p>赋值 owner 例子：</p> <div class="language- extra-class"><pre class="language-text"><code>address public immutable adsImmut;
+constructor(address _owner) {
+    adsImmut = _owner;
+}
+</code></pre></div><p>使用参数的属性：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    uint256 public immutable decimals;
+    uint256 public immutable maxBalance;
+
+    constructor(uint256 decimals_, address ref) {
+        decimals = decimals_;
+        // 可以访问属性
+        maxBalance = ref.balance;
+    }
+}
+</code></pre></div><h4 id="⓷-constructor-内使用函数的结果赋值"><a href="#⓷-constructor-内使用函数的结果赋值" class="header-anchor">#</a> ⓷ constructor 内使用函数的结果赋值</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract C {
+    uint256 public immutable decimals;
+
+    constructor() {
+        decimals = get();
+    }
+
+    function get() internal pure returns(uint256){
+        return 18;
+    }
+}
+</code></pre></div><h3 id="_3-部署后不可以修改"><a href="#_3-部署后不可以修改" class="header-anchor">#</a> 3.部署后不可以修改</h3> <p>注意点：不可变量只能赋值一次，以后就不能再次改变了</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    address public immutable adsImmut;
+    address public immutable ads = address(0);
+
+    constructor() {
+        adsImmut = msg.sender;
+
+        // Immutable state variable already initialized.
+        // ads = msg.sender;
+    }
+
+    // immutable 部署后不可以修改，如果尝试修改immutable类型变量，会报错
+    // Cannot write to immutable here: Immutable variables can only
+    // be initialized inline or assigned directly in the constructor.
+    // function changeImmutable() external {
+    //     adsImmut = msg.sender;
+    // }
+}
+</code></pre></div><h3 id="_4-不可以在赋值前读取"><a href="#_4-不可以在赋值前读取" class="header-anchor">#</a> 4.不可以在赋值前读取</h3> <p>并且在赋值之后才可以读取 immutable 变量，如果赋值之前读取会报错。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    address public immutable adsImmut;
+    address public ads;
+
+    constructor() {
+        // Immutable variables cannot be read before they are initialized.
+        // ads = adsImmut;
+
+        adsImmut = msg.sender;
+        ads = adsImmut;
+    }
+}
+</code></pre></div><h3 id="_5-不可以在-constructor-之外赋值其他不可变量"><a href="#_5-不可以在-constructor-之外赋值其他不可变量" class="header-anchor">#</a> 5.不可以在 <code>constructor</code> 之外赋值其他不可变量</h3> <p>不可变量可以在声明时赋值，不过只有在合约的构造函数执行时才被视为视为初始化。这意味着，你不能用一个依赖于不可变量的值初始化另一个不可变量。</p> <p>因为不可变量在构造函数中才真正赋值，所以在合约的构造函数中这样做。这样的机制是为了防止对状态变量初始化和构造函数顺序的不同解释，特别是继承时，出现问题。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint256 public a1 = 1;
+    uint256 public a2 = a1;
+
+    uint256 public immutable b1 = 1;
+    // Immutable variables cannot be read before they are initialized.
+    // uint256 public b2 = b1;
+    uint256 public b2;
+
+    uint256 public immutable b3;
+
+    constructor() {
+        b2 = b1;
+        b3 = b1;
+    }
+}
+</code></pre></div><p>核心：在部署的时候确定变量的值，它是一个运行时赋值。</p> <h3 id="_6-immutable-不能用在引用数据类型"><a href="#_6-immutable-不能用在引用数据类型" class="header-anchor">#</a> 6.<code>immutable</code> 不能用在引用数据类型</h3> <p>当前<code>constant</code>支持引用类型中的 <code>string</code>和 <code>bytes</code>，<code>immutable</code>不支持任何引用数据类型</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    string public constant TEXT1 = &quot;abc&quot;;
+    // string public immutable TEXT2 = &quot;abc&quot;; // ❌
+
+    bytes public constant BYTES1 = &quot;abc&quot;;
+    // bytes public immutable BYTES2 = &quot;abc&quot;; // ❌
+
+    // Immutable variables cannot have a non-value type.
+    // mapping(address =&gt; uint256) public immutable mp;
+
+    struct Book {
+        string title;
+        string author;
+        uint256 book_id;
+    }
+
+    // Immutable variables cannot have a non-value type.
+    // Book public immutable book1; // 一本书
+}
+</code></pre></div><h3 id="_7-不同状态变量的-gas-对比"><a href="#_7-不同状态变量的-gas-对比" class="header-anchor">#</a> 7.不同状态变量的 gas 对比</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract A {
+    // 23597 gas
+    address public ads1 = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+    // 21486 gas
+    address public constant MY_ADDRESS =
+        0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+    // 21442 gas
+    address public immutable adsImmut1 =
+        0x5B38Da6a701c568545dCfcB03FcB875f56beddC4;
+
+    // 21420 gas
+    address public immutable adsImmut2;
+
+    constructor() {
+        adsImmut2 = msg.sender;
+    }
+}
+</code></pre></div><ul><li><strong>状态变量</strong>: <code>23597</code> gas</li> <li><strong>常量</strong>: <code>21486</code> gas</li> <li><strong>不可变量</strong>: <code>21442</code> gas</li></ul> <p><strong>备注</strong>: 修改变量顺序，或者声明变量的数量，也会影响 gas 的消耗。可以自己亲自测试下。</p> <p>通过对比可以发现，它既有 constant 常量不可修改和 Gas 费用低的优势，又有变量动态赋值的优势。</p> <p>不可变变量在构造时进行一次求值，并将其值复制到代码中访问它们的所有位置。 对于这些值，将保留 32 个字节，即使它们适合较少的字节也是如此。很多时候常量的 gas 更低。下面是 uint8 类型的例子</p> <div class="language- extra-class"><pre class="language-text"><code>contract Demo {
+    // 23532 gas
+    uint8 public u1 = 1;
+    // 21377
+    uint8 public constant U2 = 1;
+
+    // 21421
+    uint8 public immutable u2 = 1;
+
+    // 21443
+    uint8 public immutable u3;
+
+    constructor(){
+        u3  = 1;
+    }
+}
+</code></pre></div><h3 id="_8-constant-和-immutable-总结"><a href="#_8-constant-和-immutable-总结" class="header-anchor">#</a> 8.constant 和 immutable 总结</h3> <h4 id="⓵-值的确定时机不同"><a href="#⓵-值的确定时机不同" class="header-anchor">#</a> ⓵ 值的确定时机不同</h4> <p>状态变量声明为 constant (常量)或者 immutable （不可变量），在这两种情况下，合约一旦部署之后，变量将不在修改。</p> <ul><li>对于 constant 常量, 他的值在编译器确定.</li> <li>对于 immutable, 它的值在部署时确定。</li></ul> <h4 id="⓶-gas-不同"><a href="#⓶-gas-不同" class="header-anchor">#</a> ⓶ gas 不同</h4> <p>与常规状态变量相比，常量和不可变量的 gas 成本要低得多。</p> <ul><li>对于常量，赋值给它的表达式将复制到所有访问该常量的位置，并且每次都会对其进行重新求值。这样可以进行本地优化。</li> <li>不可变变量在构造时进行一次求值，并将其值复制到代码中访问它们的所有位置。 对于这些值，将保留 32 个字节，即使它们适合较少的字节也是如此。很多时候常量的 gas 更低。</li></ul> <p>如果可以使用常量的时候，推荐使用常量。</p> <h4 id="⓷-支持的数据不同"><a href="#⓷-支持的数据不同" class="header-anchor">#</a> ⓷ 支持的数据不同</h4> <p>不是所有类型的状态变量都支持用 <code>constant</code> 或 <code>immutable</code> 来修饰</p> <ul><li>当前<code>constant</code>仅支持值类型和引用类型中的 string 和 bytes</li> <li><code>immutable</code>仅支持值类型</li></ul> <h2 id="_4️⃣-变量名的命名规则"><a href="#_4️⃣-变量名的命名规则" class="header-anchor">#</a> 4️⃣ 变量名的命名规则</h2> <p>在为变量命名时，请记住以下规则：</p> <ul><li>禁止使用<strong>保留关键字</strong>作为变量名。</li> <li>变量名首字母禁止使用数字，必须以字母或下划线开头。</li> <li>变量名大小写敏感。</li></ul> <h3 id="本节配套视频-4"><a href="#本节配套视频-4" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=49" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=eoi12KYJjww&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=49" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-禁止使用保留关键字作为变量名"><a href="#_1-禁止使用保留关键字作为变量名" class="header-anchor">#</a> 1.禁止使用<strong>保留关键字</strong>作为变量名</h3> <p>禁止使用<strong>保留关键字</strong>作为变量名。例如：<code>break</code> / <code>boolean</code> / <code>contract</code> 这些是无效的变量名。</p> <ul><li>abstract</li> <li>after</li> <li>alias</li> <li>apply</li> <li>auto</li> <li>case</li> <li>catch</li> <li>copyof</li> <li>default</li> <li>define</li> <li>final</li> <li>immutable</li> <li>implements</li> <li>in</li> <li>inline</li> <li>let</li> <li>macro</li> <li>match</li> <li>mutable</li> <li>null</li> <li>of</li> <li>override</li> <li>partial</li> <li>promise</li> <li>reference</li> <li>relocatable</li> <li>sealed</li> <li>sizeof</li> <li>static</li> <li>supports</li> <li>switch</li> <li>try</li> <li>typedef</li> <li>typeof</li> <li>unchecked</li></ul> <h3 id="_2-变量名必须以字母或者下划线开头"><a href="#_2-变量名必须以字母或者下划线开头" class="header-anchor">#</a> 2.变量名必须以字母或者下划线开头</h3> <p>禁止使用数字作为变量名的开始，例如：<code>123abc</code> 是一个无效的变量名，但是 <code>_123abc</code> 是一个有效的变量名。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint8 public abc = 1;
+    uint8 public _123abc = 1;
+
+    // Expected identifier but got 'ILLEGAL'
+    uint8 public 123abc = 1;
+}
+</code></pre></div><h3 id="_3-变量名大小写敏感"><a href="#_3-变量名大小写敏感" class="header-anchor">#</a> 3.变量名大小写敏感</h3> <p>例如：Name 和 name 是两个不同的变量。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    string public name = &quot;Anbang&quot;;
+    string public constant Name = &quot;Anbang&quot;;
+}
+</code></pre></div><h2 id="_5️⃣-变量的可见性"><a href="#_5️⃣-变量的可见性" class="header-anchor">#</a> 5️⃣ 变量的可见性</h2> <p>可见性仅存在于状态变量和函数中</p> <ul><li>局部变量的可见性仅限于定义它们的函数，函数有四可见型，分别是 <code>private</code> / <code>external</code> / <code>internal</code> / <code>public</code></li> <li>状态变量可以有三种可见型，分别是 <code>private</code> / <code>internal</code> / <code>public</code></li></ul> <p>我们这里重点介绍状态变量可见型。</p> <p>internal 和 private 类型的变量不能被外部访问，而 public 变量能够被外部访问。</p> <p>警告: 设置为 <code>private</code>或 <code>internal</code>，只能防止其他合约读取或修改信息，但它仍然可以在链外查看到。你不要想着通过设置可见型，让别人看不到你的代码。反编译可以得到大部分需要的逻辑。</p> <h3 id="本节配套视频-5"><a href="#本节配套视频-5" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=50" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=Bi25cUElsDA&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=50" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-private"><a href="#_1-private" class="header-anchor">#</a> 1.private</h3> <p><strong>private</strong>: 私有，仅在当前合约中可以访问</p> <p>在继承的合约内不可访问，私有状态变量就像内部变量一样，但它们在派生合约中是不可见的。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint8 private a = 1;
+
+    // 这里使用 view 不是 pure
+    // 不能因为 private 对外不可见就想着用pure，
+    // 这个状态可变形是根据存储空间来决定的
+    function getA() public view returns(uint8){
+        return a;
+    }
+}
+</code></pre></div><h3 id="_2-internal"><a href="#_2-internal" class="header-anchor">#</a> 2.internal</h3> <p><strong>internal</strong>: 内部可视(合约内部和被继承的子合约中都可视)</p> <ul><li>状态变量如果不显示声明，默认是 <strong>internal</strong> 权限</li> <li>内部可见性状态变量只能在它们所定义的合约和派生合同中访问。 它们不能被外部访问。 这是状态变量的默认可见性。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint8 internal a = 1;
+
+    function getA() public view returns(uint8){
+        return a;
+    }
+}
+</code></pre></div><h3 id="_3-external"><a href="#_3-external" class="header-anchor">#</a> 3.external</h3> <p><strong>external</strong>: 外部可视(合约外部可视，在内部是不可见)</p> <p><strong><code>external</code> 不能声明在状态变量上，只能标识在函数上</strong>,因为如果一个状态变量在合约自身如果没有办法读取的话，那就没有存在的必要了。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo {
+    uint8 external a = 1;
+}
+</code></pre></div><h3 id="_4-public"><a href="#_4-public" class="header-anchor">#</a> 4.public</h3> <p><strong>public</strong>: 公开可视(合约内部，被继承的，外部都可以调用)</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    uint8 public a = 1;
+
+    function getA() public view returns (uint8) {
+        return a;
+    }
+}
+</code></pre></div><h3 id="_5-public-自动生成-getter-函数"><a href="#_5-public-自动生成-getter-函数" class="header-anchor">#</a> 5.public 自动生成 getter 函数</h3> <p>编译器自动为所有 public 状态变量创建 getter 函数.</p> <h4 id="⓵-值类型"><a href="#⓵-值类型" class="header-anchor">#</a> ⓵ 值类型</h4> <p>例子：通过其他合约访问</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo {
+    uint8 public a = 1;
+}
+contract Caller {
+    Demo demo = new Demo();
+    function f() public view returns(uint8 local){
+        local = demo.a();
+    }
+}
+</code></pre></div><p>例子：合约自身的两种访问</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo {
+    uint8 public a = 1;
+    function x() public returns(uint8 val){
+        a = 3; // 内部访问
+        val = this.a(); // 外部访问
+    }
+}
+</code></pre></div><p>getter 函数具有外部（<code>external</code>）可见性。</p> <ul><li>如果在内部访问 getter（即没有 <code>this.</code> ），它被认为一个状态变量。</li> <li>如果使用外部访问（即用 <code>this.</code> ），它被认作为一个函数。</li></ul> <h4 id="⓶-引用类型"><a href="#⓶-引用类型" class="header-anchor">#</a> ⓶ 引用类型</h4> <p>数组：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo {
+  uint256[] public myArray=[1,2,3];
+
+  // 指定生成的Getter 函数
+//   function myArray(uint256 i) external view returns (uint256) {
+//       return myArray[i];
+//   }
+}
+</code></pre></div><p>字符串：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+contract Demo {
+  string public str = &quot;abc&quot;;
+  // 指定生成的Getter 函数
+//   function str() external view returns(string memory s_){
+//       return str;
+//   }
+}
+</code></pre></div><h4 id="⓷-mapping-和-struct-的-getter-函数"><a href="#⓷-mapping-和-struct-的-getter-函数" class="header-anchor">#</a> ⓷ mapping 和 struct 的 getter 函数</h4> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    struct Data {
+        uint256 a;
+        bytes3 b;
+        mapping (uint256 =&gt; uint256) map;
+        uint256[3] c;
+        uint256[] d;
+        bytes e;
+    }
+    mapping (uint256 =&gt; mapping(bool =&gt; Data[])) public data;
+
+    // function data(uint256 arg1, bool arg2, uint256 arg3)
+    //     external
+    //     returns (uint256 a, bytes3 b, bytes memory e)
+    // {
+    //     a = data[arg1][arg2][arg3].a;
+    //     b = data[arg1][arg2][arg3].b;
+    //     e = data[arg1][arg2][arg3].e;
+    // }
+}
+</code></pre></div><p>在结构体内的映射和数组（byte 数组除外）被省略了，因为没有好办法为单个结构成员或为映射提供一个键。</p> <h2 id="_6️⃣-全局-时间单位"><a href="#_6️⃣-全局-时间单位" class="header-anchor">#</a> 6️⃣ 全局：时间单位</h2> <p>在做时间相关业务时候可以使用 分钟，小时，天，周的概念。</p> <h3 id="本节配套视频-6"><a href="#本节配套视频-6" class="header-anchor">#</a> 本节配套视频</h3> <ul><li>BiliBili: <a href="https://www.bilibili.com/video/BV1HR4y197Ag?p=51" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li> <li>Youtube: <a href="https://www.youtube.com/watch?v=D_1Cdd7_KME&amp;list=PLdXBX6Eqe4Net43OWIZychHW0n6CX_8Ih&amp;index=51" target="_blank" rel="noreferrer">第三章第 1 节: 变量基础知识</a></li></ul> <h3 id="_1-基本用法"><a href="#_1-基本用法" class="header-anchor">#</a> 1.基本用法</h3> <p>秒是缺省时间单位,可以不写，在时间单位之间，数字后面带有 <code>seconds</code>、 <code>minutes</code>、 <code>hours</code>、 <code>days</code>、 <code>weeks</code> 可以进行换算，基本换算关系如下：</p> <ul><li><code>1 == 1 seconds</code></li> <li><code>1 minutes == 60 seconds</code></li> <li><code>1 hours == 60 minutes</code></li> <li><code>1 days == 24 hours</code></li> <li><code>1 weeks == 7 days</code></li></ul> <p>之前老版本的合约还有 <code>years</code> 的概念，现在已经不再用了，从 0.5.0 版本不支持使用 <code>years</code> 了。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// Time
+contract Demo {
+    // 定义全局变量
+    uint256 public time;
+
+    constructor() {
+        time = 100000000;
+    }
+
+    function fSeconds() public view returns (uint256) {
+        return time + 1 seconds;
+    }
+
+    function fMinutes() public view returns (uint256) {
+        return time + 1 minutes;
+    }
+
+    function fHours() public view returns (uint256) {
+        return time + 1 hours;
+    }
+
+    function fDays() public view returns (uint256) {
+        return time + 1 days;
+    }
+
+    function fWeeks() public view returns (uint256) {
+        return time + 1 weeks;
+    }
+
+    // 这些后缀不能直接用在变量后边。
+    // 如果想用时间单位来将输入变量换算为时间，你可以用如下方式来完成：
+    function testVar(uint256 daysValue) public view returns (uint256) {
+        return time + daysValue * 1 weeks;
+    }
+}
+</code></pre></div><h3 id="_2-两种时间逻辑"><a href="#_2-两种时间逻辑" class="header-anchor">#</a> 2.两种时间逻辑</h3> <p>注意：由于闰秒造成的每年不都是 365 天、每天不都是 24 小时，所以<strong>如果你要使用这些单位计算日期和时间</strong>，请注意这个问题。因为闰秒是无法预测的，所以需要借助外部的预言机来对一个确定的日期代码库进行时间矫正。</p> <p>时间在项目中有两种逻辑</p> <ol><li>像之前众筹合约里介绍的那样，使用持续时间来代表时间。比如持续 2 两小时结束，常见于众筹/拍卖合约</li> <li>到某个时间点开始抢购活动，比如到 XX 年 XX 月 XX 日 XX 分 XX 秒，开启抢购，这种需要借助预言机才能正确完成</li></ol> <p>请按照自己的业务需求选择合适的时间方式。</p> <h2 id="_7️⃣-全局-区块和交易属性"><a href="#_7️⃣-全局-区块和交易属性" class="header-anchor">#</a> 7️⃣ 全局：区块和交易属性</h2> <p>分别是 <code>block</code> / <code>msg</code> / <code>tx</code> 三个全局变量，因为功能相似，我们把 <code>blockhash()</code> 和 <code>gasleft()</code> 这两个全局函数也一起介绍。</p> <h3 id="_1-预览"><a href="#_1-预览" class="header-anchor">#</a> 1.预览</h3> <table><thead><tr><th>名称 (返回值)</th> <th>返回</th></tr></thead> <tbody><tr><td>block.basefee (uint256)</td> <td>当前区块的基本费用（ <a href="https://eips.ethereum.org/EIPS/eip-3198" target="_blank" rel="noopener noreferrer">EIP-3198<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 和 <a href="https://eips.ethereum.org/EIPS/eip-1559" target="_blank" rel="noopener noreferrer">EIP-1559<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>）</td></tr> <tr><td>block.chainid (uint256)</td> <td>当前链 id</td></tr> <tr><td>block.difficulty (uint256)</td> <td>当前区块的难度</td></tr> <tr><td>block.gaslimit (uint256)</td> <td>当前区块的 gaslimit</td></tr> <tr><td>block.number (uint256)</td> <td>当前区块的 number</td></tr> <tr><td>block.timestamp (uint256)</td> <td>当前区块的时间戳，为 unix 纪元以来的秒</td></tr> <tr><td>block.coinbase (address payable)</td> <td>当前区块矿工的地址</td></tr> <tr><td>msg.sender (address)</td> <td>消息发送者 (当前 caller)</td></tr> <tr><td>msg.value (uint256)</td> <td>当前消息的 wei 值</td></tr> <tr><td>msg.data (bytes calldata)</td> <td>完整的 calldata</td></tr> <tr><td>msg.sig (bytes4)</td> <td>calldata 的前四个字节<br>– (function identifier/即函数标识符)</td></tr> <tr><td>tx.gasprice (uint256)</td> <td>交易的 gas 价格</td></tr> <tr><td>tx.origin (address)</td> <td>交易的发送方 （完整的调用链）</td></tr> <tr><td>blockhash(uint256 blockNumber) returns (bytes32)</td> <td>给定区块的哈希值<br>– 只适用于 256 最近区块, 不包含当前区块</td></tr> <tr><td><code>gasleft() returns (uint256)</code></td> <td>剩余 gas</td></tr></tbody></table> <h3 id="_2-block"><a href="#_2-block" class="header-anchor">#</a> 2.block</h3> <p>全局变量 block，除了 coinbase 属性的返回值是 address 类型，其他都是 uint256。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    // payable address 类型
+    address payable public ads;
+
+    function blockInfo() public
+    returns (
+        uint256,
+        uint256,
+        uint256,
+        uint256,
+        uint256,
+        uint256,
+        address
+        )
+    {
+       uint256 basefee = block.basefee;
+       uint256 chainid = block.chainid;
+       uint256 difficulty = block.difficulty;
+       uint256 gaslimit = block.gaslimit;
+       uint256 number = block.number;
+       uint256 timestamp = block.timestamp;
+
+       // 除了 coinbase 返回值是 payable address 类型，其他都是 uint256
+       address coinbase = block.coinbase;
+       ads = block.coinbase; // 赋值给 payable address 的变量
+
+       return (
+           basefee,
+           chainid,
+           difficulty,
+           gaslimit,
+           number,
+           timestamp,
+           coinbase
+       );
+    }
+}
+</code></pre></div><h3 id="_3-msg"><a href="#_3-msg" class="header-anchor">#</a> 3.msg</h3> <ul><li>msg.sender: 只能赋值给普通 address 的变量</li> <li>msg.value: 必须用在 payable 函数上</li> <li>msg.data: 如果函数不接受参数 msg.data 等于 sig</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Demo {
+    address payable public ads1;
+    address public ads2;
+
+    function msgInfo(uint256 u_)
+        public
+        payable
+        returns (
+            uint256,
+            bytes memory,
+            bytes4
+        )
+    {
+        ads2 = msg.sender; // 只能赋值给普通 address 的变量
+        uint256 value = msg.value; // 必须用在 payable 函数上
+        bytes memory data = msg.data; // 如果函数不接受参数 msg.data 等于 sig
+        bytes4 sig = msg.sig;
+        return (value,data,sig);
+    }
+}
+</code></pre></div><h3 id="_4-tx"><a href="#_4-tx" class="header-anchor">#</a> 4.tx</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract Demo {
+    address payable public ads1;
+    address public ads2;
+
+    function txInfo() public returns (uint256) {
+        ads2 = tx.origin; // 只能赋值给普通 address 的变量
+        uint256 gasprice = tx.gasprice;
+        return gasprice;
+    }
+}
+</code></pre></div><h3 id="_5-blockhash"><a href="#_5-blockhash" class="header-anchor">#</a> 5.blockhash()</h3> <p>这是获取最近 256 个区块高度的 hash 值，如果获取当前的区块 hash 是没办法获取到的。（因为当前的数据还没有被打包，没有被确定）</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract Demo {
+    uint256 public blockNumber;
+
+    function blockInfo1() public returns (uint256, bytes32) {
+        blockNumber = block.number;
+        bytes32 hashCurrent = blockhash(blockNumber); // 不包含当前区块
+
+        return (block.number, hashCurrent);
+    }
+
+    function blockInfo2() public view returns (uint256, bytes32) {
+        bytes32 hash = blockhash(blockNumber);
+        // errored: Key not found in database [h n]
+        return (block.number, hash);
+    }
+}
+</code></pre></div><h3 id="_6-gasleft"><a href="#_6-gasleft" class="header-anchor">#</a> 6.gasleft()</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract Demo {
+    function gas() public view returns (uint256) {
+        return gasleft();
+    }
+}
+</code></pre></div><h3 id="_7-已经删除的全局变量"><a href="#_7-已经删除的全局变量" class="header-anchor">#</a> 7.已经删除的全局变量</h3> <table><thead><tr><th>名称</th> <th>返回</th></tr></thead> <tbody><tr><td><code>block.blockhash</code></td> <td>给定区块的哈希值;在 0.5.0 版本中删除,现使用<code>blockhash()</code>获取</td></tr> <tr><td><code>now(uint256)</code></td> <td>block.timestamp 的别名;在 0.7.0 版中删除</td></tr> <tr><td><code>msg.gas</code></td> <td>剩余 gas; 在 0.5.0 版中删除,现使用 <code>gasleft()</code> 获取</td></tr></tbody></table> <h3 id="_8-使用注意"><a href="#_8-使用注意" class="header-anchor">#</a> 8.使用注意</h3> <p>不要依赖 <code>block.timestamp</code> 和 <code>blockhash</code> 产生随机数，除非你已经知道后果，并且后果对项目没有影响。</p> <p>时间戳和区块哈希在一定程度上都可能受到挖矿矿工影响。例如，某个抽奖合约使用 <code>block.timestamp</code> 或 <code>blockhash</code> 产生随机数，但是恶意矿工可以进行一直发起，如果他们没有中奖就取消交易，只需重试不同的交易就可以刷出中奖的交易并且发出去。</p> <p>当前区块的时间戳会严格大于最后一个区块的时间戳，但是这里唯一能确保的: 它会是在权威链上的两个连续区块的时间戳之间的数值。</p> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li>不同类型的变量初始默认值是什么？<div class="language- extra-class"><pre class="language-text"><code>  string public str; // &quot;&quot;
+  bool public b; // false
+  uint256 public count; // 0
+  int256 public intValue; // 0
+  address public ads; // 0x0000000000000000000000000000000000000000
+  bytes32 public bt32; // 0x0000000000000000000000000000000000000000000000000000000000000000
+</code></pre></div></li> <li>聊一聊变量的作用域
+<ul><li>Solidity 中的作用域规则遵循了 C99：变量将会从它们被声明之后可见，直到一对 <code>{}</code> 块的结束。对于参数形式的变量（例如：函数参数、修饰器参数、catch 参数等等）在其后接着的代码块内有效。 这些代码块是函数的实现，catch 语句块等。作为一个例外，在 for 循环语句中初始化的变量，其可见性仅维持到 <code>for</code> 循环的结束。</li> <li>那些定义在代码块之外的变量，比如函数、合约、自定义类型等等，并不会影响它们的作用域特性。这意味着你可以在实际声明状态变量的语句之前就使用它们，并且递归地调用函数。</li></ul></li> <li>聊一聊<code>状态变量</code>/<code>局部变量</code>/<code>全局变量</code>（3 种变量状态）。
+<ul><li>状态变量:
+<ul><li>变量值永久保存在智能合约存储空间中，相当于属于已经写入到区块链中，可以随时调用，除非该条链消失。</li> <li>特点:定义在智能合约的存储空间中</li></ul></li> <li>局部变量:
+<ul><li>变量值仅在函数执行过程中有效,供函数内部使用；调用函数时，在虚拟机的内存中；函数退出后，变量无效。</li> <li>特点: 定义在函数内部</li></ul></li> <li>全局变量:
+<ul><li>保存在全局命名空间，用于获取区块链相关信息的特殊变量。</li> <li>特点:不用定义，直接获取即可。</li></ul></li></ul></li> <li>Constant 常量使用时有哪些需要注意的？
+<ul><li>普通的状态变量，添加 <code>constant</code> 关键词即可声明为常量</li> <li>与常规状态变量相比，常量的 gas 要低很多。</li> <li>常量的名字，一般使用全大写的。</li> <li>常量赋值后不可以修改。</li> <li>常量必须声明和初始化一起做掉，否则编译不通过。
+<ul><li>对于 constant 常量, 他的值在编译器确定，不能定义在函数内</li></ul></li> <li>不是所有的类型都支持常量，当前支持的仅有<strong>值类型</strong>（包括地址类型）/<strong>字符串</strong>。</li> <li>编译器并不会为 <code>constant</code> 常量在 <code>storage</code> 上预留空间
+<ul><li>编译器不会为这些变量预留存储位，它们的每次出现都会被替换为相应的常量表达式（它可能被优化器计算为实际的某个值）。</li></ul></li> <li>也可以在文件级别定义 constant 变量
+<ul><li>注：0.7.2 之后加入的特性。</li></ul></li> <li>可以使用内建函数赋值常量</li></ul></li> <li>Immutable 不可变量使用时有哪些需要注意的？
+<ul><li><strong>赋值方式</strong>: <code>immutable</code> 修饰的变量是在部署的时候确定变量的值，<strong>它在构造函数中赋值一次之后,以后就不不能再次改变了</strong>，它是一个运行时赋值。同时也带来更多的安全性。</li> <li><strong>特点</strong>:它既有 constant 常量不可修改和 Gas 费用低的优势，又有变量动态赋值的优势。
+<ul><li>Solidity <code>immutable</code> 是另一种常量的表达方式。</li></ul></li> <li><strong>原则</strong>:
+<ul><li><code>immutable</code> 可以声明和初始化一起做掉，也可以部署时在<code>constructor</code>中做掉。（必须在<code>constructor</code>运行截止时就赋值，也支持在构造函数内使用普通函数的结果来赋值）</li> <li><code>immutable</code> 不能用在引用数据类型上（当前<code>constant</code>支持字符串,<code>immutable</code>不支持字符串）</li></ul></li> <li><strong>应用场景</strong>：
+<ul><li>在创建不可转移的 <code>owner</code> 时</li> <li>在创建 ERC20 的 <code>name</code>,<code>symbol</code>,<code>decimals</code> 时</li></ul></li></ul></li> <li>状态变量/constant/Immutable 三者的 gas 区别
+<ul><li>对于常量，赋值给它的表达式将复制到所有访问该常量的位置，并且每次都会对其进行重新求值。这样可以进行本地优化。</li> <li>不可变变量在构造时进行一次求值，并将其值复制到代码中访问它们的所有位置。 对于这些值，将保留 32 个字节，即使它们适合较少的字节也是如此。 因此，常量有时可能比不可变量更便宜。</li> <li>状态变量声明为 constant (常量)或者 immutable （不可变量），在这两种情况下，合约一旦部署之后，变量将不在修改。</li> <li>对于 constant 常量, 他的值在编译器确定.</li> <li>对于 immutable, 它的值在部署时确定。</li> <li>与常规状态变量相比，常量和不可变量的 gas 成本要低得多。</li> <li>对于常量，赋值给它的表达式将复制到所有访问该常量的位置，并且每次都会对其进行重新求值。这样可以进行本地优化。</li> <li>不可变变量在构造时进行一次求值，并将其值复制到代码中访问它们的所有位置。 对于这些值，将保留 32 个字节，即使它们适合较少的字节也是如此。 因此，常量有时可能比不可变量更便宜。</li> <li>不是所有类型的状态变量都支持用 <code>constant</code> 或 <code>immutable</code> 来修饰，当前<code>constant</code>仅支持 字符串/值类型,<code>immutable</code>仅支持值类型</li></ul></li> <li>状态变量的可见性又哪些？
+<ul><li>三种，注意 external 不能声明在状态变量上，只能标识在函数上</li></ul></li> <li>四种可见性的使用区别
+<ul><li>需要注意继承性</li> <li>需要注意 external 不能声明在状态变量上，只能标识在函数上</li> <li>public 自动生成 getter 函数</li></ul></li> <li>不同类型的 getter 函数是什么样子的？
+<ul><li>编译器自动为所有 public 状态变量创建 getter 函数。</li> <li>array/mapping/struct 类型的 getter 函数有参数。</li></ul></li> <li>全局时间单位有哪些？使用时候有没有需要注意的事情？
+<ul><li>由于闰秒造成的每年不都是 365 天、每天不都是 24 小时 leap seconds，如果想要和线下时间堆砌，需要预言机进行时间矫正。</li></ul></li> <li>全局的区块和交易属性有哪些？分别返回什么？可以用来做什么？使用时候有没有什么需要注意的？
+<ul><li>不要依赖 <code>block.timestamp</code> 和 <code>blockhash</code> 产生随机数，除非你知道自己在做什么。</li></ul></li> <li>全部的 ABI 编码及解码函数有哪些？分别什么作用？
+<ul><li><code>abi.encode</code> 会补零</li> <li><code>abi.encodePacked</code> 不会补零（不补零，容易导致碰撞错误。（两个参数拼在一起，导致参数不同，结果相同））</li> <li><code>abi.decode</code></li> <li><code>abi.encodeWithSignature</code></li> <li><code>abi.encodeWithSelector</code></li> <li><code>abi.encodeCall</code> 和 <code>abi.encodeWithSelector</code> 一致；执行完整的类型检查, 确保类型匹配函数签名。</li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/02.type-of-data.html" class="prev">
+          数据
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/04.function.html">
+          函数
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1️⃣-变量基础知识" class="sidebar-link reco-side-_1️⃣-变量基础知识" data-v-b57cc07c>1️⃣ 变量基础知识</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频" class="sidebar-link reco-side-本节配套视频" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-初始默认值" class="sidebar-link reco-side-_1-初始默认值" data-v-b57cc07c>1.初始默认值</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-作用域和声明" class="sidebar-link reco-side-_2-作用域和声明" data-v-b57cc07c>2.作用域和声明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-变量的三种状态" class="sidebar-link reco-side-_3-变量的三种状态" data-v-b57cc07c>3.变量的三种状态</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2️⃣-constant-常量" class="sidebar-link reco-side-_2️⃣-constant-常量" data-v-b57cc07c>2️⃣ Constant 常量</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频-2" class="sidebar-link reco-side-本节配套视频-2" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-普通变量与常量" class="sidebar-link reco-side-_1-普通变量与常量" data-v-b57cc07c>1.普通变量与常量</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-常量相比变量更省钱" class="sidebar-link reco-side-_2-常量相比变量更省钱" data-v-b57cc07c>2.常量相比变量更省钱</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-常量名字一般使用全大写" class="sidebar-link reco-side-_3-常量名字一般使用全大写" data-v-b57cc07c>3.常量名字一般使用全大写</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_4-常量赋值后不可以修改" class="sidebar-link reco-side-_4-常量赋值后不可以修改" data-v-b57cc07c>4.常量赋值后不可以修改</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_5-常量必须声明和初始化一起做掉" class="sidebar-link reco-side-_5-常量必须声明和初始化一起做掉" data-v-b57cc07c>5.常量必须声明和初始化一起做掉</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_6-常量的值储存原理" class="sidebar-link reco-side-_6-常量的值储存原理" data-v-b57cc07c>6.常量的值储存原理</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_7-引用类型支持-string-和-bytes" class="sidebar-link reco-side-_7-引用类型支持-string-和-bytes" data-v-b57cc07c>7.引用类型支持 string 和 bytes</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_8-常见的赋值方式" class="sidebar-link reco-side-_8-常见的赋值方式" data-v-b57cc07c>8.常见的赋值方式</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3️⃣-immutable-不可变量" class="sidebar-link reco-side-_3️⃣-immutable-不可变量" data-v-b57cc07c>3️⃣ Immutable 不可变量</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频-3" class="sidebar-link reco-side-本节配套视频-3" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-声明和初始化一起做掉" class="sidebar-link reco-side-_1-声明和初始化一起做掉" data-v-b57cc07c>1.声明和初始化一起做掉</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-声明后在-constructor-中赋值" class="sidebar-link reco-side-_2-声明后在-constructor-中赋值" data-v-b57cc07c>2.声明后在 constructor 中赋值</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-部署后不可以修改" class="sidebar-link reco-side-_3-部署后不可以修改" data-v-b57cc07c>3.部署后不可以修改</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_4-不可以在赋值前读取" class="sidebar-link reco-side-_4-不可以在赋值前读取" data-v-b57cc07c>4.不可以在赋值前读取</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_5-不可以在-constructor-之外赋值其他不可变量" class="sidebar-link reco-side-_5-不可以在-constructor-之外赋值其他不可变量" data-v-b57cc07c>5.不可以在 constructor 之外赋值其他不可变量</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_6-immutable-不能用在引用数据类型" class="sidebar-link reco-side-_6-immutable-不能用在引用数据类型" data-v-b57cc07c>6.immutable 不能用在引用数据类型</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_7-不同状态变量的-gas-对比" class="sidebar-link reco-side-_7-不同状态变量的-gas-对比" data-v-b57cc07c>7.不同状态变量的 gas 对比</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_8-constant-和-immutable-总结" class="sidebar-link reco-side-_8-constant-和-immutable-总结" data-v-b57cc07c>8.constant 和 immutable 总结</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_4️⃣-变量名的命名规则" class="sidebar-link reco-side-_4️⃣-变量名的命名规则" data-v-b57cc07c>4️⃣ 变量名的命名规则</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频-4" class="sidebar-link reco-side-本节配套视频-4" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-禁止使用保留关键字作为变量名" class="sidebar-link reco-side-_1-禁止使用保留关键字作为变量名" data-v-b57cc07c>1.禁止使用保留关键字作为变量名</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-变量名必须以字母或者下划线开头" class="sidebar-link reco-side-_2-变量名必须以字母或者下划线开头" data-v-b57cc07c>2.变量名必须以字母或者下划线开头</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-变量名大小写敏感" class="sidebar-link reco-side-_3-变量名大小写敏感" data-v-b57cc07c>3.变量名大小写敏感</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_5️⃣-变量的可见性" class="sidebar-link reco-side-_5️⃣-变量的可见性" data-v-b57cc07c>5️⃣ 变量的可见性</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频-5" class="sidebar-link reco-side-本节配套视频-5" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-private" class="sidebar-link reco-side-_1-private" data-v-b57cc07c>1.private</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-internal" class="sidebar-link reco-side-_2-internal" data-v-b57cc07c>2.internal</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-external" class="sidebar-link reco-side-_3-external" data-v-b57cc07c>3.external</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_4-public" class="sidebar-link reco-side-_4-public" data-v-b57cc07c>4.public</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_5-public-自动生成-getter-函数" class="sidebar-link reco-side-_5-public-自动生成-getter-函数" data-v-b57cc07c>5.public 自动生成 getter 函数</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_6️⃣-全局-时间单位" class="sidebar-link reco-side-_6️⃣-全局-时间单位" data-v-b57cc07c>6️⃣ 全局：时间单位</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#本节配套视频-6" class="sidebar-link reco-side-本节配套视频-6" data-v-b57cc07c>本节配套视频</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-基本用法" class="sidebar-link reco-side-_1-基本用法" data-v-b57cc07c>1.基本用法</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-两种时间逻辑" class="sidebar-link reco-side-_2-两种时间逻辑" data-v-b57cc07c>2.两种时间逻辑</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_7️⃣-全局-区块和交易属性" class="sidebar-link reco-side-_7️⃣-全局-区块和交易属性" data-v-b57cc07c>7️⃣ 全局：区块和交易属性</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_1-预览" class="sidebar-link reco-side-_1-预览" data-v-b57cc07c>1.预览</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_2-block" class="sidebar-link reco-side-_2-block" data-v-b57cc07c>2.block</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_3-msg" class="sidebar-link reco-side-_3-msg" data-v-b57cc07c>3.msg</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_4-tx" class="sidebar-link reco-side-_4-tx" data-v-b57cc07c>4.tx</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_5-blockhash" class="sidebar-link reco-side-_5-blockhash" data-v-b57cc07c>5.blockhash()</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_6-gasleft" class="sidebar-link reco-side-_6-gasleft" data-v-b57cc07c>6.gasleft()</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_7-已经删除的全局变量" class="sidebar-link reco-side-_7-已经删除的全局变量" data-v-b57cc07c>7.已经删除的全局变量</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#_8-使用注意" class="sidebar-link reco-side-_8-使用注意" data-v-b57cc07c>8.使用注意</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/03.variable.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/29.dd2c0633.js" defer></script>
+  </body>
+</html>

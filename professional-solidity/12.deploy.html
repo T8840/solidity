@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>12.合约部署合约 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/38.c8172eb9.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" aria-current="page" class="active sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">12.合约部署合约</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_12-合约部署合约"><a href="#_12-合约部署合约" class="header-anchor">#</a> 12.合约部署合约</h1> <h2 id="_1️⃣-通过-new-创建合约-create"><a href="#_1️⃣-通过-new-创建合约-create" class="header-anchor">#</a> 1️⃣ 通过 <code>new</code> 创建合约 / <code>create</code></h2> <p>使用关键字 <code>new</code> 可以创建一个新合约。待创建合约的完整代码必须事先知道，因此递归的创建依赖是不可能的。<code>create</code>主要有以下三种表现形式。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract D {
+    uint x;
+    function D(uint a) payable {
+        x = a;
+    }
+}
+
+contract C {
+    // 1.将作为合约的一部分执行
+    D d = new D(4);
+
+    // 2.方法内创建
+    function createD1(uint arg) public {
+        D newD = new D(arg);
+    }
+
+    // 3.方法内创建，并转账
+    function createD2(uint arg, uint amount) public payable {
+        //随合约的创建发送 ether
+        D newD = (new D){value:amount}(arg);
+    }
+}
+</code></pre></div><p>如示例中所示，通过使用 <code>value</code> 选项创建 <code>D</code> 的实例时可以附带发送 Ether，但是不能限制 gas 的数量。 如果创建失败（可能因为栈溢出，或没有足够的余额或其他问题），会引发异常。</p> <p>这种方式也被称为 Factory 创建。工厂合约部署，也被称为 <code>create</code>，批量创建的时候使用，比如批量创建交易池，DeFi 类产品中批量创建借贷池等。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Account {
+    address public deployer;
+    address public owner;
+
+    constructor(address _owner) payable {
+        owner = _owner;
+        deployer = msg.sender;
+    }
+
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+
+contract AccountFactory {
+    Account[] public accounts;
+
+    function deploy(address _owner) external payable {
+        Account account = new Account{value: msg.value}(_owner);
+        accounts.push(account);
+    }
+}
+</code></pre></div><h2 id="_2️⃣-通过-salt-创建合约-create2"><a href="#_2️⃣-通过-salt-创建合约-create2" class="header-anchor">#</a> 2️⃣ 通过 <code>salt</code> 创建合约 / <code>create2</code></h2> <p>在创建合约时，将根据创建合约的地址和每次创建合约交易时的 <code>nonce</code> 来计算合约的地址。如果你指定了一个可选的 <code>salt</code> （一个 bytes32 值），那么合约创建将使用另一种机制(<code>create2</code>)来生成新合约的地址：它将根据给定的 <code>salt</code> ，创建合约的字节码和构造函数参数来计算创建合约的地址。特别注意，这里不再使用 <code>nonce</code>。</p> <p>create2 的意义：可以在创建合约时提供更大的灵活性：你可以在创建新合约之前就推导出将要创建的合约地址。 甚至是还可以依赖此地址（即便它还不存在）来创建其他合约。一个主要用例场景是<strong>充当链下交互仲裁合约，仅在有争议时才需要创建。</strong></p> <h3 id="案例演示-1"><a href="#案例演示-1" class="header-anchor">#</a> 案例演示 1</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract D {
+    uint256 public x;
+
+    constructor(uint256 a) {
+        x = a;
+    }
+}
+
+contract C {
+    function createDSalted(bytes32 salt, uint256 arg) public {
+        // 最新的语法
+        D d = new D{salt: salt}(arg);
+
+        // 之前的写法
+        // 这个复杂的表达式只是告诉我们，如何预先计算地址。
+        // 这里仅仅用来说明。 实际上，现在仅需要使用 `new D{salt: salt}(arg)` 即可.
+        address predictedAddress = address(
+            uint160(
+                uint256(
+                    keccak256(
+                        abi.encodePacked(
+                            bytes1(0xff),
+                            address(this),
+                            salt,
+                            keccak256(
+                                abi.encodePacked(type(D).creationCode, arg)
+                            )
+                        )
+                    )
+                )
+            )
+        );
+
+        require(address(d) == predictedAddress);
+    }
+}
+</code></pre></div><p>使用 <code>create2</code> 创建合约还有一些特别之处。 合约销毁后可以在同一地址重新创建。不过，即使创建字节码（creation bytecode）相同（这是要求，因为否则地址会发生变化），该新创建的合约也可能有不同的部署字节码（deployed bytecode）。 这是因为构造函数可以使用两次创建合约之间可能已更改的外部状态，并在存储合约时将其合并到部署字节码中。</p> <h3 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h3> <p>这种也被称为操作码部署，<code>create</code> 可以通过加入 salt，来预测即将生成的地址。这种创建就能预测生成地址的方式也被称为 <code>create2</code> 创建。</p> <ul><li>加 salt ,salt 决定了合约地址，不能重复使用
+<ul><li>除非之前 salt 生成的合约被销毁了。</li></ul></li> <li>即将部署的合约地址计算
+<ul><li><code>uint160</code> 格式就是地址格式了</li></ul></li></ul> <p>下面是两者的简短总结：</p> <ul><li><strong>普通合约</strong>的地址生成方式: 部署者的<code>地址</code> + <code>地址 nonce</code></li> <li><strong>预测合约地址的方式</strong>:</li></ul> <div class="language- extra-class"><pre class="language-text"><code>bytes32 hash = keccak256(
+    abi.encodePacked(
+        bytes1(0xff), // 固定字符串
+        address(this), // 当前工厂合约地址，固定写法
+        _salt, // salt
+        keccak256(bytecode) //部署合约的 bytecode
+    )
+);
+return address(uint160(uint256(hash)));
+</code></pre></div><h3 id="案例代码-2"><a href="#案例代码-2" class="header-anchor">#</a> 案例代码 2</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract DeployWithCreate2 {
+    address public deployer;
+    address public owner;
+
+    constructor(address _owner) payable {
+        owner = _owner;
+        deployer = msg.sender;
+    }
+
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+
+contract AccountFactory {
+    DeployWithCreate2[] public accounts;
+
+    function deploy(uint256 _salt) external payable {
+        DeployWithCreate2 account = new DeployWithCreate2{
+            salt: bytes32(_salt), // uint256 需要转为 bytes32
+            value: msg.value
+        }(msg.sender);
+        accounts.push(account);
+    }
+
+    // 获取即将部署的地址
+    function getAddress(bytes memory bytecode, uint256 _salt)
+        external
+        view
+        returns (address)
+    {
+        bytes32 hash = keccak256(
+            abi.encodePacked(
+                bytes1(0xff), // 固定字符串
+                address(this), // 当前工厂合约地址
+                _salt, // salt
+                keccak256(bytecode) //部署合约的 bytecode
+            )
+        );
+        return address(uint160(uint256(hash)));
+    }
+
+    // 获取合约的 bytecode
+    function getBytecode(address _owner) external pure returns (bytes memory) {
+        bytes memory bytecode = type(DeployWithCreate2).creationCode;
+        // 连接的参数使用 abi.encode
+        return abi.encodePacked(bytecode, abi.encode(_owner));
+    }
+}
+</code></pre></div><h3 id="合约测试"><a href="#合约测试" class="header-anchor">#</a> 合约测试</h3> <ul><li><code>address1</code> 部署合约
+<ul><li>address1: <code>0x5B38Da6a701c568545dCfcB03FcB875f56beddC4</code></li></ul></li> <li>使用 <code>address1</code> 作为参数，获取 <code>getBytecode</code> 返回值。</li> <li>调用 getAddress
+<ul><li>bytecode 参数是 <code>getBytecode</code> 返回值</li> <li>salt 参数是 1</li> <li>计算结果是: <code>0x0022172A008CEdf60B1770dDD987888e5663D1Cc</code></li></ul></li> <li>调用 deploy，salt 参数是 1</li> <li>调用 accounts[0]
+<ul><li>返回的合约地址是 <code>0x0022172A008CEdf60B1770dDD987888e5663D1Cc</code>，和计算的完全一样。</li></ul></li> <li>再次调用 deploy，salt 参数是 1
+<ul><li>返回失败 <code>transact to AccountFactory.deploy errored: VM error: revert.</code></li></ul></li></ul> <h2 id="_3️⃣-用-assembly-做-create"><a href="#_3️⃣-用-assembly-做-create" class="header-anchor">#</a> 3️⃣ 用 assembly 做 create</h2> <h3 id="create-部署"><a href="#create-部署" class="header-anchor">#</a> create 部署</h3> <ul><li>Proxy: 部署合约的方法，和修改 owner</li> <li>Helper: 生成部署用的 bytecode 和修改 owner 的 data</li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test1 {
+    address public owner = msg.sender;
+
+    function setOwner(address _owner) public {
+        require(msg.sender == owner, &quot;now owner&quot;);
+        owner = _owner;
+    }
+}
+
+contract Test2 {
+    address public owner = msg.sender;
+    uint256 public value = msg.value;
+    uint256 public x;
+    uint256 public y;
+
+    constructor(uint256 _x, uint256 _y) {
+        x = _x;
+        y = _y;
+    }
+}
+
+// contract Proxy {
+//     function depolyTest1() external {
+//         new Test1();
+//     }
+
+//     function depolyTest2() external payable {
+//         new Test2(1, 2);
+//     }
+// }
+
+// assembly 部署
+contract Proxy {
+    event Depoly(address);
+
+    // fallback() external payable {}
+
+    function depoly(bytes memory _code)
+        external
+        payable
+        returns (address adds)
+    {
+        assembly {
+            // create(v,p,n);
+            // v 是 发送的ETH值
+            // p 是 内存中机器码开始的位置
+            // n 是 内存中机器码的大小
+            // msg.value 不能使用，需要用 callvalue()
+            adds := create(callvalue(), add(_code, 0x20), mload(_code))
+        }
+
+        require(adds != address(0), &quot;Depoly Failed&quot;);
+        emit Depoly(adds);
+    }
+
+    // 跳用
+    function execute(address _target, bytes memory _data) external payable {
+        (bool success, ) = _target.call{value: msg.value}(_data);
+        require(success, &quot;Failed&quot;);
+    }
+}
+
+contract Helper {
+    // 生成 type(contract).creationCode
+    function getBytescode1() external pure returns (bytes memory bytecode) {
+        bytecode = type(Test1).creationCode;
+    }
+
+    // 生成构造函数带有参数的 bytecode，参数连接后面就可以了
+    function getBytescode2(uint256 _x, uint256 _y)
+        external
+        pure
+        returns (bytes memory)
+    {
+        bytes memory bytecode = type(Test2).creationCode;
+        // abi 全局变量
+        return abi.encodePacked(bytecode, abi.encode(_x, _y));
+    }
+
+    // 调用合约方法的calldata，使用 abi.encodeWithSignature
+    function getCalldata(address _owner) external pure returns (bytes memory) {
+        return abi.encodeWithSignature(&quot;setOwner(address)&quot;, _owner);
+    }
+}
+</code></pre></div><h3 id="测试部署"><a href="#测试部署" class="header-anchor">#</a> 测试部署</h3> <p>前提条件：部署 Helper 和 Proxy 合约。</p> <ol start="0"><li>通过 getBytescode1 ，获取 Test1 需要的 bytecode</li> <li>部署 Test1</li> <li>获取 Test1 合约地址</li> <li>At Test1 Address</li> <li>获取 Test1 owner 地址</li> <li>通过 getCalldata ，获取 Test1 setOwner 需要的 bytecode。参数是想要设置的 Owner 地址。</li> <li>执行 execute(),参数是 Test1 合约地址 和 getCalldata 返回值。</li></ol> <p>合约 2</p> <ol start="0"><li>通过 getBytescode2 ，获取 Test2 需要的 bytecode</li> <li>部署 Test2，需要设置 x, y 的值，可以选择支付 ETH。</li> <li>获取 Test2 合约地址</li> <li>At Test2 Address</li> <li>查看 Test2 的值</li></ol> <h2 id="_4️⃣-用-assembly-做-create2"><a href="#_4️⃣-用-assembly-做-create2" class="header-anchor">#</a> 4️⃣ 用 assembly 做 create2</h2> <p>UniswapV2Factory 的创建 pair 代码如下</p> <div class="language- extra-class"><pre class="language-text"><code>function createPair(address tokenA, address tokenB) external returns (address pair) {
+    require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
+    (address token0, address token1) = tokenA &lt; tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
+    require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
+
+    // single check is sufficient
+    require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); 
+    bytes memory bytecode = type(UniswapV2Pair).creationCode;
+    bytes32 salt = keccak256(abi.encodePacked(token0, token1));
+    assembly {
+        pair := create2(0, add(bytecode, 32), mload(bytecode), salt)
+    }
+    IUniswapV2Pair(pair).initialize(token0, token1);
+    getPair[token0][token1] = pair;
+    getPair[token1][token0] = pair; // populate mapping in the reverse direction
+    allPairs.push(pair);
+    emit PairCreated(token0, token1, pair, allPairs.length);
+}
+</code></pre></div><h2 id="_5️⃣-创建合约的扩展"><a href="#_5️⃣-创建合约的扩展" class="header-anchor">#</a> 5️⃣ 创建合约的扩展</h2> <p>可以通过以太坊交易<strong>从外部</strong>或从 Solidity 合约内部创建合约。</p> <p>一些集成开发环境，例如 Remix, 通过使用一些 UI 用户界面使创建合约的过程更加顺畅。 在以太坊上通过编程创建合约最好使用 JavaScript API web3.js。 现在，我们已经有了一个叫做 <code>web3.eth.Contract</code> 的方法能够更容易的创建合约。</p> <p>创建合约时， 合约的构造函数 (一个用关键字 constructor 声明的函数)会执行一次。 构造函数是可选的。只允许有一个构造函数，这意味着不支持重载。构造函数执行完毕后，合约的最终代码将部署到区块链上。此代码包括所有公共和外部函数以及所有可以通过函数调用访问的函数。 部署的代码没有 包括构造函数代码或构造函数调用的内部函数。</p> <p>在内部，构造函数参数在合约代码之后通过 ABI 编码 传递，但是如果你使用 web3.js 则不必关心这个问题。</p> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li><p>通过 <code>new</code> 创建合约 / <code>create</code>的方法</p> <ul><li>1 将作为合约的一部分执行 <code>D d = new D(4);</code></li> <li>2 方法内创建<div class="language- extra-class"><pre class="language-text"><code>function createD(uint arg) public {
+    D newD = new D(arg);
+}
+</code></pre></div></li> <li>2 方法内创建，并转账<div class="language- extra-class"><pre class="language-text"><code>function createD2(uint arg, uint amount) public payable {
+    //随合约的创建发送 ether
+    D newD = (new D){value:amount}(arg);
+}
+</code></pre></div></li></ul></li> <li><p>create / create2 区别</p> <ul><li>在创建合约时，将根据创建合约的地址和每次创建合约交易时的 <code>nonce</code> 来计算合约的地址。如果你指定了一个可选的 <code>salt</code> （一个 bytes32 值），那么合约创建将使用另一种机制(<code>create2</code>)来生成新合约的地址：它将根据给定的 <code>salt</code> ，创建合约的字节码和构造函数参数来计算创建合约的地址。特别注意，这里不再使用 <code>nonce</code>。</li></ul></li> <li><p>create2 的意义</p> <ul><li>可以在创建合约时提供更大的灵活性：你可以在创建新合约之前就推导出将要创建的合约地址。甚至是还可以依赖此地址（即便它还不存在）来创建其他合约。一个主要用例场景是<strong>充当链下交互仲裁合约，仅在有争议时才需要创建。</strong></li></ul></li> <li><p>create2 有什么需要注意的？</p> <ul><li>不能重复使用 salt</li> <li>使用 <code>create2</code> 创建合约还有一些特别之处。 合约销毁后可以在同一地址重新创建。不过，即使创建字节码（creation bytecode）相同（这是要求，因为否则地址会发生变化），该新创建的合约也可能有不同的部署字节码（deployed bytecode）。 这是因为构造函数可以使用两次创建合约之间可能已更改的外部状态，并在存储合约时将其合并到部署字节码中。</li></ul></li> <li><p>如何预测 create2 合约地址</p> <ul><li><p>核心如下</p> <div class="language- extra-class"><pre class="language-text"><code>bytes32 hash = keccak256(
+    abi.encodePacked(
+        bytes1(0xff), // 固定字符串
+        address(this), // 当前工厂合约地址，固定写法
+        _salt, // salt
+        keccak256(bytecode) //部署合约的 bytecode
+    )
+);
+return address(uint160(uint256(hash)));
+</code></pre></div></li> <li><p>精确写法</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract D {
+    uint public x;
+    constructor(uint a) {
+        x = a;
+    }
+}
+
+contract C {
+    function createDSalted(bytes32 salt, uint arg) public {
+        /// 这个复杂的表达式只是告诉我们，如何预先计算地址。
+        /// 这里仅仅用来说明。
+        /// 实际上，你仅仅需要 ``new D{salt: salt}(arg)``.
+        address predictedAddress = address(uint160(uint(keccak256(abi.encodePacked(
+            bytes1(0xff), // 固定字符串
+            address(this), // 当前工厂合约地址，固定写法
+            salt, // salt
+            //部署合约的 bytecode
+            keccak256(abi.encodePacked(
+                type(D).creationCode,
+                arg
+            ))
+        )))));
+
+        D d = new D{salt: salt}(arg);
+        require(address(d) == predictedAddress);
+    }
+}
+</code></pre></div></li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/11.call-other.html" class="prev">
+          合约调用合约
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/13.interface.html">
+          接口
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#_1️⃣-通过-new-创建合约-create" class="sidebar-link reco-side-_1️⃣-通过-new-创建合约-create" data-v-b57cc07c>1️⃣ 通过 new 创建合约 / create</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#_2️⃣-通过-salt-创建合约-create2" class="sidebar-link reco-side-_2️⃣-通过-salt-创建合约-create2" data-v-b57cc07c>2️⃣ 通过 salt 创建合约 / create2</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#案例演示-1" class="sidebar-link reco-side-案例演示-1" data-v-b57cc07c>案例演示 1</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#小结" class="sidebar-link reco-side-小结" data-v-b57cc07c>小结</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#案例代码-2" class="sidebar-link reco-side-案例代码-2" data-v-b57cc07c>案例代码 2</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#合约测试" class="sidebar-link reco-side-合约测试" data-v-b57cc07c>合约测试</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#_3️⃣-用-assembly-做-create" class="sidebar-link reco-side-_3️⃣-用-assembly-做-create" data-v-b57cc07c>3️⃣ 用 assembly 做 create</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#create-部署" class="sidebar-link reco-side-create-部署" data-v-b57cc07c>create 部署</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#测试部署" class="sidebar-link reco-side-测试部署" data-v-b57cc07c>测试部署</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#_4️⃣-用-assembly-做-create2" class="sidebar-link reco-side-_4️⃣-用-assembly-做-create2" data-v-b57cc07c>4️⃣ 用 assembly 做 create2</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#_5️⃣-创建合约的扩展" class="sidebar-link reco-side-_5️⃣-创建合约的扩展" data-v-b57cc07c>5️⃣ 创建合约的扩展</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/12.deploy.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/38.c8172eb9.js" defer></script>
+  </body>
+</html>

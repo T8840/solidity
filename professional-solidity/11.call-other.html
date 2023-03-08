@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>11.合约调用合约 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/37.a902f0d2.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/39.d83f4932.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" aria-current="page" class="active sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" class="sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">11.合约调用合约</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_11-合约调用合约"><a href="#_11-合约调用合约" class="header-anchor">#</a> 11.合约调用合约</h1> <p>Solidity 支持一个合约调用另一个合约。两个合约既可以位于同一文件内，也可以位于不同的两个文件中。还能调用已经上链的其它合约。</p> <ul><li>调用内部合约
+<ul><li>内部合约指：位于同一 sol 文件中的合约，它们不需要额外的声明就可以直接调用。</li></ul></li> <li>调用外部合约
+<ul><li>外部合约指：位于不同文件的外部合约，以及上链的合约。</li> <li>方法一: 通过接口方式调用</li> <li>方法二: 通过签名方式调用</li></ul></li></ul> <p>了解上面的调用后，可以扩展了解<strong>多次调用</strong></p> <h2 id="_1️⃣-调用内部合约"><a href="#_1️⃣-调用内部合约" class="header-anchor">#</a> 1️⃣ 调用内部合约</h2> <p>地址转换为合约对象的防范：</p> <ul><li><strong>方法 1</strong>: 通过 <code>ContractName(_ads)</code> 将传入的地址，转为合约对象
+<ul><li><code>Test(_ads).setX(_x);</code></li> <li>如果为了代码逻辑，也可以分开写，比如<div class="language- extra-class"><pre class="language-text"><code>Test temp = Test(_ads);
+temp.setX(_x);
+</code></pre></div></li></ul></li> <li><strong>方法 2</strong>: 可以通过参数中指定合约名字进行转换<div class="language- extra-class"><pre class="language-text"><code>  function setX2(Test _ads, uint256 _x) public {
+      _ads.setX(_x);
+  }
+</code></pre></div></li> <li><strong>调用并发送 ETH</strong>: <code>fnName{value: msg.value}();</code> <ul><li><code>Test(_ads).setYBySendEth{value: msg.value}();</code></li></ul></li></ul> <p>例子演示：</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    uint256 public x = 1;
+    uint256 public y = 2;
+
+    function setX(uint256 _x) public {
+        x = _x;
+    }
+
+    function getX() public view returns (uint256) {
+        return x;
+    }
+
+    function setYBySendEth() public payable {
+        y = msg.value;
+    }
+
+    function getXandY() public view returns (uint256, uint256) {
+        return (x, y);
+    }
+}
+
+contract CallTest {
+    // 第1种方法: 229647 / 27858 gas
+    function setX1(address _ads, uint256 _x) public {
+        Test(_ads).setX(_x);
+    }
+
+    // 第2种方法:   27923 gas
+    function setX2(Test _ads, uint256 _x) public {
+        _ads.setX(_x);
+    }
+
+    function getX(address _ads) public view returns (uint256) {
+        return Test(_ads).getX();
+    }
+
+    function setYBySendEth(address _ads) public payable {
+        Test(_ads).setYBySendEth{value: msg.value}();
+    }
+
+    function getXandY(address _ads)
+        public
+        view
+        returns (uint256 __x, uint256 __y)
+    {
+        (__x, __y) = Test(_ads).getXandY();
+    }
+}
+</code></pre></div><h2 id="_2️⃣-调用外部合约"><a href="#_2️⃣-调用外部合约" class="header-anchor">#</a> 2️⃣ 调用外部合约</h2> <h3 id="_1-通过接口方式调用"><a href="#_1-通过接口方式调用" class="header-anchor">#</a> 1. 通过接口方式调用</h3> <p><a href="/solidity/source/13.interface.html#id3">接口使用案例</a></p> <p>核心代码</p> <div class="language- extra-class"><pre class="language-text"><code>interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test(address _addr) external returns (string memory) {
+        AnimalEat general = AnimalEat(_addr);
+        return general.eat();
+    }
+}
+</code></pre></div><h3 id="_2-通过签名方式调用"><a href="#_2-通过签名方式调用" class="header-anchor">#</a> 2. 通过签名方式调用</h3> <p>通过签名方式调用合约，只需要传入被调用者的地址和调用方法声明。</p> <p>在第二章地址类型那一节有详细的介绍</p> <ul><li>使用 <a href="/solidity/source/02.type-of-data.html#call">call</a></li> <li>使用 <a href="/solidity/source/02.type-of-data.html#delegatecall">delegatecall</a></li> <li>使用 <a href="/solidity/source/02.type-of-data.html#staticcall">staticcall</a></li></ul> <p><strong>call 核心代码如下</strong></p> <div class="language- extra-class"><pre class="language-text"><code>bytes memory data = abi.encodeWithSignature(
+    &quot;setNameAndAge(string,uint256)&quot;,
+    _name,
+    _age
+);
+(bool success, bytes memory _bys) = _ads.call{value: msg.value}(data);
+require(success, &quot;Call Failed&quot;);
+bys = _bys;
+</code></pre></div><p>用给定的有效载荷（payload）发出低级 <code>CALL</code> 调用，并<strong>返回交易成功状态和返回数据</strong>（调用合约的方法并转账）, 格式如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;address&gt;.call(bytes memory) returns (bool, bytes memory)
+</code></pre></div><p><strong>DelegateCall 核心代码如下</strong></p> <ul><li>委托调用后，所有变量修改都是发生在委托合约内部，并不会保存在被委托合约中。
+<ul><li>利用这个特性，可以通过更换被委托合约，来升级委托合约。</li></ul></li> <li>委托调用合约内部，需要和被委托合约的内部参数完全一样，否则容易导致数据混乱
+<ul><li>可以通过顺序来避免这个问题，但是推荐完全一样</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>function set(address _ads, uint256 _num) external payable {
+    sender = msg.sender;
+    value = msg.value;
+    num = _num;
+    // 第1种 encode
+    // 不需知道合约名字，函数完全自定义
+    bytes memory data1 = abi.encodeWithSignature(&quot;set(uint256)&quot;, _num);
+    // 第2种 encode
+    // 需要合约名字，可以避免函数和参数写错
+    // bytes memory data2 = abi.encodeWithSelector(Test1.set.selector, _num);
+
+    (bool success, bytes memory _data) = _ads.delegatecall(data1);
+
+    require(success, &quot;DelegateCall set failed&quot;);
+}
+</code></pre></div><p><strong>staticcall 核心代码如下</strong>: 它与 call 基本相同，<strong>但如果被调用的函数以任何方式修改状态变量，都将回退</strong>。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// 被调用的合约
+contract Hello {
+    function echo() external pure returns (string memory) {
+        return &quot;Hello World!&quot;;
+    }
+}
+
+// 调用者合约
+contract SoldityTest {
+    function callHello(address _ads) external view returns (string memory) {
+        // 编码被调用者的方法签名
+        bytes4 methodId = bytes4(keccak256(&quot;echo()&quot;));
+
+        // 调用合约
+        (bool success, bytes memory data) = _ads.staticcall(
+            abi.encodeWithSelector(methodId)
+        );
+        if (success) {
+            return abi.decode(data, (string));
+        } else {
+            return &quot;error&quot;;
+        }
+    }
+}
+</code></pre></div><h2 id="_3️⃣-multicall-多次调用"><a href="#_3️⃣-multicall-多次调用" class="header-anchor">#</a> 3️⃣ MultiCall/多次调用</h2> <ul><li>把多个合约的多次函数的调用，打包在一个里面对合约进行调用。RPC 对调用有限制，这样可以绕开限制。</li> <li>多次调用里面，对方的内部, <code>msg.sender</code> 是 MultiCall 合约，而不是用户地址。</li></ul> <h3 id="说明"><a href="#说明" class="header-anchor">#</a> 说明</h3> <ul><li>调用的地址</li> <li>调用的 data</li></ul> <h3 id="合约代码"><a href="#合约代码" class="header-anchor">#</a> 合约代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Test {
+    function fn1()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (1, msg.sender, block.timestamp);
+    }
+
+    function fn2()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (2, msg.sender, block.timestamp);
+    }
+
+    function getFn1Data() external pure returns (bytes memory) {
+        // 两种签名方法都可以
+        // abi.encodeWithSignature(&quot;fn1()&quot;);
+        return abi.encodeWithSelector(this.fn1.selector);
+    }
+
+    function getFn2Data() external pure returns (bytes memory) {
+        return abi.encodeWithSelector(this.fn2.selector);
+    }
+}
+
+contract MultiCall {
+    function multiCall(address[] calldata targets, bytes[] calldata data)
+        external
+        view
+        returns (bytes[] memory)
+    {
+        require(targets.length == data.length, &quot;targets.length != data.length&quot;);
+        bytes[] memory results = new bytes[](data.length);
+        for (uint256 index = 0; index &lt; targets.length; index++) {
+            (bool success, bytes memory result) = targets[index].staticcall(
+                data[index]
+            );
+            require(success, &quot;call faild&quot;);
+            results[index] = result;
+        }
+        return results;
+    }
+}
+</code></pre></div><p><strong>测试</strong></p> <ul><li><p>部署 <code>Test</code>: <code>0x1c91347f2A44538ce62453BEBd9Aa907C662b4bD</code></p> <ul><li>使用 <code>getFn1Data</code> 获取 fn1 data</li> <li>使用 <code>getFn2Data</code> 获取 fn2 data</li></ul></li> <li><p>部署 <code>MultiCall</code>: <code>0x93f8dddd876c7dBE3323723500e83E202A7C96CC</code></p></li> <li><p>调用 multiCall 方法</p> <ul><li>参数 1: <code>[&quot;Test 地址&quot;,&quot;Test 地址&quot;]</code></li> <li>参数 2: <code>[&quot;fn1 data&quot;,&quot;fn2 data&quot;]</code></li></ul></li> <li><p>返回值如下</p> <div class="language- extra-class"><pre class="language-text"><code>0x
+0000000000000000000000000000000000000000000000000000000000000001
+00000000000000000000000093f8dddd876c7dbe3323723500e83e202a7c96cc
+00000000000000000000000000000000000000000000000000000000630c7834,
+0x
+0000000000000000000000000000000000000000000000000000000000000002
+00000000000000000000000093f8dddd876c7dbe3323723500e83e202a7c96cc
+00000000000000000000000000000000000000000000000000000000630c7834
+</code></pre></div></li></ul> <h2 id="_4️⃣-multidelegatecall-多次委托调用"><a href="#_4️⃣-multidelegatecall-多次委托调用" class="header-anchor">#</a> 4️⃣ MultiDelegatecall / 多次委托调用</h2> <p>为什么使用 MultiDelegatecall ，不使用 MultiCall?是为了让被调用的合约内，<code>msg.sender</code> 是用户合约，而不是中转合约的地址。</p> <p>但是委托调用的缺点是，合约必须是自己编写的，不能是别人编写的。</p> <p>多次委托调用，存在漏洞，不要在里面多次累加余额。或者多重委托禁止接受资金。</p> <h3 id="合约"><a href="#合约" class="header-anchor">#</a> 合约</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract MultiDelegatecall {
+    function multiDelegatecall(bytes[] calldata data)
+        external
+        returns (bytes[] memory)
+    {
+        bytes[] memory results = new bytes[](data.length);
+        for (uint256 index = 0; index &lt; data.length; index++) {
+            (bool success, bytes memory result) = address(this).delegatecall(
+                data[index]
+            );
+            require(success, &quot;call faild&quot;);
+            results[index] = result;
+        }
+        return results;
+    }
+}
+
+contract Test is MultiDelegatecall {
+    function fn1()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (1, msg.sender, block.timestamp);
+    }
+
+    function fn2()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (2, msg.sender, block.timestamp);
+    }
+
+    function getFn1Data() external pure returns (bytes memory) {
+        // 两种签名方法都可以
+        // abi.encodeWithSignature(&quot;fn1()&quot;);
+        return abi.encodeWithSelector(this.fn1.selector);
+    }
+
+    function getFn2Data() external pure returns (bytes memory) {
+        return abi.encodeWithSelector(this.fn2.selector);
+    }
+}
+</code></pre></div><p><strong>合约测试</strong></p> <ul><li><p>部署 Test 合约</p></li> <li><p>获取 getFn1Data: <code>0x648fc804</code></p></li> <li><p>获取 getFn2Data: <code>0x98d26a11</code></p></li> <li><p>调用 <code>multiDelegatecall</code></p> <ul><li>[&quot;0x648fc804&quot;,&quot;0x98d26a11&quot;]</li></ul></li> <li><p>得到 decoded output，发现地址是用户的</p> <div class="language- extra-class"><pre class="language-text"><code>0x
+0000000000000000000000000000000000000000000000000000000000000001
+0000000000000000000000005b38da6a701c568545dcfcb03fcb875f56beddc4
+00000000000000000000000000000000000000000000000000000000630c8ebc,
+0x
+0000000000000000000000000000000000000000000000000000000000000002
+0000000000000000000000005b38da6a701c568545dcfcb03fcb875f56beddc4
+00000000000000000000000000000000000000000000000000000000630c8ebc
+</code></pre></div></li></ul> <h2 id="🆗-实战应用"><a href="#🆗-实战应用" class="header-anchor">#</a> 🆗 实战应用</h2> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li>内部合约调用有哪些方法？
+<ul><li><strong>方法 1</strong>: 通过 <code>ContractName(_ads)</code> 将传入的地址，转为合约对象
+<ul><li><code>Test(_ads).setX(_x);</code></li> <li>如果为了代码逻辑，也可以分开写，比如<div class="language- extra-class"><pre class="language-text"><code>Test temp = Test(_ads);
+temp.setX(_x);
+</code></pre></div></li></ul></li> <li><strong>方法 2</strong>: 可以通过参数中指定合约名字进行转换<div class="language- extra-class"><pre class="language-text"><code>  function setX2(Test _ads, uint256 _x) public {
+      _ads.setX(_x);
+  }
+</code></pre></div></li> <li><strong>调用并发送 ETH</strong>: <code>fnName{value: msg.value}();</code> <ul><li><code>Test(_ads).setYBySendEth{value: msg.value}();</code></li></ul></li></ul></li> <li>调用外部合约有哪些方法？
+<ul><li>1 通过接口方式调用</li></ul> <div class="language- extra-class"><pre class="language-text"><code>  interface AnimalEat {
+      function eat() external returns (string memory);
+  }
+
+  contract Animal {
+      function test(address _addr) external returns (string memory) {
+          AnimalEat general = AnimalEat(_addr);
+          return general.eat();
+      }
+  }
+</code></pre></div><ul><li>2 通过签名方式调用(call/delegatecall/staticcall)
+<ul><li><strong>call 核心代码如下</strong></li></ul> <div class="language- extra-class"><pre class="language-text"><code>bytes memory data = abi.encodeWithSignature(
+    &quot;setNameAndAge(string,uint256)&quot;,
+    _name,
+    _age
+);
+(bool success, bytes memory _bys) = _ads.call{value: msg.value}(data);
+require(success, &quot;Call Failed&quot;);
+bys = _bys;
+</code></pre></div><ul><li>用给定的有效载荷（payload）发出低级 <code>CALL</code> 调用，并<strong>返回交易成功状态和返回数据</strong>（调用合约的方法并转账）, 格式如下：</li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;address&gt;.call(bytes memory) returns (bool, bytes memory)
+</code></pre></div><ul><li><p><strong>DelegateCall 核心代码如下</strong></p> <div class="language- extra-class"><pre class="language-text"><code>function set(address _ads, uint256 _num) external payable {
+    sender = msg.sender;
+    value = msg.value;
+    num = _num;
+    // 第1种 encode
+    // 不需知道合约名字，函数完全自定义
+    bytes memory data1 = abi.encodeWithSignature(&quot;set(uint256)&quot;, _num);
+    // 第2种 encode
+    // 需要合约名字，可以避免函数和参数写错
+    // bytes memory data2 = abi.encodeWithSelector(Test1.set.selector, _num);
+
+    (bool success, bytes memory _data) = _ads.delegatecall(data1);
+
+    require(success, &quot;DelegateCall set failed&quot;);
+}
+</code></pre></div></li> <li><p><strong>staticcall 核心代码如下</strong>: 它与 call 基本相同，<strong>但如果被调用的函数以任何方式修改状态变量，都将回退</strong>。</p> <div class="language- extra-class"><pre class="language-text"><code>  // SPDX-License-Identifier: MIT
+  pragma solidity ^0.8.17;
+
+  // 被调用的合约
+  contract Hello {
+      function echo() external pure returns (string memory) {
+          return &quot;Hello World!&quot;;
+      }
+  }
+
+  // 调用者合约
+  contract SoldityTest {
+      function callHello(address _ads) external view returns (string memory) {
+          // 编码被调用者的方法签名
+          bytes4 methodId = bytes4(keccak256(&quot;echo()&quot;));
+
+          // 调用合约
+          (bool success, bytes memory data) = _ads.staticcall(
+              abi.encodeWithSelector(methodId)
+          );
+          if (success) {
+              return abi.decode(data, (string));
+          } else {
+              return &quot;error&quot;;
+          }
+      }
+  }
+</code></pre></div></li></ul></li></ul></li> <li>MultiCall/多次调用
+<ul><li>把多个合约的多次函数的调用，打包在一个里面对合约进行调用。RPC 对调用有限制，这样可以绕开限制。</li> <li>多次调用里面，对方的内部, <code>msg.sender</code> 是 MultiCall 合约，而不是用户地址。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>contract MultiCall {
+      function multiCall(address[] calldata targets, bytes[] calldata data)
+          external
+          view
+          returns (bytes[] memory)
+      {
+          require(targets.length == data.length, &quot;targets.length != data.length&quot;);
+          bytes[] memory results = new bytes[](data.length);
+          for (uint256 index = 0; index &lt; targets.length; index++) {
+              (bool success, bytes memory result) = targets[index].staticcall(
+                  data[index]
+              );
+              require(success, &quot;call faild&quot;);
+              results[index] = result;
+          }
+          return results;
+      }
+  }
+</code></pre></div></li> <li>MultiDelegatecall / 多次委托调用
+<ul><li>为什么使用 MultiDelegatecall ，不使用 MultiCall?是为了让被调用的合约内，<code>msg.sender</code> 是用户合约，而不是中转合约的地址。但是委托调用的缺点是，合约必须是自己编写的，不能是别人编写的。多次委托调用，存在漏洞，不要在里面多次累加余额。或者多重委托禁止接受资金。<div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract MultiDelegatecall {
+    function multiDelegatecall(bytes[] calldata data)
+        external
+        returns (bytes[] memory)
+    {
+        bytes[] memory results = new bytes[](data.length);
+        for (uint256 index = 0; index &lt; data.length; index++) {
+            (bool success, bytes memory result) = address(this).delegatecall(
+                data[index]
+            );
+            require(success, &quot;call faild&quot;);
+            results[index] = result;
+        }
+        return results;
+    }
+}
+
+contract Test is MultiDelegatecall {
+    function fn1()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (1, msg.sender, block.timestamp);
+    }
+
+    function fn2()
+        external
+        view
+        returns (
+            uint256,
+            address,
+            uint256
+        )
+    {
+        return (2, msg.sender, block.timestamp);
+    }
+
+    function getFn1Data() external pure returns (bytes memory) {
+        // 两种签名方法都可以
+        // abi.encodeWithSignature(&quot;fn1()&quot;);
+        return abi.encodeWithSelector(this.fn1.selector);
+    }
+
+    function getFn2Data() external pure returns (bytes memory) {
+        return abi.encodeWithSelector(this.fn2.selector);
+    }
+}
+</code></pre></div></li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/10.inheritance.html" class="prev">
+          继承
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/12.deploy.html">
+          合约部署合约
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_1️⃣-调用内部合约" class="sidebar-link reco-side-_1️⃣-调用内部合约" data-v-b57cc07c>1️⃣ 调用内部合约</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_2️⃣-调用外部合约" class="sidebar-link reco-side-_2️⃣-调用外部合约" data-v-b57cc07c>2️⃣ 调用外部合约</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_1-通过接口方式调用" class="sidebar-link reco-side-_1-通过接口方式调用" data-v-b57cc07c>1. 通过接口方式调用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_2-通过签名方式调用" class="sidebar-link reco-side-_2-通过签名方式调用" data-v-b57cc07c>2. 通过签名方式调用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_3️⃣-multicall-多次调用" class="sidebar-link reco-side-_3️⃣-multicall-多次调用" data-v-b57cc07c>3️⃣ MultiCall/多次调用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#说明" class="sidebar-link reco-side-说明" data-v-b57cc07c>说明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#合约代码" class="sidebar-link reco-side-合约代码" data-v-b57cc07c>合约代码</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#_4️⃣-multidelegatecall-多次委托调用" class="sidebar-link reco-side-_4️⃣-multidelegatecall-多次委托调用" data-v-b57cc07c>4️⃣ MultiDelegatecall / 多次委托调用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#合约" class="sidebar-link reco-side-合约" data-v-b57cc07c>合约</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#🆗-实战应用" class="sidebar-link reco-side-🆗-实战应用" data-v-b57cc07c>🆗 实战应用</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/11.call-other.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/37.a902f0d2.js" defer></script>
+  </body>
+</html>

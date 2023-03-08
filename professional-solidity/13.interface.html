@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>13.interface:接口 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/solidity/assets/css/0.styles.b490882a.css" as="style"><link rel="preload" href="/solidity/assets/js/app.e5082ffd.js" as="script"><link rel="preload" href="/solidity/assets/js/3.5ee47f7c.js" as="script"><link rel="preload" href="/solidity/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/solidity/assets/js/39.d83f4932.js" as="script"><link rel="prefetch" href="/solidity/assets/js/10.b8fb11d0.js"><link rel="prefetch" href="/solidity/assets/js/11.f32d6aa6.js"><link rel="prefetch" href="/solidity/assets/js/12.500c9e01.js"><link rel="prefetch" href="/solidity/assets/js/13.f32bd8e7.js"><link rel="prefetch" href="/solidity/assets/js/14.240c8045.js"><link rel="prefetch" href="/solidity/assets/js/15.0e4064e0.js"><link rel="prefetch" href="/solidity/assets/js/16.520be469.js"><link rel="prefetch" href="/solidity/assets/js/17.9e1045bf.js"><link rel="prefetch" href="/solidity/assets/js/18.fda721ea.js"><link rel="prefetch" href="/solidity/assets/js/19.7dcfc9fc.js"><link rel="prefetch" href="/solidity/assets/js/20.5b4e6f91.js"><link rel="prefetch" href="/solidity/assets/js/21.19568bc5.js"><link rel="prefetch" href="/solidity/assets/js/22.166c2d98.js"><link rel="prefetch" href="/solidity/assets/js/23.5cfe8d9a.js"><link rel="prefetch" href="/solidity/assets/js/24.ca3cb849.js"><link rel="prefetch" href="/solidity/assets/js/25.fd73bb0b.js"><link rel="prefetch" href="/solidity/assets/js/26.560bc8ec.js"><link rel="prefetch" href="/solidity/assets/js/27.f2377326.js"><link rel="prefetch" href="/solidity/assets/js/28.f5e564d2.js"><link rel="prefetch" href="/solidity/assets/js/29.dd2c0633.js"><link rel="prefetch" href="/solidity/assets/js/30.28848fc0.js"><link rel="prefetch" href="/solidity/assets/js/31.4c918904.js"><link rel="prefetch" href="/solidity/assets/js/32.a8886025.js"><link rel="prefetch" href="/solidity/assets/js/33.ffc5709c.js"><link rel="prefetch" href="/solidity/assets/js/34.f08a3e2e.js"><link rel="prefetch" href="/solidity/assets/js/35.95934a73.js"><link rel="prefetch" href="/solidity/assets/js/36.61b3c3c3.js"><link rel="prefetch" href="/solidity/assets/js/37.a902f0d2.js"><link rel="prefetch" href="/solidity/assets/js/38.c8172eb9.js"><link rel="prefetch" href="/solidity/assets/js/4.673bf15a.js"><link rel="prefetch" href="/solidity/assets/js/40.a01d9291.js"><link rel="prefetch" href="/solidity/assets/js/41.bd4ae60c.js"><link rel="prefetch" href="/solidity/assets/js/42.00e1217a.js"><link rel="prefetch" href="/solidity/assets/js/43.398d96c8.js"><link rel="prefetch" href="/solidity/assets/js/44.61afc1d6.js"><link rel="prefetch" href="/solidity/assets/js/45.e8d6009e.js"><link rel="prefetch" href="/solidity/assets/js/46.5d6497e3.js"><link rel="prefetch" href="/solidity/assets/js/47.34b62bec.js"><link rel="prefetch" href="/solidity/assets/js/48.b3077ae7.js"><link rel="prefetch" href="/solidity/assets/js/49.51c93428.js"><link rel="prefetch" href="/solidity/assets/js/5.8b013b29.js"><link rel="prefetch" href="/solidity/assets/js/50.be8ed4e3.js"><link rel="prefetch" href="/solidity/assets/js/51.ec76f9b6.js"><link rel="prefetch" href="/solidity/assets/js/52.40936f0d.js"><link rel="prefetch" href="/solidity/assets/js/53.488d417b.js"><link rel="prefetch" href="/solidity/assets/js/54.8e10336a.js"><link rel="prefetch" href="/solidity/assets/js/55.2edfb408.js"><link rel="prefetch" href="/solidity/assets/js/56.2c197860.js"><link rel="prefetch" href="/solidity/assets/js/57.1574a0d4.js"><link rel="prefetch" href="/solidity/assets/js/58.34fb9546.js"><link rel="prefetch" href="/solidity/assets/js/59.33203193.js"><link rel="prefetch" href="/solidity/assets/js/6.aad79307.js"><link rel="prefetch" href="/solidity/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/solidity/assets/js/8.1296ca76.js"><link rel="prefetch" href="/solidity/assets/js/9.cc552303.js">
+    <link rel="stylesheet" href="/solidity/assets/css/0.styles.b490882a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/solidity/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>41</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/solidity/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/solidity/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/best/BestWeb3TechIntroduce" class="sidebar-heading clickable"><span>Web3最佳编程实践指南</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/best/BestWeb3TechIntroduce.html" class="sidebar-link">Web3最佳编程实践指南</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/solidity/basic/Introduce" class="sidebar-heading clickable"><span>基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/basic/Introduce.html" class="sidebar-link">介绍</a></li><li><a href="/solidity/basic/FirstMetSolidity.html" class="sidebar-link">初步了解Solidity</a></li><li><a href="/solidity/basic/SoliditybyExample.html" class="sidebar-link">SoliditybyExample</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/standards/Introduce" class="sidebar-heading clickable"><span>标准</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/professional-solidity/Contents" class="sidebar-heading clickable open"><span>教程:professional-solidity</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/solidity/professional-solidity/Contents.html" class="sidebar-link">目录</a></li><li><a href="/solidity/professional-solidity/02.type-of-data.html" class="sidebar-link">数据</a></li><li><a href="/solidity/professional-solidity/03.variable.html" class="sidebar-link">变量</a></li><li><a href="/solidity/professional-solidity/04.function.html" class="sidebar-link">函数</a></li><li><a href="/solidity/professional-solidity/05.operator.html" class="sidebar-link">操作符</a></li><li><a href="/solidity/professional-solidity/06.error.html" class="sidebar-link">错误处理</a></li><li><a href="/solidity/professional-solidity/07.control-flow.html" class="sidebar-link">流程控制</a></li><li><a href="/solidity/professional-solidity/08.loops-and-iteration.html" class="sidebar-link">循环与迭代</a></li><li><a href="/solidity/professional-solidity/09.event.html" class="sidebar-link">事件</a></li><li><a href="/solidity/professional-solidity/10.inheritance.html" class="sidebar-link">继承</a></li><li><a href="/solidity/professional-solidity/11.call-other.html" class="sidebar-link">合约调用合约</a></li><li><a href="/solidity/professional-solidity/12.deploy.html" class="sidebar-link">合约部署合约</a></li><li><a href="/solidity/professional-solidity/13.interface.html" aria-current="page" class="active sidebar-link">接口</a></li><li><a href="/solidity/professional-solidity/14.library.html" class="sidebar-link">库</a></li><li><a href="/solidity/professional-solidity/15.algorithm.html" class="sidebar-link">算法</a></li><li><a href="/solidity/professional-solidity/16.assembly.html" class="sidebar-link">内联汇编</a></li><li><a href="/solidity/professional-solidity/17.metadata.html" class="sidebar-link">元数据</a></li><li><a href="/solidity/professional-solidity/18.abi.html" class="sidebar-link">ABI编码</a></li><li><a href="/solidity/professional-solidity/19.layout.html" class="sidebar-link">变量布局</a></li><li><a href="/solidity/professional-solidity/20.safe.html" class="sidebar-link">安全</a></li><li><a href="/solidity/professional-solidity/21.gas.html" class="sidebar-link">gas优化</a></li><li><a href="/solidity/professional-solidity/22.styleguide.html" class="sidebar-link">合约编码规范</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/openzeppelin-learn/Introduce" class="sidebar-heading clickable"><span>教程:openzeppelin-learn</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/nodejs/Introduce" class="sidebar-heading clickable"><span>nodejs</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/go/Introduce" class="sidebar-heading clickable"><span>Go</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/relay/Introduce" class="sidebar-heading clickable"><span>Relay</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/dapp/CreateWeb3Dapp" class="sidebar-heading clickable"><span>Dapp</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/solidity/project/Summary" class="sidebar-heading clickable"><span>项目</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88></h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">13.interface:接口</h1> <div data-v-8a445198><!----> <!----> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="_13-interface-接口"><a href="#_13-interface-接口" class="header-anchor">#</a> 13.interface:接口</h1> <p>很多时候，我们需要调用已经部署在链上的已经合约，这时候可以通过接口合约实现部分调用的逻辑，我们只需要写一个与之对应的接口合约，就可以调用了。</p> <p>在 solidity 语言中，只要某个合约有和接口种相同的函数声明，就可以被此合约所接受。接口就是起到一个桥接的作用；类似手机的接口，只要匹配，可以进行充电，也可以进行听歌。</p> <p><code>interface</code> 类似于<a href="/solidity/source/10.inheritance.html#abstract">抽象合约</a> ，但它们不能实现任何功能。还有其他限制。 <code>interface</code>内的函数被隐式标记为<code>virtual</code></p> <h2 id="_1️⃣-限制"><a href="#_1️⃣-限制" class="header-anchor">#</a> 1️⃣ 限制</h2> <ul><li>无法实现任何功能，没有函数体。</li> <li>无法定义构造函数。</li> <li>无法定义状态变量。</li> <li>无法定义结构（<code>strct</code>）（<code>0.5.0</code> 版本开始接口里可以支持声明 <code>enum</code> 类型）。</li> <li>不可以声明修改器。</li> <li>所有声明的函数必须是 <code>external</code> 的，尽管在合约里可以是 public
+<ul><li>文档说：将来可能会解除这里的某些限制。</li></ul></li></ul> <p>⚠️ 注意： interface 可以基于别的 interface，可以继承其他合约。比如 <code>interface IERC20Metadata is IERC20{}</code>,定义 <code>IERC20Metadata</code> 基于 <code>IERC20</code> 接口。</p> <h2 id="_2️⃣-定义和使用"><a href="#_2️⃣-定义和使用" class="header-anchor">#</a> 2️⃣ 定义和使用</h2> <p>接口需要有 interface 关键字，并且内部只需要有函数的声明，不用实现。只要某合约中有和词接口相同的函数声明，就可以被此合约所接受。语法如下</p> <div class="language- extra-class"><pre class="language-text"><code>interface 接口名{
+    函数声明;
+}
+</code></pre></div><p>接口基本上仅限于合约 ABI 可以表示的内容，并且 ABI 和接口之间的转换不应该丢失任何信息。</p> <p>在下面的例子中，定义了 cat 合约以及 dog 合约。他们都有 eat 方法.以此他们都可以被上面的 animalEat 接口所接收。</p> <h3 id="使用例子"><a href="#使用例子" class="header-anchor">#</a> 使用例子</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract Cat {
+    uint256 public age;
+
+    function eat() public returns (string memory) {
+        age++;
+        return &quot;cat eat fish&quot;;
+    }
+
+    function sleep1() public pure returns (string memory) {
+        return &quot;sleep1&quot;;
+    }
+}
+
+contract Dog {
+    uint256 public age;
+
+    function eat() public returns (string memory) {
+        age += 2;
+        return &quot;dog miss you&quot;;
+    }
+
+    function sleep2() public pure returns (string memory) {
+        return &quot;sleep2&quot;;
+    }
+}
+
+interface AnimalEat {
+    function eat() external returns (string memory);
+}
+
+contract Animal {
+    function test(address _addr) external returns (string memory) {
+        AnimalEat general = AnimalEat(_addr);
+        return general.eat();
+    }
+}
+</code></pre></div><p>测试流程:</p> <ol><li>部署 Cat 合约</li> <li>部署 Dog 合约</li> <li>部署 Animal 合约</li> <li>调用 <code>Animal.test</code>,参数是 Cat 合约地址
+<ol><li>返回 <code>&quot;string: cat eat fish&quot;</code></li> <li>在 Cat 合约内查看 <code>age</code> 返回的数字</li></ol></li> <li>调用 <code>Animal.test</code>,参数是 Dog 合约地址
+<ol><li>返回 <code>&quot;string: dog miss you&quot;</code></li> <li>在 Dog 合约内查看 <code>age</code> 返回的数字</li></ol></li></ol> <p>在合约 Animal 中，调用函数 test，如果传递的是部署的 Cat 的合约地址，那么我们在调用接口的 eat 方法时，实则调用了 Cat 合约的 eat 方法。 同理，如果传递的是部署的 Dog 的合约地址，那么我们在调用接口的 eat 方法时，实则调用了 dog 合约的 eat 方法。</p> <h3 id="隐式的标记为virtual"><a href="#隐式的标记为virtual" class="header-anchor">#</a> 隐式的标记为<code>virtual</code></h3> <p>就像继承其他合约一样，合约可以继承接口。接口中的函数都会隐式的标记为
+<code>virtual</code> ，意味着他们会被重写并不需要 <code>override</code> 关键字。
+但是不表示重写（overriding）函数可以再次重写，仅仅当重写的函数标记为
+<code>virtual</code> 才可以再次重写。</p> <p>接口可以继承其他的接口，遵循同样继承规则。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface ParentA {
+    function test() external returns (uint256);
+}
+
+interface ParentB {
+    function test() external returns (uint256);
+}
+
+interface SubInterface is ParentA, ParentB {
+    // 必须重新定义 test 函数，以表示兼容父合约含义
+    function test() external override(ParentA, ParentB) returns (uint256);
+}
+</code></pre></div><h2 id="_3️⃣-全局属性-type-i-interfaceid"><a href="#_3️⃣-全局属性-type-i-interfaceid" class="header-anchor">#</a> 3️⃣ 全局属性 <code>type(I).interfaceId</code></h2> <p>返回接口<code>I</code> 的 bytes4 类型的接口 ID，接口 ID 参考： EIP-165 定义的， 接口 ID 被定义为 XOR （异或） 接口内所有的函数的函数选择器（除继承的函数。</p> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface ParentA {
+    function test() external returns (uint256);
+}
+
+contract Demo {
+    function interfaceId() public pure returns (bytes4) {
+        return type(ParentA).interfaceId;
+    }
+}
+</code></pre></div><h2 id="_4️⃣-erc20-标准"><a href="#_4️⃣-erc20-标准" class="header-anchor">#</a> 4️⃣ ERC20 标准</h2> <h3 id="标准"><a href="#标准" class="header-anchor">#</a> 标准</h3> <p><strong>问题: 如何判断一个 Token 合约是否为标准的 ERC20 合约？</strong></p> <ul><li>只要含有 ERC20 接口规定的所有内容，就算标准的 ERC20 合约。
+<ul><li>至于方法内的逻辑是如何实现的，是不做判断。</li></ul></li></ul> <p>详情参考: https://eips.ethereum.org/EIPS/eip-20</p> <h3 id="标准-erc20-接口"><a href="#标准-erc20-接口" class="header-anchor">#</a> 标准 ERC20 接口</h3> <ul><li>3 个查询
+<ul><li><code>balanceOf</code>: 查询指定地址的 Token 数量</li> <li><code>totalSupply</code>: 查询当前合约的 Token 总量</li> <li><code>allowance</code>: 查询指定地址对另外一个地址的剩余授权额度</li></ul></li> <li>2 个交易
+<ul><li><code>transfer</code>: 从当前调用者地址发送指定数量的 Token 到指定地址。
+<ul><li>这是一个写入方法，所以还会抛出一个 <code>Transfer</code> 事件。</li></ul></li> <li><code>transferFrom</code>: 当向另外一个合约地址存款时，对方合约必须调用 transferFrom 才可以把 Token 拿到它自己的合约中。</li></ul></li> <li>2 个事件
+<ul><li><code>Transfer</code></li> <li><code>Approval</code></li></ul></li> <li>1 个授权
+<ul><li><code>approve</code>: 授权指定地址可以操作调用者的最大 Token 数量。</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC20 {
+    // 1个授权
+    function approve(address spender, uint256 amount) external returns (bool);
+
+    // 2个事件
+    event Transfer(address indexed from, address indexed to, uint256 amount);
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 amount
+    );
+
+    // 2个交易
+    function transfer(address recipient, uint256 amount)
+        external
+        returns (bool);
+
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external returns (bool);
+
+    // 3个查询
+    function totalSupply() external view returns (uint256);
+
+    function balanceOf(address account) external view returns (uint256);
+
+    function allowance(address owner, address spender)
+        external
+        view
+        returns (uint256);
+}
+</code></pre></div><h3 id="erc20-标准合约实现"><a href="#erc20-标准合约实现" class="header-anchor">#</a> ERC20 标准合约实现</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC20 {
+    // 1个授权
+    function approve(address spender, uint256 amount) external returns (bool);
+
+    // 2个事件
+    event Transfer(address indexed from, address indexed to, uint256 amount);
+    event Approval(
+        address indexed owner,
+        address indexed spender,
+        uint256 amount
+    );
+
+    // 2个交易
+    function transfer(address recipient, uint256 amount)
+        external
+        returns (bool);
+
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external returns (bool);
+
+    // 3个查询
+    function totalSupply() external view returns (uint256);
+
+    function balanceOf(address account) external view returns (uint256);
+
+    function allowance(address owner, address spender)
+        external
+        view
+        returns (uint256);
+}
+
+contract ERC20 is IERC20 {
+    // 状态变量
+    string public name;
+    string public symbol;
+    uint8 public immutable decimals;
+
+    address public immutable owner;
+
+    // uint256 public immutable totalSupply; // 不增加总量
+    uint256 public totalSupply; // 总价总量
+    mapping(address =&gt; uint256) public balanceOf;
+    mapping(address =&gt; mapping(address =&gt; uint256)) public allowance;
+
+    // 函数修改器
+    modifier onlyOwner() {
+        require(msg.sender == owner, &quot;not owner&quot;);
+        _;
+    }
+
+    // 构造函数
+    constructor(
+        string memory _name,
+        string memory _symbol,
+        uint8 _decimals,
+        uint256 _totalSupply
+    ) {
+        owner = msg.sender;
+        name = _name;
+        symbol = _symbol;
+        decimals = _decimals;
+        totalSupply = _totalSupply;
+        balanceOf[msg.sender] = _totalSupply;
+        emit Transfer(address(0), msg.sender, _totalSupply);
+    }
+
+    // 1个授权
+    function approve(address spender, uint256 amount) external returns (bool) {
+        allowance[msg.sender][spender] = amount;
+        emit Approval(msg.sender, spender, amount);
+        return true;
+    }
+
+    // 2个交易
+    function transfer(address recipient, uint256 amount)
+        external
+        returns (bool)
+    {
+        balanceOf[msg.sender] -= amount;
+        balanceOf[recipient] += amount;
+        emit Transfer(msg.sender, recipient, amount);
+        return true;
+    }
+
+    function transferFrom(
+        address sender,
+        address recipient,
+        uint256 amount
+    ) external returns (bool) {
+        // msg.sender 也就是当前调用者，是被批准者
+        allowance[sender][msg.sender] -= amount;
+        balanceOf[sender] -= amount;
+        balanceOf[recipient] += amount;
+        emit Transfer(sender, recipient, amount);
+        return true;
+    }
+
+    // 1个铸币 - 非必须
+    function mint(uint256 amount) external onlyOwner returns (bool) {
+        totalSupply += amount;
+        balanceOf[msg.sender] += amount;
+        emit Transfer(address(0), msg.sender, amount);
+        return true;
+    }
+
+    // 1个销毁 - 非必须
+    function burn(uint256 amount) external returns (bool) {
+        totalSupply -= amount;
+        balanceOf[msg.sender] -= amount;
+        emit Transfer(msg.sender, address(0), amount);
+        return true;
+    }
+
+    // 转移 owner 权限等其他一些操作均是看各自业务，非必需的
+}
+</code></pre></div><h2 id="_5️⃣-erc721-标准"><a href="#_5️⃣-erc721-标准" class="header-anchor">#</a> 5️⃣ ERC721 标准</h2> <p>参考资料:</p> <ul><li>https://eips.ethereum.org/EIPS/eip-721</li> <li>https://ethereum.org/zh/developers/docs/standards/tokens/erc-721/</li></ul> <h3 id="场景说明"><a href="#场景说明" class="header-anchor">#</a> 场景说明</h3> <p>非同质化代币（NFT）用于以唯一的方式标识某人或者某物。 此类型的代币可以被完美地用于出售下列物品的平台：收藏品、密钥、彩票、音乐会座位编号、体育比赛等。 这种类型的代币有着惊人的潜力，因此它需要一个适当的标准。ERC-721 就是为解决这个问题而来！</p> <p>所有 NFTs 都有一个 <code>uint256</code> 变量，名为 <code>tokenId</code>，所以对于任何 ERC-721 合约，这对值 <code>contract address, tokenId</code> 必须是全局唯一的。 也就是说，去中心化应用程序可以有一个“转换器”， 使用 tokenId 作为输入并输出一些很酷的事物图像，例如僵尸、武器、技能或神奇的小猫咪！</p> <h3 id="合约代码"><a href="#合约代码" class="header-anchor">#</a> 合约代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/**
+ * @dev ERC165 标准的接口 https://eips.ethereum.org/EIPS/eip-165
+ * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified
+ */
+interface IERC165 {
+    /// @notice 查询合约是否实现接口
+    /// @param interfaceID ERC-165 中指定的接口标识符
+    /// @dev 接口标识在 ERC-165 中指定。此功能需要低于 30,000 gas。
+    /// @return 如果合约实现了 interfaceID 且 interfaceID 不是 0xffffffff，则为 true，否则为 false
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+
+/// @title ERC-721 Non-Fungible Token Standard
+/// @dev See https://eips.ethereum.org/EIPS/eip-721
+///  Note: the ERC-165 identifier for this interface is 0x80ac58cd.
+interface IERC721 is IERC165 {
+    /**
+     @dev 当任何 NFT 的所有权通过任何形式发生变化时，需要触发该事件。
+     当 NFT 创建（`from` == 0）和销毁（`to` == 0）时会触发此事件。
+     例外情况：在合约创建期间，可以创建和分配任意数量的 NFT，而不会发出 Transfer。
+     在任何形式的资产转移时，该 NFT如果有批准地址将重置为无。
+    */
+    event Transfer(
+        address indexed _from,
+        address indexed _to,
+        uint256 indexed _tokenId
+    );
+
+    /**
+     * 当 NFT 的批准地址被更改或重新确认时，它会发出。
+     * 零地址表示没有批准的地址。
+     * 当 Transfer 事件发出时，这也表明该 NFT 如果有批准地址被重置为无。
+     */
+    event Approval(
+        address indexed _owner,
+        address indexed _approved,
+        uint256 indexed _tokenId
+    );
+
+    /// @dev 当为所有者启用或禁用操作员时，它会发出。 运营者可以管理所有者的所有 NFT。
+    event ApprovalForAll(
+        address indexed _owner,
+        address indexed _operator,
+        bool _approved
+    );
+
+    /// @notice 所有者的 NFT 数量
+    /// @dev 分配给零地址的 NFT 被认为是无效的，并且该函数抛出有关零地址的查询。
+    /// @param _owner 查询余额的地址
+    /// @return `_owner` 拥有的 NFT 数量，可能为零
+    function balanceOf(address _owner) external view returns (uint256);
+
+    /// @notice 找到 NFT 的所有者
+    /// @dev 分配给零地址的 NFT 被认为是无效的，并且对它们的查询确实会抛出异常。
+    /// @param _tokenId NFT 的标识符
+    /// @return NFT所有者的地址
+    function ownerOf(uint256 _tokenId) external view returns (address);
+
+    /// @notice 将 NFT 的所有权从一个地址转移到另一个地址
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT. When transfer is complete, this function
+    ///  checks if `_to` is a smart contract (code size &gt; 0). If so, it calls
+    ///  `onERC721Received` on `_to` and throws if the return value is not
+    ///  `bytes4(keccak256(&quot;onERC721Received(address,address,uint256,bytes)&quot;))`.
+    /// @param _from NFT的当前所有者
+    /// @param _to 新 owner
+    /// @param _tokenId 转移的 NFT
+    /// @param data 没有指定格式的附加数据，在调用 _to 时发送
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId,
+        bytes calldata data
+    ) external payable;
+
+    /// @notice 将 NFT 的所有权从一个地址转移到另一个地址
+    /// @dev 这与具有额外数据参数的其他函数的工作方式相同，只是此函数只是将数据设置为“”。
+    /// @param _from NFT的当前所有者
+    /// @param _to 新 owner
+    /// @param _tokenId 转移的 NFT
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId
+    ) external payable;
+
+    /// @notice 转移 NFT 的所有权——调用者有责任确认 `_to` 能够接收 NFTS，否则它们可能会永久丢失
+    /// @dev Throws unless `msg.sender` is the current owner, an authorized
+    ///  operator, or the approved address for this NFT. Throws if `_from` is
+    ///  not the current owner. Throws if `_to` is the zero address. Throws if
+    ///  `_tokenId` is not a valid NFT.
+    /// @param _from NFT的当前所有者
+    /// @param _to 新 owner
+    /// @param _tokenId 转移的 NFT
+    function transferFrom(
+        address _from,
+        address _to,
+        uint256 _tokenId
+    ) external payable;
+
+    /// @notice 更改或重申 NFT 的批准地址
+    /// @dev The zero address indicates there is no approved address.
+    ///  Throws unless `msg.sender` is the current NFT owner, or an authorized
+    ///  operator of the current owner.
+    /// @param _approved 新批准的 NFT 控制器
+    /// @param _tokenId NFT 批准
+    function approve(address _approved, uint256 _tokenId) external payable;
+
+    /// @notice 启用或禁用对第三方（“操作员”）的批准以管理所有 `msg.sender` 的资产
+    /// @dev 发出 ApprovalForAll 事件。 合同必须允许每个所有者有多个操作员。
+    /// @param _operator 添加到授权运营商集中的地址
+    /// @param _approved 如果运营商获得批准，则为 True，如果撤消批准，则为 false
+    function setApprovalForAll(address _operator, bool _approved) external;
+
+    /// @notice 获取单个 NFT 的认可地址
+    /// @dev 如果 _tokenId 不是有效的 NFT，则抛出。
+    /// @param _tokenId NFT寻找批准的地址
+    /// @return 此 NFT 的批准地址，如果没有则为零地址
+    function getApproved(uint256 _tokenId) external view returns (address);
+
+    /// @notice 查询一个地址是否是另一个地址的授权操作员
+    /// @param _owner 拥有 NFT 的地址
+    /// @param _operator 代表所有者的地址
+    /// @return 如果 _operator 是 _owner 的批准运算符，则为真，否则为假
+    function isApprovedForAll(address _owner, address _operator)
+        external
+        view
+        returns (bool);
+}
+</code></pre></div><h2 id="_6️⃣-erc1155-标准"><a href="#_6️⃣-erc1155-标准" class="header-anchor">#</a> 6️⃣ ERC1155 标准</h2> <p>参考资料:</p> <ul><li>https://eips.ethereum.org/EIPS/eip-1155</li> <li>https://ethereum.org/zh/developers/docs/standards/tokens/erc-1155/</li></ul> <h3 id="场景说明-2"><a href="#场景说明-2" class="header-anchor">#</a> 场景说明</h3> <p>用于多种代币管理的合约标准接口。单个部署的合约可以包括同质化代币、非同质化代币或其他配置（如半同质化代币）的任何组合。</p> <p>它的目的很单纯，就是创建一个智能合约接口，可以代表和控制任何数量的同质化和非同质化代币类型。 这样一来，ERC-1155 代币就具有与 ERC-20 和 ERC-721 代币相同的功能，甚至可以同时使用这两者的功能。 而最重要的是，它能改善这两种标准的功能，使其更有效率，并纠正 ERC-20 和 ERC-721 标准上明显的实施错误。</p> <h3 id="合约代码-2"><a href="#合约代码-2" class="header-anchor">#</a> 合约代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+/**
+ * @dev ERC165 标准的接口 https://eips.ethereum.org/EIPS/eip-165
+ * https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified
+ */
+interface IERC165 {
+    /// @notice 查询合约是否实现接口
+    /// @param interfaceID ERC-165 中指定的接口标识符
+    /// @dev 接口标识在 ERC-165 中指定。此功能需要低于 30,000 gas。
+    /// @return 如果合约实现了 interfaceID 且 interfaceID 不是 0xffffffff，则为 true，否则为 false
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+
+/**
+    @title ERC-1155 Multi Token Standard
+    @dev See https://eips.ethereum.org/EIPS/eip-1155
+    Note: The ERC-165 identifier for this interface is 0xd9b67a26.
+ */
+interface IERC1155 is IERC165 {
+    /**
+        @dev Either `TransferSingle` or `TransferBatch` MUST emit when tokens are transferred,
+        including zero value transfers as well as minting or burning (see &quot;Safe Transfer Rules&quot; section of the standard).
+        The `_operator` argument MUST be the address of an account/contract that is approved to make the transfer (SHOULD be msg.sender).
+        The `_from` argument MUST be the address of the holder whose balance is decreased.
+        The `_to` argument MUST be the address of the recipient whose balance is increased.
+        The `_id` argument MUST be the token type being transferred.
+        The `_value` argument MUST be the number of tokens the holder balance is decreased by and match what the recipient balance is increased by.
+        When minting/creating tokens, the `_from` argument MUST be set to `0x0` (i.e. zero address).
+        When burning/destroying tokens, the `_to` argument MUST be set to `0x0` (i.e. zero address).
+    */
+    event TransferSingle(
+        address indexed _operator,
+        address indexed _from,
+        address indexed _to,
+        uint256 _id,
+        uint256 _value
+    );
+
+    /**
+        @dev Either `TransferSingle` or `TransferBatch` MUST emit when tokens are transferred,
+        including zero value transfers as well as minting or burning (see &quot;Safe Transfer Rules&quot; section of the standard).
+        The `_operator` argument MUST be the address of an account/contract that is approved to make the transfer (SHOULD be msg.sender).
+        The `_from` argument MUST be the address of the holder whose balance is decreased.
+        The `_to` argument MUST be the address of the recipient whose balance is increased.
+        The `_ids` argument MUST be the list of tokens being transferred.
+        The `_values` argument MUST be the list of number of tokens (matching the list and order of tokens specified in _ids)
+        the holder balance is decreased by and match what the recipient balance is increased by.
+        When minting/creating tokens, the `_from` argument MUST be set to `0x0` (i.e. zero address).
+        When burning/destroying tokens, the `_to` argument MUST be set to `0x0` (i.e. zero address).
+    */
+    event TransferBatch(
+        address indexed _operator,
+        address indexed _from,
+        address indexed _to,
+        uint256[] _ids,
+        uint256[] _values
+    );
+
+    /**
+        @dev 必须在批准第二方/运营商地址管理所有者地址的所有令牌时启用或禁用（没有事件假定禁用）
+    */
+    event ApprovalForAll(
+        address indexed _owner,
+        address indexed _operator,
+        bool _approved
+    );
+
+    /**
+        @dev 必须在为令牌 ID 更新 URI 时发出。
+        URI 在 RFC 3986 中定义。
+        URI 必须指向符合“ERC-1155 元数据 URI JSON 模式”的 JSON 文件。
+    */
+    event URI(string _value, uint256 indexed _id);
+
+    /**
+        @notice Transfers `_value` amount of an `_id` from the `_from` address
+                to the `_to` address specified (with safety call).
+        @dev Caller must be approved to manage the tokens being transferred
+        out of the `_from` account (see &quot;Approval&quot; section of the standard).
+        MUST revert if `_to` is the zero address.
+        MUST revert if balance of holder for token `_id` is lower than the `_value` sent.
+        MUST revert on any other error.
+        MUST emit the `TransferSingle` event to reflect the balance change (see &quot;Safe Transfer Rules&quot; section of the standard).
+        After the above conditions are met, this function MUST check if `_to` is a smart contract (e.g. code size &gt; 0). If so,
+        it MUST call `onERC1155Received` on `_to` and act appropriately (see &quot;Safe Transfer Rules&quot; section of the standard).
+        @param _from    Source address
+        @param _to      Target address
+        @param _id      ID of the token type
+        @param _value   Transfer amount
+        @param _data    Additional data with no specified format, MUST be sent unaltered in call to `onERC1155Received` on `_to`
+    */
+    function safeTransferFrom(
+        address _from,
+        address _to,
+        uint256 _id,
+        uint256 _value,
+        bytes calldata _data
+    ) external;
+
+    /**
+        @notice 将 `_ids` 的 `_values` 数量从 `_from` 地址转移到指定的 `_to` 地址（使用安全调用）。
+        @dev Caller must be approved to manage the tokens being transferred out of the `_from` account (see &quot;Approval&quot; section of the standard).
+        MUST revert if `_to` is the zero address.
+        MUST revert if length of `_ids` is not the same as length of `_values`.
+        MUST revert if any of the balance(s) of the holder(s) for token(s) in `_ids` is lower than the respective amount(s) in `_values` sent to the recipient.
+        MUST revert on any other error.
+        MUST emit `TransferSingle` or `TransferBatch` event(s) such that all the balance changes are reflected (see &quot;Safe Transfer Rules&quot; section of the standard).
+        Balance changes and events MUST follow the ordering of the arrays (_ids[0]/_values[0] before _ids[1]/_values[1], etc).
+        After the above conditions for the transfer(s) in the batch are met, this function MUST check if `_to` is a smart contract (e.g. code size &gt; 0). If so,
+        it MUST call the relevant `ERC1155TokenReceiver` hook(s) on `_to` and act appropriately (see &quot;Safe Transfer Rules&quot; section of the standard).
+        @param _from    Source address
+        @param _to      Target address
+        @param _ids     每个令牌类型的 ID（顺序和长度必须匹配 _values 数组）
+        @param _values  每种代币类型的转账金额（顺序和长度必须匹配 _ids 数组）
+        @param _data    没有指定格式的额外数据，必须在调用 _to 上的 `ERC1155TokenReceiver` 钩子时原封不动地发送
+    */
+    function safeBatchTransferFrom(
+        address _from,
+        address _to,
+        uint256[] calldata _ids,
+        uint256[] calldata _values,
+        bytes calldata _data
+    ) external;
+
+    /**
+        @notice 获取帐户令牌的余额。
+        @param _owner  令牌持有者的地址
+        @param _id     ID of the token
+        @return        请求的代币类型的所有者余额
+     */
+    function balanceOf(address _owner, uint256 _id)
+        external
+        view
+        returns (uint256);
+
+    /**
+        @notice 获取多个账户/代币对的余额
+        @param _owners 代币持有者的地址
+        @param _ids    ID of the tokens
+        @return        请求的令牌类型的 _owner 余额（即每个 (owner, id) 对的余额）
+     */
+    function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids)
+        external
+        view
+        returns (uint256[] memory);
+
+    /**
+        @notice 启用或禁用对第三方（“操作员”）的批准以管理所有调用者的令牌。
+        @dev 必须在成功时发出 ApprovalForAll 事件。
+        @param _operator  添加到授权运营商集中的地址
+        @param _approved  如果运营商获得批准，则为 True，如果撤消批准，则为 false
+    */
+    function setApprovalForAll(address _operator, bool _approved) external;
+
+    /**
+        @notice 查询给定所有者的操作员的批准状态。
+        @param _owner     The owner of the tokens
+        @param _operator  授权操作员的地址
+        @return           如果操作员被批准则为真，否则为假
+    */
+    function isApprovedForAll(address _owner, address _operator)
+        external
+        view
+        returns (bool);
+}
+</code></pre></div><h2 id="_7️⃣-erc3525-标准"><a href="#_7️⃣-erc3525-标准" class="header-anchor">#</a> 7️⃣ ERC3525 标准</h2> <p>每个符合 EIP-3525 的合约都必须实现 EIP-3525、EIP-721 和 EIP-165 接口</p> <p>参考资料:</p> <ul><li>https://eips.ethereum.org/EIPS/eip-3525</li></ul> <h3 id="场景说明-3"><a href="#场景说明-3" class="header-anchor">#</a> 场景说明</h3> <p>描述一组具有相同类型，但是有轻微不同的东西。比如相同的 100 元人民币，一共 100 张，每一张都是价值 100 的纸币，大部分的防伪等等都不同，但是每一张都编号都不同。</p> <h3 id="合约代码-3"><a href="#合约代码-3" class="header-anchor">#</a> 合约代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+/**
+ * @title EIP-3525 Semi-Fungible Token Standard
+ * Note: the EIP-165 identifier for this interface is 0xd5358140.
+ */
+
+interface IERC3525  /* is IERC165, IERC721 */ {
+    /**
+     * @dev MUST emit when value of a token is transferred to another token with the same slot,
+     *  including zero value transfers (_value == 0) as well as transfers when tokens are created
+     *  (`_fromTokenId` == 0) or destroyed (`_toTokenId` == 0).
+     * @param _fromTokenId The token id to transfer value from
+     * @param _toTokenId The token id to transfer value to
+     * @param _value The transferred value
+     */
+    event TransferValue(
+        uint256 indexed _fromTokenId,
+        uint256 indexed _toTokenId,
+        uint256 _value
+    );
+
+    /**
+     * @dev MUST emit when the approval value of a token is set or changed.
+     * @param _tokenId The token to approve
+     * @param _operator The operator to approve for
+     * @param _value The maximum value that `_operator` is allowed to manage
+     */
+    event ApprovalValue(
+        uint256 indexed _tokenId,
+        address indexed _operator,
+        uint256 _value
+    );
+
+    /**
+     * @dev MUST emit when the slot of a token is set or changed.
+     * @param _tokenId The token of which slot is set or changed
+     * @param _oldSlot The previous slot of the token
+     * @param _newSlot The updated slot of the token
+     */
+    event SlotChanged(
+        uint256 indexed _tokenId,
+        uint256 indexed _oldSlot,
+        uint256 indexed _newSlot
+    );
+
+    /**
+     * @notice Get the number of decimals the token uses for value - e.g. 6, means the user
+     *  representation of the value of a token can be calculated by dividing it by 1,000,000.
+     *  Considering the compatibility with third-party wallets, this function is defined as
+     *  `valueDecimals()` instead of `decimals()` to avoid conflict with EIP-20 tokens.
+     * @return The number of decimals for value
+     */
+    function valueDecimals() external view returns (uint8);
+
+    /**
+     * @notice Get the value of a token.
+     * @param _tokenId The token for which to query the balance
+     * @return The value of `_tokenId`
+     */
+    function balanceOf(uint256 _tokenId) external view returns (uint256);
+
+    /**
+     * @notice Get the slot of a token.
+     * @param _tokenId The identifier for a token
+     * @return The slot of the token
+     */
+    function slotOf(uint256 _tokenId) external view returns (uint256);
+
+    /**
+     * @notice Allow an operator to manage the value of a token, up to the `_value`.
+     * @dev MUST revert unless caller is the current owner, an authorized operator, or the approved
+     *  address for `_tokenId`.
+     *  MUST emit the ApprovalValue event.
+     * @param _tokenId The token to approve
+     * @param _operator The operator to be approved
+     * @param _value The maximum value of `_toTokenId` that `_operator` is allowed to manage
+     */
+    function approve(
+        uint256 _tokenId,
+        address _operator,
+        uint256 _value
+    ) external payable;
+
+    /**
+     * @notice Get the maximum value of a token that an operator is allowed to manage.
+     * @param _tokenId The token for which to query the allowance
+     * @param _operator The address of an operator
+     * @return The current approval value of `_tokenId` that `_operator` is allowed to manage
+     */
+    function allowance(uint256 _tokenId, address _operator)
+        external
+        view
+        returns (uint256);
+
+    /**
+     * @notice Transfer value from a specified token to another specified token with the same slot.
+     * @dev Caller MUST be the current owner, an authorized operator or an operator who has been
+     *  approved the whole `_fromTokenId` or part of it.
+     *  MUST revert if `_fromTokenId` or `_toTokenId` is zero token id or does not exist.
+     *  MUST revert if slots of `_fromTokenId` and `_toTokenId` do not match.
+     *  MUST revert if `_value` exceeds the balance of `_fromTokenId` or its allowance to the
+     *  operator.
+     *  MUST emit `TransferValue` event.
+     * @param _fromTokenId The token to transfer value from
+     * @param _toTokenId The token to transfer value to
+     * @param _value The transferred value
+     */
+    function transferFrom(
+        uint256 _fromTokenId,
+        uint256 _toTokenId,
+        uint256 _value
+    ) external payable;
+
+    /**
+     * @notice 转移将指定数量的代币到新地址。调用者应确认 _to 能够接收 EIP-3525 资产。
+     * @dev This function MUST create a new EIP-3525 token with the same slot for `_to`,
+     *  or find an existing token with the same slot owned by `_to`, to receive the transferred value.
+     *  MUST revert if `_fromTokenId` is zero token id or does not exist.
+     *  MUST revert if `_to` is zero address.
+     *  MUST revert if `_value` exceeds the balance of `_fromTokenId` or its allowance to the
+     *  operator.
+     *  MUST emit `Transfer` and `TransferValue` events.
+     * @param _fromTokenId The token to transfer value from
+     * @param _to The address to transfer value to
+     * @param _value The transferred value
+     * @return ID of the token which receives the transferred value
+     */
+    function transferFrom(
+        uint256 _fromTokenId,
+        address _to,
+        uint256 _value
+    ) external payable returns (uint256);
+}
+</code></pre></div><h3 id="扩展"><a href="#扩展" class="header-anchor">#</a> 扩展</h3> <p>更多关于 3525 协议的内容，参考 https://cloud.tencent.com/developer/article/2155201</p> <h2 id="_8️⃣-四种代币标准的对比"><a href="#_8️⃣-四种代币标准的对比" class="header-anchor">#</a> 8️⃣ 四种代币标准的对比</h2> <p><img src="/_static/13/01.jpeg" alt=""></p> <p><img src="/_static/13/02.jpeg" alt=""></p> <p><img src="/_static/13/03.jpeg" alt=""></p> <p><img src="/_static/13/04.jpeg" alt=""></p> <h2 id="🆗-实战-荷兰拍卖"><a href="#🆗-实战-荷兰拍卖" class="header-anchor">#</a> 🆗 实战:荷兰拍卖</h2> <h3 id="原理"><a href="#原理" class="header-anchor">#</a> 原理</h3> <p>拍卖 NFT</p> <ul><li>需要拥有 NFT</li> <li>需要在 NFT 合约内对拍卖合约做 <code>aoorove</code>;</li></ul> <h3 id="代码"><a href="#代码" class="header-anchor">#</a> 代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC721 {
+    function transferFrom(
+        address _form,
+        address _to,
+        uint256 _nftId
+    ) external;
+}
+
+contract DutchAuction {
+    uint256 private immutable duration;
+
+    address payable public immutable seller;
+
+    IERC721 public immutable nft;
+    uint256 public immutable nftId;
+
+    uint256 public immutable startingPrice;
+    uint256 public immutable startAt;
+    uint256 public immutable endAt;
+    uint256 public immutable discountRate;
+
+    constructor(
+        address _nft,
+        uint256 _nftId,
+        uint256 _startingPrice,
+        uint256 _duration,
+        uint256 _discountRate
+    ) {
+        require(
+            _startingPrice &gt;= _duration * _discountRate,
+            &quot;starting price &lt; discount&quot;
+        );
+        seller = payable(msg.sender);
+        nft = IERC721(_nft); // 需要 IERC721 进行转换
+        nftId = _nftId;
+        duration = _duration;
+        startingPrice = _startingPrice;
+        discountRate = _discountRate;
+
+        startAt = block.timestamp;
+        endAt = block.timestamp + _duration;
+    }
+
+    // 获取价格
+    function getPrice() public view returns (uint256) {
+        uint256 timeElapsed = block.timestamp - startAt;
+        uint256 discount = discountRate * timeElapsed;
+        return startingPrice - discount;
+    }
+
+    // 购买
+    function buy() external payable {
+        // 打包时间需要在拍卖截止之前
+        require(block.timestamp &lt; endAt, &quot;Auction has ended&quot;);
+
+        uint256 price = getPrice();
+        require(msg.value &gt;= price, &quot;Insufficient amount&quot;);
+        nft.transferFrom(seller, msg.sender, nftId);
+
+        // 如果有多余的钱，需要把钱退会购买者账号(提交时间和打包确认时间不一致)
+        uint256 refund = msg.value - price;
+        if (refund &gt; 0) {
+            payable(msg.sender).transfer(refund);
+        }
+        selfdestruct(seller);
+    }
+}
+</code></pre></div><h2 id="🆗-实战-英式拍卖"><a href="#🆗-实战-英式拍卖" class="header-anchor">#</a> 🆗 实战:英式拍卖</h2> <h3 id="原理-2"><a href="#原理-2" class="header-anchor">#</a> 原理</h3> <p>拍卖 NFT</p> <ul><li>需要拥有 NFT</li> <li>需要在 NFT 合约内对拍卖合约做 <code>aoorove</code>;</li></ul> <h3 id="代码-2"><a href="#代码-2" class="header-anchor">#</a> 代码</h3> <div class="language- extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC721 {
+    function transferFrom(
+        address _form,
+        address _to,
+        uint256 _nftId
+    ) external;
+}
+
+// TODO: 区块注释信息，可以选择在合约完成后删除
+contract HelloComrades {
+    /*
+     * ========================================
+     * State Variables
+     * ========================================
+     */
+
+    address payable public immutable seller;
+
+    IERC721 public immutable nft;
+    uint256 public immutable nftId;
+
+    uint32 public endAt; // 结束时间
+    bool public started; // 开始时间
+    bool public ended; // 结束时间
+
+    uint256 public highestBid; // 最高出价
+    address public highestBider; // 最高出价人
+    mapping(address =&gt; uint256) public bids; // 除了最高出价外的所有出价人
+
+    /*
+     * ========================================
+     * Events
+     * ========================================
+     */
+    event Start();
+    event End(address highestBider, uint256 amount);
+    event Bid(address indexed sender, uint256 amount);
+    event Withdraw(address indexed sender, uint256 amount);
+
+    /*
+     * ========================================
+     * Modifier
+     * ========================================
+     */
+
+    /*
+     * ========================================
+     * Errors
+     * ========================================
+     */
+
+    /*
+     * ========================================
+     * Constructor
+     * ========================================
+     */
+    constructor(
+        address _nft,
+        uint256 _nftId,
+        uint256 _startingPrice
+    ) {
+        seller = payable(msg.sender);
+        nft = IERC721(_nft); // 需要 IERC721 进行转换
+        nftId = _nftId;
+        highestBid = _startingPrice;
+    }
+
+    /*
+     * ========================================
+     * Functions
+     * ========================================
+     */
+    function start() external {
+        require(msg.sender == seller, &quot;Nor seller&quot;);
+        require(!started, &quot;started&quot;);
+
+        started = true;
+        endAt = uint32(block.timestamp + 60);
+        nft.transferFrom(seller, address(this), nftId);
+
+        emit Start();
+    }
+
+    function bid() external payable {
+        require(started, &quot;Not started&quot;); //需要时间已经开始
+        require(block.timestamp &lt; endAt, &quot;ended&quot;); // 需要时间还没有过期
+        require(msg.value &gt; highestBid, &quot;invalid price&quot;); // 需要高于上次出价
+
+        // 把上一次最高出价和出价人写入账本
+        if (highestBider != address(0)) {
+            bids[highestBider] += highestBid;
+        }
+
+        // 更新最高出价/最高出价人
+        highestBid = msg.value;
+        highestBider = msg.sender;
+        emit Bid(msg.sender, msg.value);
+    }
+
+    // 取回自己的出价
+    function withdraw() external {
+        uint256 bal = bids[msg.sender];
+        require(bal &gt; 0, &quot;No amount can be refunded&quot;);
+        bids[msg.sender] = 0; //为了防止漏洞发生，需要先把状态修改
+        payable(msg.sender).transfer(bal);
+        emit Withdraw(msg.sender, bal);
+    }
+
+    // 结束拍卖;不需要做身份确认，因为需要做的事情是固定的，
+    // 能不做身份判断就不需要做，可以节省Gas
+    function end() external {
+        require(started, &quot;Not started&quot;); // 需要已经开始
+        require(!ended, &quot;is ended&quot;); // 需要还没有结束
+        require(block.timestamp &gt;= endAt, &quot;auction in progress&quot;);
+        ended = true;
+
+        if (highestBider != address(0)) {
+            // 如果有人出价则将 NFT 给最高出价人，最高价格给销售者
+            nft.transferFrom(address(this), highestBider, nftId);
+            seller.transfer(highestBid);
+        } else {
+            // 如果没有人出价，则NFT原路返还给销售者
+            nft.transferFrom(address(this), seller, nftId);
+        }
+        emit End(highestBider, highestBid);
+    }
+
+    /*
+     * ========================================
+     * Helper
+     * ========================================
+     */
+    function getBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}
+</code></pre></div><h3 id="测试流程"><a href="#测试流程" class="header-anchor">#</a> 测试流程</h3> <ul><li>部署 ERC721 ,NFT 合约地址是 <code>nftContractAds</code></li> <li>给 <code>address1</code> min 一个 ID 是 1 的 NFT</li> <li>部署英式拍卖合约 <code>EnglishAuction</code> <ul><li>输入 NFT 合约地址</li> <li>输入 NFT ID 号</li> <li>起拍价格:8</li></ul></li> <li>在 <code>nftContractAds</code> 中 approve <code>EnglishAuction</code> , ID 为 1 的 NFT</li> <li>使用 <code>address2</code> 出价 1,查看是否返回错误 <code>Not started</code></li> <li>查看合约的状态
+<ul><li><code>started</code></li> <li><code>ended</code></li> <li><code>getBalance</code></li> <li><code>seller</code></li> <li><code>nft</code></li> <li><code>nftId</code></li> <li><code>highestBider</code></li> <li><code>highestBid</code></li></ul></li> <li>使用 <code>address1</code> 出价 1, 开始拍卖合约，查看是否返回错误 <code>invalid price</code></li> <li>再次查看合约的状态</li> <li>使用 <code>address2</code> 出价 10</li> <li>使用 <code>address3</code> 出价 20</li> <li>使用 <code>address2</code> 出价 50</li> <li>查询 <code>address2</code> 可退换的主币</li> <li>查询 <code>address3</code> 可退换的主币</li> <li>结束拍卖</li> <li>使用 <code>address2</code> 取回主币</li> <li>使用 <code>address3</code> 取回主币</li></ul> <h2 id="️⃣-问答题"><a href="#️⃣-问答题" class="header-anchor">#</a> #️⃣ 问答题</h2> <ul><li><code>interface</code> 有哪些限制？
+<ul><li>无法实现任何功能，没有函数体。
+<ul><li>否则报错:<code>Functions in interfaces must be declared external.</code></li></ul></li> <li>无法继承其他合约。(需要验证，是否可以继承接口，文档内说可以继承其他接口。)</li> <li>无法定义构造函数。</li> <li>无法定义状态变量。</li> <li>不可以声明修改器。</li> <li>无法定义结构（<code>strct</code>）（<code>0.5.0</code> 版本开始接口里可以支持声明 <code>enum</code> 类型）。</li> <li>所有声明的函数必须是 <code>external</code> 的，尽管在合约里可以是 public</li> <li>文档说：将来可能会解除这里的某些限制。</li></ul></li> <li><code>interface</code> 的意义？
+<ul><li>我们需要调用已经部署在链上的已经合约，这时候可以通过接口合约实现部分调用的逻辑，我们只需要写一个与之对应的接口合约，就可以调用了。</li></ul></li> <li><code>interface</code> 和 <code>abstract</code>(抽象合约)有啥区别？分别用在什么地方？</li> <li><code>interface</code> 的常见用法有哪些？
+<ul><li>制定标准，比如最成功的 <code>ERC20</code> 接口合约</li></ul></li> <li><code>ERC20</code> 标准接口有哪些内容？
+<ul><li>1 个授权（approve）</li> <li>2 个事件（Transfer/Approval）</li> <li>2 个交易（transfer/transferFrom）</li> <li>3 个查询（totalSupply/balanceOf/allowance）</li> <li>只要满足以上接口的都是 ERC20 标准合约，很多土狗合约喜欢在 transfer 内魔改。</li></ul></li> <li>全局属性 <code>type(I).interfaceId</code> 使用？
+<ul><li>没啥用，就是类似函数签名一样的十六进制数据，知道有这个属性就好。</li></ul></li> <li>聊一聊 <code>interface</code> <ul><li>就像继承其他合约一样，合约可以继承接口。接口中的函数都会隐式的标记为
+<code>virtual</code> ，意味着他们会被重写并不需要 <code>override</code> 关键字。
+但是不表示重写（overriding）函数可以再次重写，仅仅当重写的函数标记为
+<code>virtual</code> 才可以再次重写。</li></ul></li></ul></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/solidity/professional-solidity/12.deploy.html" class="prev">
+          合约部署合约
+        </a></span> <span class="next"><a href="/solidity/professional-solidity/14.library.html">
+          库
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_1️⃣-限制" class="sidebar-link reco-side-_1️⃣-限制" data-v-b57cc07c>1️⃣ 限制</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_2️⃣-定义和使用" class="sidebar-link reco-side-_2️⃣-定义和使用" data-v-b57cc07c>2️⃣ 定义和使用</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#使用例子" class="sidebar-link reco-side-使用例子" data-v-b57cc07c>使用例子</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#隐式的标记为virtual" class="sidebar-link reco-side-隐式的标记为virtual" data-v-b57cc07c>隐式的标记为virtual</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_3️⃣-全局属性-type-i-interfaceid" class="sidebar-link reco-side-_3️⃣-全局属性-type-i-interfaceid" data-v-b57cc07c>3️⃣ 全局属性 type(I).interfaceId</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_4️⃣-erc20-标准" class="sidebar-link reco-side-_4️⃣-erc20-标准" data-v-b57cc07c>4️⃣ ERC20 标准</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#标准" class="sidebar-link reco-side-标准" data-v-b57cc07c>标准</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#标准-erc20-接口" class="sidebar-link reco-side-标准-erc20-接口" data-v-b57cc07c>标准 ERC20 接口</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#erc20-标准合约实现" class="sidebar-link reco-side-erc20-标准合约实现" data-v-b57cc07c>ERC20 标准合约实现</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_5️⃣-erc721-标准" class="sidebar-link reco-side-_5️⃣-erc721-标准" data-v-b57cc07c>5️⃣ ERC721 标准</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#场景说明" class="sidebar-link reco-side-场景说明" data-v-b57cc07c>场景说明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#合约代码" class="sidebar-link reco-side-合约代码" data-v-b57cc07c>合约代码</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_6️⃣-erc1155-标准" class="sidebar-link reco-side-_6️⃣-erc1155-标准" data-v-b57cc07c>6️⃣ ERC1155 标准</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#场景说明-2" class="sidebar-link reco-side-场景说明-2" data-v-b57cc07c>场景说明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#合约代码-2" class="sidebar-link reco-side-合约代码-2" data-v-b57cc07c>合约代码</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_7️⃣-erc3525-标准" class="sidebar-link reco-side-_7️⃣-erc3525-标准" data-v-b57cc07c>7️⃣ ERC3525 标准</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#场景说明-3" class="sidebar-link reco-side-场景说明-3" data-v-b57cc07c>场景说明</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#合约代码-3" class="sidebar-link reco-side-合约代码-3" data-v-b57cc07c>合约代码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#扩展" class="sidebar-link reco-side-扩展" data-v-b57cc07c>扩展</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#_8️⃣-四种代币标准的对比" class="sidebar-link reco-side-_8️⃣-四种代币标准的对比" data-v-b57cc07c>8️⃣ 四种代币标准的对比</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#🆗-实战-荷兰拍卖" class="sidebar-link reco-side-🆗-实战-荷兰拍卖" data-v-b57cc07c>🆗 实战:荷兰拍卖</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#原理" class="sidebar-link reco-side-原理" data-v-b57cc07c>原理</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#代码" class="sidebar-link reco-side-代码" data-v-b57cc07c>代码</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#🆗-实战-英式拍卖" class="sidebar-link reco-side-🆗-实战-英式拍卖" data-v-b57cc07c>🆗 实战:英式拍卖</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#原理-2" class="sidebar-link reco-side-原理-2" data-v-b57cc07c>原理</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#代码-2" class="sidebar-link reco-side-代码-2" data-v-b57cc07c>代码</a></li><li class="level-3" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#测试流程" class="sidebar-link reco-side-测试流程" data-v-b57cc07c>测试流程</a></li><li class="level-2" data-v-b57cc07c><a href="/solidity/professional-solidity/13.interface.html#️⃣-问答题" class="sidebar-link reco-side-️⃣-问答题" data-v-b57cc07c>#️⃣ 问答题</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/solidity/assets/js/app.e5082ffd.js" defer></script><script src="/solidity/assets/js/3.5ee47f7c.js" defer></script><script src="/solidity/assets/js/1.912b4b55.js" defer></script><script src="/solidity/assets/js/39.d83f4932.js" defer></script>
+  </body>
+</html>
